@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UniDx: include/UniDx/Physics.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UniDx
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_physics_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Physics.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_physics_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_property_8h.html">Property.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_singleton_8h.html">Singleton.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_bounds_8h.html">Bounds.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="_collision_8h.html">Collision.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_uni_dx.html">UniDx</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">class </span><a class="code hl_class" href="class_uni_dx_1_1_collider.html">Collider</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">class </span><a class="code hl_class" href="class_uni_dx_1_1_rigidbody.html">Rigidbody</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">class </span><a class="code hl_class" href="class_uni_dx_1_1_physics_shape.html">PhysicsShape</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_contact.html">   20</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_uni_dx_1_1_contact.html">Contact</a></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">//    Vector3 point;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_contact.html#a85fea060b70d803a78a9ce2375aa6f67">   23</a></span>    <a class="code hl_struct" href="struct_uni_dx_1_1_vector3.html">Vector3</a> <a class="code hl_variable" href="struct_uni_dx_1_1_contact.html#a85fea060b70d803a78a9ce2375aa6f67">normal</a>;     <span class="comment">// from A to B</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_contact.html#a7ae2e5c319b75a091828ecb0451c201d">   24</a></span>    <span class="keywordtype">float</span>   <a class="code hl_variable" href="struct_uni_dx_1_1_contact.html#a7ae2e5c319b75a091828ecb0451c201d">penetration</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>};</div>
+</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_contact_manifold.html">   27</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_uni_dx_1_1_contact_manifold.html">ContactManifold</a></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>{</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_contact_manifold.html#afda6438abfc68435558dc0eabe4d2729">   29</a></span>    <a class="code hl_class" href="class_uni_dx_1_1_physics_shape.html">PhysicsShape</a>* <a class="code hl_variable" href="struct_uni_dx_1_1_contact_manifold.html#afda6438abfc68435558dc0eabe4d2729">a</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_contact_manifold.html#a7d6fa411a69385b1b396c86c2edc8d60">   30</a></span>    <a class="code hl_class" href="class_uni_dx_1_1_physics_shape.html">PhysicsShape</a>* <a class="code hl_variable" href="struct_uni_dx_1_1_contact_manifold.html#a7d6fa411a69385b1b396c86c2edc8d60">b</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_contact_manifold.html#a081564785891dae52e3b4aecd6bf9d7a">   31</a></span>    std::array&lt;Contact, 4&gt; <a class="code hl_variable" href="struct_uni_dx_1_1_contact_manifold.html#a081564785891dae52e3b4aecd6bf9d7a">contacts</a>;  <span class="comment">// 1〜4点</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_contact_manifold.html#ac280eae0550e4727554a4d8fa5d0a1ff">   32</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_uni_dx_1_1_contact_manifold.html#ac280eae0550e4727554a4d8fa5d0a1ff">numContacts</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>};</div>
+</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">class </span>AABBGeometory;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">class </span>SpheresGeometory;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">class </span>CapsulesGeometory;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">class </span>BoxGeometory;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">// --------------------</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">// PhysicsActor</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">// --------------------</span></div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="};">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_physics_actor.html">   44</a></span><span class="keyword">class  </span><a class="code hl_function" href="class_uni_dx_1_1_physics_actor.html#af4f24c5b3c4c07d70829566aaecbf205">PhysicsActor</a></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>{</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="};">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_physics_actor_1_1_less.html">   47</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_uni_dx_1_1_physics_actor_1_1_less.html">Less</a> {</div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_physics_actor_1_1_less.html#a2157e8e2f71ef7d336ec64dc7c03f67f">   48</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_uni_dx_1_1_physics_actor_1_1_less.html#a2157e8e2f71ef7d336ec64dc7c03f67f">operator()</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_uni_dx_1_1_physics_actor.html#af4f24c5b3c4c07d70829566aaecbf205">PhysicsActor</a>&amp; lhs, <span class="keyword">const</span> <a class="code hl_function" href="class_uni_dx_1_1_physics_actor.html#af4f24c5b3c4c07d70829566aaecbf205">PhysicsActor</a>&amp; rhs)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keywordflow">return</span> lhs.<a class="code hl_function" href="class_uni_dx_1_1_physics_actor.html#a7cd9885643cbb2732380affdf53d5f79">getRigidbody</a>() &lt; rhs.<a class="code hl_function" href="class_uni_dx_1_1_physics_actor.html#a7cd9885643cbb2732380affdf53d5f79">getRigidbody</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        }</div>
+</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    };</div>
+</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_physics_actor.html#af4f24c5b3c4c07d70829566aaecbf205">   53</a></span>    <span class="keyword">explicit</span> <a class="code hl_function" href="class_uni_dx_1_1_physics_actor.html#af4f24c5b3c4c07d70829566aaecbf205">PhysicsActor</a>(<a class="code hl_class" href="class_uni_dx_1_1_rigidbody.html">Rigidbody</a>* rigidbody) : rigidbody_(rigidbody) {}</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_physics_actor.html#a7cd9885643cbb2732380affdf53d5f79">   55</a></span>    <a class="code hl_class" href="class_uni_dx_1_1_rigidbody.html">Rigidbody</a>* <a class="code hl_function" href="class_uni_dx_1_1_physics_actor.html#a7cd9885643cbb2732380affdf53d5f79">getRigidbody</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> rigidbody_; }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_physics_actor.html#a770bdce2979dea4b3ea15b76c3eab859">   56</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_uni_dx_1_1_physics_actor.html#a770bdce2979dea4b3ea15b76c3eab859">isValid</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> rigidbody_ != <span class="keyword">nullptr</span>; }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_physics_actor.html#a30a93c4ada613cce4234d0c18092e905">   57</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_physics_actor.html#a30a93c4ada613cce4234d0c18092e905">setInvalid</a>() { rigidbody_ = <span class="keyword">nullptr</span>; }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_physics_actor.html#a4b8895fede9d2e05ae424201e395eead">   59</a></span>    <a class="code hl_struct" href="struct_uni_dx_1_1_bounds.html">Bounds</a> <a class="code hl_function" href="class_uni_dx_1_1_physics_actor.html#a4b8895fede9d2e05ae424201e395eead">getCorrectPositionBounds</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> correctPositionBounds; }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_physics_actor.html#ae46557be4d68c4b60a915e6efe949d66">   60</a></span>    <a class="code hl_struct" href="struct_uni_dx_1_1_bounds.html">Bounds</a> <a class="code hl_function" href="class_uni_dx_1_1_physics_actor.html#ae46557be4d68c4b60a915e6efe949d66">getCorrectVelocityBounds</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> correctVelocityBounds; }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="comment">// 補正用のBoundsを初期化</span></div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_physics_actor.html#adf1c56067687e66a4d22836b5790d14e">   63</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_physics_actor.html#adf1c56067687e66a4d22836b5790d14e">initCorrectBounds</a>()</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        correctPositionBounds.Center = <a class="code hl_variable" href="struct_uni_dx_1_1_vector3.html#a204090a115aa310016d26ad9bbeeb705">Vector3::zero</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        correctPositionBounds.extents = <a class="code hl_variable" href="struct_uni_dx_1_1_vector3.html#a204090a115aa310016d26ad9bbeeb705">Vector3::zero</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        correctVelocityBounds.Center = <a class="code hl_variable" href="struct_uni_dx_1_1_vector3.html#a204090a115aa310016d26ad9bbeeb705">Vector3::zero</a>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        correctVelocityBounds.extents = <a class="code hl_variable" href="struct_uni_dx_1_1_vector3.html#a204090a115aa310016d26ad9bbeeb705">Vector3::zero</a>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="comment">// 位置を補正する差分ベクトルを登録</span></div>
+<div class="foldopen" id="foldopen00072" data-start="{" data-end="}">
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_physics_actor.html#aae9de25984963e16eab4c1db9c5e0de8">   72</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_physics_actor.html#aae9de25984963e16eab4c1db9c5e0de8">addCorrectPosition</a>(<a class="code hl_struct" href="struct_uni_dx_1_1_vector3.html">Vector3</a> vec)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        correctPositionBounds.Encapsulate(vec);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="comment">// 速度を補正する差分ベクトルを登録</span></div>
+<div class="foldopen" id="foldopen00078" data-start="{" data-end="}">
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_physics_actor.html#a8f23b2c44d1925e198af8ea6c098baaa">   78</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_physics_actor.html#a8f23b2c44d1925e198af8ea6c098baaa">addCorrectVelocity</a>(<a class="code hl_struct" href="struct_uni_dx_1_1_vector3.html">Vector3</a> vec)</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        correctVelocityBounds.Encapsulate(vec);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
+</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <a class="code hl_class" href="class_uni_dx_1_1_rigidbody.html">Rigidbody</a>* rigidbody_;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <a class="code hl_struct" href="struct_uni_dx_1_1_bounds.html">Bounds</a> correctPositionBounds;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <a class="code hl_struct" href="struct_uni_dx_1_1_bounds.html">Bounds</a> correctVelocityBounds;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>};</div>
+</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">// --------------------</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment">// PhysicsShape</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment">// --------------------</span></div>
+<div class="foldopen" id="foldopen00093" data-start="{" data-end="};">
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_physics_shape.html">   93</a></span><span class="keyword">class  </span><a class="code hl_class" href="class_uni_dx_1_1_physics_shape.html">PhysicsShape</a></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>{</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_physics_shape.html#a055b1f5b60f61aa7fceef85397bd7392">initialize</a>(<a class="code hl_class" href="class_uni_dx_1_1_collider.html">Collider</a>* collider);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_physics_shape.html#a97fe6911dfbdd2db04e11a82eb420635">   98</a></span>    <a class="code hl_struct" href="struct_uni_dx_1_1_bounds.html">Bounds</a> <a class="code hl_variable" href="class_uni_dx_1_1_physics_shape.html#a97fe6911dfbdd2db04e11a82eb420635">moveBounds</a>;  <span class="comment">// コライダーの bounds に移動量を広げた範囲</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_physics_shape.html#afc859376ee5b8946baefb8afdc32bf04">   99</a></span>    <a class="code hl_class" href="class_uni_dx_1_1_physics_actor.html">PhysicsActor</a>* <a class="code hl_variable" href="class_uni_dx_1_1_physics_shape.html#afc859376ee5b8946baefb8afdc32bf04">actor</a>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_physics_shape.html#af8f1718f433a4f4089d0c3d6abc11799">  101</a></span>    <a class="code hl_class" href="class_uni_dx_1_1_collider.html">Collider</a>* <a class="code hl_function" href="class_uni_dx_1_1_physics_shape.html#af8f1718f433a4f4089d0c3d6abc11799">getCollider</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> collider_; }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_physics_shape.html#a39e6f048fd37e7c4faddfb9ece579e72">  102</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_uni_dx_1_1_physics_shape.html#a39e6f048fd37e7c4faddfb9ece579e72">isValid</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> collider_ != <span class="keyword">nullptr</span>; }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_physics_shape.html#a10d3cf8eb0b47adcb5650ec5d60bcaa3">  103</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_physics_shape.html#a10d3cf8eb0b47adcb5650ec5d60bcaa3">setInvalid</a>() { collider_ = <span class="keyword">nullptr</span>; }</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_physics_shape.html#ac50ce76c7f4ad1e27b0a477695b68a04">  104</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_physics_shape.html#ac50ce76c7f4ad1e27b0a477695b68a04">initOtherNew</a>() { triggersNew_.clear(); collisionsNew_.clear(); }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_physics_shape.html#affa8c1b96435cced5b5cb662cfcbc952">  105</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_physics_shape.html#affa8c1b96435cced5b5cb662cfcbc952">addCollide</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_uni_dx_1_1_collision.html">Collision</a>&amp; col) { collisionsNew_.push_back(col); }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_physics_shape.html#a2ad5e068c9e17411fa2fb0d6b3f6352b">  106</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_physics_shape.html#a2ad5e068c9e17411fa2fb0d6b3f6352b">addTrigger</a>(<a class="code hl_class" href="class_uni_dx_1_1_collider.html">Collider</a>* other) { triggersNew_.push_back(other); }</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_physics_shape.html#af63d99d8f826ce9b60d8301b8df7465f">collideCallback</a>();</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <a class="code hl_class" href="class_uni_dx_1_1_collider.html">Collider</a>* collider_;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    std::vector&lt;Collision&gt; collisions_;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    std::vector&lt;Collision&gt; collisionsNew_;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    std::vector&lt;Collider*&gt; triggers_;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    std::vector&lt;Collider*&gt; triggersNew_;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>};</div>
+</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="comment">// --------------------</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="comment">// Physics</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="comment">// --------------------</span></div>
+<div class="foldopen" id="foldopen00122" data-start="{" data-end="};">
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_physics.html">  122</a></span><span class="keyword">class </span><a class="code hl_class" href="class_uni_dx_1_1_physics.html">Physics</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_uni_dx_1_1_singleton.html#aa1d5dc993efef5faa60dc69cb141ae1f">Singleton</a>&lt;Physics&gt;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>{</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_physics.html#a2b29b5007bbde2a1b1d9714796f95761">  125</a></span>    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_uni_dx_1_1_physics.html#a2b29b5007bbde2a1b1d9714796f95761">gravity</a> = -9.81f;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_physics.html#aca632abd4a0a64c8770e10009b27aa8e">simulate</a>(<span class="keywordtype">float</span> setp);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_physics.html#aaffdb001e2410b97e7a1ddc87019ef24">simulatePositionCorrection</a>(<span class="keywordtype">float</span> step);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_physics.html#aad2d525e9f030108827f91683607a2ae">registerRigidbody</a>(<a class="code hl_class" href="class_uni_dx_1_1_rigidbody.html">Rigidbody</a>* rigidbody);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_physics.html#ad7e44b1185f4060b3c80d3f3ca2bc191">unregisterRigidbody</a>(<a class="code hl_class" href="class_uni_dx_1_1_rigidbody.html">Rigidbody</a>* rigidbody);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_physics.html#a6bd0b7663e8cee2828051df644ed8285">register3d</a>(<a class="code hl_class" href="class_uni_dx_1_1_collider.html">Collider</a>* collider);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_physics.html#a2e34db71eb050c83ca7830a32f557881">unregister3d</a>(<a class="code hl_class" href="class_uni_dx_1_1_collider.html">Collider</a>* collider);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="comment">// origin, direction, maxDistance, filter (デフォルト nullptr =&gt; 全て含める)</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="comment">// 戻り値: ヒット情報を含む optional（ヒットしなければ nullopt）</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_uni_dx_1_1_physics.html#af9d1e1dfa6dc778b2fcc2065ea58f09d">Raycast</a>(<a class="code hl_struct" href="struct_uni_dx_1_1_vector3.html">Vector3</a> origin, <a class="code hl_struct" href="struct_uni_dx_1_1_vector3.html">Vector3</a> direction, <span class="keywordtype">float</span> maxDistance,</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        <a class="code hl_struct" href="struct_uni_dx_1_1_raycast_hit.html">RaycastHit</a>* hitInfo = <span class="keyword">nullptr</span>, std::function&lt;<span class="keywordtype">bool</span>(<span class="keyword">const</span> <a class="code hl_class" href="class_uni_dx_1_1_collider.html">Collider</a>*)&gt; filter = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keyword">struct </span>PotentialPair {</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <a class="code hl_class" href="class_uni_dx_1_1_physics_shape.html">PhysicsShape</a>* a;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <a class="code hl_class" href="class_uni_dx_1_1_physics_shape.html">PhysicsShape</a>* b;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    };</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    std::vector&lt;PotentialPair&gt; potentialPairs;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    std::vector&lt;PotentialPair&gt; potentialPairsTrigger;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    std::vector&lt;ContactManifold&gt; manifolds;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    std::map&lt;Rigidbody*, PhysicsActor&gt; physicsActors;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    std::vector&lt;PhysicsShape&gt; physicsShapes;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keywordtype">void</span> initializeSimulate(<span class="keywordtype">float</span> step);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="keywordtype">void</span> solveVelocityConstraint(<a class="code hl_class" href="class_uni_dx_1_1_rigidbody.html">Rigidbody</a>* A, <a class="code hl_class" href="class_uni_dx_1_1_rigidbody.html">Rigidbody</a>* B, <span class="keyword">const</span> <a class="code hl_struct" href="struct_uni_dx_1_1_contact_manifold.html">ContactManifold</a>&amp; m);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keywordtype">void</span> solvePositionConstraint(<a class="code hl_class" href="class_uni_dx_1_1_rigidbody.html">Rigidbody</a>* A, <a class="code hl_class" href="class_uni_dx_1_1_rigidbody.html">Rigidbody</a>* B, <span class="keyword">const</span> <a class="code hl_struct" href="struct_uni_dx_1_1_contact_manifold.html">ContactManifold</a>&amp; m);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>};</div>
+</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>}</div>
+<div class="ttc" id="a_bounds_8h_html"><div class="ttname"><a href="_bounds_8h.html">Bounds.h</a></div></div>
+<div class="ttc" id="a_collision_8h_html"><div class="ttname"><a href="_collision_8h.html">Collision.h</a></div></div>
+<div class="ttc" id="a_property_8h_html"><div class="ttname"><a href="_property_8h.html">Property.h</a></div></div>
+<div class="ttc" id="a_singleton_8h_html"><div class="ttname"><a href="_singleton_8h.html">Singleton.h</a></div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_collider_html"><div class="ttname"><a href="class_uni_dx_1_1_collider.html">UniDx::Collider</a></div><div class="ttdef"><b>Definition</b> Collider.h:18</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_actor_html"><div class="ttname"><a href="class_uni_dx_1_1_physics_actor.html">UniDx::PhysicsActor</a></div><div class="ttdef"><b>Definition</b> Physics.h:45</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_actor_html_a30a93c4ada613cce4234d0c18092e905"><div class="ttname"><a href="class_uni_dx_1_1_physics_actor.html#a30a93c4ada613cce4234d0c18092e905">UniDx::PhysicsActor::setInvalid</a></div><div class="ttdeci">void setInvalid()</div><div class="ttdef"><b>Definition</b> Physics.h:57</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_actor_html_a4b8895fede9d2e05ae424201e395eead"><div class="ttname"><a href="class_uni_dx_1_1_physics_actor.html#a4b8895fede9d2e05ae424201e395eead">UniDx::PhysicsActor::getCorrectPositionBounds</a></div><div class="ttdeci">Bounds getCorrectPositionBounds() const</div><div class="ttdef"><b>Definition</b> Physics.h:59</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_actor_html_a770bdce2979dea4b3ea15b76c3eab859"><div class="ttname"><a href="class_uni_dx_1_1_physics_actor.html#a770bdce2979dea4b3ea15b76c3eab859">UniDx::PhysicsActor::isValid</a></div><div class="ttdeci">bool isValid() const</div><div class="ttdef"><b>Definition</b> Physics.h:56</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_actor_html_a7cd9885643cbb2732380affdf53d5f79"><div class="ttname"><a href="class_uni_dx_1_1_physics_actor.html#a7cd9885643cbb2732380affdf53d5f79">UniDx::PhysicsActor::getRigidbody</a></div><div class="ttdeci">Rigidbody * getRigidbody() const</div><div class="ttdef"><b>Definition</b> Physics.h:55</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_actor_html_a8f23b2c44d1925e198af8ea6c098baaa"><div class="ttname"><a href="class_uni_dx_1_1_physics_actor.html#a8f23b2c44d1925e198af8ea6c098baaa">UniDx::PhysicsActor::addCorrectVelocity</a></div><div class="ttdeci">void addCorrectVelocity(Vector3 vec)</div><div class="ttdef"><b>Definition</b> Physics.h:78</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_actor_html_aae9de25984963e16eab4c1db9c5e0de8"><div class="ttname"><a href="class_uni_dx_1_1_physics_actor.html#aae9de25984963e16eab4c1db9c5e0de8">UniDx::PhysicsActor::addCorrectPosition</a></div><div class="ttdeci">void addCorrectPosition(Vector3 vec)</div><div class="ttdef"><b>Definition</b> Physics.h:72</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_actor_html_adf1c56067687e66a4d22836b5790d14e"><div class="ttname"><a href="class_uni_dx_1_1_physics_actor.html#adf1c56067687e66a4d22836b5790d14e">UniDx::PhysicsActor::initCorrectBounds</a></div><div class="ttdeci">void initCorrectBounds()</div><div class="ttdef"><b>Definition</b> Physics.h:63</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_actor_html_ae46557be4d68c4b60a915e6efe949d66"><div class="ttname"><a href="class_uni_dx_1_1_physics_actor.html#ae46557be4d68c4b60a915e6efe949d66">UniDx::PhysicsActor::getCorrectVelocityBounds</a></div><div class="ttdeci">Bounds getCorrectVelocityBounds() const</div><div class="ttdef"><b>Definition</b> Physics.h:60</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_actor_html_af4f24c5b3c4c07d70829566aaecbf205"><div class="ttname"><a href="class_uni_dx_1_1_physics_actor.html#af4f24c5b3c4c07d70829566aaecbf205">UniDx::PhysicsActor::PhysicsActor</a></div><div class="ttdeci">PhysicsActor(Rigidbody *rigidbody)</div><div class="ttdef"><b>Definition</b> Physics.h:53</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_html"><div class="ttname"><a href="class_uni_dx_1_1_physics.html">UniDx::Physics</a></div><div class="ttdef"><b>Definition</b> Physics.h:123</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_html_a2b29b5007bbde2a1b1d9714796f95761"><div class="ttname"><a href="class_uni_dx_1_1_physics.html#a2b29b5007bbde2a1b1d9714796f95761">UniDx::Physics::gravity</a></div><div class="ttdeci">static float gravity</div><div class="ttdef"><b>Definition</b> Physics.h:125</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_html_a2e34db71eb050c83ca7830a32f557881"><div class="ttname"><a href="class_uni_dx_1_1_physics.html#a2e34db71eb050c83ca7830a32f557881">UniDx::Physics::unregister3d</a></div><div class="ttdeci">void unregister3d(Collider *collider)</div><div class="ttdef"><b>Definition</b> Physics.cpp:123</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_html_a6bd0b7663e8cee2828051df644ed8285"><div class="ttname"><a href="class_uni_dx_1_1_physics.html#a6bd0b7663e8cee2828051df644ed8285">UniDx::Physics::register3d</a></div><div class="ttdeci">void register3d(Collider *collider)</div><div class="ttdef"><b>Definition</b> Physics.cpp:101</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_html_aad2d525e9f030108827f91683607a2ae"><div class="ttname"><a href="class_uni_dx_1_1_physics.html#aad2d525e9f030108827f91683607a2ae">UniDx::Physics::registerRigidbody</a></div><div class="ttdeci">void registerRigidbody(Rigidbody *rigidbody)</div><div class="ttdef"><b>Definition</b> Physics.cpp:86</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_html_aaffdb001e2410b97e7a1ddc87019ef24"><div class="ttname"><a href="class_uni_dx_1_1_physics.html#aaffdb001e2410b97e7a1ddc87019ef24">UniDx::Physics::simulatePositionCorrection</a></div><div class="ttdeci">void simulatePositionCorrection(float step)</div><div class="ttdef"><b>Definition</b> Physics.cpp:199</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_html_aca632abd4a0a64c8770e10009b27aa8e"><div class="ttname"><a href="class_uni_dx_1_1_physics.html#aca632abd4a0a64c8770e10009b27aa8e">UniDx::Physics::simulate</a></div><div class="ttdeci">void simulate(float setp)</div><div class="ttdef"><b>Definition</b> Physics.cpp:279</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_html_ad7e44b1185f4060b3c80d3f3ca2bc191"><div class="ttname"><a href="class_uni_dx_1_1_physics.html#ad7e44b1185f4060b3c80d3f3ca2bc191">UniDx::Physics::unregisterRigidbody</a></div><div class="ttdeci">void unregisterRigidbody(Rigidbody *rigidbody)</div><div class="ttdef"><b>Definition</b> Physics.cpp:94</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_html_af9d1e1dfa6dc778b2fcc2065ea58f09d"><div class="ttname"><a href="class_uni_dx_1_1_physics.html#af9d1e1dfa6dc778b2fcc2065ea58f09d">UniDx::Physics::Raycast</a></div><div class="ttdeci">bool Raycast(Vector3 origin, Vector3 direction, float maxDistance, RaycastHit *hitInfo=nullptr, std::function&lt; bool(const Collider *)&gt; filter=nullptr)</div><div class="ttdef"><b>Definition</b> Physics.cpp:343</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_shape_html"><div class="ttname"><a href="class_uni_dx_1_1_physics_shape.html">UniDx::PhysicsShape</a></div><div class="ttdef"><b>Definition</b> Physics.h:94</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_shape_html_a055b1f5b60f61aa7fceef85397bd7392"><div class="ttname"><a href="class_uni_dx_1_1_physics_shape.html#a055b1f5b60f61aa7fceef85397bd7392">UniDx::PhysicsShape::initialize</a></div><div class="ttdeci">void initialize(Collider *collider)</div><div class="ttdef"><b>Definition</b> Physics.cpp:16</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_shape_html_a10d3cf8eb0b47adcb5650ec5d60bcaa3"><div class="ttname"><a href="class_uni_dx_1_1_physics_shape.html#a10d3cf8eb0b47adcb5650ec5d60bcaa3">UniDx::PhysicsShape::setInvalid</a></div><div class="ttdeci">void setInvalid()</div><div class="ttdef"><b>Definition</b> Physics.h:103</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_shape_html_a2ad5e068c9e17411fa2fb0d6b3f6352b"><div class="ttname"><a href="class_uni_dx_1_1_physics_shape.html#a2ad5e068c9e17411fa2fb0d6b3f6352b">UniDx::PhysicsShape::addTrigger</a></div><div class="ttdeci">void addTrigger(Collider *other)</div><div class="ttdef"><b>Definition</b> Physics.h:106</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_shape_html_a39e6f048fd37e7c4faddfb9ece579e72"><div class="ttname"><a href="class_uni_dx_1_1_physics_shape.html#a39e6f048fd37e7c4faddfb9ece579e72">UniDx::PhysicsShape::isValid</a></div><div class="ttdeci">bool isValid() const</div><div class="ttdef"><b>Definition</b> Physics.h:102</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_shape_html_a97fe6911dfbdd2db04e11a82eb420635"><div class="ttname"><a href="class_uni_dx_1_1_physics_shape.html#a97fe6911dfbdd2db04e11a82eb420635">UniDx::PhysicsShape::moveBounds</a></div><div class="ttdeci">Bounds moveBounds</div><div class="ttdef"><b>Definition</b> Physics.h:98</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_shape_html_ac50ce76c7f4ad1e27b0a477695b68a04"><div class="ttname"><a href="class_uni_dx_1_1_physics_shape.html#ac50ce76c7f4ad1e27b0a477695b68a04">UniDx::PhysicsShape::initOtherNew</a></div><div class="ttdeci">void initOtherNew()</div><div class="ttdef"><b>Definition</b> Physics.h:104</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_shape_html_af63d99d8f826ce9b60d8301b8df7465f"><div class="ttname"><a href="class_uni_dx_1_1_physics_shape.html#af63d99d8f826ce9b60d8301b8df7465f">UniDx::PhysicsShape::collideCallback</a></div><div class="ttdeci">void collideCallback()</div><div class="ttdef"><b>Definition</b> Physics.cpp:23</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_shape_html_af8f1718f433a4f4089d0c3d6abc11799"><div class="ttname"><a href="class_uni_dx_1_1_physics_shape.html#af8f1718f433a4f4089d0c3d6abc11799">UniDx::PhysicsShape::getCollider</a></div><div class="ttdeci">Collider * getCollider() const</div><div class="ttdef"><b>Definition</b> Physics.h:101</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_shape_html_afc859376ee5b8946baefb8afdc32bf04"><div class="ttname"><a href="class_uni_dx_1_1_physics_shape.html#afc859376ee5b8946baefb8afdc32bf04">UniDx::PhysicsShape::actor</a></div><div class="ttdeci">PhysicsActor * actor</div><div class="ttdef"><b>Definition</b> Physics.h:99</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_physics_shape_html_affa8c1b96435cced5b5cb662cfcbc952"><div class="ttname"><a href="class_uni_dx_1_1_physics_shape.html#affa8c1b96435cced5b5cb662cfcbc952">UniDx::PhysicsShape::addCollide</a></div><div class="ttdeci">void addCollide(const Collision &amp;col)</div><div class="ttdef"><b>Definition</b> Physics.h:105</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_rigidbody_html"><div class="ttname"><a href="class_uni_dx_1_1_rigidbody.html">UniDx::Rigidbody</a></div><div class="ttdef"><b>Definition</b> Rigidbody.h:18</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_singleton_html_aa1d5dc993efef5faa60dc69cb141ae1f"><div class="ttname"><a href="class_uni_dx_1_1_singleton.html#aa1d5dc993efef5faa60dc69cb141ae1f">UniDx::Singleton&lt; Physics &gt;::Singleton</a></div><div class="ttdeci">Singleton()</div><div class="ttdef"><b>Definition</b> Singleton.h:38</div></div>
+<div class="ttc" id="anamespace_uni_dx_html"><div class="ttname"><a href="namespace_uni_dx.html">UniDx</a></div><div class="ttdef"><b>Definition</b> AnimationCurve.cpp:5</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_bounds_html"><div class="ttname"><a href="struct_uni_dx_1_1_bounds.html">UniDx::Bounds</a></div><div class="ttdef"><b>Definition</b> Bounds.h:20</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_collision_html"><div class="ttname"><a href="struct_uni_dx_1_1_collision.html">UniDx::Collision</a></div><div class="ttdef"><b>Definition</b> Collision.h:27</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_contact_html"><div class="ttname"><a href="struct_uni_dx_1_1_contact.html">UniDx::Contact</a></div><div class="ttdef"><b>Definition</b> Physics.h:21</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_contact_html_a7ae2e5c319b75a091828ecb0451c201d"><div class="ttname"><a href="struct_uni_dx_1_1_contact.html#a7ae2e5c319b75a091828ecb0451c201d">UniDx::Contact::penetration</a></div><div class="ttdeci">float penetration</div><div class="ttdef"><b>Definition</b> Physics.h:24</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_contact_html_a85fea060b70d803a78a9ce2375aa6f67"><div class="ttname"><a href="struct_uni_dx_1_1_contact.html#a85fea060b70d803a78a9ce2375aa6f67">UniDx::Contact::normal</a></div><div class="ttdeci">Vector3 normal</div><div class="ttdef"><b>Definition</b> Physics.h:23</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_contact_manifold_html"><div class="ttname"><a href="struct_uni_dx_1_1_contact_manifold.html">UniDx::ContactManifold</a></div><div class="ttdef"><b>Definition</b> Physics.h:28</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_contact_manifold_html_a081564785891dae52e3b4aecd6bf9d7a"><div class="ttname"><a href="struct_uni_dx_1_1_contact_manifold.html#a081564785891dae52e3b4aecd6bf9d7a">UniDx::ContactManifold::contacts</a></div><div class="ttdeci">std::array&lt; Contact, 4 &gt; contacts</div><div class="ttdef"><b>Definition</b> Physics.h:31</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_contact_manifold_html_a7d6fa411a69385b1b396c86c2edc8d60"><div class="ttname"><a href="struct_uni_dx_1_1_contact_manifold.html#a7d6fa411a69385b1b396c86c2edc8d60">UniDx::ContactManifold::b</a></div><div class="ttdeci">PhysicsShape * b</div><div class="ttdef"><b>Definition</b> Physics.h:30</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_contact_manifold_html_ac280eae0550e4727554a4d8fa5d0a1ff"><div class="ttname"><a href="struct_uni_dx_1_1_contact_manifold.html#ac280eae0550e4727554a4d8fa5d0a1ff">UniDx::ContactManifold::numContacts</a></div><div class="ttdeci">int numContacts</div><div class="ttdef"><b>Definition</b> Physics.h:32</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_contact_manifold_html_afda6438abfc68435558dc0eabe4d2729"><div class="ttname"><a href="struct_uni_dx_1_1_contact_manifold.html#afda6438abfc68435558dc0eabe4d2729">UniDx::ContactManifold::a</a></div><div class="ttdeci">PhysicsShape * a</div><div class="ttdef"><b>Definition</b> Physics.h:29</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_physics_actor_1_1_less_html"><div class="ttname"><a href="struct_uni_dx_1_1_physics_actor_1_1_less.html">UniDx::PhysicsActor::Less</a></div><div class="ttdef"><b>Definition</b> Physics.h:47</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_physics_actor_1_1_less_html_a2157e8e2f71ef7d336ec64dc7c03f67f"><div class="ttname"><a href="struct_uni_dx_1_1_physics_actor_1_1_less.html#a2157e8e2f71ef7d336ec64dc7c03f67f">UniDx::PhysicsActor::Less::operator()</a></div><div class="ttdeci">bool operator()(const PhysicsActor &amp;lhs, const PhysicsActor &amp;rhs) const</div><div class="ttdef"><b>Definition</b> Physics.h:48</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_raycast_hit_html"><div class="ttname"><a href="struct_uni_dx_1_1_raycast_hit.html">UniDx::RaycastHit</a></div><div class="ttdef"><b>Definition</b> Collision.h:38</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_vector3_html"><div class="ttname"><a href="struct_uni_dx_1_1_vector3.html">UniDx::Vector3</a></div><div class="ttdoc">3D ベクトル</div><div class="ttdef"><b>Definition</b> Math.h:47</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_vector3_html_a204090a115aa310016d26ad9bbeeb705"><div class="ttname"><a href="struct_uni_dx_1_1_vector3.html#a204090a115aa310016d26ad9bbeeb705">UniDx::Vector3::zero</a></div><div class="ttdeci">static const Vector3 zero</div><div class="ttdef"><b>Definition</b> Math.h:69</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_450094861a7bbaf444577c849cb4d1c8.html">UniDx</a></li><li class="navelem"><a href="_physics_8h.html">Physics.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

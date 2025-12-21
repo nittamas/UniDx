@@ -1,0 +1,506 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UniDx: UniDx::Random クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UniDx
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_uni_dx_1_1_random.html','','class_uni_dx_1_1_random-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">UniDx::Random クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_random_8h_source.html">Random.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a1fee6bddf5ed6c77ab826ea3edc21efb" id="r_a1fee6bddf5ed6c77ab826ea3edc21efb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fee6bddf5ed6c77ab826ea3edc21efb">Random</a> (uint64_t seed=std::chrono::high_resolution_clock::now().time_since_epoch().count())</td></tr>
+<tr class="memitem:ac6997bdb58985cef531559145367d098" id="r_ac6997bdb58985cef531559145367d098"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6997bdb58985cef531559145367d098">InitState</a> (uint64_t seed)</td></tr>
+<tr class="memitem:a4247de7029ac0a3b01518247f006be65" id="r_a4247de7029ac0a3b01518247f006be65"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4247de7029ac0a3b01518247f006be65">getState</a> () const</td></tr>
+<tr class="memitem:a04605a39c959971dc02c5756823dbb26" id="r_a04605a39c959971dc02c5756823dbb26"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04605a39c959971dc02c5756823dbb26">value</a> ()</td></tr>
+<tr class="memitem:a11bc204ab2b742b9ebae94ff97b08624" id="r_a11bc204ab2b742b9ebae94ff97b08624"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11bc204ab2b742b9ebae94ff97b08624">Range</a> (float min, float max)</td></tr>
+<tr class="memitem:a665008f8ae9d70b2fee08f5e85489d7a" id="r_a665008f8ae9d70b2fee08f5e85489d7a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a665008f8ae9d70b2fee08f5e85489d7a">Range</a> (int min, int max)</td></tr>
+<tr class="memitem:aeb586ea57833863f89e1294477640fc6" id="r_aeb586ea57833863f89e1294477640fc6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb586ea57833863f89e1294477640fc6">RangeExclusive</a> (float min, float maxExclusive)</td></tr>
+<tr class="memitem:a8ae36ebd297cc454ddffa94c603d67da" id="r_a8ae36ebd297cc454ddffa94c603d67da"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ae36ebd297cc454ddffa94c603d67da">RangeExclusive</a> (int min, int maxExclusive)</td></tr>
+<tr class="memitem:a77fc8cc86673308cb1480955a1854f07" id="r_a77fc8cc86673308cb1480955a1854f07"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77fc8cc86673308cb1480955a1854f07">symmetricValue</a> ()</td></tr>
+<tr class="memitem:aeced10255466f02757a4f4e806c20064" id="r_aeced10255466f02757a4f4e806c20064"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeced10255466f02757a4f4e806c20064">insideUnitSphere</a> ()</td></tr>
+<tr class="memitem:add5a912a0175b7469b1f7550d02fc5b5" id="r_add5a912a0175b7469b1f7550d02fc5b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add5a912a0175b7469b1f7550d02fc5b5">insideUnitCircle</a> ()</td></tr>
+<tr class="memitem:a8f29ba39f7c9257950a80bc785f6d309" id="r_a8f29ba39f7c9257950a80bc785f6d309"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f29ba39f7c9257950a80bc785f6d309">onUnitSphere</a> ()</td></tr>
+<tr class="memitem:adedb5b20a11846e412e6ec58c2825a96" id="r_adedb5b20a11846e412e6ec58c2825a96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adedb5b20a11846e412e6ec58c2825a96">rotationUniform</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a98d8568db0cd9d8f92fe1115a8004591" id="r_a98d8568db0cd9d8f92fe1115a8004591"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a1fee6bddf5ed6c77ab826ea3edc21efb">Random</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98d8568db0cd9d8f92fe1115a8004591">global</a> ()</td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
+<a id="a1fee6bddf5ed6c77ab826ea3edc21efb" name="a1fee6bddf5ed6c77ab826ea3edc21efb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fee6bddf5ed6c77ab826ea3edc21efb">&#9670;&#160;</a></span>Random()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UniDx::Random::Random </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t</td>          <td class="paramname"><span class="paramname"><em>seed</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::chrono::high_resolution_clock::now().time_since_epoch().count()</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="a4247de7029ac0a3b01518247f006be65" name="a4247de7029ac0a3b01518247f006be65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4247de7029ac0a3b01518247f006be65">&#9670;&#160;</a></span>getState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t UniDx::Random::getState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a98d8568db0cd9d8f92fe1115a8004591" name="a98d8568db0cd9d8f92fe1115a8004591"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98d8568db0cd9d8f92fe1115a8004591">&#9670;&#160;</a></span>global()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a1fee6bddf5ed6c77ab826ea3edc21efb">Random</a> &amp; UniDx::Random::global </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6997bdb58985cef531559145367d098" name="ac6997bdb58985cef531559145367d098"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6997bdb58985cef531559145367d098">&#9670;&#160;</a></span>InitState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UniDx::Random::InitState </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t</td>          <td class="paramname"><span class="paramname"><em>seed</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="add5a912a0175b7469b1f7550d02fc5b5" name="add5a912a0175b7469b1f7550d02fc5b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add5a912a0175b7469b1f7550d02fc5b5">&#9670;&#160;</a></span>insideUnitCircle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> UniDx::Random::insideUnitCircle </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeced10255466f02757a4f4e806c20064" name="aeced10255466f02757a4f4e806c20064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeced10255466f02757a4f4e806c20064">&#9670;&#160;</a></span>insideUnitSphere()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> UniDx::Random::insideUnitSphere </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f29ba39f7c9257950a80bc785f6d309" name="a8f29ba39f7c9257950a80bc785f6d309"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f29ba39f7c9257950a80bc785f6d309">&#9670;&#160;</a></span>onUnitSphere()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> UniDx::Random::onUnitSphere </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a11bc204ab2b742b9ebae94ff97b08624" name="a11bc204ab2b742b9ebae94ff97b08624"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11bc204ab2b742b9ebae94ff97b08624">&#9670;&#160;</a></span>Range() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UniDx::Random::Range </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>min</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>max</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a665008f8ae9d70b2fee08f5e85489d7a" name="a665008f8ae9d70b2fee08f5e85489d7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a665008f8ae9d70b2fee08f5e85489d7a">&#9670;&#160;</a></span>Range() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UniDx::Random::Range </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>min</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>max</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb586ea57833863f89e1294477640fc6" name="aeb586ea57833863f89e1294477640fc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb586ea57833863f89e1294477640fc6">&#9670;&#160;</a></span>RangeExclusive() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UniDx::Random::RangeExclusive </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>min</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>maxExclusive</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8ae36ebd297cc454ddffa94c603d67da" name="a8ae36ebd297cc454ddffa94c603d67da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ae36ebd297cc454ddffa94c603d67da">&#9670;&#160;</a></span>RangeExclusive() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UniDx::Random::RangeExclusive </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>min</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>maxExclusive</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adedb5b20a11846e412e6ec58c2825a96" name="adedb5b20a11846e412e6ec58c2825a96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adedb5b20a11846e412e6ec58c2825a96">&#9670;&#160;</a></span>rotationUniform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> UniDx::Random::rotationUniform </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77fc8cc86673308cb1480955a1854f07" name="a77fc8cc86673308cb1480955a1854f07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77fc8cc86673308cb1480955a1854f07">&#9670;&#160;</a></span>symmetricValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UniDx::Random::symmetricValue </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a04605a39c959971dc02c5756823dbb26" name="a04605a39c959971dc02c5756823dbb26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04605a39c959971dc02c5756823dbb26">&#9670;&#160;</a></span>value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UniDx::Random::value </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>include/UniDx/<a class="el" href="_random_8h_source.html">Random.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_uni_dx.html">UniDx</a></li><li class="navelem"><a href="class_uni_dx_1_1_random.html">Random</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

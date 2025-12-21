@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UniDx: include/UniDx/PlayerLoop.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UniDx
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_player_loop_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PlayerLoop.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_player_loop_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;windows.h&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;Keyboard.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_singleton_8h.html">Singleton.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_uni_dx.html">UniDx</a></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">class </span><a class="code hl_class" href="class_uni_dx_1_1_game_object.html">GameObject</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">class </span><a class="code hl_class" href="class_uni_dx_1_1_camera.html">Camera</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">class </span><a class="code hl_class" href="class_uni_dx_1_1_canvas.html">Canvas</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_player_loop.html">   20</a></span><span class="keyword">class </span><a class="code hl_class" href="class_uni_dx_1_1_player_loop.html">PlayerLoop</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_uni_dx_1_1_singleton.html#aa1d5dc993efef5faa60dc69cb141ae1f">Singleton</a>&lt;PlayerLoop&gt;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_player_loop.html#aef8f689e30ba98d1a56dacf2a8850cf8">Initialize</a>(HWND hWnd);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_uni_dx_1_1_player_loop.html#a2937a9802d6521c05c8c900487e54602">MainLoop</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_player_loop.html#ae13e70dec986e249fa1140cefff802b3">   32</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_player_loop.html#ae13e70dec986e249fa1140cefff802b3">ProcessKeyboardMessage</a>(UINT message, WPARAM wParam, LPARAM lParam)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        DirectX::Keyboard::ProcessMessage(message, wParam, lParam);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_player_loop.html#a7532b47157002845e776066b41a9d842">registerCanvas</a>(<a class="code hl_class" href="class_uni_dx_1_1_canvas.html">Canvas</a>* c);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_player_loop.html#ad1cc186ea308c4ea58c8bf033ee103bd">unregisterCanvas</a>(<a class="code hl_class" href="class_uni_dx_1_1_canvas.html">Canvas</a>* c);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_player_loop.html#a14a2beeb2cc048dbdd385e7e08c5eb71">fixedUpdate</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_player_loop.html#a2f0ca0eb3d9585d87128d55fb3f5aa8a">physics</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_player_loop.html#a615b7553048e103acb2ae79a9a488d7b">input</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_player_loop.html#a7f90c103d5cdbea3caab80f406de13e3">update</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_player_loop.html#a773b221cdd0df12a260c13a6ce34a2f1">lateUpdate</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_player_loop.html#aeade21436e3df164d64bc6e7db226d41">render</a>();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_player_loop.html#ac6a6d4ea37a392c5f40d04284b820c73">finalize</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_player_loop.html#af48c722d7fcac3d766f6d01752594ec0">awake</a>(<a class="code hl_class" href="class_uni_dx_1_1_game_object.html">GameObject</a>* <span class="keywordtype">object</span>);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_player_loop.html#a14a2beeb2cc048dbdd385e7e08c5eb71">fixedUpdate</a>(<a class="code hl_class" href="class_uni_dx_1_1_game_object.html">GameObject</a>* <span class="keywordtype">object</span>);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_player_loop.html#a1fabac2e63d277635820ed803b97c9ce">checkStart</a>(<a class="code hl_class" href="class_uni_dx_1_1_game_object.html">GameObject</a>* <span class="keywordtype">object</span>);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_player_loop.html#a7f90c103d5cdbea3caab80f406de13e3">update</a>(<a class="code hl_class" href="class_uni_dx_1_1_game_object.html">GameObject</a>* <span class="keywordtype">object</span>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_player_loop.html#a773b221cdd0df12a260c13a6ce34a2f1">lateUpdate</a>(<a class="code hl_class" href="class_uni_dx_1_1_game_object.html">GameObject</a>* <span class="keywordtype">object</span>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_player_loop.html#aeade21436e3df164d64bc6e7db226d41">render</a>(<a class="code hl_class" href="class_uni_dx_1_1_game_object.html">GameObject</a>* <span class="keywordtype">object</span>, <span class="keyword">const</span> <a class="code hl_class" href="class_uni_dx_1_1_camera.html">Camera</a>&amp; camera);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    std::vector&lt;Canvas*&gt; canvas_;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">void</span> createScene();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>};</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
+<div class="ttc" id="a_singleton_8h_html"><div class="ttname"><a href="_singleton_8h.html">Singleton.h</a></div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_camera_html"><div class="ttname"><a href="class_uni_dx_1_1_camera.html">UniDx::Camera</a></div><div class="ttdef"><b>Definition</b> Camera.h:12</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_canvas_html"><div class="ttname"><a href="class_uni_dx_1_1_canvas.html">UniDx::Canvas</a></div><div class="ttdef"><b>Definition</b> Canvas.h:14</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_game_object_html"><div class="ttname"><a href="class_uni_dx_1_1_game_object.html">UniDx::GameObject</a></div><div class="ttdef"><b>Definition</b> GameObject.h:25</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_player_loop_html"><div class="ttname"><a href="class_uni_dx_1_1_player_loop.html">UniDx::PlayerLoop</a></div><div class="ttdef"><b>Definition</b> PlayerLoop.h:21</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_player_loop_html_a14a2beeb2cc048dbdd385e7e08c5eb71"><div class="ttname"><a href="class_uni_dx_1_1_player_loop.html#a14a2beeb2cc048dbdd385e7e08c5eb71">UniDx::PlayerLoop::fixedUpdate</a></div><div class="ttdeci">virtual void fixedUpdate()</div><div class="ttdef"><b>Definition</b> PlayerLoop.cpp:160</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_player_loop_html_a1fabac2e63d277635820ed803b97c9ce"><div class="ttname"><a href="class_uni_dx_1_1_player_loop.html#a1fabac2e63d277635820ed803b97c9ce">UniDx::PlayerLoop::checkStart</a></div><div class="ttdeci">void checkStart(GameObject *object)</div><div class="ttdef"><b>Definition</b> PlayerLoop.cpp:297</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_player_loop_html_a2937a9802d6521c05c8c900487e54602"><div class="ttname"><a href="class_uni_dx_1_1_player_loop.html#a2937a9802d6521c05c8c900487e54602">UniDx::PlayerLoop::MainLoop</a></div><div class="ttdeci">virtual int MainLoop()</div><div class="ttdoc">ゲーム全体のメインループ</div><div class="ttdef"><b>Definition</b> PlayerLoop.cpp:77</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_player_loop_html_a2f0ca0eb3d9585d87128d55fb3f5aa8a"><div class="ttname"><a href="class_uni_dx_1_1_player_loop.html#a2f0ca0eb3d9585d87128d55fb3f5aa8a">UniDx::PlayerLoop::physics</a></div><div class="ttdeci">virtual void physics()</div><div class="ttdef"><b>Definition</b> PlayerLoop.cpp:170</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_player_loop_html_a615b7553048e103acb2ae79a9a488d7b"><div class="ttname"><a href="class_uni_dx_1_1_player_loop.html#a615b7553048e103acb2ae79a9a488d7b">UniDx::PlayerLoop::input</a></div><div class="ttdeci">virtual void input()</div><div class="ttdef"><b>Definition</b> PlayerLoop.cpp:177</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_player_loop_html_a7532b47157002845e776066b41a9d842"><div class="ttname"><a href="class_uni_dx_1_1_player_loop.html#a7532b47157002845e776066b41a9d842">UniDx::PlayerLoop::registerCanvas</a></div><div class="ttdeci">void registerCanvas(Canvas *c)</div><div class="ttdef"><b>Definition</b> PlayerLoop.cpp:377</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_player_loop_html_a773b221cdd0df12a260c13a6ce34a2f1"><div class="ttname"><a href="class_uni_dx_1_1_player_loop.html#a773b221cdd0df12a260c13a6ce34a2f1">UniDx::PlayerLoop::lateUpdate</a></div><div class="ttdeci">virtual void lateUpdate()</div><div class="ttdef"><b>Definition</b> PlayerLoop.cpp:201</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_player_loop_html_a7f90c103d5cdbea3caab80f406de13e3"><div class="ttname"><a href="class_uni_dx_1_1_player_loop.html#a7f90c103d5cdbea3caab80f406de13e3">UniDx::PlayerLoop::update</a></div><div class="ttdeci">virtual void update()</div><div class="ttdef"><b>Definition</b> PlayerLoop.cpp:184</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_player_loop_html_ac6a6d4ea37a392c5f40d04284b820c73"><div class="ttname"><a href="class_uni_dx_1_1_player_loop.html#ac6a6d4ea37a392c5f40d04284b820c73">UniDx::PlayerLoop::finalize</a></div><div class="ttdeci">virtual void finalize()</div><div class="ttdef"><b>Definition</b> PlayerLoop.cpp:252</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_player_loop_html_ad1cc186ea308c4ea58c8bf033ee103bd"><div class="ttname"><a href="class_uni_dx_1_1_player_loop.html#ad1cc186ea308c4ea58c8bf033ee103bd">UniDx::PlayerLoop::unregisterCanvas</a></div><div class="ttdeci">void unregisterCanvas(Canvas *c)</div><div class="ttdef"><b>Definition</b> PlayerLoop.cpp:383</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_player_loop_html_ae13e70dec986e249fa1140cefff802b3"><div class="ttname"><a href="class_uni_dx_1_1_player_loop.html#ae13e70dec986e249fa1140cefff802b3">UniDx::PlayerLoop::ProcessKeyboardMessage</a></div><div class="ttdeci">void ProcessKeyboardMessage(UINT message, WPARAM wParam, LPARAM lParam)</div><div class="ttdef"><b>Definition</b> PlayerLoop.h:32</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_player_loop_html_aeade21436e3df164d64bc6e7db226d41"><div class="ttname"><a href="class_uni_dx_1_1_player_loop.html#aeade21436e3df164d64bc6e7db226d41">UniDx::PlayerLoop::render</a></div><div class="ttdeci">virtual void render()</div><div class="ttdef"><b>Definition</b> PlayerLoop.cpp:213</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_player_loop_html_aef8f689e30ba98d1a56dacf2a8850cf8"><div class="ttname"><a href="class_uni_dx_1_1_player_loop.html#aef8f689e30ba98d1a56dacf2a8850cf8">UniDx::PlayerLoop::Initialize</a></div><div class="ttdeci">virtual void Initialize(HWND hWnd)</div><div class="ttdoc">プレイヤーループの初期化。</div><div class="ttdef"><b>Definition</b> PlayerLoop.cpp:37</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_player_loop_html_af48c722d7fcac3d766f6d01752594ec0"><div class="ttname"><a href="class_uni_dx_1_1_player_loop.html#af48c722d7fcac3d766f6d01752594ec0">UniDx::PlayerLoop::awake</a></div><div class="ttdeci">void awake(GameObject *object)</div><div class="ttdef"><b>Definition</b> PlayerLoop.cpp:261</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_singleton_html_aa1d5dc993efef5faa60dc69cb141ae1f"><div class="ttname"><a href="class_uni_dx_1_1_singleton.html#aa1d5dc993efef5faa60dc69cb141ae1f">UniDx::Singleton&lt; PlayerLoop &gt;::Singleton</a></div><div class="ttdeci">Singleton()</div><div class="ttdef"><b>Definition</b> Singleton.h:38</div></div>
+<div class="ttc" id="anamespace_uni_dx_html"><div class="ttname"><a href="namespace_uni_dx.html">UniDx</a></div><div class="ttdef"><b>Definition</b> AnimationCurve.cpp:5</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_450094861a7bbaf444577c849cb4d1c8.html">UniDx</a></li><li class="navelem"><a href="_player_loop_8h.html">PlayerLoop.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

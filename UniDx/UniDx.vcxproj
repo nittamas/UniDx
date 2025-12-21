@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{f3fe9aae-1cc9-459f-b4e9-1a93ac517a8d}</ProjectGuid>
+    <RootNamespace>UniDx</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)\include;$(ProjectDir)\private;$(ProjectDir)\..\external\tinygltf;$(ProjectDir)\..\external\DirectXTK\Inc;$(ProjectDir)\..\external\DirectXTex\DirectXTex</AdditionalIncludeDirectories>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)\include;$(ProjectDir)\private;$(ProjectDir)\..\external\tinygltf;$(ProjectDir)\..\external\DirectXTK\Inc;$(ProjectDir)\..\external\DirectXTex\DirectXTex</AdditionalIncludeDirectories>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\external\tinygltf\tiny_gltf.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="include\UniDx.h" />
+    <ClInclude Include="include\UniDx\AnimationCurve.h" />
+    <ClInclude Include="include\UniDx\Behaviour.h" />
+    <ClInclude Include="include\UniDx\Bounds.h" />
+    <ClInclude Include="include\UniDx\Camera.h" />
+    <ClInclude Include="include\UniDx\Canvas.h" />
+    <ClInclude Include="include\UniDx\Collider.h" />
+    <ClInclude Include="include\UniDx\Collision.h" />
+    <ClInclude Include="include\UniDx\Component.h" />
+    <ClInclude Include="include\UniDx\ConstantBuffer.h" />
+    <ClInclude Include="include\UniDx\D3DManager.h" />
+    <ClInclude Include="include\UniDx\Debug.h" />
+    <ClInclude Include="include\UniDx\PlayerLoop.h" />
+    <ClInclude Include="include\UniDx\Font.h" />
+    <ClInclude Include="include\UniDx\GameObject.h" />
+    <ClInclude Include="include\UniDx\GameObject_impl.h" />
+    <ClInclude Include="include\UniDx\GltfModel.h" />
+    <ClInclude Include="include\UniDx\Image.h" />
+    <ClInclude Include="include\UniDx\Input.h" />
+    <ClInclude Include="include\UniDx\Light.h" />
+    <ClInclude Include="include\UniDx\LightManager.h" />
+    <ClInclude Include="include\UniDx\Material.h" />
+    <ClInclude Include="include\UniDx\Math.h" />
+    <ClInclude Include="include\UniDx\Mesh.h" />
+    <ClInclude Include="include\UniDx\Object.h" />
+    <ClInclude Include="include\UniDx\Physics.h" />
+    <ClInclude Include="include\UniDx\PrimitiveRenderer.h" />
+    <ClInclude Include="include\UniDx\Property.h" />
+    <ClInclude Include="include\UniDx\Random.h" />
+    <ClInclude Include="include\UniDx\Renderer.h" />
+    <ClInclude Include="include\UniDx\Rigidbody.h" />
+    <ClInclude Include="include\UniDx\Scene.h" />
+    <ClInclude Include="include\UniDx\SceneManager.h" />
+    <ClInclude Include="include\UniDx\Shader.h" />
+    <ClInclude Include="include\UniDx\Singleton.h" />
+    <ClInclude Include="include\UniDx\Sphere.h" />
+    <ClInclude Include="include\UniDx\TextMesh.h" />
+    <ClInclude Include="include\UniDx\Texture.h" />
+    <ClInclude Include="include\UniDx\Time.h" />
+    <ClInclude Include="include\UniDx\Transform.h" />
+    <ClInclude Include="include\UniDx\UIBehaviour.h" />
+    <ClInclude Include="include\UniDx\UniDx.h" />
+    <ClInclude Include="include\UniDx\UniDxDefine.h" />
+    <ClInclude Include="private\pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\external\tinygltf\tiny_gltf.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\AnimationCurve.cpp" />
+    <ClCompile Include="src\Camera.cpp" />
+    <ClCompile Include="src\Canvas.cpp" />
+    <ClCompile Include="src\Collider.cpp" />
+    <ClCompile Include="src\Component.cpp" />
+    <ClCompile Include="src\D3DManager.cpp" />
+    <ClCompile Include="src\PlayerLoop.cpp" />
+    <ClCompile Include="src\Font.cpp" />
+    <ClCompile Include="src\GameObject.cpp" />
+    <ClCompile Include="src\GltfModel.cpp" />
+    <ClCompile Include="src\Image.cpp" />
+    <ClCompile Include="src\Input.cpp" />
+    <ClCompile Include="src\Light.cpp" />
+    <ClCompile Include="src\LightManager.cpp" />
+    <ClCompile Include="src\Material.cpp" />
+    <ClCompile Include="src\Math.cpp" />
+    <ClCompile Include="src\Mesh.cpp" />
+    <ClCompile Include="src\pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\Physics.cpp" />
+    <ClCompile Include="src\PrimitiveRenderer.cpp" />
+    <ClCompile Include="src\Renderer.cpp" />
+    <ClCompile Include="src\SceneManager.cpp" />
+    <ClCompile Include="src\Shader.cpp" />
+    <ClCompile Include="src\TextMesh.cpp" />
+    <ClCompile Include="src\Texture.cpp" />
+    <ClCompile Include="src\Transform.cpp" />
+    <ClCompile Include="src\UIBehaviour.cpp" />
+    <ClCompile Include="src\UniDx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Doxyfile" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

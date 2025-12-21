@@ -1,0 +1,567 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UniDx: UniDx::Quaternion 構造体</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UniDx
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('struct_uni_dx_1_1_quaternion.html','','struct_uni_dx_1_1_quaternion-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">UniDx::Quaternion 構造体</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>クォータニオン (回転表現)  
+ <a href="#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_math_8h_source.html">Math.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a4f37a53499999688a674b6b919f9d649" id="r_a4f37a53499999688a674b6b919f9d649"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f37a53499999688a674b6b919f9d649">Quaternion</a> () noexcept</td></tr>
+<tr class="memitem:aaf9183f8dc9903541ec92ac5fa0a1f64" id="r_aaf9183f8dc9903541ec92ac5fa0a1f64"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf9183f8dc9903541ec92ac5fa0a1f64">Quaternion</a> (float ix, float iy, float iz, float iw) noexcept</td></tr>
+<tr class="memitem:ac1e8371e96fc42ae4047f1f49deda565" id="r_ac1e8371e96fc42ae4047f1f49deda565"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1e8371e96fc42ae4047f1f49deda565">Quaternion</a> (const DirectX::XMFLOAT4 &amp;V) noexcept</td></tr>
+<tr class="memitem:a59d8fb3d8cc07b0ff9b110bc2d1529de" id="r_a59d8fb3d8cc07b0ff9b110bc2d1529de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59d8fb3d8cc07b0ff9b110bc2d1529de">Quaternion</a> (const DirectX::XMVECTOR &amp;v)</td></tr>
+<tr class="memitem:ab7ff8601aecd5ca10903f48dc5359dfc" id="r_ab7ff8601aecd5ca10903f48dc5359dfc"><td class="memItemLeft" align="right" valign="top">const DirectX::XMVECTOR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7ff8601aecd5ca10903f48dc5359dfc">XMLoad</a> () const</td></tr>
+<tr class="memitem:a36b01f1cd1baf0695e9723078f358e9a" id="r_a36b01f1cd1baf0695e9723078f358e9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36b01f1cd1baf0695e9723078f358e9a">XMStore</a> (const DirectX::XMVECTOR &amp;v)</td></tr>
+<tr class="memitem:a9a906808ea90bf1448f08b903460c2c4" id="r_a9a906808ea90bf1448f08b903460c2c4"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#a4f37a53499999688a674b6b919f9d649">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a906808ea90bf1448f08b903460c2c4">operator+</a> () const noexcept</td></tr>
+<tr class="memitem:afec180a55d274c48c260aa221104e128" id="r_afec180a55d274c48c260aa221104e128"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#a4f37a53499999688a674b6b919f9d649">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afec180a55d274c48c260aa221104e128">operator-</a> () const noexcept</td></tr>
+<tr class="memitem:abf7563140bccc0251efdcf38b2c9dff2" id="r_abf7563140bccc0251efdcf38b2c9dff2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf7563140bccc0251efdcf38b2c9dff2">operator DirectX::XMFLOAT4 &amp;</a> ()</td></tr>
+<tr class="memitem:a0bf67fa63d9186e7e60bf6ef737203c0" id="r_a0bf67fa63d9186e7e60bf6ef737203c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0bf67fa63d9186e7e60bf6ef737203c0">operator const DirectX::XMFLOAT4 &amp;</a> () const</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a84700ed3bbef9db9d414ae7146404870" id="r_a84700ed3bbef9db9d414ae7146404870"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a4f37a53499999688a674b6b919f9d649">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84700ed3bbef9db9d414ae7146404870">AngleAxis</a> (float degree, <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> axis)</td></tr>
+<tr class="memdesc:a84700ed3bbef9db9d414ae7146404870"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定軸・角度からクォータニオンを生成（度指定）  <br /></td></tr>
+<tr class="memitem:ae018e9d637bf873a174185ddd0309e65" id="r_ae018e9d637bf873a174185ddd0309e65"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a4f37a53499999688a674b6b919f9d649">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae018e9d637bf873a174185ddd0309e65">Euler</a> (float pitchDegree, float yawDegree, float rollDegree) noexcept</td></tr>
+<tr class="memdesc:ae018e9d637bf873a174185ddd0309e65"><td class="mdescLeft">&#160;</td><td class="mdescRight">オイラー角（度）からクォータニオンを生成（Z-&gt;X-&gt;Y の順で合成）  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a64dd6607cb4a33c96bafe823a41eb7e1" id="r_a64dd6607cb4a33c96bafe823a41eb7e1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64dd6607cb4a33c96bafe823a41eb7e1">x</a></td></tr>
+<tr class="memitem:a0f4d7a04158344e2a959ec66a7e364a2" id="r_a0f4d7a04158344e2a959ec66a7e364a2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f4d7a04158344e2a959ec66a7e364a2">y</a></td></tr>
+<tr class="memitem:a302835267b4f2cd9acac0121f6c41d90" id="r_a302835267b4f2cd9acac0121f6c41d90"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a302835267b4f2cd9acac0121f6c41d90">z</a></td></tr>
+<tr class="memitem:a095368e2341fc06c671b1100f8f0f38e" id="r_a095368e2341fc06c671b1100f8f0f38e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a095368e2341fc06c671b1100f8f0f38e">w</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静的公開変数類</h2></td></tr>
+<tr class="memitem:adb8ce6b2960a1bde5b23b11271f0501c" id="r_adb8ce6b2960a1bde5b23b11271f0501c"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="#a4f37a53499999688a674b6b919f9d649">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb8ce6b2960a1bde5b23b11271f0501c">identity</a> = <a class="el" href="#a4f37a53499999688a674b6b919f9d649">Quaternion</a>(0.f, 0.f, 0.f, 1.f)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>クォータニオン (回転表現) </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
+<a id="a4f37a53499999688a674b6b919f9d649" name="a4f37a53499999688a674b6b919f9d649"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f37a53499999688a674b6b919f9d649">&#9670;&#160;</a></span>Quaternion() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UniDx::Quaternion::Quaternion </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf9183f8dc9903541ec92ac5fa0a1f64" name="aaf9183f8dc9903541ec92ac5fa0a1f64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf9183f8dc9903541ec92ac5fa0a1f64">&#9670;&#160;</a></span>Quaternion() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UniDx::Quaternion::Quaternion </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>ix</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>iy</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>iz</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>iw</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac1e8371e96fc42ae4047f1f49deda565" name="ac1e8371e96fc42ae4047f1f49deda565"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1e8371e96fc42ae4047f1f49deda565">&#9670;&#160;</a></span>Quaternion() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UniDx::Quaternion::Quaternion </td>
+          <td>(</td>
+          <td class="paramtype">const DirectX::XMFLOAT4 &amp;</td>          <td class="paramname"><span class="paramname"><em>V</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a59d8fb3d8cc07b0ff9b110bc2d1529de" name="a59d8fb3d8cc07b0ff9b110bc2d1529de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59d8fb3d8cc07b0ff9b110bc2d1529de">&#9670;&#160;</a></span>Quaternion() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UniDx::Quaternion::Quaternion </td>
+          <td>(</td>
+          <td class="paramtype">const DirectX::XMVECTOR &amp;</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="a84700ed3bbef9db9d414ae7146404870" name="a84700ed3bbef9db9d414ae7146404870"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84700ed3bbef9db9d414ae7146404870">&#9670;&#160;</a></span>AngleAxis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a4f37a53499999688a674b6b919f9d649">Quaternion</a> UniDx::Quaternion::AngleAxis </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>degree</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a></td>          <td class="paramname"><span class="paramname"><em>axis</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指定軸・角度からクォータニオンを生成（度指定） </p>
+
+</div>
+</div>
+<a id="ae018e9d637bf873a174185ddd0309e65" name="ae018e9d637bf873a174185ddd0309e65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae018e9d637bf873a174185ddd0309e65">&#9670;&#160;</a></span>Euler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a4f37a53499999688a674b6b919f9d649">Quaternion</a> UniDx::Quaternion::Euler </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>pitchDegree</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>yawDegree</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>rollDegree</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>オイラー角（度）からクォータニオンを生成（Z-&gt;X-&gt;Y の順で合成） </p>
+
+</div>
+</div>
+<a id="a0bf67fa63d9186e7e60bf6ef737203c0" name="a0bf67fa63d9186e7e60bf6ef737203c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bf67fa63d9186e7e60bf6ef737203c0">&#9670;&#160;</a></span>operator const DirectX::XMFLOAT4 &amp;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UniDx::Quaternion::operator const DirectX::XMFLOAT4 &amp; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf7563140bccc0251efdcf38b2c9dff2" name="abf7563140bccc0251efdcf38b2c9dff2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf7563140bccc0251efdcf38b2c9dff2">&#9670;&#160;</a></span>operator DirectX::XMFLOAT4 &amp;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UniDx::Quaternion::operator DirectX::XMFLOAT4 &amp; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9a906808ea90bf1448f08b903460c2c4" name="a9a906808ea90bf1448f08b903460c2c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a906808ea90bf1448f08b903460c2c4">&#9670;&#160;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a4f37a53499999688a674b6b919f9d649">Quaternion</a> UniDx::Quaternion::operator+ </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afec180a55d274c48c260aa221104e128" name="afec180a55d274c48c260aa221104e128"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afec180a55d274c48c260aa221104e128">&#9670;&#160;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a4f37a53499999688a674b6b919f9d649">Quaternion</a> UniDx::Quaternion::operator- </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab7ff8601aecd5ca10903f48dc5359dfc" name="ab7ff8601aecd5ca10903f48dc5359dfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7ff8601aecd5ca10903f48dc5359dfc">&#9670;&#160;</a></span>XMLoad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const DirectX::XMVECTOR UniDx::Quaternion::XMLoad </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a36b01f1cd1baf0695e9723078f358e9a" name="a36b01f1cd1baf0695e9723078f358e9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36b01f1cd1baf0695e9723078f358e9a">&#9670;&#160;</a></span>XMStore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UniDx::Quaternion::XMStore </td>
+          <td>(</td>
+          <td class="paramtype">const DirectX::XMVECTOR &amp;</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">メンバ詳解</h2>
+<a id="adb8ce6b2960a1bde5b23b11271f0501c" name="adb8ce6b2960a1bde5b23b11271f0501c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb8ce6b2960a1bde5b23b11271f0501c">&#9670;&#160;</a></span>identity</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="#a4f37a53499999688a674b6b919f9d649">Quaternion</a> UniDx::Quaternion::identity = <a class="el" href="#a4f37a53499999688a674b6b919f9d649">Quaternion</a>(0.f, 0.f, 0.f, 1.f)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a095368e2341fc06c671b1100f8f0f38e" name="a095368e2341fc06c671b1100f8f0f38e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a095368e2341fc06c671b1100f8f0f38e">&#9670;&#160;</a></span>w</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UniDx::Quaternion::w</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64dd6607cb4a33c96bafe823a41eb7e1" name="a64dd6607cb4a33c96bafe823a41eb7e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64dd6607cb4a33c96bafe823a41eb7e1">&#9670;&#160;</a></span>x</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UniDx::Quaternion::x</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f4d7a04158344e2a959ec66a7e364a2" name="a0f4d7a04158344e2a959ec66a7e364a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f4d7a04158344e2a959ec66a7e364a2">&#9670;&#160;</a></span>y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UniDx::Quaternion::y</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a302835267b4f2cd9acac0121f6c41d90" name="a302835267b4f2cd9acac0121f6c41d90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a302835267b4f2cd9acac0121f6c41d90">&#9670;&#160;</a></span>z</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UniDx::Quaternion::z</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>この構造体詳解は次のファイルから抽出されました:<ul>
+<li>include/UniDx/<a class="el" href="_math_8h_source.html">Math.h</a></li>
+<li>src/<a class="el" href="_math_8cpp.html">Math.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_uni_dx.html">UniDx</a></li><li class="navelem"><a href="struct_uni_dx_1_1_quaternion.html">Quaternion</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

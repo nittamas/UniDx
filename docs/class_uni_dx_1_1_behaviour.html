@@ -1,0 +1,484 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UniDx: UniDx::Behaviour クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UniDx
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_uni_dx_1_1_behaviour.html','','class_uni_dx_1_1_behaviour-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">UniDx::Behaviour クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_behaviour_8h_source.html">Behaviour.h</a>&gt;</code></p>
+<div class="dynheader">
+UniDx::Behaviour の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_uni_dx_1_1_behaviour.png" usemap="#UniDx_3A_3ABehaviour_map" alt=""/>
+  <map id="UniDx_3A_3ABehaviour_map" name="UniDx_3A_3ABehaviour_map">
+<area href="class_uni_dx_1_1_component.html" alt="UniDx::Component" shape="rect" coords="195,56,315,80"/>
+<area href="class_uni_dx_1_1_object.html" alt="UniDx::Object" shape="rect" coords="195,0,315,24"/>
+<area href="class_uni_dx_1_1_camera.html" alt="UniDx::Camera" shape="rect" coords="0,168,120,192"/>
+<area href="class_uni_dx_1_1_canvas.html" alt="UniDx::Canvas" shape="rect" coords="130,168,250,192"/>
+<area href="class_uni_dx_1_1_light.html" alt="UniDx::Light" shape="rect" coords="260,168,380,192"/>
+<area href="class_uni_dx_1_1_u_i_behaviour.html" alt="UniDx::UIBehaviour" shape="rect" coords="390,168,510,192"/>
+<area href="class_uni_dx_1_1_image.html" alt="UniDx::Image" shape="rect" coords="325,224,445,248"/>
+<area href="class_uni_dx_1_1_text_mesh.html" alt="UniDx::TextMesh" shape="rect" coords="455,224,575,248"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a990e72e9ecb26dc3d30760b4b4f8067d" id="r_a990e72e9ecb26dc3d30760b4b4f8067d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a990e72e9ecb26dc3d30760b4b4f8067d">FixedUpdate</a> ()</td></tr>
+<tr class="memitem:aaefe205010428d553a3c109f00f05e72" id="r_aaefe205010428d553a3c109f00f05e72"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaefe205010428d553a3c109f00f05e72">Update</a> ()</td></tr>
+<tr class="memitem:aac3041c77784ece5b823d6c2c357d1ed" id="r_aac3041c77784ece5b823d6c2c357d1ed"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac3041c77784ece5b823d6c2c357d1ed">LateUpdate</a> ()</td></tr>
+<tr class="memitem:ad2ec50f64efd37663352ea86a88ee795" id="r_ad2ec50f64efd37663352ea86a88ee795"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2ec50f64efd37663352ea86a88ee795">OnTriggerEnter</a> (<a class="el" href="class_uni_dx_1_1_collider.html">Collider</a> *other)</td></tr>
+<tr class="memitem:ac4c70446ad25e4e9da46ffa4b740afae" id="r_ac4c70446ad25e4e9da46ffa4b740afae"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4c70446ad25e4e9da46ffa4b740afae">OnTriggerStay</a> (<a class="el" href="class_uni_dx_1_1_collider.html">Collider</a> *other)</td></tr>
+<tr class="memitem:a43d738c6fe11481e39295e53976b8fe5" id="r_a43d738c6fe11481e39295e53976b8fe5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43d738c6fe11481e39295e53976b8fe5">OnTriggerExit</a> (<a class="el" href="class_uni_dx_1_1_collider.html">Collider</a> *other)</td></tr>
+<tr class="memitem:aa8fe49408ba48977e21d6087201ab82e" id="r_aa8fe49408ba48977e21d6087201ab82e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8fe49408ba48977e21d6087201ab82e">OnCollisionEnter</a> (const <a class="el" href="struct_uni_dx_1_1_collision.html">Collision</a> &amp;collision)</td></tr>
+<tr class="memitem:a289058a56e928a3afe5c26da087f4037" id="r_a289058a56e928a3afe5c26da087f4037"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a289058a56e928a3afe5c26da087f4037">OnCollisionStay</a> (const <a class="el" href="struct_uni_dx_1_1_collision.html">Collision</a> &amp;collision)</td></tr>
+<tr class="memitem:a85a896b4db1a1b2626d2fa4ca67f2f37" id="r_a85a896b4db1a1b2626d2fa4ca67f2f37"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85a896b4db1a1b2626d2fa4ca67f2f37">OnCollisionExit</a> (const <a class="el" href="struct_uni_dx_1_1_collision.html">Collision</a> &amp;collision)</td></tr>
+<tr class="memitem:a89e36d9a23d7ba3e9a6aee18f70bbc7c" id="r_a89e36d9a23d7ba3e9a6aee18f70bbc7c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89e36d9a23d7ba3e9a6aee18f70bbc7c">~Behaviour</a> ()=default</td></tr>
+<tr class="memitem:a633b22a599fff5082e4e107f02910765" id="r_a633b22a599fff5082e4e107f02910765"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a633b22a599fff5082e4e107f02910765 template"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a633b22a599fff5082e4e107f02910765">GetComponent</a> (bool includeInactive=false) const</td></tr>
+<tr class="memitem:a6d8c1bd91dcc06e85c2a498654517d5c" id="r_a6d8c1bd91dcc06e85c2a498654517d5c"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a6d8c1bd91dcc06e85c2a498654517d5c template"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d8c1bd91dcc06e85c2a498654517d5c">GetComponentInParent</a> (bool includeInactive=false) const</td></tr>
+<tr class="inherit_header pub_methods_class_uni_dx_1_1_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_uni_dx_1_1_component')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_uni_dx_1_1_component.html">UniDx::Component</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:ae3cb179a3188fce84a0c18df712904f8 inherit pub_methods_class_uni_dx_1_1_component" id="r_ae3cb179a3188fce84a0c18df712904f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#ae3cb179a3188fce84a0c18df712904f8">checkAwake</a> ()</td></tr>
+<tr class="memitem:a3bd90e124c7a14c73b2899adaf2b92cb inherit pub_methods_class_uni_dx_1_1_component" id="r_a3bd90e124c7a14c73b2899adaf2b92cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#a3bd90e124c7a14c73b2899adaf2b92cb">checkStart</a> ()</td></tr>
+<tr class="memitem:adfaad805015736afd6d469fab365eceb inherit pub_methods_class_uni_dx_1_1_component" id="r_adfaad805015736afd6d469fab365eceb"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#adfaad805015736afd6d469fab365eceb">~Component</a> ()</td></tr>
+<tr class="inherit_header pub_methods_class_uni_dx_1_1_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_uni_dx_1_1_object')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_uni_dx_1_1_object.html">UniDx::Object</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:af1f20702fde9b535a83a02a5f8663fec inherit pub_methods_class_uni_dx_1_1_object" id="r_af1f20702fde9b535a83a02a5f8663fec"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_object.html#af1f20702fde9b535a83a02a5f8663fec">~Object</a> ()</td></tr>
+<tr class="memitem:a8105112b7931a0c380dfe004d3efc959 inherit pub_methods_class_uni_dx_1_1_object" id="r_a8105112b7931a0c380dfe004d3efc959"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_object.html#a8105112b7931a0c380dfe004d3efc959">Object</a> (<a class="el" href="class_uni_dx_1_1_read_only_property.html">ReadOnlyProperty</a>&lt; wstring_view &gt;<a class="el" href="class_uni_dx_1_1_read_only_property.html">::Getter</a> nameGet)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pub_attribs_class_uni_dx_1_1_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_uni_dx_1_1_component')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_uni_dx_1_1_component.html">UniDx::Component</a> に属する継承公開変数類</td></tr>
+<tr class="memitem:a86927d102e6bca3cf6e222accbba3519 inherit pub_attribs_class_uni_dx_1_1_component" id="r_a86927d102e6bca3cf6e222accbba3519"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_uni_dx_1_1_property.html">Property</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#a86927d102e6bca3cf6e222accbba3519">enabled</a></td></tr>
+<tr class="memitem:ac0c376f02458a8e1f3ed23ccc8299eab inherit pub_attribs_class_uni_dx_1_1_component" id="r_ac0c376f02458a8e1f3ed23ccc8299eab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_uni_dx_1_1_read_only_property.html">ReadOnlyProperty</a>&lt; <a class="el" href="class_uni_dx_1_1_transform.html">Transform</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#ac0c376f02458a8e1f3ed23ccc8299eab">transform</a></td></tr>
+<tr class="memitem:a8b7c735570cdb78e7a9a400649d1b32f inherit pub_attribs_class_uni_dx_1_1_component" id="r_a8b7c735570cdb78e7a9a400649d1b32f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_uni_dx_1_1_game_object.html">GameObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#a8b7c735570cdb78e7a9a400649d1b32f">gameObject</a> = nullptr</td></tr>
+<tr class="inherit_header pub_attribs_class_uni_dx_1_1_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_uni_dx_1_1_object')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_uni_dx_1_1_object.html">UniDx::Object</a> に属する継承公開変数類</td></tr>
+<tr class="memitem:a462b80cab72539ae5a42e9f39b479ff8 inherit pub_attribs_class_uni_dx_1_1_object" id="r_a462b80cab72539ae5a42e9f39b479ff8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_uni_dx_1_1_read_only_property.html">ReadOnlyProperty</a>&lt; wstring_view &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_object.html#a462b80cab72539ae5a42e9f39b479ff8">name</a></td></tr>
+<tr class="inherit_header pro_methods_class_uni_dx_1_1_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_uni_dx_1_1_component')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_uni_dx_1_1_component.html">UniDx::Component</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:ade9bdf0c41f0485c3b46df47f074b48e inherit pro_methods_class_uni_dx_1_1_component" id="r_ade9bdf0c41f0485c3b46df47f074b48e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#ade9bdf0c41f0485c3b46df47f074b48e">Awake</a> ()</td></tr>
+<tr class="memitem:afbb63a49fcd4c32476bf7b8875f8b9fd inherit pro_methods_class_uni_dx_1_1_component" id="r_afbb63a49fcd4c32476bf7b8875f8b9fd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#afbb63a49fcd4c32476bf7b8875f8b9fd">Start</a> ()</td></tr>
+<tr class="memitem:a7d3ef4ec15fbe5fe132aa5584f4a8bc3 inherit pro_methods_class_uni_dx_1_1_component" id="r_a7d3ef4ec15fbe5fe132aa5584f4a8bc3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#a7d3ef4ec15fbe5fe132aa5584f4a8bc3">OnEnable</a> ()</td></tr>
+<tr class="memitem:a264bd15403e3a0d6c1f5bbb6b54d73f8 inherit pro_methods_class_uni_dx_1_1_component" id="r_a264bd15403e3a0d6c1f5bbb6b54d73f8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#a264bd15403e3a0d6c1f5bbb6b54d73f8">OnDisable</a> ()</td></tr>
+<tr class="memitem:a6f93d15a2634fb75aa500d192f1550b9 inherit pro_methods_class_uni_dx_1_1_component" id="r_a6f93d15a2634fb75aa500d192f1550b9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#a6f93d15a2634fb75aa500d192f1550b9">OnDestroy</a> ()</td></tr>
+<tr class="memitem:a6d0d42ab64e09768b102e1621ce72f0e inherit pro_methods_class_uni_dx_1_1_component" id="r_a6d0d42ab64e09768b102e1621ce72f0e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#a6d0d42ab64e09768b102e1621ce72f0e">Component</a> ()</td></tr>
+<tr class="inherit_header pro_attribs_class_uni_dx_1_1_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_uni_dx_1_1_component')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_uni_dx_1_1_component.html">UniDx::Component</a> に属する継承限定公開変数類</td></tr>
+<tr class="memitem:a1be773279b79168c81a7b25d76c1476d inherit pro_attribs_class_uni_dx_1_1_component" id="r_a1be773279b79168c81a7b25d76c1476d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#a1be773279b79168c81a7b25d76c1476d">isCalledAwake</a></td></tr>
+<tr class="memitem:a25f03307ef83efdf1853475790f0c800 inherit pro_attribs_class_uni_dx_1_1_component" id="r_a25f03307ef83efdf1853475790f0c800"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#a25f03307ef83efdf1853475790f0c800">isCalledStart</a></td></tr>
+<tr class="memitem:a8cfe2aff82c20453058c9b3c607907d0 inherit pro_attribs_class_uni_dx_1_1_component" id="r_a8cfe2aff82c20453058c9b3c607907d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#a8cfe2aff82c20453058c9b3c607907d0">_enabled</a></td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
+<a id="a89e36d9a23d7ba3e9a6aee18f70bbc7c" name="a89e36d9a23d7ba3e9a6aee18f70bbc7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89e36d9a23d7ba3e9a6aee18f70bbc7c">&#9670;&#160;</a></span>~Behaviour()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual UniDx::Behaviour::~Behaviour </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="a990e72e9ecb26dc3d30760b4b4f8067d" name="a990e72e9ecb26dc3d30760b4b4f8067d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a990e72e9ecb26dc3d30760b4b4f8067d">&#9670;&#160;</a></span>FixedUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void UniDx::Behaviour::FixedUpdate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a633b22a599fff5082e4e107f02910765" name="a633b22a599fff5082e4e107f02910765"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a633b22a599fff5082e4e107f02910765">&#9670;&#160;</a></span>GetComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T * UniDx::Behaviour::GetComponent </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>includeInactive</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d8c1bd91dcc06e85c2a498654517d5c" name="a6d8c1bd91dcc06e85c2a498654517d5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d8c1bd91dcc06e85c2a498654517d5c">&#9670;&#160;</a></span>GetComponentInParent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T * UniDx::Behaviour::GetComponentInParent </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>includeInactive</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac3041c77784ece5b823d6c2c357d1ed" name="aac3041c77784ece5b823d6c2c357d1ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac3041c77784ece5b823d6c2c357d1ed">&#9670;&#160;</a></span>LateUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void UniDx::Behaviour::LateUpdate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa8fe49408ba48977e21d6087201ab82e" name="aa8fe49408ba48977e21d6087201ab82e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8fe49408ba48977e21d6087201ab82e">&#9670;&#160;</a></span>OnCollisionEnter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void UniDx::Behaviour::OnCollisionEnter </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_uni_dx_1_1_collision.html">Collision</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>collision</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a85a896b4db1a1b2626d2fa4ca67f2f37" name="a85a896b4db1a1b2626d2fa4ca67f2f37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85a896b4db1a1b2626d2fa4ca67f2f37">&#9670;&#160;</a></span>OnCollisionExit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void UniDx::Behaviour::OnCollisionExit </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_uni_dx_1_1_collision.html">Collision</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>collision</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a289058a56e928a3afe5c26da087f4037" name="a289058a56e928a3afe5c26da087f4037"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a289058a56e928a3afe5c26da087f4037">&#9670;&#160;</a></span>OnCollisionStay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void UniDx::Behaviour::OnCollisionStay </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_uni_dx_1_1_collision.html">Collision</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>collision</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad2ec50f64efd37663352ea86a88ee795" name="ad2ec50f64efd37663352ea86a88ee795"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2ec50f64efd37663352ea86a88ee795">&#9670;&#160;</a></span>OnTriggerEnter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void UniDx::Behaviour::OnTriggerEnter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_uni_dx_1_1_collider.html">Collider</a> *</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a43d738c6fe11481e39295e53976b8fe5" name="a43d738c6fe11481e39295e53976b8fe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43d738c6fe11481e39295e53976b8fe5">&#9670;&#160;</a></span>OnTriggerExit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void UniDx::Behaviour::OnTriggerExit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_uni_dx_1_1_collider.html">Collider</a> *</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac4c70446ad25e4e9da46ffa4b740afae" name="ac4c70446ad25e4e9da46ffa4b740afae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4c70446ad25e4e9da46ffa4b740afae">&#9670;&#160;</a></span>OnTriggerStay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void UniDx::Behaviour::OnTriggerStay </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_uni_dx_1_1_collider.html">Collider</a> *</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaefe205010428d553a3c109f00f05e72" name="aaefe205010428d553a3c109f00f05e72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaefe205010428d553a3c109f00f05e72">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void UniDx::Behaviour::Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>include/UniDx/<a class="el" href="_behaviour_8h_source.html">Behaviour.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_uni_dx.html">UniDx</a></li><li class="navelem"><a href="class_uni_dx_1_1_behaviour.html">Behaviour</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

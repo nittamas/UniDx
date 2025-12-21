@@ -1,0 +1,465 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UniDx: include/UniDx/Mesh.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UniDx
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_mesh_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Mesh.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_mesh_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;span&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;d3d11.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_object_8h.html">Object.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="_property_8h.html">Property.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="_shader_8h.html">Shader.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_uni_dx.html">UniDx</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">class </span><a class="code hl_class" href="class_uni_dx_1_1_camera.html">Camera</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">class </span><a class="code hl_class" href="class_uni_dx_1_1_texture.html">Texture</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">// --------------------</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">// SubMesh構造体</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">// --------------------</span></div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_sub_mesh.html">   22</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_uni_dx_1_1_sub_mesh.html">SubMesh</a></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_sub_mesh.html#a7406ef7f75feba9705a65f39a3316f62">   24</a></span>    D3D11_PRIMITIVE_TOPOLOGY <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a7406ef7f75feba9705a65f39a3316f62">topology</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_sub_mesh.html#a843da84dda0e238d8de72bb0c9e20698">   26</a></span>    std::span&lt;const Vector3&gt; <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a843da84dda0e238d8de72bb0c9e20698">positions</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_sub_mesh.html#a3efcc2babb70bf904f7206627e63ad56">   27</a></span>    std::span&lt;const Vector3&gt; <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a3efcc2babb70bf904f7206627e63ad56">normals</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_sub_mesh.html#a147b2d750dcd6cd9363ec18457f81d2e">   28</a></span>    std::span&lt;const Color&gt; <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a147b2d750dcd6cd9363ec18457f81d2e">colors</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_sub_mesh.html#a5db00745a692f4c40b186cfab36394b9">   29</a></span>    std::span&lt;const Vector2&gt; <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a5db00745a692f4c40b186cfab36394b9">uv</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_sub_mesh.html#a26863ce7718faaafbc98e61228077567">   30</a></span>    std::span&lt;const Vector2&gt; <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a26863ce7718faaafbc98e61228077567">uv2</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_sub_mesh.html#a7c9ecd78db63d17aa3a79f32e69a8a05">   31</a></span>    std::span&lt;const Vector2&gt; <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a7c9ecd78db63d17aa3a79f32e69a8a05">uv3</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_sub_mesh.html#aa6766215271e05485b5fa85fe0180bd2">   32</a></span>    std::span&lt;const Vector2&gt; <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#aa6766215271e05485b5fa85fe0180bd2">uv4</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_sub_mesh.html#ab0bd8520efa21d5f25797dda8388d9da">   33</a></span>    std::span&lt;const uint32_t&gt; <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#ab0bd8520efa21d5f25797dda8388d9da">indices</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_sub_mesh.html#ae25b48e69d137bd05266247c605afa44">   35</a></span>    ComPtr&lt;ID3D11Buffer&gt; <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#ae25b48e69d137bd05266247c605afa44">vertexBuffer</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_sub_mesh.html#a8e8ec9eed2a1155ad681c51541a9a1df">   36</a></span>    ComPtr&lt;ID3D11Buffer&gt; <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a8e8ec9eed2a1155ad681c51541a9a1df">indexBuffer</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_sub_mesh.html#a5a8e3dd8197b9373069844c65ce37026">   38</a></span>    UINT <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a5a8e3dd8197b9373069844c65ce37026">stride</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TVertex&gt;</div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_sub_mesh.html#a69f96589a5b636a499c993e3076667bf">   41</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_function" href="struct_uni_dx_1_1_sub_mesh.html#a69f96589a5b636a499c993e3076667bf">copyTo</a>(std::span&lt;TVertex&gt; vertex)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        assert(vertex.size() &gt;= <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a843da84dda0e238d8de72bb0c9e20698">positions</a>.size());</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="comment">// 位置のコピー</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a843da84dda0e238d8de72bb0c9e20698">positions</a>.size(); ++i)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            vertex[i].setPosition(<a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a843da84dda0e238d8de72bb0c9e20698">positions</a>[i]);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="comment">// 法線のコピー</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <a class="code hl_function" href="struct_uni_dx_1_1_sub_mesh.html#a472b5c67216e96c78e36e9199adc5c62">copyNormalTo</a>(vertex);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="comment">// カラーのコピー</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_function" href="struct_uni_dx_1_1_sub_mesh.html#ae3c7331e058f12ebd500df334ee30875">copyColorTo</a>(vertex);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="comment">// uvのコピー</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <a class="code hl_function" href="struct_uni_dx_1_1_sub_mesh.html#a74aa140c86ff5d28af9f2b67a6fd1382">copyUVTo</a>(vertex);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <a class="code hl_function" href="struct_uni_dx_1_1_sub_mesh.html#afd2548ddc76615419c035c5cd93c9e37">copyUV2To</a>(vertex);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <a class="code hl_function" href="struct_uni_dx_1_1_sub_mesh.html#a959189bb5b7e9d6e21ddc1c5b92dcae4">copyUV3To</a>(vertex);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_function" href="struct_uni_dx_1_1_sub_mesh.html#ac8ad5f71d24a424c2f102e21580b176e">copyUV4To</a>(vertex);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a843da84dda0e238d8de72bb0c9e20698">positions</a>.size();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
+</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="comment">// ID3D11Bufferの頂点バッファとインデックスバッファを作成</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="comment">// 戻ったバッファは破棄しても良い（DirectX12では仕様が変わる）</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TVertex&gt;</div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_sub_mesh.html#abec0090a3d5169a40a63d12290560c3b">   68</a></span>    std::unique_ptr&lt; std::vector&lt;TVertex&gt; &gt; <a class="code hl_function" href="struct_uni_dx_1_1_sub_mesh.html#abec0090a3d5169a40a63d12290560c3b">createBuffer</a>()</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="comment">// メモリ上に頂点を確保</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        std::unique_ptr &lt; std::vector&lt;TVertex&gt; &gt; buf = std::make_unique&lt; std::vector&lt;TVertex&gt; &gt;();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        buf-&gt;resize(<a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a843da84dda0e238d8de72bb0c9e20698">positions</a>.size());</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="comment">// 確保したメモリに各属性データをコピー</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_function" href="struct_uni_dx_1_1_sub_mesh.html#a69f96589a5b636a499c993e3076667bf">copyTo</a>(std::span&lt;TVertex&gt;(*buf));</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="comment">// ID3D11Buffer を作成</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a5a8e3dd8197b9373069844c65ce37026">stride</a> = <span class="keyword">sizeof</span>(TVertex);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <a class="code hl_function" href="struct_uni_dx_1_1_sub_mesh.html#ac39546b4e910bdbf30382def2683e49f">createVertexBuffer</a>(&amp;buf-&gt;front());</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="comment">// インデックスが設定されていればバッファを作成</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#ab0bd8520efa21d5f25797dda8388d9da">indices</a>.size() &gt; 0)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <a class="code hl_function" href="struct_uni_dx_1_1_sub_mesh.html#a2e8b49751b4c3f1010c6aaafdc43e767">createIndexBuffer</a>();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="comment">// メモリ上のデータを返す。DirextX11では即座に開放して良い</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordflow">return</span> buf;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
+</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TVertex, <span class="keyword">typename</span> F&gt;</div>
+<div class="foldopen" id="foldopen00090" data-start="{" data-end="}">
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_sub_mesh.html#a3318fdf444b933420b34c1aff07ee4e7">   90</a></span>    std::unique_ptr&lt; std::vector&lt;TVertex&gt; &gt; <a class="code hl_function" href="struct_uni_dx_1_1_sub_mesh.html#a3318fdf444b933420b34c1aff07ee4e7">createBuffer</a>(F func)</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="comment">// メモリ上に頂点を確保</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        std::unique_ptr &lt; std::vector&lt;TVertex&gt; &gt; buf = std::make_unique&lt; std::vector&lt;TVertex&gt; &gt;();</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        buf-&gt;resize(<a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a843da84dda0e238d8de72bb0c9e20698">positions</a>.size());</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="comment">// 確保したメモリに各属性データをコピー</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <a class="code hl_function" href="struct_uni_dx_1_1_sub_mesh.html#a69f96589a5b636a499c993e3076667bf">copyTo</a>(std::span&lt;TVertex&gt;(*buf));</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        func(std::span&lt;TVertex&gt;(*buf));</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="comment">// ID3D11Buffer を作成</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a5a8e3dd8197b9373069844c65ce37026">stride</a> = <span class="keyword">sizeof</span>(TVertex);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <a class="code hl_function" href="struct_uni_dx_1_1_sub_mesh.html#ac39546b4e910bdbf30382def2683e49f">createVertexBuffer</a>(&amp;buf-&gt;front());</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="comment">// インデックスが設定されていればバッファを作成</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#ab0bd8520efa21d5f25797dda8388d9da">indices</a>.size() &gt; 0)</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <a class="code hl_function" href="struct_uni_dx_1_1_sub_mesh.html#a2e8b49751b4c3f1010c6aaafdc43e767">createIndexBuffer</a>();</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="comment">// メモリ上のデータを返す。DirextX11では即座に開放して良い</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordflow">return</span> buf;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    }</div>
+</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="comment">// GPUにバッファを作成</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_uni_dx_1_1_sub_mesh.html#ac39546b4e910bdbf30382def2683e49f">createVertexBuffer</a>(<span class="keywordtype">void</span>* data);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_uni_dx_1_1_sub_mesh.html#a2e8b49751b4c3f1010c6aaafdc43e767">createIndexBuffer</a>();</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="comment">// 描画</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_uni_dx_1_1_sub_mesh.html#abf62a412aab9166861befbb1ed134253">render</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="comment">// 法線のコピー</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TVertex&gt;</div>
+<div class="foldopen" id="foldopen00122" data-start="{" data-end="}">
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_sub_mesh.html#a472b5c67216e96c78e36e9199adc5c62">  122</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_uni_dx_1_1_sub_mesh.html#a472b5c67216e96c78e36e9199adc5c62">copyNormalTo</a>(std::span&lt;TVertex&gt; vertex)</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a3efcc2babb70bf904f7206627e63ad56">normals</a>.size() == 0) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        assert(<a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a3efcc2babb70bf904f7206627e63ad56">normals</a>.size() == <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a843da84dda0e238d8de72bb0c9e20698">positions</a>.size());</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a843da84dda0e238d8de72bb0c9e20698">positions</a>.size(); ++i) vertex[i].setNormal(<a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a3efcc2babb70bf904f7206627e63ad56">normals</a>[i]);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    }</div>
+</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="comment">// カラーのコピー</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TVertex&gt;</div>
+<div class="foldopen" id="foldopen00131" data-start="{" data-end="}">
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_sub_mesh.html#ae3c7331e058f12ebd500df334ee30875">  131</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_uni_dx_1_1_sub_mesh.html#ae3c7331e058f12ebd500df334ee30875">copyColorTo</a>(std::span&lt;TVertex&gt; vertex)</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    {</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a147b2d750dcd6cd9363ec18457f81d2e">colors</a>.size() == 0) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        assert(<a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a147b2d750dcd6cd9363ec18457f81d2e">colors</a>.size() == <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a843da84dda0e238d8de72bb0c9e20698">positions</a>.size());</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a843da84dda0e238d8de72bb0c9e20698">positions</a>.size(); ++i) vertex[i].setColor(<a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a147b2d750dcd6cd9363ec18457f81d2e">colors</a>[i]);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    }</div>
+</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="comment">// UVのコピー</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TVertex&gt;</div>
+<div class="foldopen" id="foldopen00140" data-start="{" data-end="}">
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_sub_mesh.html#a74aa140c86ff5d28af9f2b67a6fd1382">  140</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_uni_dx_1_1_sub_mesh.html#a74aa140c86ff5d28af9f2b67a6fd1382">copyUVTo</a>(std::span&lt;TVertex&gt; vertex)</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    {</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a5db00745a692f4c40b186cfab36394b9">uv</a>.size() == 0) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        assert(<a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a5db00745a692f4c40b186cfab36394b9">uv</a>.size() == <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a843da84dda0e238d8de72bb0c9e20698">positions</a>.size());</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a843da84dda0e238d8de72bb0c9e20698">positions</a>.size(); ++i) vertex[i].setUV(<a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a5db00745a692f4c40b186cfab36394b9">uv</a>[i]);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    }</div>
+</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TVertex&gt;</div>
+<div class="foldopen" id="foldopen00147" data-start="{" data-end="}">
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_sub_mesh.html#afd2548ddc76615419c035c5cd93c9e37">  147</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_uni_dx_1_1_sub_mesh.html#afd2548ddc76615419c035c5cd93c9e37">copyUV2To</a>(std::span&lt;TVertex&gt; vertex)</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    {</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a26863ce7718faaafbc98e61228077567">uv2</a>.size() == 0) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        assert(<a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a26863ce7718faaafbc98e61228077567">uv2</a>.size() == <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a843da84dda0e238d8de72bb0c9e20698">positions</a>.size());</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a843da84dda0e238d8de72bb0c9e20698">positions</a>.size(); ++i) vertex[i].setUV2(<a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a26863ce7718faaafbc98e61228077567">uv2</a>[i]);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    }</div>
+</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TVertex&gt;</div>
+<div class="foldopen" id="foldopen00154" data-start="{" data-end="}">
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_sub_mesh.html#a959189bb5b7e9d6e21ddc1c5b92dcae4">  154</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_uni_dx_1_1_sub_mesh.html#a959189bb5b7e9d6e21ddc1c5b92dcae4">copyUV3To</a>(std::span&lt;TVertex&gt; vertex)</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    {</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a7c9ecd78db63d17aa3a79f32e69a8a05">uv3</a>.size() == 0) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        assert(<a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a7c9ecd78db63d17aa3a79f32e69a8a05">uv3</a>.size() == <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a843da84dda0e238d8de72bb0c9e20698">positions</a>.size());</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a843da84dda0e238d8de72bb0c9e20698">positions</a>.size(); ++i) vertex[i].setUV3(<a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a7c9ecd78db63d17aa3a79f32e69a8a05">uv3</a>[i]);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    }</div>
+</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TVertex&gt;</div>
+<div class="foldopen" id="foldopen00161" data-start="{" data-end="}">
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_sub_mesh.html#ac8ad5f71d24a424c2f102e21580b176e">  161</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_uni_dx_1_1_sub_mesh.html#ac8ad5f71d24a424c2f102e21580b176e">copyUV4To</a>(std::span&lt;TVertex&gt; vertex)</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    {</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#aa6766215271e05485b5fa85fe0180bd2">uv4</a>.size() == 0) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        assert(<a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#aa6766215271e05485b5fa85fe0180bd2">uv4</a>.size() == <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a843da84dda0e238d8de72bb0c9e20698">positions</a>.size());</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a843da84dda0e238d8de72bb0c9e20698">positions</a>.size(); ++i) vertex[i].setUV4(<a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#aa6766215271e05485b5fa85fe0180bd2">uv4</a>[i]);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    }</div>
+</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>};</div>
+</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="comment">// --------------------</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="comment">// OwnedSubMesh</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="comment">// --------------------</span></div>
+<div class="foldopen" id="foldopen00173" data-start="{" data-end="};">
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_owned_sub_mesh.html">  173</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_uni_dx_1_1_owned_sub_mesh.html">OwnedSubMesh</a> : <span class="keyword">public</span> <a class="code hl_struct" href="struct_uni_dx_1_1_sub_mesh.html">SubMesh</a></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>{</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_owned_sub_mesh.html#a481f5ee36eba6cbc59b12ffa805d474e">  175</a></span>    <span class="keyword">const</span> std::vector&lt;Vector3&gt;&amp; <a class="code hl_function" href="struct_uni_dx_1_1_owned_sub_mesh.html#a481f5ee36eba6cbc59b12ffa805d474e">mutablePositions</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#a3430039bb543d2dfb171d4562e41b2d0">positions_data</a>; }</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_owned_sub_mesh.html#acfef07036aae0f3e58a95f4274a40c72">  176</a></span>    <span class="keyword">const</span> std::vector&lt;Vector3&gt;&amp; <a class="code hl_function" href="struct_uni_dx_1_1_owned_sub_mesh.html#acfef07036aae0f3e58a95f4274a40c72">mutableNormals</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#a550654609ca654669a8d5e104e02f18b">normals_data</a>; }</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_owned_sub_mesh.html#a8b9db6b493ad0db68b940601f5476a22">  177</a></span>    <span class="keyword">const</span> std::vector&lt;Color&gt;&amp;   <a class="code hl_function" href="struct_uni_dx_1_1_owned_sub_mesh.html#a8b9db6b493ad0db68b940601f5476a22">mutableColors</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#a1242d98b7c926326145f47a190658922">colors_data</a>; }</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_owned_sub_mesh.html#a315149c755cd4c86b10544d16b99fc9e">  178</a></span>    <span class="keyword">const</span> std::vector&lt;Vector2&gt;&amp; <a class="code hl_function" href="struct_uni_dx_1_1_owned_sub_mesh.html#a315149c755cd4c86b10544d16b99fc9e">mutableUV</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#a623f5ad76c1628ceddd70ee24deea0fa">uv_data</a>; }</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_owned_sub_mesh.html#abbeccb58204fea9a68696ca710dd9ed1">  179</a></span>    <span class="keyword">const</span> std::vector&lt;Vector2&gt;&amp; <a class="code hl_function" href="struct_uni_dx_1_1_owned_sub_mesh.html#abbeccb58204fea9a68696ca710dd9ed1">mutableUV2</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#ab13bb69a05ab4074d4cbe017dcba6d51">uv2_data</a>; }</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_owned_sub_mesh.html#a04a104d8780ea6370934512f9f30054f">  180</a></span>    <span class="keyword">const</span> std::vector&lt;Vector2&gt;&amp; <a class="code hl_function" href="struct_uni_dx_1_1_owned_sub_mesh.html#a04a104d8780ea6370934512f9f30054f">mutableUV3</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#ad8b6649ed996709945b777a9e0716a40">uv3_data</a>; }</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_owned_sub_mesh.html#af101f4e7505e8e5f2b8d4ffc6fdb4d7b">  181</a></span>    <span class="keyword">const</span> std::vector&lt;Vector2&gt;&amp; <a class="code hl_function" href="struct_uni_dx_1_1_owned_sub_mesh.html#af101f4e7505e8e5f2b8d4ffc6fdb4d7b">mutableUV4</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#a35ea1cf9669cfe9def65141132454ade">uv4_data</a>; }</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_owned_sub_mesh.html#a0e6841c6c202657553c2c1cafa9001a4">  182</a></span>    <span class="keyword">const</span> std::vector&lt;uint32_t&gt;&amp; <a class="code hl_function" href="struct_uni_dx_1_1_owned_sub_mesh.html#a0e6841c6c202657553c2c1cafa9001a4">mutableIndices</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#ae05d76b6c5680ba5c489dbe001b839a4">indices_data</a>; }</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="comment">// 必要なサイズだけ確保し、spanを設定</span></div>
+<div class="foldopen" id="foldopen00185" data-start="{" data-end="}">
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_owned_sub_mesh.html#a22ef2278b2f6aab316656436c0c57225">  185</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_uni_dx_1_1_owned_sub_mesh.html#a22ef2278b2f6aab316656436c0c57225">resizePositions</a>(<span class="keywordtype">size_t</span> n) {</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        <a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#a3430039bb543d2dfb171d4562e41b2d0">positions_data</a>.resize(n);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a843da84dda0e238d8de72bb0c9e20698">positions</a> = std::span&lt;const Vector3&gt;(<a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#a3430039bb543d2dfb171d4562e41b2d0">positions_data</a>.data(), n);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00189" data-start="{" data-end="}">
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_owned_sub_mesh.html#a9d5ae6c793911591329d5a7cda5bcca0">  189</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_uni_dx_1_1_owned_sub_mesh.html#a9d5ae6c793911591329d5a7cda5bcca0">resizeNormals</a>(<span class="keywordtype">size_t</span> n) {</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        <a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#a550654609ca654669a8d5e104e02f18b">normals_data</a>.resize(n);</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a3efcc2babb70bf904f7206627e63ad56">normals</a> = std::span&lt;const Vector3&gt;(<a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#a550654609ca654669a8d5e104e02f18b">normals_data</a>.data(), n);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00193" data-start="{" data-end="}">
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_owned_sub_mesh.html#a498b77098c416a5f01cc2594b85fa910">  193</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_uni_dx_1_1_owned_sub_mesh.html#a498b77098c416a5f01cc2594b85fa910">resizeColors</a>(<span class="keywordtype">size_t</span> n) {</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        <a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#a1242d98b7c926326145f47a190658922">colors_data</a>.resize(n);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a147b2d750dcd6cd9363ec18457f81d2e">colors</a> = std::span&lt;const Color&gt;(<a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#a1242d98b7c926326145f47a190658922">colors_data</a>.data(), n);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00197" data-start="{" data-end="}">
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_owned_sub_mesh.html#abfbfe206b7a82fd36682c2a9d8471cc9">  197</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_uni_dx_1_1_owned_sub_mesh.html#abfbfe206b7a82fd36682c2a9d8471cc9">resizeUV</a>(<span class="keywordtype">size_t</span> n) {</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#a623f5ad76c1628ceddd70ee24deea0fa">uv_data</a>.resize(n);</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a5db00745a692f4c40b186cfab36394b9">uv</a> = std::span&lt;const Vector2&gt;(<a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#a623f5ad76c1628ceddd70ee24deea0fa">uv_data</a>.data(), n);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00201" data-start="{" data-end="}">
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_owned_sub_mesh.html#a8e4fef50187260237bcb0065bc6416e2">  201</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_uni_dx_1_1_owned_sub_mesh.html#a8e4fef50187260237bcb0065bc6416e2">resizeUV2</a>(<span class="keywordtype">size_t</span> n) {</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        <a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#ab13bb69a05ab4074d4cbe017dcba6d51">uv2_data</a>.resize(n);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a26863ce7718faaafbc98e61228077567">uv2</a> = std::span&lt;const Vector2&gt;(<a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#ab13bb69a05ab4074d4cbe017dcba6d51">uv2_data</a>.data(), n);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00205" data-start="{" data-end="}">
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_owned_sub_mesh.html#a6b1d54f5253f897c610b1f3f79987c57">  205</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_uni_dx_1_1_owned_sub_mesh.html#a6b1d54f5253f897c610b1f3f79987c57">resizeUV3</a>(<span class="keywordtype">size_t</span> n) {</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        <a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#ad8b6649ed996709945b777a9e0716a40">uv3_data</a>.resize(n);</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#a7c9ecd78db63d17aa3a79f32e69a8a05">uv3</a> = std::span&lt;const Vector2&gt;(<a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#ad8b6649ed996709945b777a9e0716a40">uv3_data</a>.data(), n);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00209" data-start="{" data-end="}">
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_owned_sub_mesh.html#a9d8fd170c3afc5fa2867dbb1e2bc56fa">  209</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_uni_dx_1_1_owned_sub_mesh.html#a9d8fd170c3afc5fa2867dbb1e2bc56fa">resizeUV4</a>(<span class="keywordtype">size_t</span> n) {</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        <a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#a35ea1cf9669cfe9def65141132454ade">uv4_data</a>.resize(n);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#aa6766215271e05485b5fa85fe0180bd2">uv4</a> = std::span&lt;const Vector2&gt;(<a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#a35ea1cf9669cfe9def65141132454ade">uv4_data</a>.data(), n);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00213" data-start="{" data-end="}">
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_owned_sub_mesh.html#adff44af26b3b962f84cba3b94d2e1d96">  213</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_uni_dx_1_1_owned_sub_mesh.html#adff44af26b3b962f84cba3b94d2e1d96">resizeIndices</a>(<span class="keywordtype">size_t</span> n) {</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        <a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#ae05d76b6c5680ba5c489dbe001b839a4">indices_data</a>.resize(n);</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        <a class="code hl_variable" href="struct_uni_dx_1_1_sub_mesh.html#ab0bd8520efa21d5f25797dda8388d9da">indices</a> = std::span&lt;const uint32_t&gt;(<a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#ae05d76b6c5680ba5c489dbe001b839a4">indices_data</a>.data(), n);</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    }</div>
+</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_owned_sub_mesh.html#a3430039bb543d2dfb171d4562e41b2d0">  219</a></span>    std::vector&lt;Vector3&gt; <a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#a3430039bb543d2dfb171d4562e41b2d0">positions_data</a>;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_owned_sub_mesh.html#a550654609ca654669a8d5e104e02f18b">  220</a></span>    std::vector&lt;Vector3&gt; <a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#a550654609ca654669a8d5e104e02f18b">normals_data</a>;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_owned_sub_mesh.html#a1242d98b7c926326145f47a190658922">  221</a></span>    std::vector&lt;Color&gt; <a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#a1242d98b7c926326145f47a190658922">colors_data</a>;</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_owned_sub_mesh.html#a623f5ad76c1628ceddd70ee24deea0fa">  222</a></span>    std::vector&lt;Vector2&gt; <a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#a623f5ad76c1628ceddd70ee24deea0fa">uv_data</a>;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_owned_sub_mesh.html#ab13bb69a05ab4074d4cbe017dcba6d51">  223</a></span>    std::vector&lt;Vector2&gt; <a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#ab13bb69a05ab4074d4cbe017dcba6d51">uv2_data</a>;</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_owned_sub_mesh.html#ad8b6649ed996709945b777a9e0716a40">  224</a></span>    std::vector&lt;Vector2&gt; <a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#ad8b6649ed996709945b777a9e0716a40">uv3_data</a>;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_owned_sub_mesh.html#a35ea1cf9669cfe9def65141132454ade">  225</a></span>    std::vector&lt;Vector2&gt; <a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#a35ea1cf9669cfe9def65141132454ade">uv4_data</a>;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_owned_sub_mesh.html#ae05d76b6c5680ba5c489dbe001b839a4">  226</a></span>    std::vector&lt;uint32_t&gt; <a class="code hl_variable" href="struct_uni_dx_1_1_owned_sub_mesh.html#ae05d76b6c5680ba5c489dbe001b839a4">indices_data</a>;</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>};</div>
+</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="comment">// --------------------</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="comment">// Meshクラス</span></div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="comment">// --------------------</span></div>
+<div class="foldopen" id="foldopen00233" data-start="{" data-end="};">
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_mesh.html">  233</a></span><span class="keyword">class </span><a class="code hl_function" href="class_uni_dx_1_1_mesh.html#a18208aac2f2944edcdbc9c48e8b3d4fb">Mesh</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_uni_dx_1_1_object.html#a8105112b7931a0c380dfe004d3efc959">Object</a></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>{</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_mesh.html#ae17b6b9585021385bcfa3f00b3da185b">  236</a></span>    std::vector&lt; std::shared_ptr&lt;SubMesh&gt; &gt; <a class="code hl_variable" href="class_uni_dx_1_1_mesh.html#ae17b6b9585021385bcfa3f00b3da185b">submesh</a>;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_mesh.html#a18208aac2f2944edcdbc9c48e8b3d4fb">  238</a></span>    <a class="code hl_function" href="class_uni_dx_1_1_mesh.html#a18208aac2f2944edcdbc9c48e8b3d4fb">Mesh</a>() : <a class="code hl_function" href="class_uni_dx_1_1_object.html#a8105112b7931a0c380dfe004d3efc959">Object</a>([this]() {<span class="keywordflow">return</span> <a class="code hl_variable" href="class_uni_dx_1_1_mesh.html#a720e197241e9e768f7f66811dffb06b7">name_</a>;}) {}</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_mesh.html#ab2642165f4daa4adcb153f09fe710700">  239</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_uni_dx_1_1_mesh.html#ab2642165f4daa4adcb153f09fe710700">~Mesh</a>() {}</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
+<div class="foldopen" id="foldopen00241" data-start="{" data-end="}">
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_mesh.html#ad6627ab774ac81cf64ebe967fa9309a7">  241</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_mesh.html#ad6627ab774ac81cf64ebe967fa9309a7">render</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; sub : <a class="code hl_variable" href="class_uni_dx_1_1_mesh.html#ae17b6b9585021385bcfa3f00b3da185b">submesh</a>)</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        {</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>            sub-&gt;render();</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        }</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    }</div>
+</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_mesh.html#a720e197241e9e768f7f66811dffb06b7">  250</a></span>    wstring <a class="code hl_variable" href="class_uni_dx_1_1_mesh.html#a720e197241e9e768f7f66811dffb06b7">name_</a>;</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>};</div>
+</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>} <span class="comment">// namespace UniDx</span></div>
+<div class="ttc" id="a_object_8h_html"><div class="ttname"><a href="_object_8h.html">Object.h</a></div></div>
+<div class="ttc" id="a_property_8h_html"><div class="ttname"><a href="_property_8h.html">Property.h</a></div></div>
+<div class="ttc" id="a_shader_8h_html"><div class="ttname"><a href="_shader_8h.html">Shader.h</a></div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_camera_html"><div class="ttname"><a href="class_uni_dx_1_1_camera.html">UniDx::Camera</a></div><div class="ttdef"><b>Definition</b> Camera.h:12</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_mesh_html_a18208aac2f2944edcdbc9c48e8b3d4fb"><div class="ttname"><a href="class_uni_dx_1_1_mesh.html#a18208aac2f2944edcdbc9c48e8b3d4fb">UniDx::Mesh::Mesh</a></div><div class="ttdeci">Mesh()</div><div class="ttdef"><b>Definition</b> Mesh.h:238</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_mesh_html_a720e197241e9e768f7f66811dffb06b7"><div class="ttname"><a href="class_uni_dx_1_1_mesh.html#a720e197241e9e768f7f66811dffb06b7">UniDx::Mesh::name_</a></div><div class="ttdeci">wstring name_</div><div class="ttdef"><b>Definition</b> Mesh.h:250</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_mesh_html_ab2642165f4daa4adcb153f09fe710700"><div class="ttname"><a href="class_uni_dx_1_1_mesh.html#ab2642165f4daa4adcb153f09fe710700">UniDx::Mesh::~Mesh</a></div><div class="ttdeci">virtual ~Mesh()</div><div class="ttdef"><b>Definition</b> Mesh.h:239</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_mesh_html_ad6627ab774ac81cf64ebe967fa9309a7"><div class="ttname"><a href="class_uni_dx_1_1_mesh.html#ad6627ab774ac81cf64ebe967fa9309a7">UniDx::Mesh::render</a></div><div class="ttdeci">void render() const</div><div class="ttdef"><b>Definition</b> Mesh.h:241</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_mesh_html_ae17b6b9585021385bcfa3f00b3da185b"><div class="ttname"><a href="class_uni_dx_1_1_mesh.html#ae17b6b9585021385bcfa3f00b3da185b">UniDx::Mesh::submesh</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; SubMesh &gt; &gt; submesh</div><div class="ttdef"><b>Definition</b> Mesh.h:236</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_object_html_a8105112b7931a0c380dfe004d3efc959"><div class="ttname"><a href="class_uni_dx_1_1_object.html#a8105112b7931a0c380dfe004d3efc959">UniDx::Object::Object</a></div><div class="ttdeci">Object(ReadOnlyProperty&lt; wstring_view &gt;::Getter nameGet)</div><div class="ttdef"><b>Definition</b> Object.h:19</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_texture_html"><div class="ttname"><a href="class_uni_dx_1_1_texture.html">UniDx::Texture</a></div><div class="ttdef"><b>Definition</b> Texture.h:18</div></div>
+<div class="ttc" id="anamespace_uni_dx_html"><div class="ttname"><a href="namespace_uni_dx.html">UniDx</a></div><div class="ttdef"><b>Definition</b> AnimationCurve.cpp:5</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_owned_sub_mesh_html"><div class="ttname"><a href="struct_uni_dx_1_1_owned_sub_mesh.html">UniDx::OwnedSubMesh</a></div><div class="ttdef"><b>Definition</b> Mesh.h:174</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_owned_sub_mesh_html_a04a104d8780ea6370934512f9f30054f"><div class="ttname"><a href="struct_uni_dx_1_1_owned_sub_mesh.html#a04a104d8780ea6370934512f9f30054f">UniDx::OwnedSubMesh::mutableUV3</a></div><div class="ttdeci">const std::vector&lt; Vector2 &gt; &amp; mutableUV3()</div><div class="ttdef"><b>Definition</b> Mesh.h:180</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_owned_sub_mesh_html_a0e6841c6c202657553c2c1cafa9001a4"><div class="ttname"><a href="struct_uni_dx_1_1_owned_sub_mesh.html#a0e6841c6c202657553c2c1cafa9001a4">UniDx::OwnedSubMesh::mutableIndices</a></div><div class="ttdeci">const std::vector&lt; uint32_t &gt; &amp; mutableIndices()</div><div class="ttdef"><b>Definition</b> Mesh.h:182</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_owned_sub_mesh_html_a1242d98b7c926326145f47a190658922"><div class="ttname"><a href="struct_uni_dx_1_1_owned_sub_mesh.html#a1242d98b7c926326145f47a190658922">UniDx::OwnedSubMesh::colors_data</a></div><div class="ttdeci">std::vector&lt; Color &gt; colors_data</div><div class="ttdef"><b>Definition</b> Mesh.h:221</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_owned_sub_mesh_html_a22ef2278b2f6aab316656436c0c57225"><div class="ttname"><a href="struct_uni_dx_1_1_owned_sub_mesh.html#a22ef2278b2f6aab316656436c0c57225">UniDx::OwnedSubMesh::resizePositions</a></div><div class="ttdeci">void resizePositions(size_t n)</div><div class="ttdef"><b>Definition</b> Mesh.h:185</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_owned_sub_mesh_html_a315149c755cd4c86b10544d16b99fc9e"><div class="ttname"><a href="struct_uni_dx_1_1_owned_sub_mesh.html#a315149c755cd4c86b10544d16b99fc9e">UniDx::OwnedSubMesh::mutableUV</a></div><div class="ttdeci">const std::vector&lt; Vector2 &gt; &amp; mutableUV()</div><div class="ttdef"><b>Definition</b> Mesh.h:178</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_owned_sub_mesh_html_a3430039bb543d2dfb171d4562e41b2d0"><div class="ttname"><a href="struct_uni_dx_1_1_owned_sub_mesh.html#a3430039bb543d2dfb171d4562e41b2d0">UniDx::OwnedSubMesh::positions_data</a></div><div class="ttdeci">std::vector&lt; Vector3 &gt; positions_data</div><div class="ttdef"><b>Definition</b> Mesh.h:219</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_owned_sub_mesh_html_a35ea1cf9669cfe9def65141132454ade"><div class="ttname"><a href="struct_uni_dx_1_1_owned_sub_mesh.html#a35ea1cf9669cfe9def65141132454ade">UniDx::OwnedSubMesh::uv4_data</a></div><div class="ttdeci">std::vector&lt; Vector2 &gt; uv4_data</div><div class="ttdef"><b>Definition</b> Mesh.h:225</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_owned_sub_mesh_html_a481f5ee36eba6cbc59b12ffa805d474e"><div class="ttname"><a href="struct_uni_dx_1_1_owned_sub_mesh.html#a481f5ee36eba6cbc59b12ffa805d474e">UniDx::OwnedSubMesh::mutablePositions</a></div><div class="ttdeci">const std::vector&lt; Vector3 &gt; &amp; mutablePositions()</div><div class="ttdef"><b>Definition</b> Mesh.h:175</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_owned_sub_mesh_html_a498b77098c416a5f01cc2594b85fa910"><div class="ttname"><a href="struct_uni_dx_1_1_owned_sub_mesh.html#a498b77098c416a5f01cc2594b85fa910">UniDx::OwnedSubMesh::resizeColors</a></div><div class="ttdeci">void resizeColors(size_t n)</div><div class="ttdef"><b>Definition</b> Mesh.h:193</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_owned_sub_mesh_html_a550654609ca654669a8d5e104e02f18b"><div class="ttname"><a href="struct_uni_dx_1_1_owned_sub_mesh.html#a550654609ca654669a8d5e104e02f18b">UniDx::OwnedSubMesh::normals_data</a></div><div class="ttdeci">std::vector&lt; Vector3 &gt; normals_data</div><div class="ttdef"><b>Definition</b> Mesh.h:220</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_owned_sub_mesh_html_a623f5ad76c1628ceddd70ee24deea0fa"><div class="ttname"><a href="struct_uni_dx_1_1_owned_sub_mesh.html#a623f5ad76c1628ceddd70ee24deea0fa">UniDx::OwnedSubMesh::uv_data</a></div><div class="ttdeci">std::vector&lt; Vector2 &gt; uv_data</div><div class="ttdef"><b>Definition</b> Mesh.h:222</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_owned_sub_mesh_html_a6b1d54f5253f897c610b1f3f79987c57"><div class="ttname"><a href="struct_uni_dx_1_1_owned_sub_mesh.html#a6b1d54f5253f897c610b1f3f79987c57">UniDx::OwnedSubMesh::resizeUV3</a></div><div class="ttdeci">void resizeUV3(size_t n)</div><div class="ttdef"><b>Definition</b> Mesh.h:205</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_owned_sub_mesh_html_a8b9db6b493ad0db68b940601f5476a22"><div class="ttname"><a href="struct_uni_dx_1_1_owned_sub_mesh.html#a8b9db6b493ad0db68b940601f5476a22">UniDx::OwnedSubMesh::mutableColors</a></div><div class="ttdeci">const std::vector&lt; Color &gt; &amp; mutableColors()</div><div class="ttdef"><b>Definition</b> Mesh.h:177</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_owned_sub_mesh_html_a8e4fef50187260237bcb0065bc6416e2"><div class="ttname"><a href="struct_uni_dx_1_1_owned_sub_mesh.html#a8e4fef50187260237bcb0065bc6416e2">UniDx::OwnedSubMesh::resizeUV2</a></div><div class="ttdeci">void resizeUV2(size_t n)</div><div class="ttdef"><b>Definition</b> Mesh.h:201</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_owned_sub_mesh_html_a9d5ae6c793911591329d5a7cda5bcca0"><div class="ttname"><a href="struct_uni_dx_1_1_owned_sub_mesh.html#a9d5ae6c793911591329d5a7cda5bcca0">UniDx::OwnedSubMesh::resizeNormals</a></div><div class="ttdeci">void resizeNormals(size_t n)</div><div class="ttdef"><b>Definition</b> Mesh.h:189</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_owned_sub_mesh_html_a9d8fd170c3afc5fa2867dbb1e2bc56fa"><div class="ttname"><a href="struct_uni_dx_1_1_owned_sub_mesh.html#a9d8fd170c3afc5fa2867dbb1e2bc56fa">UniDx::OwnedSubMesh::resizeUV4</a></div><div class="ttdeci">void resizeUV4(size_t n)</div><div class="ttdef"><b>Definition</b> Mesh.h:209</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_owned_sub_mesh_html_ab13bb69a05ab4074d4cbe017dcba6d51"><div class="ttname"><a href="struct_uni_dx_1_1_owned_sub_mesh.html#ab13bb69a05ab4074d4cbe017dcba6d51">UniDx::OwnedSubMesh::uv2_data</a></div><div class="ttdeci">std::vector&lt; Vector2 &gt; uv2_data</div><div class="ttdef"><b>Definition</b> Mesh.h:223</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_owned_sub_mesh_html_abbeccb58204fea9a68696ca710dd9ed1"><div class="ttname"><a href="struct_uni_dx_1_1_owned_sub_mesh.html#abbeccb58204fea9a68696ca710dd9ed1">UniDx::OwnedSubMesh::mutableUV2</a></div><div class="ttdeci">const std::vector&lt; Vector2 &gt; &amp; mutableUV2()</div><div class="ttdef"><b>Definition</b> Mesh.h:179</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_owned_sub_mesh_html_abfbfe206b7a82fd36682c2a9d8471cc9"><div class="ttname"><a href="struct_uni_dx_1_1_owned_sub_mesh.html#abfbfe206b7a82fd36682c2a9d8471cc9">UniDx::OwnedSubMesh::resizeUV</a></div><div class="ttdeci">void resizeUV(size_t n)</div><div class="ttdef"><b>Definition</b> Mesh.h:197</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_owned_sub_mesh_html_acfef07036aae0f3e58a95f4274a40c72"><div class="ttname"><a href="struct_uni_dx_1_1_owned_sub_mesh.html#acfef07036aae0f3e58a95f4274a40c72">UniDx::OwnedSubMesh::mutableNormals</a></div><div class="ttdeci">const std::vector&lt; Vector3 &gt; &amp; mutableNormals()</div><div class="ttdef"><b>Definition</b> Mesh.h:176</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_owned_sub_mesh_html_ad8b6649ed996709945b777a9e0716a40"><div class="ttname"><a href="struct_uni_dx_1_1_owned_sub_mesh.html#ad8b6649ed996709945b777a9e0716a40">UniDx::OwnedSubMesh::uv3_data</a></div><div class="ttdeci">std::vector&lt; Vector2 &gt; uv3_data</div><div class="ttdef"><b>Definition</b> Mesh.h:224</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_owned_sub_mesh_html_adff44af26b3b962f84cba3b94d2e1d96"><div class="ttname"><a href="struct_uni_dx_1_1_owned_sub_mesh.html#adff44af26b3b962f84cba3b94d2e1d96">UniDx::OwnedSubMesh::resizeIndices</a></div><div class="ttdeci">void resizeIndices(size_t n)</div><div class="ttdef"><b>Definition</b> Mesh.h:213</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_owned_sub_mesh_html_ae05d76b6c5680ba5c489dbe001b839a4"><div class="ttname"><a href="struct_uni_dx_1_1_owned_sub_mesh.html#ae05d76b6c5680ba5c489dbe001b839a4">UniDx::OwnedSubMesh::indices_data</a></div><div class="ttdeci">std::vector&lt; uint32_t &gt; indices_data</div><div class="ttdef"><b>Definition</b> Mesh.h:226</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_owned_sub_mesh_html_af101f4e7505e8e5f2b8d4ffc6fdb4d7b"><div class="ttname"><a href="struct_uni_dx_1_1_owned_sub_mesh.html#af101f4e7505e8e5f2b8d4ffc6fdb4d7b">UniDx::OwnedSubMesh::mutableUV4</a></div><div class="ttdeci">const std::vector&lt; Vector2 &gt; &amp; mutableUV4()</div><div class="ttdef"><b>Definition</b> Mesh.h:181</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_sub_mesh_html"><div class="ttname"><a href="struct_uni_dx_1_1_sub_mesh.html">UniDx::SubMesh</a></div><div class="ttdef"><b>Definition</b> Mesh.h:23</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_sub_mesh_html_a147b2d750dcd6cd9363ec18457f81d2e"><div class="ttname"><a href="struct_uni_dx_1_1_sub_mesh.html#a147b2d750dcd6cd9363ec18457f81d2e">UniDx::SubMesh::colors</a></div><div class="ttdeci">std::span&lt; const Color &gt; colors</div><div class="ttdef"><b>Definition</b> Mesh.h:28</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_sub_mesh_html_a26863ce7718faaafbc98e61228077567"><div class="ttname"><a href="struct_uni_dx_1_1_sub_mesh.html#a26863ce7718faaafbc98e61228077567">UniDx::SubMesh::uv2</a></div><div class="ttdeci">std::span&lt; const Vector2 &gt; uv2</div><div class="ttdef"><b>Definition</b> Mesh.h:30</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_sub_mesh_html_a2e8b49751b4c3f1010c6aaafdc43e767"><div class="ttname"><a href="struct_uni_dx_1_1_sub_mesh.html#a2e8b49751b4c3f1010c6aaafdc43e767">UniDx::SubMesh::createIndexBuffer</a></div><div class="ttdeci">void createIndexBuffer()</div><div class="ttdef"><b>Definition</b> Mesh.cpp:31</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_sub_mesh_html_a3318fdf444b933420b34c1aff07ee4e7"><div class="ttname"><a href="struct_uni_dx_1_1_sub_mesh.html#a3318fdf444b933420b34c1aff07ee4e7">UniDx::SubMesh::createBuffer</a></div><div class="ttdeci">std::unique_ptr&lt; std::vector&lt; TVertex &gt; &gt; createBuffer(F func)</div><div class="ttdef"><b>Definition</b> Mesh.h:90</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_sub_mesh_html_a3efcc2babb70bf904f7206627e63ad56"><div class="ttname"><a href="struct_uni_dx_1_1_sub_mesh.html#a3efcc2babb70bf904f7206627e63ad56">UniDx::SubMesh::normals</a></div><div class="ttdeci">std::span&lt; const Vector3 &gt; normals</div><div class="ttdef"><b>Definition</b> Mesh.h:27</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_sub_mesh_html_a472b5c67216e96c78e36e9199adc5c62"><div class="ttname"><a href="struct_uni_dx_1_1_sub_mesh.html#a472b5c67216e96c78e36e9199adc5c62">UniDx::SubMesh::copyNormalTo</a></div><div class="ttdeci">void copyNormalTo(std::span&lt; TVertex &gt; vertex)</div><div class="ttdef"><b>Definition</b> Mesh.h:122</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_sub_mesh_html_a5a8e3dd8197b9373069844c65ce37026"><div class="ttname"><a href="struct_uni_dx_1_1_sub_mesh.html#a5a8e3dd8197b9373069844c65ce37026">UniDx::SubMesh::stride</a></div><div class="ttdeci">UINT stride</div><div class="ttdef"><b>Definition</b> Mesh.h:38</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_sub_mesh_html_a5db00745a692f4c40b186cfab36394b9"><div class="ttname"><a href="struct_uni_dx_1_1_sub_mesh.html#a5db00745a692f4c40b186cfab36394b9">UniDx::SubMesh::uv</a></div><div class="ttdeci">std::span&lt; const Vector2 &gt; uv</div><div class="ttdef"><b>Definition</b> Mesh.h:29</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_sub_mesh_html_a69f96589a5b636a499c993e3076667bf"><div class="ttname"><a href="struct_uni_dx_1_1_sub_mesh.html#a69f96589a5b636a499c993e3076667bf">UniDx::SubMesh::copyTo</a></div><div class="ttdeci">size_t copyTo(std::span&lt; TVertex &gt; vertex)</div><div class="ttdef"><b>Definition</b> Mesh.h:41</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_sub_mesh_html_a7406ef7f75feba9705a65f39a3316f62"><div class="ttname"><a href="struct_uni_dx_1_1_sub_mesh.html#a7406ef7f75feba9705a65f39a3316f62">UniDx::SubMesh::topology</a></div><div class="ttdeci">D3D11_PRIMITIVE_TOPOLOGY topology</div><div class="ttdef"><b>Definition</b> Mesh.h:24</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_sub_mesh_html_a74aa140c86ff5d28af9f2b67a6fd1382"><div class="ttname"><a href="struct_uni_dx_1_1_sub_mesh.html#a74aa140c86ff5d28af9f2b67a6fd1382">UniDx::SubMesh::copyUVTo</a></div><div class="ttdeci">void copyUVTo(std::span&lt; TVertex &gt; vertex)</div><div class="ttdef"><b>Definition</b> Mesh.h:140</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_sub_mesh_html_a7c9ecd78db63d17aa3a79f32e69a8a05"><div class="ttname"><a href="struct_uni_dx_1_1_sub_mesh.html#a7c9ecd78db63d17aa3a79f32e69a8a05">UniDx::SubMesh::uv3</a></div><div class="ttdeci">std::span&lt; const Vector2 &gt; uv3</div><div class="ttdef"><b>Definition</b> Mesh.h:31</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_sub_mesh_html_a843da84dda0e238d8de72bb0c9e20698"><div class="ttname"><a href="struct_uni_dx_1_1_sub_mesh.html#a843da84dda0e238d8de72bb0c9e20698">UniDx::SubMesh::positions</a></div><div class="ttdeci">std::span&lt; const Vector3 &gt; positions</div><div class="ttdef"><b>Definition</b> Mesh.h:26</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_sub_mesh_html_a8e8ec9eed2a1155ad681c51541a9a1df"><div class="ttname"><a href="struct_uni_dx_1_1_sub_mesh.html#a8e8ec9eed2a1155ad681c51541a9a1df">UniDx::SubMesh::indexBuffer</a></div><div class="ttdeci">ComPtr&lt; ID3D11Buffer &gt; indexBuffer</div><div class="ttdef"><b>Definition</b> Mesh.h:36</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_sub_mesh_html_a959189bb5b7e9d6e21ddc1c5b92dcae4"><div class="ttname"><a href="struct_uni_dx_1_1_sub_mesh.html#a959189bb5b7e9d6e21ddc1c5b92dcae4">UniDx::SubMesh::copyUV3To</a></div><div class="ttdeci">void copyUV3To(std::span&lt; TVertex &gt; vertex)</div><div class="ttdef"><b>Definition</b> Mesh.h:154</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_sub_mesh_html_aa6766215271e05485b5fa85fe0180bd2"><div class="ttname"><a href="struct_uni_dx_1_1_sub_mesh.html#aa6766215271e05485b5fa85fe0180bd2">UniDx::SubMesh::uv4</a></div><div class="ttdeci">std::span&lt; const Vector2 &gt; uv4</div><div class="ttdef"><b>Definition</b> Mesh.h:32</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_sub_mesh_html_ab0bd8520efa21d5f25797dda8388d9da"><div class="ttname"><a href="struct_uni_dx_1_1_sub_mesh.html#ab0bd8520efa21d5f25797dda8388d9da">UniDx::SubMesh::indices</a></div><div class="ttdeci">std::span&lt; const uint32_t &gt; indices</div><div class="ttdef"><b>Definition</b> Mesh.h:33</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_sub_mesh_html_abec0090a3d5169a40a63d12290560c3b"><div class="ttname"><a href="struct_uni_dx_1_1_sub_mesh.html#abec0090a3d5169a40a63d12290560c3b">UniDx::SubMesh::createBuffer</a></div><div class="ttdeci">std::unique_ptr&lt; std::vector&lt; TVertex &gt; &gt; createBuffer()</div><div class="ttdef"><b>Definition</b> Mesh.h:68</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_sub_mesh_html_abf62a412aab9166861befbb1ed134253"><div class="ttname"><a href="struct_uni_dx_1_1_sub_mesh.html#abf62a412aab9166861befbb1ed134253">UniDx::SubMesh::render</a></div><div class="ttdeci">void render() const</div><div class="ttdef"><b>Definition</b> Mesh.cpp:53</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_sub_mesh_html_ac39546b4e910bdbf30382def2683e49f"><div class="ttname"><a href="struct_uni_dx_1_1_sub_mesh.html#ac39546b4e910bdbf30382def2683e49f">UniDx::SubMesh::createVertexBuffer</a></div><div class="ttdeci">void createVertexBuffer(void *data)</div><div class="ttdef"><b>Definition</b> Mesh.cpp:9</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_sub_mesh_html_ac8ad5f71d24a424c2f102e21580b176e"><div class="ttname"><a href="struct_uni_dx_1_1_sub_mesh.html#ac8ad5f71d24a424c2f102e21580b176e">UniDx::SubMesh::copyUV4To</a></div><div class="ttdeci">void copyUV4To(std::span&lt; TVertex &gt; vertex)</div><div class="ttdef"><b>Definition</b> Mesh.h:161</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_sub_mesh_html_ae25b48e69d137bd05266247c605afa44"><div class="ttname"><a href="struct_uni_dx_1_1_sub_mesh.html#ae25b48e69d137bd05266247c605afa44">UniDx::SubMesh::vertexBuffer</a></div><div class="ttdeci">ComPtr&lt; ID3D11Buffer &gt; vertexBuffer</div><div class="ttdef"><b>Definition</b> Mesh.h:35</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_sub_mesh_html_ae3c7331e058f12ebd500df334ee30875"><div class="ttname"><a href="struct_uni_dx_1_1_sub_mesh.html#ae3c7331e058f12ebd500df334ee30875">UniDx::SubMesh::copyColorTo</a></div><div class="ttdeci">void copyColorTo(std::span&lt; TVertex &gt; vertex)</div><div class="ttdef"><b>Definition</b> Mesh.h:131</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_sub_mesh_html_afd2548ddc76615419c035c5cd93c9e37"><div class="ttname"><a href="struct_uni_dx_1_1_sub_mesh.html#afd2548ddc76615419c035c5cd93c9e37">UniDx::SubMesh::copyUV2To</a></div><div class="ttdeci">void copyUV2To(std::span&lt; TVertex &gt; vertex)</div><div class="ttdef"><b>Definition</b> Mesh.h:147</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_450094861a7bbaf444577c849cb4d1c8.html">UniDx</a></li><li class="navelem"><a href="_mesh_8h.html">Mesh.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

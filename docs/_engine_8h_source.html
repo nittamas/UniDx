@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UniDx: include/UniDx/Engine.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UniDx
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_engine_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Engine.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_engine_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;windows.h&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;Keyboard.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_singleton_8h.html">Singleton.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_uni_dx.html">UniDx</a></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">class </span><a class="code hl_class" href="class_uni_dx_1_1_game_object.html">GameObject</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">class </span><a class="code hl_class" href="class_uni_dx_1_1_camera.html">Camera</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">class </span><a class="code hl_class" href="class_uni_dx_1_1_canvas.html">Canvas</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// エンジンのメイン</span></div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_engine.html">   16</a></span><span class="keyword">class </span><a class="code hl_class" href="class_uni_dx_1_1_engine.html">Engine</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_uni_dx_1_1_singleton.html#aa1d5dc993efef5faa60dc69cb141ae1f">Singleton</a>&lt;Engine&gt;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_engine.html#a9e8a60d0f7a2e2b2e62314fbdf9b645e">Initialize</a>(HWND hWnd);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_uni_dx_1_1_engine.html#a0e6cbea4412f6118b039bc359ec45d6d">PlayerLoop</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_engine.html#a600de128d890aeb876b0c99417288d4e">   22</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_engine.html#a600de128d890aeb876b0c99417288d4e">ProcessKeyboardMessage</a>(UINT message, WPARAM wParam, LPARAM lParam)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        DirectX::Keyboard::ProcessMessage(message, wParam, lParam);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
+</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_engine.html#abd4e3c31cbe93e2792831c60957a99da">registerCanvas</a>(<a class="code hl_class" href="class_uni_dx_1_1_canvas.html">Canvas</a>* c);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_engine.html#a19e9202df5ce675b10549652225e537d">unregisterCanvas</a>(<a class="code hl_class" href="class_uni_dx_1_1_canvas.html">Canvas</a>* c);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_engine.html#a99b646067bcb22f4638a2c2b0ca8cec9">fixedUpdate</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_engine.html#ac645bae7a5739a529513d27de79dc69a">physics</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_engine.html#a097384278ad2263456a714a3d7042d31">input</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_engine.html#aceefccc71bf876a34d6b2103aff358a6">update</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_engine.html#a69cb151089d51e79735ee30d40eee674">lateUpdate</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_engine.html#a1df58652e3f77e552527e730c22a54cf">render</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_engine.html#aea1c1fb5d8873d5996b03b8ac0ed869c">finalize</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_engine.html#a14c5d1e90d6b33a01b01646f2c6ed093">awake</a>(<a class="code hl_class" href="class_uni_dx_1_1_game_object.html">GameObject</a>* <span class="keywordtype">object</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_engine.html#a99b646067bcb22f4638a2c2b0ca8cec9">fixedUpdate</a>(<a class="code hl_class" href="class_uni_dx_1_1_game_object.html">GameObject</a>* <span class="keywordtype">object</span>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_engine.html#abd6981bff4a500500909b41cd4e2fa5a">checkStart</a>(<a class="code hl_class" href="class_uni_dx_1_1_game_object.html">GameObject</a>* <span class="keywordtype">object</span>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_engine.html#aceefccc71bf876a34d6b2103aff358a6">update</a>(<a class="code hl_class" href="class_uni_dx_1_1_game_object.html">GameObject</a>* <span class="keywordtype">object</span>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_engine.html#a69cb151089d51e79735ee30d40eee674">lateUpdate</a>(<a class="code hl_class" href="class_uni_dx_1_1_game_object.html">GameObject</a>* <span class="keywordtype">object</span>);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_engine.html#a1df58652e3f77e552527e730c22a54cf">render</a>(<a class="code hl_class" href="class_uni_dx_1_1_game_object.html">GameObject</a>* <span class="keywordtype">object</span>, <span class="keyword">const</span> <a class="code hl_class" href="class_uni_dx_1_1_camera.html">Camera</a>&amp; camera);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    std::vector&lt;Canvas*&gt; canvas_;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> createScene();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>};</div>
+</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
+<div class="ttc" id="a_singleton_8h_html"><div class="ttname"><a href="_singleton_8h.html">Singleton.h</a></div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_camera_html"><div class="ttname"><a href="class_uni_dx_1_1_camera.html">UniDx::Camera</a></div><div class="ttdef"><b>Definition</b> Camera.h:12</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_canvas_html"><div class="ttname"><a href="class_uni_dx_1_1_canvas.html">UniDx::Canvas</a></div><div class="ttdef"><b>Definition</b> Canvas.h:14</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_engine_html"><div class="ttname"><a href="class_uni_dx_1_1_engine.html">UniDx::Engine</a></div><div class="ttdef"><b>Definition</b> Engine.h:17</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_engine_html_a097384278ad2263456a714a3d7042d31"><div class="ttname"><a href="class_uni_dx_1_1_engine.html#a097384278ad2263456a714a3d7042d31">UniDx::Engine::input</a></div><div class="ttdeci">virtual void input()</div><div class="ttdef"><b>Definition</b> Engine.cpp:177</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_engine_html_a0e6cbea4412f6118b039bc359ec45d6d"><div class="ttname"><a href="class_uni_dx_1_1_engine.html#a0e6cbea4412f6118b039bc359ec45d6d">UniDx::Engine::PlayerLoop</a></div><div class="ttdeci">virtual int PlayerLoop()</div><div class="ttdef"><b>Definition</b> Engine.cpp:77</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_engine_html_a14c5d1e90d6b33a01b01646f2c6ed093"><div class="ttname"><a href="class_uni_dx_1_1_engine.html#a14c5d1e90d6b33a01b01646f2c6ed093">UniDx::Engine::awake</a></div><div class="ttdeci">void awake(GameObject *object)</div><div class="ttdef"><b>Definition</b> Engine.cpp:268</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_engine_html_a19e9202df5ce675b10549652225e537d"><div class="ttname"><a href="class_uni_dx_1_1_engine.html#a19e9202df5ce675b10549652225e537d">UniDx::Engine::unregisterCanvas</a></div><div class="ttdeci">void unregisterCanvas(Canvas *c)</div><div class="ttdef"><b>Definition</b> Engine.cpp:390</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_engine_html_a1df58652e3f77e552527e730c22a54cf"><div class="ttname"><a href="class_uni_dx_1_1_engine.html#a1df58652e3f77e552527e730c22a54cf">UniDx::Engine::render</a></div><div class="ttdeci">virtual void render()</div><div class="ttdef"><b>Definition</b> Engine.cpp:220</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_engine_html_a600de128d890aeb876b0c99417288d4e"><div class="ttname"><a href="class_uni_dx_1_1_engine.html#a600de128d890aeb876b0c99417288d4e">UniDx::Engine::ProcessKeyboardMessage</a></div><div class="ttdeci">void ProcessKeyboardMessage(UINT message, WPARAM wParam, LPARAM lParam)</div><div class="ttdef"><b>Definition</b> Engine.h:22</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_engine_html_a69cb151089d51e79735ee30d40eee674"><div class="ttname"><a href="class_uni_dx_1_1_engine.html#a69cb151089d51e79735ee30d40eee674">UniDx::Engine::lateUpdate</a></div><div class="ttdeci">virtual void lateUpdate()</div><div class="ttdef"><b>Definition</b> Engine.cpp:205</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_engine_html_a99b646067bcb22f4638a2c2b0ca8cec9"><div class="ttname"><a href="class_uni_dx_1_1_engine.html#a99b646067bcb22f4638a2c2b0ca8cec9">UniDx::Engine::fixedUpdate</a></div><div class="ttdeci">virtual void fixedUpdate()</div><div class="ttdef"><b>Definition</b> Engine.cpp:160</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_engine_html_a9e8a60d0f7a2e2b2e62314fbdf9b645e"><div class="ttname"><a href="class_uni_dx_1_1_engine.html#a9e8a60d0f7a2e2b2e62314fbdf9b645e">UniDx::Engine::Initialize</a></div><div class="ttdeci">virtual void Initialize(HWND hWnd)</div><div class="ttdef"><b>Definition</b> Engine.cpp:37</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_engine_html_abd4e3c31cbe93e2792831c60957a99da"><div class="ttname"><a href="class_uni_dx_1_1_engine.html#abd4e3c31cbe93e2792831c60957a99da">UniDx::Engine::registerCanvas</a></div><div class="ttdeci">void registerCanvas(Canvas *c)</div><div class="ttdef"><b>Definition</b> Engine.cpp:384</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_engine_html_abd6981bff4a500500909b41cd4e2fa5a"><div class="ttname"><a href="class_uni_dx_1_1_engine.html#abd6981bff4a500500909b41cd4e2fa5a">UniDx::Engine::checkStart</a></div><div class="ttdeci">void checkStart(GameObject *object)</div><div class="ttdef"><b>Definition</b> Engine.cpp:304</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_engine_html_ac645bae7a5739a529513d27de79dc69a"><div class="ttname"><a href="class_uni_dx_1_1_engine.html#ac645bae7a5739a529513d27de79dc69a">UniDx::Engine::physics</a></div><div class="ttdeci">virtual void physics()</div><div class="ttdef"><b>Definition</b> Engine.cpp:170</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_engine_html_aceefccc71bf876a34d6b2103aff358a6"><div class="ttname"><a href="class_uni_dx_1_1_engine.html#aceefccc71bf876a34d6b2103aff358a6">UniDx::Engine::update</a></div><div class="ttdeci">virtual void update()</div><div class="ttdef"><b>Definition</b> Engine.cpp:188</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_engine_html_aea1c1fb5d8873d5996b03b8ac0ed869c"><div class="ttname"><a href="class_uni_dx_1_1_engine.html#aea1c1fb5d8873d5996b03b8ac0ed869c">UniDx::Engine::finalize</a></div><div class="ttdeci">virtual void finalize()</div><div class="ttdef"><b>Definition</b> Engine.cpp:259</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_game_object_html"><div class="ttname"><a href="class_uni_dx_1_1_game_object.html">UniDx::GameObject</a></div><div class="ttdef"><b>Definition</b> GameObject.h:25</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_singleton_html_aa1d5dc993efef5faa60dc69cb141ae1f"><div class="ttname"><a href="class_uni_dx_1_1_singleton.html#aa1d5dc993efef5faa60dc69cb141ae1f">UniDx::Singleton&lt; Engine &gt;::Singleton</a></div><div class="ttdeci">Singleton()</div><div class="ttdef"><b>Definition</b> Singleton.h:38</div></div>
+<div class="ttc" id="anamespace_uni_dx_html"><div class="ttname"><a href="namespace_uni_dx.html">UniDx</a></div><div class="ttdef"><b>Definition</b> AnimationCurve.cpp:5</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_450094861a7bbaf444577c849cb4d1c8.html">UniDx</a></li><li class="navelem"><a href="_engine_8h.html">Engine.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

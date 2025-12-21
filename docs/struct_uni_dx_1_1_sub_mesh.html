@@ -1,0 +1,631 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UniDx: UniDx::SubMesh 構造体</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UniDx
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('struct_uni_dx_1_1_sub_mesh.html','','struct_uni_dx_1_1_sub_mesh-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">UniDx::SubMesh 構造体</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_mesh_8h_source.html">Mesh.h</a>&gt;</code></p>
+<div class="dynheader">
+UniDx::SubMesh の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="struct_uni_dx_1_1_sub_mesh.png" usemap="#UniDx_3A_3ASubMesh_map" alt=""/>
+  <map id="UniDx_3A_3ASubMesh_map" name="UniDx_3A_3ASubMesh_map">
+<area href="struct_uni_dx_1_1_owned_sub_mesh.html" alt="UniDx::OwnedSubMesh" shape="rect" coords="0,56,144,80"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a69f96589a5b636a499c993e3076667bf" id="r_a69f96589a5b636a499c993e3076667bf"><td class="memTemplParams" colspan="2">template&lt;typename TVertex&gt; </td></tr>
+<tr class="memitem:a69f96589a5b636a499c993e3076667bf template"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69f96589a5b636a499c993e3076667bf">copyTo</a> (std::span&lt; TVertex &gt; vertex)</td></tr>
+<tr class="memitem:abec0090a3d5169a40a63d12290560c3b" id="r_abec0090a3d5169a40a63d12290560c3b"><td class="memTemplParams" colspan="2">template&lt;typename TVertex&gt; </td></tr>
+<tr class="memitem:abec0090a3d5169a40a63d12290560c3b template"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; std::vector&lt; TVertex &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abec0090a3d5169a40a63d12290560c3b">createBuffer</a> ()</td></tr>
+<tr class="memitem:a3318fdf444b933420b34c1aff07ee4e7" id="r_a3318fdf444b933420b34c1aff07ee4e7"><td class="memTemplParams" colspan="2">template&lt;typename TVertex, typename F&gt; </td></tr>
+<tr class="memitem:a3318fdf444b933420b34c1aff07ee4e7 template"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; std::vector&lt; TVertex &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3318fdf444b933420b34c1aff07ee4e7">createBuffer</a> (F func)</td></tr>
+<tr class="memitem:ac39546b4e910bdbf30382def2683e49f" id="r_ac39546b4e910bdbf30382def2683e49f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac39546b4e910bdbf30382def2683e49f">createVertexBuffer</a> (void *data)</td></tr>
+<tr class="memitem:a2e8b49751b4c3f1010c6aaafdc43e767" id="r_a2e8b49751b4c3f1010c6aaafdc43e767"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e8b49751b4c3f1010c6aaafdc43e767">createIndexBuffer</a> ()</td></tr>
+<tr class="memitem:abf62a412aab9166861befbb1ed134253" id="r_abf62a412aab9166861befbb1ed134253"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf62a412aab9166861befbb1ed134253">render</a> () const</td></tr>
+<tr class="memitem:a472b5c67216e96c78e36e9199adc5c62" id="r_a472b5c67216e96c78e36e9199adc5c62"><td class="memTemplParams" colspan="2">template&lt;typename TVertex&gt; </td></tr>
+<tr class="memitem:a472b5c67216e96c78e36e9199adc5c62 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a472b5c67216e96c78e36e9199adc5c62">copyNormalTo</a> (std::span&lt; TVertex &gt; vertex)</td></tr>
+<tr class="memitem:ae3c7331e058f12ebd500df334ee30875" id="r_ae3c7331e058f12ebd500df334ee30875"><td class="memTemplParams" colspan="2">template&lt;typename TVertex&gt; </td></tr>
+<tr class="memitem:ae3c7331e058f12ebd500df334ee30875 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3c7331e058f12ebd500df334ee30875">copyColorTo</a> (std::span&lt; TVertex &gt; vertex)</td></tr>
+<tr class="memitem:a74aa140c86ff5d28af9f2b67a6fd1382" id="r_a74aa140c86ff5d28af9f2b67a6fd1382"><td class="memTemplParams" colspan="2">template&lt;typename TVertex&gt; </td></tr>
+<tr class="memitem:a74aa140c86ff5d28af9f2b67a6fd1382 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74aa140c86ff5d28af9f2b67a6fd1382">copyUVTo</a> (std::span&lt; TVertex &gt; vertex)</td></tr>
+<tr class="memitem:afd2548ddc76615419c035c5cd93c9e37" id="r_afd2548ddc76615419c035c5cd93c9e37"><td class="memTemplParams" colspan="2">template&lt;typename TVertex&gt; </td></tr>
+<tr class="memitem:afd2548ddc76615419c035c5cd93c9e37 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd2548ddc76615419c035c5cd93c9e37">copyUV2To</a> (std::span&lt; TVertex &gt; vertex)</td></tr>
+<tr class="memitem:a959189bb5b7e9d6e21ddc1c5b92dcae4" id="r_a959189bb5b7e9d6e21ddc1c5b92dcae4"><td class="memTemplParams" colspan="2">template&lt;typename TVertex&gt; </td></tr>
+<tr class="memitem:a959189bb5b7e9d6e21ddc1c5b92dcae4 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a959189bb5b7e9d6e21ddc1c5b92dcae4">copyUV3To</a> (std::span&lt; TVertex &gt; vertex)</td></tr>
+<tr class="memitem:ac8ad5f71d24a424c2f102e21580b176e" id="r_ac8ad5f71d24a424c2f102e21580b176e"><td class="memTemplParams" colspan="2">template&lt;typename TVertex&gt; </td></tr>
+<tr class="memitem:ac8ad5f71d24a424c2f102e21580b176e template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8ad5f71d24a424c2f102e21580b176e">copyUV4To</a> (std::span&lt; TVertex &gt; vertex)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a7406ef7f75feba9705a65f39a3316f62" id="r_a7406ef7f75feba9705a65f39a3316f62"><td class="memItemLeft" align="right" valign="top">D3D11_PRIMITIVE_TOPOLOGY&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7406ef7f75feba9705a65f39a3316f62">topology</a></td></tr>
+<tr class="memitem:a843da84dda0e238d8de72bb0c9e20698" id="r_a843da84dda0e238d8de72bb0c9e20698"><td class="memItemLeft" align="right" valign="top">std::span&lt; const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a843da84dda0e238d8de72bb0c9e20698">positions</a></td></tr>
+<tr class="memitem:a3efcc2babb70bf904f7206627e63ad56" id="r_a3efcc2babb70bf904f7206627e63ad56"><td class="memItemLeft" align="right" valign="top">std::span&lt; const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3efcc2babb70bf904f7206627e63ad56">normals</a></td></tr>
+<tr class="memitem:a147b2d750dcd6cd9363ec18457f81d2e" id="r_a147b2d750dcd6cd9363ec18457f81d2e"><td class="memItemLeft" align="right" valign="top">std::span&lt; const <a class="el" href="struct_uni_dx_1_1_color.html">Color</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a147b2d750dcd6cd9363ec18457f81d2e">colors</a></td></tr>
+<tr class="memitem:a5db00745a692f4c40b186cfab36394b9" id="r_a5db00745a692f4c40b186cfab36394b9"><td class="memItemLeft" align="right" valign="top">std::span&lt; const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5db00745a692f4c40b186cfab36394b9">uv</a></td></tr>
+<tr class="memitem:a26863ce7718faaafbc98e61228077567" id="r_a26863ce7718faaafbc98e61228077567"><td class="memItemLeft" align="right" valign="top">std::span&lt; const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26863ce7718faaafbc98e61228077567">uv2</a></td></tr>
+<tr class="memitem:a7c9ecd78db63d17aa3a79f32e69a8a05" id="r_a7c9ecd78db63d17aa3a79f32e69a8a05"><td class="memItemLeft" align="right" valign="top">std::span&lt; const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c9ecd78db63d17aa3a79f32e69a8a05">uv3</a></td></tr>
+<tr class="memitem:aa6766215271e05485b5fa85fe0180bd2" id="r_aa6766215271e05485b5fa85fe0180bd2"><td class="memItemLeft" align="right" valign="top">std::span&lt; const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6766215271e05485b5fa85fe0180bd2">uv4</a></td></tr>
+<tr class="memitem:ab0bd8520efa21d5f25797dda8388d9da" id="r_ab0bd8520efa21d5f25797dda8388d9da"><td class="memItemLeft" align="right" valign="top">std::span&lt; const uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0bd8520efa21d5f25797dda8388d9da">indices</a></td></tr>
+<tr class="memitem:ae25b48e69d137bd05266247c605afa44" id="r_ae25b48e69d137bd05266247c605afa44"><td class="memItemLeft" align="right" valign="top">ComPtr&lt; ID3D11Buffer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae25b48e69d137bd05266247c605afa44">vertexBuffer</a></td></tr>
+<tr class="memitem:a8e8ec9eed2a1155ad681c51541a9a1df" id="r_a8e8ec9eed2a1155ad681c51541a9a1df"><td class="memItemLeft" align="right" valign="top">ComPtr&lt; ID3D11Buffer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e8ec9eed2a1155ad681c51541a9a1df">indexBuffer</a></td></tr>
+<tr class="memitem:a5a8e3dd8197b9373069844c65ce37026" id="r_a5a8e3dd8197b9373069844c65ce37026"><td class="memItemLeft" align="right" valign="top">UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a8e3dd8197b9373069844c65ce37026">stride</a></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="ae3c7331e058f12ebd500df334ee30875" name="ae3c7331e058f12ebd500df334ee30875"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3c7331e058f12ebd500df334ee30875">&#9670;&#160;</a></span>copyColorTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TVertex&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UniDx::SubMesh::copyColorTo </td>
+          <td>(</td>
+          <td class="paramtype">std::span&lt; TVertex &gt;</td>          <td class="paramname"><span class="paramname"><em>vertex</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a472b5c67216e96c78e36e9199adc5c62" name="a472b5c67216e96c78e36e9199adc5c62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a472b5c67216e96c78e36e9199adc5c62">&#9670;&#160;</a></span>copyNormalTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TVertex&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UniDx::SubMesh::copyNormalTo </td>
+          <td>(</td>
+          <td class="paramtype">std::span&lt; TVertex &gt;</td>          <td class="paramname"><span class="paramname"><em>vertex</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a69f96589a5b636a499c993e3076667bf" name="a69f96589a5b636a499c993e3076667bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69f96589a5b636a499c993e3076667bf">&#9670;&#160;</a></span>copyTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TVertex&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UniDx::SubMesh::copyTo </td>
+          <td>(</td>
+          <td class="paramtype">std::span&lt; TVertex &gt;</td>          <td class="paramname"><span class="paramname"><em>vertex</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afd2548ddc76615419c035c5cd93c9e37" name="afd2548ddc76615419c035c5cd93c9e37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd2548ddc76615419c035c5cd93c9e37">&#9670;&#160;</a></span>copyUV2To()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TVertex&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UniDx::SubMesh::copyUV2To </td>
+          <td>(</td>
+          <td class="paramtype">std::span&lt; TVertex &gt;</td>          <td class="paramname"><span class="paramname"><em>vertex</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a959189bb5b7e9d6e21ddc1c5b92dcae4" name="a959189bb5b7e9d6e21ddc1c5b92dcae4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a959189bb5b7e9d6e21ddc1c5b92dcae4">&#9670;&#160;</a></span>copyUV3To()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TVertex&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UniDx::SubMesh::copyUV3To </td>
+          <td>(</td>
+          <td class="paramtype">std::span&lt; TVertex &gt;</td>          <td class="paramname"><span class="paramname"><em>vertex</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac8ad5f71d24a424c2f102e21580b176e" name="ac8ad5f71d24a424c2f102e21580b176e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8ad5f71d24a424c2f102e21580b176e">&#9670;&#160;</a></span>copyUV4To()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TVertex&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UniDx::SubMesh::copyUV4To </td>
+          <td>(</td>
+          <td class="paramtype">std::span&lt; TVertex &gt;</td>          <td class="paramname"><span class="paramname"><em>vertex</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a74aa140c86ff5d28af9f2b67a6fd1382" name="a74aa140c86ff5d28af9f2b67a6fd1382"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74aa140c86ff5d28af9f2b67a6fd1382">&#9670;&#160;</a></span>copyUVTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TVertex&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UniDx::SubMesh::copyUVTo </td>
+          <td>(</td>
+          <td class="paramtype">std::span&lt; TVertex &gt;</td>          <td class="paramname"><span class="paramname"><em>vertex</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abec0090a3d5169a40a63d12290560c3b" name="abec0090a3d5169a40a63d12290560c3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abec0090a3d5169a40a63d12290560c3b">&#9670;&#160;</a></span>createBuffer() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TVertex&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; std::vector&lt; TVertex &gt; &gt; UniDx::SubMesh::createBuffer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3318fdf444b933420b34c1aff07ee4e7" name="a3318fdf444b933420b34c1aff07ee4e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3318fdf444b933420b34c1aff07ee4e7">&#9670;&#160;</a></span>createBuffer() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TVertex, typename F&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; std::vector&lt; TVertex &gt; &gt; UniDx::SubMesh::createBuffer </td>
+          <td>(</td>
+          <td class="paramtype">F</td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e8b49751b4c3f1010c6aaafdc43e767" name="a2e8b49751b4c3f1010c6aaafdc43e767"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e8b49751b4c3f1010c6aaafdc43e767">&#9670;&#160;</a></span>createIndexBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UniDx::SubMesh::createIndexBuffer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac39546b4e910bdbf30382def2683e49f" name="ac39546b4e910bdbf30382def2683e49f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac39546b4e910bdbf30382def2683e49f">&#9670;&#160;</a></span>createVertexBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UniDx::SubMesh::createVertexBuffer </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf62a412aab9166861befbb1ed134253" name="abf62a412aab9166861befbb1ed134253"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf62a412aab9166861befbb1ed134253">&#9670;&#160;</a></span>render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UniDx::SubMesh::render </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">メンバ詳解</h2>
+<a id="a147b2d750dcd6cd9363ec18457f81d2e" name="a147b2d750dcd6cd9363ec18457f81d2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a147b2d750dcd6cd9363ec18457f81d2e">&#9670;&#160;</a></span>colors</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::span&lt;const <a class="el" href="struct_uni_dx_1_1_color.html">Color</a>&gt; UniDx::SubMesh::colors</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e8ec9eed2a1155ad681c51541a9a1df" name="a8e8ec9eed2a1155ad681c51541a9a1df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e8ec9eed2a1155ad681c51541a9a1df">&#9670;&#160;</a></span>indexBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ComPtr&lt;ID3D11Buffer&gt; UniDx::SubMesh::indexBuffer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab0bd8520efa21d5f25797dda8388d9da" name="ab0bd8520efa21d5f25797dda8388d9da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0bd8520efa21d5f25797dda8388d9da">&#9670;&#160;</a></span>indices</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::span&lt;const uint32_t&gt; UniDx::SubMesh::indices</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3efcc2babb70bf904f7206627e63ad56" name="a3efcc2babb70bf904f7206627e63ad56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3efcc2babb70bf904f7206627e63ad56">&#9670;&#160;</a></span>normals</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::span&lt;const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a>&gt; UniDx::SubMesh::normals</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a843da84dda0e238d8de72bb0c9e20698" name="a843da84dda0e238d8de72bb0c9e20698"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a843da84dda0e238d8de72bb0c9e20698">&#9670;&#160;</a></span>positions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::span&lt;const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a>&gt; UniDx::SubMesh::positions</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a8e3dd8197b9373069844c65ce37026" name="a5a8e3dd8197b9373069844c65ce37026"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a8e3dd8197b9373069844c65ce37026">&#9670;&#160;</a></span>stride</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UINT UniDx::SubMesh::stride</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7406ef7f75feba9705a65f39a3316f62" name="a7406ef7f75feba9705a65f39a3316f62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7406ef7f75feba9705a65f39a3316f62">&#9670;&#160;</a></span>topology</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">D3D11_PRIMITIVE_TOPOLOGY UniDx::SubMesh::topology</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5db00745a692f4c40b186cfab36394b9" name="a5db00745a692f4c40b186cfab36394b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5db00745a692f4c40b186cfab36394b9">&#9670;&#160;</a></span>uv</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::span&lt;const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a>&gt; UniDx::SubMesh::uv</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a26863ce7718faaafbc98e61228077567" name="a26863ce7718faaafbc98e61228077567"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26863ce7718faaafbc98e61228077567">&#9670;&#160;</a></span>uv2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::span&lt;const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a>&gt; UniDx::SubMesh::uv2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7c9ecd78db63d17aa3a79f32e69a8a05" name="a7c9ecd78db63d17aa3a79f32e69a8a05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c9ecd78db63d17aa3a79f32e69a8a05">&#9670;&#160;</a></span>uv3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::span&lt;const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a>&gt; UniDx::SubMesh::uv3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa6766215271e05485b5fa85fe0180bd2" name="aa6766215271e05485b5fa85fe0180bd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6766215271e05485b5fa85fe0180bd2">&#9670;&#160;</a></span>uv4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::span&lt;const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a>&gt; UniDx::SubMesh::uv4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae25b48e69d137bd05266247c605afa44" name="ae25b48e69d137bd05266247c605afa44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae25b48e69d137bd05266247c605afa44">&#9670;&#160;</a></span>vertexBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ComPtr&lt;ID3D11Buffer&gt; UniDx::SubMesh::vertexBuffer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>この構造体詳解は次のファイルから抽出されました:<ul>
+<li>include/UniDx/<a class="el" href="_mesh_8h_source.html">Mesh.h</a></li>
+<li>src/<a class="el" href="_mesh_8cpp.html">Mesh.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_uni_dx.html">UniDx</a></li><li class="navelem"><a href="struct_uni_dx_1_1_sub_mesh.html">SubMesh</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

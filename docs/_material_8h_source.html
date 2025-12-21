@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UniDx: include/UniDx/Material.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UniDx
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_material_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Material.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_material_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_component_8h.html">Component.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_shader_8h.html">Shader.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_mesh_8h.html">Mesh.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_texture_8h.html">Texture.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_uni_dx.html">UniDx</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">class </span><a class="code hl_class" href="class_uni_dx_1_1_camera.html">Camera</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">class </span><a class="code hl_class" href="class_uni_dx_1_1_texture.html">Texture</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">enum</span> <a class="code hl_enumeration" href="namespace_uni_dx.html#a0ef83c78637931767d874f8b99300418">RenderingMode</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// Unity のシェーダーグラフに合わせたブレンドモード</span></div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="namespace_uni_dx.html#a10da2d2141e6f4e7d752167702398c7b">   19</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="namespace_uni_dx.html#a10da2d2141e6f4e7d752167702398c7b">BlendMode</a></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="namespace_uni_dx.html#a10da2d2141e6f4e7d752167702398c7baf99a516c3f67ba00b2313848aef682ea">   21</a></span>    <a class="code hl_enumvalue" href="namespace_uni_dx.html#a10da2d2141e6f4e7d752167702398c7baf99a516c3f67ba00b2313848aef682ea">BlendMode_Opaque</a>,</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="namespace_uni_dx.html#a10da2d2141e6f4e7d752167702398c7baf84cbc72b836267477eed729b4892bda">   22</a></span>    <a class="code hl_enumvalue" href="namespace_uni_dx.html#a10da2d2141e6f4e7d752167702398c7baf84cbc72b836267477eed729b4892bda">BlendMode_Alpha</a>,</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="namespace_uni_dx.html#a10da2d2141e6f4e7d752167702398c7ba068a2d7f60f657a6e002559d7bab596d">   23</a></span>    <a class="code hl_enumvalue" href="namespace_uni_dx.html#a10da2d2141e6f4e7d752167702398c7ba068a2d7f60f657a6e002559d7bab596d">BlendMode_PremultipliedAlpha</a>,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="namespace_uni_dx.html#a10da2d2141e6f4e7d752167702398c7ba8993f69e513fa65e7ee40745fe3e435e">   24</a></span>    <a class="code hl_enumvalue" href="namespace_uni_dx.html#a10da2d2141e6f4e7d752167702398c7ba8993f69e513fa65e7ee40745fe3e435e">BlendMode_Additive</a>,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>};</div>
+</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">// --------------------</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">// Materialクラス</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">// --------------------</span></div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_material.html">   31</a></span><span class="keyword">class </span><a class="code hl_function" href="class_uni_dx_1_1_material.html#a4575082e9652f4bdeec00a6e3f206877">Material</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_uni_dx_1_1_object.html#a8105112b7931a0c380dfe004d3efc959">Object</a></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>{</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_material.html#a03882d3e2527a2a5d4f3ba58d3d42d8f">   34</a></span>    <a class="code hl_class" href="class_uni_dx_1_1_shader.html">Shader</a> <a class="code hl_variable" href="class_uni_dx_1_1_material.html#a03882d3e2527a2a5d4f3ba58d3d42d8f">shader</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_material.html#aedf06205b9a226cc24aa98bd85b716da">   35</a></span>    <a class="code hl_struct" href="struct_uni_dx_1_1_color.html">Color</a> <a class="code hl_variable" href="class_uni_dx_1_1_material.html#aedf06205b9a226cc24aa98bd85b716da">color</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_material.html#ac50c51fe9fa2e7f8f2901f345356c6a5">   36</a></span>    <a class="code hl_class" href="class_uni_dx_1_1_read_only_property.html">ReadOnlyProperty&lt;Texture*&gt;</a> <a class="code hl_variable" href="class_uni_dx_1_1_material.html#ac50c51fe9fa2e7f8f2901f345356c6a5">mainTexture</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_material.html#afbb53068fd666c6f96dd37a63cd4aa76">   37</a></span>    D3D11_DEPTH_WRITE_MASK <a class="code hl_variable" href="class_uni_dx_1_1_material.html#afbb53068fd666c6f96dd37a63cd4aa76">depthWrite</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_material.html#a37aeff1400b62648e9d5ebe0914b1ee6">   38</a></span>    D3D11_COMPARISON_FUNC <a class="code hl_variable" href="class_uni_dx_1_1_material.html#a37aeff1400b62648e9d5ebe0914b1ee6">ztest</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_material.html#ac06b6333620f336cc0e19ee0e9c995a8">   39</a></span>    <a class="code hl_enumeration" href="namespace_uni_dx.html#a0ef83c78637931767d874f8b99300418">RenderingMode</a> <a class="code hl_variable" href="class_uni_dx_1_1_material.html#ac06b6333620f336cc0e19ee0e9c995a8">renderingMode</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">// コンストラクタ</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_function" href="class_uni_dx_1_1_material.html#a4575082e9652f4bdeec00a6e3f206877">Material</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="comment">// マテリアル情報設定。Render()内で呼び出す</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_uni_dx_1_1_material.html#ad555b26009f49bb36896ff57a4338733">setForRender</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">// テクスチャの取得</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_material.html#aab7847a2cdb89469ea2736d8f607895f">   48</a></span>    std::span&lt;std::shared_ptr&lt;Texture&gt;&gt; <a class="code hl_function" href="class_uni_dx_1_1_material.html#aab7847a2cdb89469ea2736d8f607895f">getTextures</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_uni_dx_1_1_material.html#a0220919aedd428a99db1db59db6b1408">textures</a>; }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">// テクスチャ追加</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_material.html#abca317f5811a29b1c3b4185668d8601d">AddTexture</a>(std::shared_ptr&lt;Texture&gt; tex);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="comment">// ブレンドモード</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_material.html#a858a7ce105483bdd14510a52ba97ab0d">   54</a></span>    <a class="code hl_enumeration" href="namespace_uni_dx.html#a10da2d2141e6f4e7d752167702398c7b">BlendMode</a> <a class="code hl_function" href="class_uni_dx_1_1_material.html#a858a7ce105483bdd14510a52ba97ab0d">getBlendMode</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_uni_dx_1_1_material.html#a05f2c1f1e8180de094422444d223c05f">blendMode</a>; }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_material.html#a67010830d29315c17f8246311ce76ec5">setBlendMode</a>(<a class="code hl_enumeration" href="namespace_uni_dx.html#a10da2d2141e6f4e7d752167702398c7b">BlendMode</a> e);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">// 有効化</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_material.html#a91193ad37a053e0af9bf0db1536426d9">OnEnable</a>();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_material.html#a8969c879246920d70ee257e3ac213842">   61</a></span>    ComPtr&lt;ID3D11Buffer&gt; <a class="code hl_variable" href="class_uni_dx_1_1_material.html#a8969c879246920d70ee257e3ac213842">constantBufferPerMaterial</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_material.html#a32858c61e77307e24f31065c61a1c70f">   62</a></span>    ComPtr&lt;ID3D11DepthStencilState&gt; <a class="code hl_variable" href="class_uni_dx_1_1_material.html#a32858c61e77307e24f31065c61a1c70f">depthStencilState</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_material.html#acc761a16a86cd81d89ec00525d0662b3">   63</a></span>    ComPtr&lt;ID3D11BlendState&gt; <a class="code hl_variable" href="class_uni_dx_1_1_material.html#acc761a16a86cd81d89ec00525d0662b3">blendState</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_material.html#a0220919aedd428a99db1db59db6b1408">   65</a></span>    std::vector&lt;std::shared_ptr&lt;Texture&gt;&gt; <a class="code hl_variable" href="class_uni_dx_1_1_material.html#a0220919aedd428a99db1db59db6b1408">textures</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_material.html#a05f2c1f1e8180de094422444d223c05f">   66</a></span>    <a class="code hl_enumeration" href="namespace_uni_dx.html#a10da2d2141e6f4e7d752167702398c7b">BlendMode</a> <a class="code hl_variable" href="class_uni_dx_1_1_material.html#a05f2c1f1e8180de094422444d223c05f">blendMode</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>};</div>
+</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>} <span class="comment">// namespace UniDx</span></div>
+<div class="ttc" id="a_component_8h_html"><div class="ttname"><a href="_component_8h.html">Component.h</a></div></div>
+<div class="ttc" id="a_mesh_8h_html"><div class="ttname"><a href="_mesh_8h.html">Mesh.h</a></div></div>
+<div class="ttc" id="a_shader_8h_html"><div class="ttname"><a href="_shader_8h.html">Shader.h</a></div></div>
+<div class="ttc" id="a_texture_8h_html"><div class="ttname"><a href="_texture_8h.html">Texture.h</a></div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_camera_html"><div class="ttname"><a href="class_uni_dx_1_1_camera.html">UniDx::Camera</a></div><div class="ttdef"><b>Definition</b> Camera.h:12</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_material_html_a0220919aedd428a99db1db59db6b1408"><div class="ttname"><a href="class_uni_dx_1_1_material.html#a0220919aedd428a99db1db59db6b1408">UniDx::Material::textures</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; Texture &gt; &gt; textures</div><div class="ttdef"><b>Definition</b> Material.h:65</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_material_html_a03882d3e2527a2a5d4f3ba58d3d42d8f"><div class="ttname"><a href="class_uni_dx_1_1_material.html#a03882d3e2527a2a5d4f3ba58d3d42d8f">UniDx::Material::shader</a></div><div class="ttdeci">Shader shader</div><div class="ttdef"><b>Definition</b> Material.h:34</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_material_html_a05f2c1f1e8180de094422444d223c05f"><div class="ttname"><a href="class_uni_dx_1_1_material.html#a05f2c1f1e8180de094422444d223c05f">UniDx::Material::blendMode</a></div><div class="ttdeci">BlendMode blendMode</div><div class="ttdef"><b>Definition</b> Material.h:66</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_material_html_a32858c61e77307e24f31065c61a1c70f"><div class="ttname"><a href="class_uni_dx_1_1_material.html#a32858c61e77307e24f31065c61a1c70f">UniDx::Material::depthStencilState</a></div><div class="ttdeci">ComPtr&lt; ID3D11DepthStencilState &gt; depthStencilState</div><div class="ttdef"><b>Definition</b> Material.h:62</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_material_html_a37aeff1400b62648e9d5ebe0914b1ee6"><div class="ttname"><a href="class_uni_dx_1_1_material.html#a37aeff1400b62648e9d5ebe0914b1ee6">UniDx::Material::ztest</a></div><div class="ttdeci">D3D11_COMPARISON_FUNC ztest</div><div class="ttdef"><b>Definition</b> Material.h:38</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_material_html_a4575082e9652f4bdeec00a6e3f206877"><div class="ttname"><a href="class_uni_dx_1_1_material.html#a4575082e9652f4bdeec00a6e3f206877">UniDx::Material::Material</a></div><div class="ttdeci">Material()</div><div class="ttdef"><b>Definition</b> Material.cpp:62</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_material_html_a67010830d29315c17f8246311ce76ec5"><div class="ttname"><a href="class_uni_dx_1_1_material.html#a67010830d29315c17f8246311ce76ec5">UniDx::Material::setBlendMode</a></div><div class="ttdeci">void setBlendMode(BlendMode e)</div><div class="ttdef"><b>Definition</b> Material.cpp:153</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_material_html_a858a7ce105483bdd14510a52ba97ab0d"><div class="ttname"><a href="class_uni_dx_1_1_material.html#a858a7ce105483bdd14510a52ba97ab0d">UniDx::Material::getBlendMode</a></div><div class="ttdeci">BlendMode getBlendMode() const</div><div class="ttdef"><b>Definition</b> Material.h:54</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_material_html_a8969c879246920d70ee257e3ac213842"><div class="ttname"><a href="class_uni_dx_1_1_material.html#a8969c879246920d70ee257e3ac213842">UniDx::Material::constantBufferPerMaterial</a></div><div class="ttdeci">ComPtr&lt; ID3D11Buffer &gt; constantBufferPerMaterial</div><div class="ttdef"><b>Definition</b> Material.h:61</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_material_html_a91193ad37a053e0af9bf0db1536426d9"><div class="ttname"><a href="class_uni_dx_1_1_material.html#a91193ad37a053e0af9bf0db1536426d9">UniDx::Material::OnEnable</a></div><div class="ttdeci">virtual void OnEnable()</div><div class="ttdef"><b>Definition</b> Material.cpp:125</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_material_html_aab7847a2cdb89469ea2736d8f607895f"><div class="ttname"><a href="class_uni_dx_1_1_material.html#aab7847a2cdb89469ea2736d8f607895f">UniDx::Material::getTextures</a></div><div class="ttdeci">std::span&lt; std::shared_ptr&lt; Texture &gt; &gt; getTextures()</div><div class="ttdef"><b>Definition</b> Material.h:48</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_material_html_abca317f5811a29b1c3b4185668d8601d"><div class="ttname"><a href="class_uni_dx_1_1_material.html#abca317f5811a29b1c3b4185668d8601d">UniDx::Material::AddTexture</a></div><div class="ttdeci">void AddTexture(std::shared_ptr&lt; Texture &gt; tex)</div><div class="ttdef"><b>Definition</b> Material.cpp:116</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_material_html_ac06b6333620f336cc0e19ee0e9c995a8"><div class="ttname"><a href="class_uni_dx_1_1_material.html#ac06b6333620f336cc0e19ee0e9c995a8">UniDx::Material::renderingMode</a></div><div class="ttdeci">RenderingMode renderingMode</div><div class="ttdef"><b>Definition</b> Material.h:39</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_material_html_ac50c51fe9fa2e7f8f2901f345356c6a5"><div class="ttname"><a href="class_uni_dx_1_1_material.html#ac50c51fe9fa2e7f8f2901f345356c6a5">UniDx::Material::mainTexture</a></div><div class="ttdeci">ReadOnlyProperty&lt; Texture * &gt; mainTexture</div><div class="ttdef"><b>Definition</b> Material.h:36</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_material_html_acc761a16a86cd81d89ec00525d0662b3"><div class="ttname"><a href="class_uni_dx_1_1_material.html#acc761a16a86cd81d89ec00525d0662b3">UniDx::Material::blendState</a></div><div class="ttdeci">ComPtr&lt; ID3D11BlendState &gt; blendState</div><div class="ttdef"><b>Definition</b> Material.h:63</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_material_html_ad555b26009f49bb36896ff57a4338733"><div class="ttname"><a href="class_uni_dx_1_1_material.html#ad555b26009f49bb36896ff57a4338733">UniDx::Material::setForRender</a></div><div class="ttdeci">bool setForRender() const</div><div class="ttdef"><b>Definition</b> Material.cpp:79</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_material_html_aedf06205b9a226cc24aa98bd85b716da"><div class="ttname"><a href="class_uni_dx_1_1_material.html#aedf06205b9a226cc24aa98bd85b716da">UniDx::Material::color</a></div><div class="ttdeci">Color color</div><div class="ttdef"><b>Definition</b> Material.h:35</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_material_html_afbb53068fd666c6f96dd37a63cd4aa76"><div class="ttname"><a href="class_uni_dx_1_1_material.html#afbb53068fd666c6f96dd37a63cd4aa76">UniDx::Material::depthWrite</a></div><div class="ttdeci">D3D11_DEPTH_WRITE_MASK depthWrite</div><div class="ttdef"><b>Definition</b> Material.h:37</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_object_html_a8105112b7931a0c380dfe004d3efc959"><div class="ttname"><a href="class_uni_dx_1_1_object.html#a8105112b7931a0c380dfe004d3efc959">UniDx::Object::Object</a></div><div class="ttdeci">Object(ReadOnlyProperty&lt; wstring_view &gt;::Getter nameGet)</div><div class="ttdef"><b>Definition</b> Object.h:19</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_read_only_property_html"><div class="ttname"><a href="class_uni_dx_1_1_read_only_property.html">UniDx::ReadOnlyProperty</a></div><div class="ttdef"><b>Definition</b> Property.h:16</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_shader_html"><div class="ttname"><a href="class_uni_dx_1_1_shader.html">UniDx::Shader</a></div><div class="ttdef"><b>Definition</b> Shader.h:136</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_texture_html"><div class="ttname"><a href="class_uni_dx_1_1_texture.html">UniDx::Texture</a></div><div class="ttdef"><b>Definition</b> Texture.h:18</div></div>
+<div class="ttc" id="anamespace_uni_dx_html"><div class="ttname"><a href="namespace_uni_dx.html">UniDx</a></div><div class="ttdef"><b>Definition</b> AnimationCurve.cpp:5</div></div>
+<div class="ttc" id="anamespace_uni_dx_html_a0ef83c78637931767d874f8b99300418"><div class="ttname"><a href="namespace_uni_dx.html#a0ef83c78637931767d874f8b99300418">UniDx::RenderingMode</a></div><div class="ttdeci">RenderingMode</div><div class="ttdef"><b>Definition</b> UniDxDefine.h:31</div></div>
+<div class="ttc" id="anamespace_uni_dx_html_a10da2d2141e6f4e7d752167702398c7b"><div class="ttname"><a href="namespace_uni_dx.html#a10da2d2141e6f4e7d752167702398c7b">UniDx::BlendMode</a></div><div class="ttdeci">BlendMode</div><div class="ttdef"><b>Definition</b> Material.h:20</div></div>
+<div class="ttc" id="anamespace_uni_dx_html_a10da2d2141e6f4e7d752167702398c7ba068a2d7f60f657a6e002559d7bab596d"><div class="ttname"><a href="namespace_uni_dx.html#a10da2d2141e6f4e7d752167702398c7ba068a2d7f60f657a6e002559d7bab596d">UniDx::BlendMode_PremultipliedAlpha</a></div><div class="ttdeci">@ BlendMode_PremultipliedAlpha</div><div class="ttdef"><b>Definition</b> Material.h:23</div></div>
+<div class="ttc" id="anamespace_uni_dx_html_a10da2d2141e6f4e7d752167702398c7ba8993f69e513fa65e7ee40745fe3e435e"><div class="ttname"><a href="namespace_uni_dx.html#a10da2d2141e6f4e7d752167702398c7ba8993f69e513fa65e7ee40745fe3e435e">UniDx::BlendMode_Additive</a></div><div class="ttdeci">@ BlendMode_Additive</div><div class="ttdef"><b>Definition</b> Material.h:24</div></div>
+<div class="ttc" id="anamespace_uni_dx_html_a10da2d2141e6f4e7d752167702398c7baf84cbc72b836267477eed729b4892bda"><div class="ttname"><a href="namespace_uni_dx.html#a10da2d2141e6f4e7d752167702398c7baf84cbc72b836267477eed729b4892bda">UniDx::BlendMode_Alpha</a></div><div class="ttdeci">@ BlendMode_Alpha</div><div class="ttdef"><b>Definition</b> Material.h:22</div></div>
+<div class="ttc" id="anamespace_uni_dx_html_a10da2d2141e6f4e7d752167702398c7baf99a516c3f67ba00b2313848aef682ea"><div class="ttname"><a href="namespace_uni_dx.html#a10da2d2141e6f4e7d752167702398c7baf99a516c3f67ba00b2313848aef682ea">UniDx::BlendMode_Opaque</a></div><div class="ttdeci">@ BlendMode_Opaque</div><div class="ttdef"><b>Definition</b> Material.h:21</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_color_html"><div class="ttname"><a href="struct_uni_dx_1_1_color.html">UniDx::Color</a></div><div class="ttdoc">色 (RGBA, float)</div><div class="ttdef"><b>Definition</b> Math.h:189</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_450094861a7bbaf444577c849cb4d1c8.html">UniDx</a></li><li class="navelem"><a href="_material_8h.html">Material.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

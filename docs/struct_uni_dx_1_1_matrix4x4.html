@@ -1,0 +1,984 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UniDx: UniDx::Matrix4x4 構造体</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UniDx
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('struct_uni_dx_1_1_matrix4x4.html','','struct_uni_dx_1_1_matrix4x4-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">UniDx::Matrix4x4 構造体</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>4x4 行列 (行優先)  
+ <a href="#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_math_8h_source.html">Math.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a7fadb7024df617e5065f817f1cc96c93" id="r_a7fadb7024df617e5065f817f1cc96c93"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7fadb7024df617e5065f817f1cc96c93">Matrix4x4</a> ()</td></tr>
+<tr class="memitem:af12e312faff604ece0d4477660191d42" id="r_af12e312faff604ece0d4477660191d42"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af12e312faff604ece0d4477660191d42">Matrix4x4</a> (float im00, float im01, float im02, float im03, float im10, float im11, float im12, float im13, float im20, float im21, float im22, float im23, float im30, float im31, float im32, float im33) noexcept</td></tr>
+<tr class="memitem:a0e7e418e6b39bbaed3e158c9bb5a9a6a" id="r_a0e7e418e6b39bbaed3e158c9bb5a9a6a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e7e418e6b39bbaed3e158c9bb5a9a6a">Matrix4x4</a> (const DirectX::XMFLOAT4X4 &amp;f) noexcept</td></tr>
+<tr class="memitem:acdcf021af3e1f5e48daa1c95e745e2a6" id="r_acdcf021af3e1f5e48daa1c95e745e2a6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdcf021af3e1f5e48daa1c95e745e2a6">Matrix4x4</a> (DirectX::CXMMATRIX M) noexcept</td></tr>
+<tr class="memitem:ad97f2d7b4effe274aa7e9fef023e961f" id="r_ad97f2d7b4effe274aa7e9fef023e961f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a7fadb7024df617e5065f817f1cc96c93">Matrix4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad97f2d7b4effe274aa7e9fef023e961f">inverse</a> () const</td></tr>
+<tr class="memdesc:ad97f2d7b4effe274aa7e9fef023e961f"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆行列  <br /></td></tr>
+<tr class="memitem:a18122c87e0ac8d69a8c9516be3f0ad7f" id="r_a18122c87e0ac8d69a8c9516be3f0ad7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18122c87e0ac8d69a8c9516be3f0ad7f">translation</a> () const noexcept</td></tr>
+<tr class="memdesc:a18122c87e0ac8d69a8c9516be3f0ad7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列から平行移動成分を取得  <br /></td></tr>
+<tr class="memitem:a82478869b4a8a5a42db2132e82e367a5" id="r_a82478869b4a8a5a42db2132e82e367a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82478869b4a8a5a42db2132e82e367a5">setTranslation</a> (const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;v)</td></tr>
+<tr class="memdesc:a82478869b4a8a5a42db2132e82e367a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">平行移動成分を設定  <br /></td></tr>
+<tr class="memitem:a3d94354aa2aa0447893b5f9adbb0af2b" id="r_a3d94354aa2aa0447893b5f9adbb0af2b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d94354aa2aa0447893b5f9adbb0af2b">Decompose</a> (<a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;scale, <a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;rotation, <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;<a class="el" href="#a18122c87e0ac8d69a8c9516be3f0ad7f">translation</a>) const noexcept</td></tr>
+<tr class="memdesc:a3d94354aa2aa0447893b5f9adbb0af2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列をスケール・回転・平行移動に分解する（成功なら true）  <br /></td></tr>
+<tr class="memitem:a8afecc04295ac993bec4448f9de97f8c" id="r_a8afecc04295ac993bec4448f9de97f8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8afecc04295ac993bec4448f9de97f8c">MultiplyPoint</a> (const DirectX::XMFLOAT3 &amp;v) const noexcept</td></tr>
+<tr class="memdesc:a8afecc04295ac993bec4448f9de97f8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列に位置をかけて変換  <br /></td></tr>
+<tr class="memitem:a851001cfb1e2eb4b9a269e37137fff93" id="r_a851001cfb1e2eb4b9a269e37137fff93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a851001cfb1e2eb4b9a269e37137fff93">MultiplyVector</a> (const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;v) const noexcept</td></tr>
+<tr class="memdesc:a851001cfb1e2eb4b9a269e37137fff93"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列に方向ベクトルをかけて変換（平行移動は無視）  <br /></td></tr>
+<tr class="memitem:aa38db859d004a100b8cdd64b31b1a57d" id="r_aa38db859d004a100b8cdd64b31b1a57d"><td class="memItemLeft" align="right" valign="top">const DirectX::XMMATRIX&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa38db859d004a100b8cdd64b31b1a57d">XMLoad</a> () const</td></tr>
+<tr class="memitem:a6adc6903a94247ada4ec048ce57bcb7e" id="r_a6adc6903a94247ada4ec048ce57bcb7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6adc6903a94247ada4ec048ce57bcb7e">XMStore</a> (const DirectX::XMMATRIX &amp;mtx)</td></tr>
+<tr class="memitem:ac388261404cda1ff9dc4e596564d1dd6" id="r_ac388261404cda1ff9dc4e596564d1dd6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a7fadb7024df617e5065f817f1cc96c93">Matrix4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac388261404cda1ff9dc4e596564d1dd6">operator+</a> () const noexcept</td></tr>
+<tr class="memitem:a0bd64fae3cdb3755b19f5bda026e5f19" id="r_a0bd64fae3cdb3755b19f5bda026e5f19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a7fadb7024df617e5065f817f1cc96c93">Matrix4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0bd64fae3cdb3755b19f5bda026e5f19">operator-</a> () const noexcept</td></tr>
+<tr class="memitem:a3410439b694656717f8c74fa966b551a" id="r_a3410439b694656717f8c74fa966b551a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3410439b694656717f8c74fa966b551a">operator DirectX::XMFLOAT4X4 &amp;</a> ()</td></tr>
+<tr class="memitem:a4221e588abb973dcf3eca0cd435032cd" id="r_a4221e588abb973dcf3eca0cd435032cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4221e588abb973dcf3eca0cd435032cd">operator const DirectX::XMFLOAT4X4 &amp;</a> () const</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:aa7e799ddf1de97787fbbaf0e0ae999c6" id="r_aa7e799ddf1de97787fbbaf0e0ae999c6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a7fadb7024df617e5065f817f1cc96c93">Matrix4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7e799ddf1de97787fbbaf0e0ae999c6">Rotate</a> (const <a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;rotation) noexcept</td></tr>
+<tr class="memdesc:aa7e799ddf1de97787fbbaf0e0ae999c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">クォータニオンから回転行列を生成  <br /></td></tr>
+<tr class="memitem:aab90e34e9717047cbfb267d8c487166e" id="r_aab90e34e9717047cbfb267d8c487166e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a7fadb7024df617e5065f817f1cc96c93">Matrix4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab90e34e9717047cbfb267d8c487166e">Translate</a> (const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;position) noexcept</td></tr>
+<tr class="memdesc:aab90e34e9717047cbfb267d8c487166e"><td class="mdescLeft">&#160;</td><td class="mdescRight">平行移動行列を生成  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a74e1cfa01d62de570b0f14c552a73743" id="r_a74e1cfa01d62de570b0f14c552a73743"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74e1cfa01d62de570b0f14c552a73743">m00</a></td></tr>
+<tr class="memitem:ad28dc68fe9fb7dd780c8564069e86fb9" id="r_ad28dc68fe9fb7dd780c8564069e86fb9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad28dc68fe9fb7dd780c8564069e86fb9">m01</a></td></tr>
+<tr class="memitem:a6e4b0921bd9036a9286a5c54ba5a83cf" id="r_a6e4b0921bd9036a9286a5c54ba5a83cf"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e4b0921bd9036a9286a5c54ba5a83cf">m02</a></td></tr>
+<tr class="memitem:a6c70994e13678f1458f67f16502ef739" id="r_a6c70994e13678f1458f67f16502ef739"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c70994e13678f1458f67f16502ef739">m03</a></td></tr>
+<tr class="memitem:ac287dfeed0017bf56a407cff53deeef5" id="r_ac287dfeed0017bf56a407cff53deeef5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac287dfeed0017bf56a407cff53deeef5">m10</a></td></tr>
+<tr class="memitem:ae61a6c8ae3683867d191e3c4f9b0faae" id="r_ae61a6c8ae3683867d191e3c4f9b0faae"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae61a6c8ae3683867d191e3c4f9b0faae">m11</a></td></tr>
+<tr class="memitem:a6e6205c20d1cc75035f9784f302f440f" id="r_a6e6205c20d1cc75035f9784f302f440f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e6205c20d1cc75035f9784f302f440f">m12</a></td></tr>
+<tr class="memitem:a9d409c869aac2226da898ce944daef10" id="r_a9d409c869aac2226da898ce944daef10"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d409c869aac2226da898ce944daef10">m13</a></td></tr>
+<tr class="memitem:a28a7b79078750ac57c95e942a094e8f4" id="r_a28a7b79078750ac57c95e942a094e8f4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28a7b79078750ac57c95e942a094e8f4">m20</a></td></tr>
+<tr class="memitem:a3c5ce45bf90faff3143e6256569dd81e" id="r_a3c5ce45bf90faff3143e6256569dd81e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c5ce45bf90faff3143e6256569dd81e">m21</a></td></tr>
+<tr class="memitem:aa066d455d22e390726d5e3cda755c010" id="r_aa066d455d22e390726d5e3cda755c010"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa066d455d22e390726d5e3cda755c010">m22</a></td></tr>
+<tr class="memitem:a0e768eb7a61ffc12975b86892356d04b" id="r_a0e768eb7a61ffc12975b86892356d04b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e768eb7a61ffc12975b86892356d04b">m23</a></td></tr>
+<tr class="memitem:a3b971ae0f93a5047a040bb95e52000d4" id="r_a3b971ae0f93a5047a040bb95e52000d4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b971ae0f93a5047a040bb95e52000d4">m30</a></td></tr>
+<tr class="memitem:a29062284345ce3b27cd993729051b922" id="r_a29062284345ce3b27cd993729051b922"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29062284345ce3b27cd993729051b922">m31</a></td></tr>
+<tr class="memitem:a9f5e474b2b89d2f25f24fc4d0d2a4db7" id="r_a9f5e474b2b89d2f25f24fc4d0d2a4db7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f5e474b2b89d2f25f24fc4d0d2a4db7">m32</a></td></tr>
+<tr class="memitem:a307a9138920f25d91ae0768702b47a91" id="r_a307a9138920f25d91ae0768702b47a91"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a307a9138920f25d91ae0768702b47a91">m33</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静的公開変数類</h2></td></tr>
+<tr class="memitem:a38103f4d4136493f4657c9a0e8148a18" id="r_a38103f4d4136493f4657c9a0e8148a18"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="#a7fadb7024df617e5065f817f1cc96c93">Matrix4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38103f4d4136493f4657c9a0e8148a18">identity</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>4x4 行列 (行優先) </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
+<a id="a7fadb7024df617e5065f817f1cc96c93" name="a7fadb7024df617e5065f817f1cc96c93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fadb7024df617e5065f817f1cc96c93">&#9670;&#160;</a></span>Matrix4x4() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UniDx::Matrix4x4::Matrix4x4 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af12e312faff604ece0d4477660191d42" name="af12e312faff604ece0d4477660191d42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af12e312faff604ece0d4477660191d42">&#9670;&#160;</a></span>Matrix4x4() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UniDx::Matrix4x4::Matrix4x4 </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>im00</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>im01</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>im02</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>im03</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>im10</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>im11</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>im12</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>im13</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>im20</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>im21</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>im22</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>im23</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>im30</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>im31</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>im32</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>im33</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e7e418e6b39bbaed3e158c9bb5a9a6a" name="a0e7e418e6b39bbaed3e158c9bb5a9a6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e7e418e6b39bbaed3e158c9bb5a9a6a">&#9670;&#160;</a></span>Matrix4x4() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UniDx::Matrix4x4::Matrix4x4 </td>
+          <td>(</td>
+          <td class="paramtype">const DirectX::XMFLOAT4X4 &amp;</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acdcf021af3e1f5e48daa1c95e745e2a6" name="acdcf021af3e1f5e48daa1c95e745e2a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdcf021af3e1f5e48daa1c95e745e2a6">&#9670;&#160;</a></span>Matrix4x4() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UniDx::Matrix4x4::Matrix4x4 </td>
+          <td>(</td>
+          <td class="paramtype">DirectX::CXMMATRIX</td>          <td class="paramname"><span class="paramname"><em>M</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="a3d94354aa2aa0447893b5f9adbb0af2b" name="a3d94354aa2aa0447893b5f9adbb0af2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d94354aa2aa0447893b5f9adbb0af2b">&#9670;&#160;</a></span>Decompose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UniDx::Matrix4x4::Decompose </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>scale</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rotation</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>translation</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>行列をスケール・回転・平行移動に分解する（成功なら true） </p>
+
+</div>
+</div>
+<a id="ad97f2d7b4effe274aa7e9fef023e961f" name="ad97f2d7b4effe274aa7e9fef023e961f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad97f2d7b4effe274aa7e9fef023e961f">&#9670;&#160;</a></span>inverse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a7fadb7024df617e5065f817f1cc96c93">Matrix4x4</a> UniDx::Matrix4x4::inverse </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>逆行列 </p>
+
+</div>
+</div>
+<a id="a8afecc04295ac993bec4448f9de97f8c" name="a8afecc04295ac993bec4448f9de97f8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8afecc04295ac993bec4448f9de97f8c">&#9670;&#160;</a></span>MultiplyPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> UniDx::Matrix4x4::MultiplyPoint </td>
+          <td>(</td>
+          <td class="paramtype">const DirectX::XMFLOAT3 &amp;</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>行列に位置をかけて変換 </p>
+
+</div>
+</div>
+<a id="a851001cfb1e2eb4b9a269e37137fff93" name="a851001cfb1e2eb4b9a269e37137fff93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a851001cfb1e2eb4b9a269e37137fff93">&#9670;&#160;</a></span>MultiplyVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> UniDx::Matrix4x4::MultiplyVector </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>行列に方向ベクトルをかけて変換（平行移動は無視） </p>
+
+</div>
+</div>
+<a id="a4221e588abb973dcf3eca0cd435032cd" name="a4221e588abb973dcf3eca0cd435032cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4221e588abb973dcf3eca0cd435032cd">&#9670;&#160;</a></span>operator const DirectX::XMFLOAT4X4 &amp;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UniDx::Matrix4x4::operator const DirectX::XMFLOAT4X4 &amp; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3410439b694656717f8c74fa966b551a" name="a3410439b694656717f8c74fa966b551a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3410439b694656717f8c74fa966b551a">&#9670;&#160;</a></span>operator DirectX::XMFLOAT4X4 &amp;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UniDx::Matrix4x4::operator DirectX::XMFLOAT4X4 &amp; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac388261404cda1ff9dc4e596564d1dd6" name="ac388261404cda1ff9dc4e596564d1dd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac388261404cda1ff9dc4e596564d1dd6">&#9670;&#160;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a7fadb7024df617e5065f817f1cc96c93">Matrix4x4</a> UniDx::Matrix4x4::operator+ </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0bd64fae3cdb3755b19f5bda026e5f19" name="a0bd64fae3cdb3755b19f5bda026e5f19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bd64fae3cdb3755b19f5bda026e5f19">&#9670;&#160;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a7fadb7024df617e5065f817f1cc96c93">Matrix4x4</a> UniDx::Matrix4x4::operator- </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa7e799ddf1de97787fbbaf0e0ae999c6" name="aa7e799ddf1de97787fbbaf0e0ae999c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7e799ddf1de97787fbbaf0e0ae999c6">&#9670;&#160;</a></span>Rotate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a7fadb7024df617e5065f817f1cc96c93">Matrix4x4</a> UniDx::Matrix4x4::Rotate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rotation</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>クォータニオンから回転行列を生成 </p>
+
+</div>
+</div>
+<a id="a82478869b4a8a5a42db2132e82e367a5" name="a82478869b4a8a5a42db2132e82e367a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82478869b4a8a5a42db2132e82e367a5">&#9670;&#160;</a></span>setTranslation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UniDx::Matrix4x4::setTranslation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>平行移動成分を設定 </p>
+
+</div>
+</div>
+<a id="aab90e34e9717047cbfb267d8c487166e" name="aab90e34e9717047cbfb267d8c487166e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab90e34e9717047cbfb267d8c487166e">&#9670;&#160;</a></span>Translate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a7fadb7024df617e5065f817f1cc96c93">Matrix4x4</a> UniDx::Matrix4x4::Translate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>position</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>平行移動行列を生成 </p>
+
+</div>
+</div>
+<a id="a18122c87e0ac8d69a8c9516be3f0ad7f" name="a18122c87e0ac8d69a8c9516be3f0ad7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18122c87e0ac8d69a8c9516be3f0ad7f">&#9670;&#160;</a></span>translation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> UniDx::Matrix4x4::translation </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>行列から平行移動成分を取得 </p>
+
+</div>
+</div>
+<a id="aa38db859d004a100b8cdd64b31b1a57d" name="aa38db859d004a100b8cdd64b31b1a57d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa38db859d004a100b8cdd64b31b1a57d">&#9670;&#160;</a></span>XMLoad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const DirectX::XMMATRIX UniDx::Matrix4x4::XMLoad </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6adc6903a94247ada4ec048ce57bcb7e" name="a6adc6903a94247ada4ec048ce57bcb7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6adc6903a94247ada4ec048ce57bcb7e">&#9670;&#160;</a></span>XMStore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UniDx::Matrix4x4::XMStore </td>
+          <td>(</td>
+          <td class="paramtype">const DirectX::XMMATRIX &amp;</td>          <td class="paramname"><span class="paramname"><em>mtx</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">メンバ詳解</h2>
+<a id="a38103f4d4136493f4657c9a0e8148a18" name="a38103f4d4136493f4657c9a0e8148a18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38103f4d4136493f4657c9a0e8148a18">&#9670;&#160;</a></span>identity</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="#a7fadb7024df617e5065f817f1cc96c93">Matrix4x4</a> UniDx::Matrix4x4::identity</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= <a class="code hl_function" href="#a7fadb7024df617e5065f817f1cc96c93">Matrix4x4</a>(</div>
+<div class="line">        1.f, 0.f, 0.f, 0.f,</div>
+<div class="line">        0.f, 1.f, 0.f, 0.f,</div>
+<div class="line">        0.f, 0.f, 1.f, 0.f,</div>
+<div class="line">        0.f, 0.f, 0.f, 1.f</div>
+<div class="line">    )</div>
+<div class="ttc" id="astruct_uni_dx_1_1_matrix4x4_html_a7fadb7024df617e5065f817f1cc96c93"><div class="ttname"><a href="#a7fadb7024df617e5065f817f1cc96c93">UniDx::Matrix4x4::Matrix4x4</a></div><div class="ttdeci">Matrix4x4()</div><div class="ttdef"><b>Definition</b> Math.h:221</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a74e1cfa01d62de570b0f14c552a73743" name="a74e1cfa01d62de570b0f14c552a73743"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74e1cfa01d62de570b0f14c552a73743">&#9670;&#160;</a></span>m00</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UniDx::Matrix4x4::m00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad28dc68fe9fb7dd780c8564069e86fb9" name="ad28dc68fe9fb7dd780c8564069e86fb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad28dc68fe9fb7dd780c8564069e86fb9">&#9670;&#160;</a></span>m01</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UniDx::Matrix4x4::m01</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e4b0921bd9036a9286a5c54ba5a83cf" name="a6e4b0921bd9036a9286a5c54ba5a83cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e4b0921bd9036a9286a5c54ba5a83cf">&#9670;&#160;</a></span>m02</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UniDx::Matrix4x4::m02</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c70994e13678f1458f67f16502ef739" name="a6c70994e13678f1458f67f16502ef739"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c70994e13678f1458f67f16502ef739">&#9670;&#160;</a></span>m03</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UniDx::Matrix4x4::m03</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac287dfeed0017bf56a407cff53deeef5" name="ac287dfeed0017bf56a407cff53deeef5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac287dfeed0017bf56a407cff53deeef5">&#9670;&#160;</a></span>m10</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UniDx::Matrix4x4::m10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae61a6c8ae3683867d191e3c4f9b0faae" name="ae61a6c8ae3683867d191e3c4f9b0faae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae61a6c8ae3683867d191e3c4f9b0faae">&#9670;&#160;</a></span>m11</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UniDx::Matrix4x4::m11</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e6205c20d1cc75035f9784f302f440f" name="a6e6205c20d1cc75035f9784f302f440f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e6205c20d1cc75035f9784f302f440f">&#9670;&#160;</a></span>m12</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UniDx::Matrix4x4::m12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d409c869aac2226da898ce944daef10" name="a9d409c869aac2226da898ce944daef10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d409c869aac2226da898ce944daef10">&#9670;&#160;</a></span>m13</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UniDx::Matrix4x4::m13</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a28a7b79078750ac57c95e942a094e8f4" name="a28a7b79078750ac57c95e942a094e8f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28a7b79078750ac57c95e942a094e8f4">&#9670;&#160;</a></span>m20</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UniDx::Matrix4x4::m20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c5ce45bf90faff3143e6256569dd81e" name="a3c5ce45bf90faff3143e6256569dd81e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c5ce45bf90faff3143e6256569dd81e">&#9670;&#160;</a></span>m21</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UniDx::Matrix4x4::m21</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa066d455d22e390726d5e3cda755c010" name="aa066d455d22e390726d5e3cda755c010"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa066d455d22e390726d5e3cda755c010">&#9670;&#160;</a></span>m22</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UniDx::Matrix4x4::m22</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e768eb7a61ffc12975b86892356d04b" name="a0e768eb7a61ffc12975b86892356d04b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e768eb7a61ffc12975b86892356d04b">&#9670;&#160;</a></span>m23</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UniDx::Matrix4x4::m23</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b971ae0f93a5047a040bb95e52000d4" name="a3b971ae0f93a5047a040bb95e52000d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b971ae0f93a5047a040bb95e52000d4">&#9670;&#160;</a></span>m30</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UniDx::Matrix4x4::m30</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29062284345ce3b27cd993729051b922" name="a29062284345ce3b27cd993729051b922"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29062284345ce3b27cd993729051b922">&#9670;&#160;</a></span>m31</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UniDx::Matrix4x4::m31</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9f5e474b2b89d2f25f24fc4d0d2a4db7" name="a9f5e474b2b89d2f25f24fc4d0d2a4db7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f5e474b2b89d2f25f24fc4d0d2a4db7">&#9670;&#160;</a></span>m32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UniDx::Matrix4x4::m32</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a307a9138920f25d91ae0768702b47a91" name="a307a9138920f25d91ae0768702b47a91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a307a9138920f25d91ae0768702b47a91">&#9670;&#160;</a></span>m33</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UniDx::Matrix4x4::m33</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>この構造体詳解は次のファイルから抽出されました:<ul>
+<li>include/UniDx/<a class="el" href="_math_8h_source.html">Math.h</a></li>
+<li>src/<a class="el" href="_math_8cpp.html">Math.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_uni_dx.html">UniDx</a></li><li class="navelem"><a href="struct_uni_dx_1_1_matrix4x4.html">Matrix4x4</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

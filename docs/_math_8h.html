@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UniDx: include/UniDx/Math.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UniDx
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_math_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Math.h ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>基本的な数学型 (ベクトル・クォータニオン・行列・色) とユーティリティ関数  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;DirectXMath.h&gt;</code><br />
+</div>
+<p><a href="_math_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:UniDx_3A_3AVector2" id="r_UniDx_3A_3AVector2"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_uni_dx_1_1_vector2.html">UniDx::Vector2</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">2D ベクトル  <a href="struct_uni_dx_1_1_vector2.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:UniDx_3A_3AVector3" id="r_UniDx_3A_3AVector3"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_uni_dx_1_1_vector3.html">UniDx::Vector3</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">3D ベクトル  <a href="struct_uni_dx_1_1_vector3.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:UniDx_3A_3AVector4" id="r_UniDx_3A_3AVector4"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_uni_dx_1_1_vector4.html">UniDx::Vector4</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">4D ベクトル  <a href="struct_uni_dx_1_1_vector4.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:UniDx_3A_3AQuaternion" id="r_UniDx_3A_3AQuaternion"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_uni_dx_1_1_quaternion.html">UniDx::Quaternion</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">クォータニオン (回転表現)  <a href="struct_uni_dx_1_1_quaternion.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:UniDx_3A_3AColor" id="r_UniDx_3A_3AColor"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_uni_dx_1_1_color.html">UniDx::Color</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">色 (RGBA, float)  <a href="struct_uni_dx_1_1_color.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:UniDx_3A_3AMatrix4x4" id="r_UniDx_3A_3AMatrix4x4"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_uni_dx_1_1_matrix4x4.html">UniDx::Matrix4x4</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">4x4 行列 (行優先)  <a href="struct_uni_dx_1_1_matrix4x4.html#details">[詳解]</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+名前空間</h2></td></tr>
+<tr class="memitem:UniDx" id="r_UniDx"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html">UniDx</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a3f2921918a7c113ea5dda6d5d1c62055" id="r_a3f2921918a7c113ea5dda6d5d1c62055"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a3f2921918a7c113ea5dda6d5d1c62055">UniDx::Dot</a> (const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;v1, const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;v2)</td></tr>
+<tr class="memdesc:a3f2921918a7c113ea5dda6d5d1c62055"><td class="mdescLeft">&#160;</td><td class="mdescRight">ベクトルの内積  <br /></td></tr>
+<tr class="memitem:a7c14423ea25825ab3d8fd681f0be904a" id="r_a7c14423ea25825ab3d8fd681f0be904a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a7c14423ea25825ab3d8fd681f0be904a">UniDx::Cross</a> (const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;v1, const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;v2) noexcept</td></tr>
+<tr class="memdesc:a7c14423ea25825ab3d8fd681f0be904a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ベクトルの外積  <br /></td></tr>
+<tr class="memitem:a28f5cc4eaab897948a01c3cc77c30e6c" id="r_a28f5cc4eaab897948a01c3cc77c30e6c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a28f5cc4eaab897948a01c3cc77c30e6c">UniDx::Distance</a> (const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;v1, const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;v2) noexcept</td></tr>
+<tr class="memdesc:a28f5cc4eaab897948a01c3cc77c30e6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">2点間の距離  <br /></td></tr>
+<tr class="memitem:a71aed6b5098180036cd0608c108aad36" id="r_a71aed6b5098180036cd0608c108aad36"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a71aed6b5098180036cd0608c108aad36">UniDx::SqrDistance</a> (const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;v1, const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;v2)</td></tr>
+<tr class="memdesc:a71aed6b5098180036cd0608c108aad36"><td class="mdescLeft">&#160;</td><td class="mdescRight">2点間の二乗距離  <br /></td></tr>
+<tr class="memitem:a899c6877e138876816241d34be59bac8" id="r_a899c6877e138876816241d34be59bac8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a899c6877e138876816241d34be59bac8">UniDx::Inverse</a> (const <a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;from) noexcept</td></tr>
+<tr class="memdesc:a899c6877e138876816241d34be59bac8"><td class="mdescLeft">&#160;</td><td class="mdescRight">クォータニオンの逆  <br /></td></tr>
+<tr class="memitem:a23f51ef5142510d00b43116a6fbb0f1e" id="r_a23f51ef5142510d00b43116a6fbb0f1e"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a23f51ef5142510d00b43116a6fbb0f1e">UniDx::operator+</a> (const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:a1dec6f466fcbe4e40cd256e1db278835" id="r_a1dec6f466fcbe4e40cd256e1db278835"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a1dec6f466fcbe4e40cd256e1db278835">UniDx::operator-</a> (const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:a2abe21fe9945deecc151459443189fd5" id="r_a2abe21fe9945deecc151459443189fd5"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a2abe21fe9945deecc151459443189fd5">UniDx::operator*</a> (const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:a4e599f2077eeba25748ac4c6fefe088b" id="r_a4e599f2077eeba25748ac4c6fefe088b"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a4e599f2077eeba25748ac4c6fefe088b">UniDx::operator/</a> (const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:a12ff622aa2ecddce9835b534a1319d2b" id="r_a12ff622aa2ecddce9835b534a1319d2b"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a12ff622aa2ecddce9835b534a1319d2b">UniDx::operator*</a> (const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;v, float s) noexcept</td></tr>
+<tr class="memitem:a569980996722f7d9edfdb38ed387e193" id="r_a569980996722f7d9edfdb38ed387e193"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a569980996722f7d9edfdb38ed387e193">UniDx::operator*</a> (float s, const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;v) noexcept</td></tr>
+<tr class="memitem:a93cf510adad0a308f0a82b141752d8a1" id="r_a93cf510adad0a308f0a82b141752d8a1"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a93cf510adad0a308f0a82b141752d8a1">UniDx::operator/</a> (const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;v, float s) noexcept</td></tr>
+<tr class="memitem:ae5bab33ba861c39c1fd75fa9370ea9ab" id="r_ae5bab33ba861c39c1fd75fa9370ea9ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#ae5bab33ba861c39c1fd75fa9370ea9ab">UniDx::operator+=</a> (<a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:ad73449dc98e161326b27a2f21a196167" id="r_ad73449dc98e161326b27a2f21a196167"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#ad73449dc98e161326b27a2f21a196167">UniDx::operator-=</a> (<a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:a17da1e357ffae1f29e8e71d648a9d6db" id="r_a17da1e357ffae1f29e8e71d648a9d6db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a17da1e357ffae1f29e8e71d648a9d6db">UniDx::operator*=</a> (<a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:a61f3c71930e9e1672147028473db8108" id="r_a61f3c71930e9e1672147028473db8108"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a61f3c71930e9e1672147028473db8108">UniDx::operator/=</a> (<a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:a71f6daa3e4219a6c95cfa6a2ba3c699c" id="r_a71f6daa3e4219a6c95cfa6a2ba3c699c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a71f6daa3e4219a6c95cfa6a2ba3c699c">UniDx::operator*=</a> (<a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;v, float s) noexcept</td></tr>
+<tr class="memitem:afbb68700718724d75e417144e4bd7d23" id="r_afbb68700718724d75e417144e4bd7d23"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#afbb68700718724d75e417144e4bd7d23">UniDx::operator/=</a> (<a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;v, float s) noexcept</td></tr>
+<tr class="memitem:a5d1272f4825026ddd0a9532dd7e63de8" id="r_a5d1272f4825026ddd0a9532dd7e63de8"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a5d1272f4825026ddd0a9532dd7e63de8">UniDx::operator==</a> (const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:afea7caea7e9551aa274829d0048cdfdb" id="r_afea7caea7e9551aa274829d0048cdfdb"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#afea7caea7e9551aa274829d0048cdfdb">UniDx::operator!=</a> (const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:a38ab5e6b645e7acdb5865eddcdaf68b2" id="r_a38ab5e6b645e7acdb5865eddcdaf68b2"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a38ab5e6b645e7acdb5865eddcdaf68b2">UniDx::operator+</a> (const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:a122912978261674b3288f5695b9da2d0" id="r_a122912978261674b3288f5695b9da2d0"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a122912978261674b3288f5695b9da2d0">UniDx::operator-</a> (const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:a24f0f56237b414e12d50009ec69121e9" id="r_a24f0f56237b414e12d50009ec69121e9"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a24f0f56237b414e12d50009ec69121e9">UniDx::operator*</a> (const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:a4c7739ea34ec568e9610c1312fe74ca2" id="r_a4c7739ea34ec568e9610c1312fe74ca2"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a4c7739ea34ec568e9610c1312fe74ca2">UniDx::operator/</a> (const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:a3a4fcc7d598df46a07ad8d047efb8145" id="r_a3a4fcc7d598df46a07ad8d047efb8145"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a3a4fcc7d598df46a07ad8d047efb8145">UniDx::operator*</a> (const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;v, float s) noexcept</td></tr>
+<tr class="memitem:a2d3f4364feb36e2523d496782f1d7c42" id="r_a2d3f4364feb36e2523d496782f1d7c42"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a2d3f4364feb36e2523d496782f1d7c42">UniDx::operator*</a> (float s, const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;v) noexcept</td></tr>
+<tr class="memitem:abbf07589ce9ef6314b0890bb8e3695fd" id="r_abbf07589ce9ef6314b0890bb8e3695fd"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#abbf07589ce9ef6314b0890bb8e3695fd">UniDx::operator/</a> (const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;v, float s) noexcept</td></tr>
+<tr class="memitem:a3e5229f9602a7708c032030badb4eca3" id="r_a3e5229f9602a7708c032030badb4eca3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a3e5229f9602a7708c032030badb4eca3">UniDx::operator+=</a> (<a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:a18d11b0dee295f9f9abfd5dc2a48e001" id="r_a18d11b0dee295f9f9abfd5dc2a48e001"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a18d11b0dee295f9f9abfd5dc2a48e001">UniDx::operator-=</a> (<a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:a823298410e83fe1bd767ac9280c7a1b3" id="r_a823298410e83fe1bd767ac9280c7a1b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a823298410e83fe1bd767ac9280c7a1b3">UniDx::operator*=</a> (<a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:afbb980b684a7989d851f084ab8b1007d" id="r_afbb980b684a7989d851f084ab8b1007d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#afbb980b684a7989d851f084ab8b1007d">UniDx::operator/=</a> (<a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:a6dccf701e1e3f0b9b2c9b22ce2786b1b" id="r_a6dccf701e1e3f0b9b2c9b22ce2786b1b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a6dccf701e1e3f0b9b2c9b22ce2786b1b">UniDx::operator*=</a> (<a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;v, float s) noexcept</td></tr>
+<tr class="memitem:a01a794ea7b1d147ace72acdbd820f053" id="r_a01a794ea7b1d147ace72acdbd820f053"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a01a794ea7b1d147ace72acdbd820f053">UniDx::operator/=</a> (<a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;v, float s) noexcept</td></tr>
+<tr class="memitem:a5d3a18c588bc77ac673c6173a37c4255" id="r_a5d3a18c588bc77ac673c6173a37c4255"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a5d3a18c588bc77ac673c6173a37c4255">UniDx::operator==</a> (const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:ab7b55a0fa5a96e1c2d6afcc0ec36e69f" id="r_ab7b55a0fa5a96e1c2d6afcc0ec36e69f"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#ab7b55a0fa5a96e1c2d6afcc0ec36e69f">UniDx::operator!=</a> (const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:a7cd5f8671b9511a7e1b8aeda30035c7e" id="r_a7cd5f8671b9511a7e1b8aeda30035c7e"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a7cd5f8671b9511a7e1b8aeda30035c7e">UniDx::operator+</a> (const <a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:a13c7ddeb2dc9591a101dffcc74d805a8" id="r_a13c7ddeb2dc9591a101dffcc74d805a8"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a13c7ddeb2dc9591a101dffcc74d805a8">UniDx::operator-</a> (const <a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:a6c95803e798b70b4af798be74e22e628" id="r_a6c95803e798b70b4af798be74e22e628"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a6c95803e798b70b4af798be74e22e628">UniDx::operator*</a> (const <a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;q, float s) noexcept</td></tr>
+<tr class="memitem:a31b129bd72341e3f3a4fee297d72c2f3" id="r_a31b129bd72341e3f3a4fee297d72c2f3"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a31b129bd72341e3f3a4fee297d72c2f3">UniDx::operator*</a> (float s, const <a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;q) noexcept</td></tr>
+<tr class="memitem:a78bf60a67a821f83d4283d8ca0354202" id="r_a78bf60a67a821f83d4283d8ca0354202"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a78bf60a67a821f83d4283d8ca0354202">UniDx::operator/</a> (const <a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;q, float s) noexcept</td></tr>
+<tr class="memitem:a9cab5ba933737243bc625d1b828504a7" id="r_a9cab5ba933737243bc625d1b828504a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a9cab5ba933737243bc625d1b828504a7">UniDx::operator+=</a> (<a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:a912638201d390ea367726fcfbf0a2c53" id="r_a912638201d390ea367726fcfbf0a2c53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a912638201d390ea367726fcfbf0a2c53">UniDx::operator-=</a> (<a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:a28bc8ae83c0a75f6e6526d0e94f6dba6" id="r_a28bc8ae83c0a75f6e6526d0e94f6dba6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a28bc8ae83c0a75f6e6526d0e94f6dba6">UniDx::operator*=</a> (<a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;q, float s) noexcept</td></tr>
+<tr class="memitem:ae3a7b8901dcce199447b93e0658e9671" id="r_ae3a7b8901dcce199447b93e0658e9671"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#ae3a7b8901dcce199447b93e0658e9671">UniDx::operator/=</a> (<a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;q, float s) noexcept</td></tr>
+<tr class="memitem:aa5bd95d138a0c3d6e5eda371081bd390" id="r_aa5bd95d138a0c3d6e5eda371081bd390"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#aa5bd95d138a0c3d6e5eda371081bd390">UniDx::operator==</a> (const <a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:a4e01d0cebed969677f452e6d7b58978d" id="r_a4e01d0cebed969677f452e6d7b58978d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a4e01d0cebed969677f452e6d7b58978d">UniDx::operator!=</a> (const <a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:a68e678e117ff66bcfc0f0fd03452aa3a" id="r_a68e678e117ff66bcfc0f0fd03452aa3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a68e678e117ff66bcfc0f0fd03452aa3a">UniDx::operator*</a> (const <a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:a088486478f37c5eedbad2520b86f66d4" id="r_a088486478f37c5eedbad2520b86f66d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a088486478f37c5eedbad2520b86f66d4">UniDx::operator*</a> (const <a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;q, const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;v) noexcept</td></tr>
+<tr class="memitem:af83824ec0ad90575bdee0c3b2fe511db" id="r_af83824ec0ad90575bdee0c3b2fe511db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#af83824ec0ad90575bdee0c3b2fe511db">UniDx::operator+</a> (const <a class="el" href="struct_uni_dx_1_1_color.html">Color</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_color.html">Color</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:ac52bd510d0e6ef15f4d1861d879a41a1" id="r_ac52bd510d0e6ef15f4d1861d879a41a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#ac52bd510d0e6ef15f4d1861d879a41a1">UniDx::operator-</a> (const <a class="el" href="struct_uni_dx_1_1_color.html">Color</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_color.html">Color</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:a6cd16ef1d2ce5d5680ba3d3e8df8117c" id="r_a6cd16ef1d2ce5d5680ba3d3e8df8117c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a6cd16ef1d2ce5d5680ba3d3e8df8117c">UniDx::operator*</a> (const <a class="el" href="struct_uni_dx_1_1_color.html">Color</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_color.html">Color</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:ad5c5f7bc24b8ebf3cf6c6eddb047b0f3" id="r_ad5c5f7bc24b8ebf3cf6c6eddb047b0f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#ad5c5f7bc24b8ebf3cf6c6eddb047b0f3">UniDx::operator*</a> (const <a class="el" href="struct_uni_dx_1_1_color.html">Color</a> &amp;c, float s) noexcept</td></tr>
+<tr class="memitem:a9a17332c0802e9173cd74acc5a0e2e6e" id="r_a9a17332c0802e9173cd74acc5a0e2e6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a9a17332c0802e9173cd74acc5a0e2e6e">UniDx::operator*</a> (float s, const <a class="el" href="struct_uni_dx_1_1_color.html">Color</a> &amp;c) noexcept</td></tr>
+<tr class="memitem:a65ee0d5ca9be75dfaca1312967ce8388" id="r_a65ee0d5ca9be75dfaca1312967ce8388"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a65ee0d5ca9be75dfaca1312967ce8388">UniDx::operator/</a> (const <a class="el" href="struct_uni_dx_1_1_color.html">Color</a> &amp;c, float s) noexcept</td></tr>
+<tr class="memitem:a06681cca31f57b89295c08f0d9ae2574" id="r_a06681cca31f57b89295c08f0d9ae2574"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_color.html">Color</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a06681cca31f57b89295c08f0d9ae2574">UniDx::operator+=</a> (<a class="el" href="struct_uni_dx_1_1_color.html">Color</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_color.html">Color</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:a4474a5049b9c40005d023c98d6f403d9" id="r_a4474a5049b9c40005d023c98d6f403d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_color.html">Color</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a4474a5049b9c40005d023c98d6f403d9">UniDx::operator-=</a> (<a class="el" href="struct_uni_dx_1_1_color.html">Color</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_color.html">Color</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:ae6949f94164bd06e39d4731813b71b78" id="r_ae6949f94164bd06e39d4731813b71b78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_color.html">Color</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#ae6949f94164bd06e39d4731813b71b78">UniDx::operator*=</a> (<a class="el" href="struct_uni_dx_1_1_color.html">Color</a> &amp;a, float s) noexcept</td></tr>
+<tr class="memitem:a04bb896bfc74a45353f480b35fab9f21" id="r_a04bb896bfc74a45353f480b35fab9f21"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a04bb896bfc74a45353f480b35fab9f21">UniDx::operator==</a> (const <a class="el" href="struct_uni_dx_1_1_color.html">Color</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_color.html">Color</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:aaafc3d6fd51401e09f7b953179f9cd41" id="r_aaafc3d6fd51401e09f7b953179f9cd41"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#aaafc3d6fd51401e09f7b953179f9cd41">UniDx::operator!=</a> (const <a class="el" href="struct_uni_dx_1_1_color.html">Color</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_color.html">Color</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:ae2dcebf3f970e07555041e7401edf491" id="r_ae2dcebf3f970e07555041e7401edf491"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_matrix4x4.html">Matrix4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#ae2dcebf3f970e07555041e7401edf491">UniDx::operator*</a> (const <a class="el" href="struct_uni_dx_1_1_matrix4x4.html">Matrix4x4</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_matrix4x4.html">Matrix4x4</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:a5b55fcbb7b3090bb6fb61451e57ec0b0" id="r_a5b55fcbb7b3090bb6fb61451e57ec0b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_matrix4x4.html">Matrix4x4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a5b55fcbb7b3090bb6fb61451e57ec0b0">UniDx::operator*=</a> (<a class="el" href="struct_uni_dx_1_1_matrix4x4.html">Matrix4x4</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_matrix4x4.html">Matrix4x4</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:ab40ad26b8cff642d2a72e5447c920c9d" id="r_ab40ad26b8cff642d2a72e5447c920c9d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#ab40ad26b8cff642d2a72e5447c920c9d">UniDx::operator==</a> (const <a class="el" href="struct_uni_dx_1_1_matrix4x4.html">Matrix4x4</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_matrix4x4.html">Matrix4x4</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:acb9bd84ca1b0c98da598689ed495110d" id="r_acb9bd84ca1b0c98da598689ed495110d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#acb9bd84ca1b0c98da598689ed495110d">UniDx::operator!=</a> (const <a class="el" href="struct_uni_dx_1_1_matrix4x4.html">Matrix4x4</a> &amp;a, const <a class="el" href="struct_uni_dx_1_1_matrix4x4.html">Matrix4x4</a> &amp;b) noexcept</td></tr>
+<tr class="memitem:a71d6773adcfe8b8df9f05cc024ca3357" id="r_a71d6773adcfe8b8df9f05cc024ca3357"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a71d6773adcfe8b8df9f05cc024ca3357">UniDx::operator*</a> (const DirectX::XMFLOAT3 &amp;v, const <a class="el" href="struct_uni_dx_1_1_matrix4x4.html">Matrix4x4</a> &amp;m) noexcept</td></tr>
+<tr class="memitem:a9f8aac7d6aded269ee620b4d51a9f394" id="r_a9f8aac7d6aded269ee620b4d51a9f394"><td class="memItemLeft" align="right" valign="top">std::wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a9f8aac7d6aded269ee620b4d51a9f394">UniDx::ToString</a> (const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;v)</td></tr>
+<tr class="memdesc:a9f8aac7d6aded269ee620b4d51a9f394"><td class="mdescLeft">&#160;</td><td class="mdescRight">各型の文字列化（ワイド文字列）  <br /></td></tr>
+<tr class="memitem:a2ed5d30ee2ed4bf08b537e52a573ba1a" id="r_a2ed5d30ee2ed4bf08b537e52a573ba1a"><td class="memItemLeft" align="right" valign="top">std::wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a2ed5d30ee2ed4bf08b537e52a573ba1a">UniDx::ToString</a> (const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;v)</td></tr>
+<tr class="memitem:aaa4ab1fcf2c858a2c237723c836f9796" id="r_aaa4ab1fcf2c858a2c237723c836f9796"><td class="memItemLeft" align="right" valign="top">std::wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#aaa4ab1fcf2c858a2c237723c836f9796">UniDx::ToString</a> (const <a class="el" href="struct_uni_dx_1_1_vector4.html">Vector4</a> &amp;v)</td></tr>
+<tr class="memitem:aaabc813c3a07f8db46c5ad4b9d194192" id="r_aaabc813c3a07f8db46c5ad4b9d194192"><td class="memItemLeft" align="right" valign="top">std::wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#aaabc813c3a07f8db46c5ad4b9d194192">UniDx::ToString</a> (const <a class="el" href="struct_uni_dx_1_1_color.html">Color</a> &amp;v)</td></tr>
+<tr class="memitem:a93159fa8e38e927dafa57b5abe4bd196" id="r_a93159fa8e38e927dafa57b5abe4bd196"><td class="memItemLeft" align="right" valign="top">std::wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a93159fa8e38e927dafa57b5abe4bd196">UniDx::ToString</a> (const <a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;v)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:ac1b22b92e9316a727d5c35c532156344" id="r_ac1b22b92e9316a727d5c35c532156344"><td class="memItemLeft" align="right" valign="top">constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#ac1b22b92e9316a727d5c35c532156344">UniDx::PI</a> = 3.141592654f</td></tr>
+<tr class="memdesc:ac1b22b92e9316a727d5c35c532156344"><td class="mdescLeft">&#160;</td><td class="mdescRight">円周率 (float)  <br /></td></tr>
+<tr class="memitem:a6ab3c553bcc13c5c18b6464d321eb43d" id="r_a6ab3c553bcc13c5c18b6464d321eb43d"><td class="memItemLeft" align="right" valign="top">constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a6ab3c553bcc13c5c18b6464d321eb43d">UniDx::Deg2Rad</a> = <a class="el" href="namespace_uni_dx.html#ac1b22b92e9316a727d5c35c532156344">PI</a> / 180.0f</td></tr>
+<tr class="memdesc:a6ab3c553bcc13c5c18b6464d321eb43d"><td class="mdescLeft">&#160;</td><td class="mdescRight">度 -&gt; ラジアン変換係数  <br /></td></tr>
+<tr class="memitem:aea74f475116138d687bdf01556cf2c19" id="r_aea74f475116138d687bdf01556cf2c19"><td class="memItemLeft" align="right" valign="top">constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#aea74f475116138d687bdf01556cf2c19">UniDx::Rad2Deg</a> = 180.0f / <a class="el" href="namespace_uni_dx.html#ac1b22b92e9316a727d5c35c532156344">PI</a></td></tr>
+<tr class="memdesc:aea74f475116138d687bdf01556cf2c19"><td class="mdescLeft">&#160;</td><td class="mdescRight">ラジアン -&gt; 度変換係数  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>基本的な数学型 (ベクトル・クォータニオン・行列・色) とユーティリティ関数 </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_450094861a7bbaf444577c849cb4d1c8.html">UniDx</a></li><li class="navelem"><a href="_math_8h.html">Math.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

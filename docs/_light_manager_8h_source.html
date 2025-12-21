@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UniDx: include/UniDx/LightManager.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UniDx
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_light_manager_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">LightManager.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_light_manager_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_uni_dx_define_8h.html">UniDxDefine.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_singleton_8h.html">Singleton.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_constant_buffer_8h.html">ConstantBuffer.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// UniDxではシェーダ簡易化のため、一番影響の大きいディレクショナルライト１つ、</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// ポイントライト最大８個、スポットライト最大８個をそれぞれ転送します。</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_uni_dx.html">UniDx</a></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">class </span><a class="code hl_class" href="class_uni_dx_1_1_light.html">Light</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_g_p_u_light.html">   19</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_uni_dx_1_1_g_p_u_light.html">GPULight</a> <span class="comment">// 16byte aligned</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_g_p_u_light.html#acc3b5819ac17258c248900cc99e8ee8f">   21</a></span>    <a class="code hl_struct" href="struct_uni_dx_1_1_vector3.html">Vector3</a> <a class="code hl_variable" href="struct_uni_dx_1_1_g_p_u_light.html#acc3b5819ac17258c248900cc99e8ee8f">positionOrDirWS</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_g_p_u_light.html#aa67bc3fc0658a950802d3c53dddd853e">   22</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_uni_dx_1_1_g_p_u_light.html#aa67bc3fc0658a950802d3c53dddd853e">rangeOrInvCos</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_g_p_u_light.html#afa0b2e8d05936cba1aaa1521d0dbb9d8">   23</a></span>    <a class="code hl_struct" href="struct_uni_dx_1_1_color.html">Color</a> <a class="code hl_variable" href="struct_uni_dx_1_1_g_p_u_light.html#afa0b2e8d05936cba1aaa1521d0dbb9d8">color</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_g_p_u_light.html#a4d1df030d9b3cc46e568f8b945a170a6">   24</a></span>    <a class="code hl_struct" href="struct_uni_dx_1_1_vector3.html">Vector3</a> <a class="code hl_variable" href="struct_uni_dx_1_1_g_p_u_light.html#a4d1df030d9b3cc46e568f8b945a170a6">spotDirWS</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_g_p_u_light.html#af423fe6bbc1a63f3aa09338596304363">   25</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_uni_dx_1_1_g_p_u_light.html#af423fe6bbc1a63f3aa09338596304363">spotOuterCos</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_g_p_u_light.html#a97ceff9e080a6340533f861f4b2ec34a">   26</a></span>    uint32_t  <a class="code hl_variable" href="struct_uni_dx_1_1_g_p_u_light.html#a97ceff9e080a6340533f861f4b2ec34a">type</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_g_p_u_light.html#abc26da642a89a5f8a8c1a7b74cebb71f">   27</a></span>    uint32_t <a class="code hl_variable" href="struct_uni_dx_1_1_g_p_u_light.html#abc26da642a89a5f8a8c1a7b74cebb71f">shadowIndex</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_g_p_u_light.html#a2e88ebe5f660b231241204ba25663e89">   28</a></span>    uint32_t  <a class="code hl_variable" href="struct_uni_dx_1_1_g_p_u_light.html#a2e88ebe5f660b231241204ba25663e89">padding</a>[2];</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
+</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">// --------------------</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">// LightManager</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">// --------------------</span></div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="};">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_light_manager.html">   35</a></span><span class="keyword">class </span><a class="code hl_function" href="class_uni_dx_1_1_light_manager.html#adbcc1ec33e78e1642cc8a50a10c4e2d0">LightManager</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_uni_dx_1_1_singleton.html#aa1d5dc993efef5faa60dc69cb141ae1f">Singleton</a>&lt;LightManager&gt;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>{</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_light_manager.html#a8a36f34b4b1ffc232709bebb62263977">   38</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_uni_dx_1_1_light_manager.html#a8a36f34b4b1ffc232709bebb62263977">LightCountMax</a> = 32;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_light_manager.html#a342df03eeeeaced9f3490ff3bf0eb665">   40</a></span>    <a class="code hl_struct" href="struct_uni_dx_1_1_color.html">Color</a> <a class="code hl_variable" href="class_uni_dx_1_1_light_manager.html#a342df03eeeeaced9f3490ff3bf0eb665">ambientColor</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_function" href="class_uni_dx_1_1_light_manager.html#adbcc1ec33e78e1642cc8a50a10c4e2d0">LightManager</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_uni_dx_1_1_light_manager.html#ae24ce851d8819550667d44845e47cf67">registerLight</a>(<a class="code hl_class" href="class_uni_dx_1_1_light.html">Light</a>* light);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_light_manager.html#a0051aaeadc0b27f5bac8fdba353b9864">unregisterLight</a>(<a class="code hl_class" href="class_uni_dx_1_1_light.html">Light</a>* light);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">// ライト情報を定数バッファに反映</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_light_manager.html#ae80716f7f66569a129c05fbb983a9127">updateLightCBuffer</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_light_manager.html#aebc80c8057a754dbf637b41f998b6489">updateLightCBufferObject</a>(<a class="code hl_struct" href="struct_uni_dx_1_1_vector3.html">Vector3</a> objPos, <span class="keywordtype">int</span> lightCountMax = PointLightCountMax + SpotLightCountMax);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    std::vector&lt;Light*&gt; lights_;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">size_t</span>              capacity_ = 0;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    std::vector&lt;GPULight&gt; gpuLights_;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    Microsoft::WRL::ComPtr&lt;ID3D11Buffer&gt;           lightBuf_;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    Microsoft::WRL::ComPtr&lt;ID3D11ShaderResourceView&gt;lightSRV_;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">//    Microsoft::WRL::ComPtr&lt;ID3D11Buffer&gt;           metaCB_;</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    std::vector&lt;PointLightBuffer&gt; pointLights;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    std::vector&lt;SpotLightBuffer&gt; spotLights;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    std::vector&lt;float&gt; pointLightIntensity;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    std::vector&lt;float&gt; spotLightIntensity;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    ComPtr&lt;ID3D11Buffer&gt; constantBufferLightPerFrame;  <span class="comment">// フレームごとにGPUで共通利用する定数バッファ</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    ComPtr&lt;ID3D11Buffer&gt; constantBufferLightPerObject; <span class="comment">// オブジェクトごとにGPUで共通利用する定数バッファ</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>};</div>
+</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
+<div class="ttc" id="a_constant_buffer_8h_html"><div class="ttname"><a href="_constant_buffer_8h.html">ConstantBuffer.h</a></div></div>
+<div class="ttc" id="a_singleton_8h_html"><div class="ttname"><a href="_singleton_8h.html">Singleton.h</a></div></div>
+<div class="ttc" id="a_uni_dx_define_8h_html"><div class="ttname"><a href="_uni_dx_define_8h.html">UniDxDefine.h</a></div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_light_html"><div class="ttname"><a href="class_uni_dx_1_1_light.html">UniDx::Light</a></div><div class="ttdef"><b>Definition</b> Light.h:24</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_light_manager_html_a0051aaeadc0b27f5bac8fdba353b9864"><div class="ttname"><a href="class_uni_dx_1_1_light_manager.html#a0051aaeadc0b27f5bac8fdba353b9864">UniDx::LightManager::unregisterLight</a></div><div class="ttdeci">void unregisterLight(Light *light)</div><div class="ttdef"><b>Definition</b> LightManager.cpp:97</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_light_manager_html_a342df03eeeeaced9f3490ff3bf0eb665"><div class="ttname"><a href="class_uni_dx_1_1_light_manager.html#a342df03eeeeaced9f3490ff3bf0eb665">UniDx::LightManager::ambientColor</a></div><div class="ttdeci">Color ambientColor</div><div class="ttdef"><b>Definition</b> LightManager.h:40</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_light_manager_html_a8a36f34b4b1ffc232709bebb62263977"><div class="ttname"><a href="class_uni_dx_1_1_light_manager.html#a8a36f34b4b1ffc232709bebb62263977">UniDx::LightManager::LightCountMax</a></div><div class="ttdeci">static constexpr int LightCountMax</div><div class="ttdef"><b>Definition</b> LightManager.h:38</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_light_manager_html_adbcc1ec33e78e1642cc8a50a10c4e2d0"><div class="ttname"><a href="class_uni_dx_1_1_light_manager.html#adbcc1ec33e78e1642cc8a50a10c4e2d0">UniDx::LightManager::LightManager</a></div><div class="ttdeci">LightManager()</div><div class="ttdef"><b>Definition</b> LightManager.cpp:47</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_light_manager_html_ae24ce851d8819550667d44845e47cf67"><div class="ttname"><a href="class_uni_dx_1_1_light_manager.html#ae24ce851d8819550667d44845e47cf67">UniDx::LightManager::registerLight</a></div><div class="ttdeci">bool registerLight(Light *light)</div><div class="ttdef"><b>Definition</b> LightManager.cpp:71</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_light_manager_html_ae80716f7f66569a129c05fbb983a9127"><div class="ttname"><a href="class_uni_dx_1_1_light_manager.html#ae80716f7f66569a129c05fbb983a9127">UniDx::LightManager::updateLightCBuffer</a></div><div class="ttdeci">virtual void updateLightCBuffer()</div><div class="ttdef"><b>Definition</b> LightManager.cpp:111</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_light_manager_html_aebc80c8057a754dbf637b41f998b6489"><div class="ttname"><a href="class_uni_dx_1_1_light_manager.html#aebc80c8057a754dbf637b41f998b6489">UniDx::LightManager::updateLightCBufferObject</a></div><div class="ttdeci">virtual void updateLightCBufferObject(Vector3 objPos, int lightCountMax=PointLightCountMax+SpotLightCountMax)</div><div class="ttdef"><b>Definition</b> LightManager.cpp:149</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_singleton_html_aa1d5dc993efef5faa60dc69cb141ae1f"><div class="ttname"><a href="class_uni_dx_1_1_singleton.html#aa1d5dc993efef5faa60dc69cb141ae1f">UniDx::Singleton&lt; LightManager &gt;::Singleton</a></div><div class="ttdeci">Singleton()</div><div class="ttdef"><b>Definition</b> Singleton.h:38</div></div>
+<div class="ttc" id="anamespace_uni_dx_html"><div class="ttname"><a href="namespace_uni_dx.html">UniDx</a></div><div class="ttdef"><b>Definition</b> AnimationCurve.cpp:5</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_color_html"><div class="ttname"><a href="struct_uni_dx_1_1_color.html">UniDx::Color</a></div><div class="ttdoc">色 (RGBA, float)</div><div class="ttdef"><b>Definition</b> Math.h:189</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_g_p_u_light_html"><div class="ttname"><a href="struct_uni_dx_1_1_g_p_u_light.html">UniDx::GPULight</a></div><div class="ttdef"><b>Definition</b> LightManager.h:20</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_g_p_u_light_html_a2e88ebe5f660b231241204ba25663e89"><div class="ttname"><a href="struct_uni_dx_1_1_g_p_u_light.html#a2e88ebe5f660b231241204ba25663e89">UniDx::GPULight::padding</a></div><div class="ttdeci">uint32_t padding[2]</div><div class="ttdef"><b>Definition</b> LightManager.h:28</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_g_p_u_light_html_a4d1df030d9b3cc46e568f8b945a170a6"><div class="ttname"><a href="struct_uni_dx_1_1_g_p_u_light.html#a4d1df030d9b3cc46e568f8b945a170a6">UniDx::GPULight::spotDirWS</a></div><div class="ttdeci">Vector3 spotDirWS</div><div class="ttdef"><b>Definition</b> LightManager.h:24</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_g_p_u_light_html_a97ceff9e080a6340533f861f4b2ec34a"><div class="ttname"><a href="struct_uni_dx_1_1_g_p_u_light.html#a97ceff9e080a6340533f861f4b2ec34a">UniDx::GPULight::type</a></div><div class="ttdeci">uint32_t type</div><div class="ttdef"><b>Definition</b> LightManager.h:26</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_g_p_u_light_html_aa67bc3fc0658a950802d3c53dddd853e"><div class="ttname"><a href="struct_uni_dx_1_1_g_p_u_light.html#aa67bc3fc0658a950802d3c53dddd853e">UniDx::GPULight::rangeOrInvCos</a></div><div class="ttdeci">float rangeOrInvCos</div><div class="ttdef"><b>Definition</b> LightManager.h:22</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_g_p_u_light_html_abc26da642a89a5f8a8c1a7b74cebb71f"><div class="ttname"><a href="struct_uni_dx_1_1_g_p_u_light.html#abc26da642a89a5f8a8c1a7b74cebb71f">UniDx::GPULight::shadowIndex</a></div><div class="ttdeci">uint32_t shadowIndex</div><div class="ttdef"><b>Definition</b> LightManager.h:27</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_g_p_u_light_html_acc3b5819ac17258c248900cc99e8ee8f"><div class="ttname"><a href="struct_uni_dx_1_1_g_p_u_light.html#acc3b5819ac17258c248900cc99e8ee8f">UniDx::GPULight::positionOrDirWS</a></div><div class="ttdeci">Vector3 positionOrDirWS</div><div class="ttdef"><b>Definition</b> LightManager.h:21</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_g_p_u_light_html_af423fe6bbc1a63f3aa09338596304363"><div class="ttname"><a href="struct_uni_dx_1_1_g_p_u_light.html#af423fe6bbc1a63f3aa09338596304363">UniDx::GPULight::spotOuterCos</a></div><div class="ttdeci">float spotOuterCos</div><div class="ttdef"><b>Definition</b> LightManager.h:25</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_g_p_u_light_html_afa0b2e8d05936cba1aaa1521d0dbb9d8"><div class="ttname"><a href="struct_uni_dx_1_1_g_p_u_light.html#afa0b2e8d05936cba1aaa1521d0dbb9d8">UniDx::GPULight::color</a></div><div class="ttdeci">Color color</div><div class="ttdef"><b>Definition</b> LightManager.h:23</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_vector3_html"><div class="ttname"><a href="struct_uni_dx_1_1_vector3.html">UniDx::Vector3</a></div><div class="ttdoc">3D ベクトル</div><div class="ttdef"><b>Definition</b> Math.h:47</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_450094861a7bbaf444577c849cb4d1c8.html">UniDx</a></li><li class="navelem"><a href="_light_manager_8h.html">LightManager.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

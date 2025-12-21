@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UniDx: UniDx::D3DManager クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UniDx
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_uni_dx_1_1_d3_d_manager.html','','class_uni_dx_1_1_d3_d_manager-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">UniDx::D3DManager クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_d3_d_manager_8h_source.html">D3DManager.h</a>&gt;</code></p>
+<div class="dynheader">
+UniDx::D3DManager の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_uni_dx_1_1_d3_d_manager.png" usemap="#UniDx_3A_3AD3DManager_map" alt=""/>
+  <map id="UniDx_3A_3AD3DManager_map" name="UniDx_3A_3AD3DManager_map">
+<area href="class_uni_dx_1_1_singleton.html" alt="UniDx::Singleton&lt; D3DManager &gt;" shape="rect" coords="0,0,203,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:af2b4f6643c1f5d5613cde9c50396a28f" id="r_af2b4f6643c1f5d5613cde9c50396a28f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2b4f6643c1f5d5613cde9c50396a28f">Initialize</a> (HWND hWnd, int width, int height)</td></tr>
+<tr class="memitem:a622df7eefdd47923594ebd9dc4c6360b" id="r_a622df7eefdd47923594ebd9dc4c6360b"><td class="memItemLeft" align="right" valign="top">const ComPtr&lt; ID3D11Device &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a622df7eefdd47923594ebd9dc4c6360b">GetDevice</a> () const</td></tr>
+<tr class="memitem:ac5ed036554e449b89ee9ea47efb65d18" id="r_ac5ed036554e449b89ee9ea47efb65d18"><td class="memItemLeft" align="right" valign="top">const ComPtr&lt; ID3D11DeviceContext &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5ed036554e449b89ee9ea47efb65d18">GetContext</a> () const</td></tr>
+<tr class="memitem:a0446cbe29fca9e47c1a73ff1b5edee75" id="r_a0446cbe29fca9e47c1a73ff1b5edee75"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0446cbe29fca9e47c1a73ff1b5edee75">~D3DManager</a> ()</td></tr>
+<tr class="memitem:ac706c5b044a1d5e2b06e2adbbbc77fce" id="r_ac706c5b044a1d5e2b06e2adbbbc77fce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac706c5b044a1d5e2b06e2adbbbc77fce">Clear</a> (float r, float g, float b, float a)</td></tr>
+<tr class="memitem:afe6ba981703df012c77616d35ccf26b4" id="r_afe6ba981703df012c77616d35ccf26b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe6ba981703df012c77616d35ccf26b4">Present</a> ()</td></tr>
+<tr class="memitem:abd415b43a59c371a23d7640e9dcb7c63" id="r_abd415b43a59c371a23d7640e9dcb7c63"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd415b43a59c371a23d7640e9dcb7c63">getScreenSize</a> () const</td></tr>
+<tr class="memitem:afb6ad50949ba080ab75c94ef176ef731" id="r_afb6ad50949ba080ab75c94ef176ef731"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_uni_dx.html#a0ef83c78637931767d874f8b99300418">RenderingMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb6ad50949ba080ab75c94ef176ef731">getCurrentRenderingMode</a> () const</td></tr>
+<tr class="memitem:af676d12d0d9bf879559dce5edfaccad6" id="r_af676d12d0d9bf879559dce5edfaccad6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af676d12d0d9bf879559dce5edfaccad6">setCurrentCurrentRenderingMode</a> (<a class="el" href="namespace_uni_dx.html#a0ef83c78637931767d874f8b99300418">RenderingMode</a> r)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pub_static_methods_class_uni_dx_1_1_singleton"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_class_uni_dx_1_1_singleton')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_uni_dx_1_1_singleton.html">UniDx::Singleton&lt; D3DManager &gt;</a> に属する継承静的公開メンバ関数</td></tr>
+<tr class="memitem:a4dbe9fdf2ac68bedfd25bf0d6c37aaae inherit pub_static_methods_class_uni_dx_1_1_singleton" id="r_a4dbe9fdf2ac68bedfd25bf0d6c37aaae"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_uni_dx_1_1_d3_d_manager.html">D3DManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_singleton.html#a4dbe9fdf2ac68bedfd25bf0d6c37aaae">getInstance</a> ()</td></tr>
+<tr class="memitem:a75b06d887f40f4ec87d20bbc09655c8c inherit pub_static_methods_class_uni_dx_1_1_singleton" id="r_a75b06d887f40f4ec87d20bbc09655c8c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_singleton.html#a75b06d887f40f4ec87d20bbc09655c8c">create</a> ()</td></tr>
+<tr class="memitem:a9d9b46d18dea3c31f3019d080b8d5660 inherit pub_static_methods_class_uni_dx_1_1_singleton" id="r_a9d9b46d18dea3c31f3019d080b8d5660"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_singleton.html#a9d9b46d18dea3c31f3019d080b8d5660">destroy</a> ()</td></tr>
+<tr class="inherit_header pro_methods_class_uni_dx_1_1_singleton"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_uni_dx_1_1_singleton')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_uni_dx_1_1_singleton.html">UniDx::Singleton&lt; D3DManager &gt;</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:aa1d5dc993efef5faa60dc69cb141ae1f inherit pro_methods_class_uni_dx_1_1_singleton" id="r_aa1d5dc993efef5faa60dc69cb141ae1f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_singleton.html#aa1d5dc993efef5faa60dc69cb141ae1f">Singleton</a> ()</td></tr>
+<tr class="memitem:a671eb1c3605112b5832e0036595ea8e2 inherit pro_methods_class_uni_dx_1_1_singleton" id="r_a671eb1c3605112b5832e0036595ea8e2"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_singleton.html#a671eb1c3605112b5832e0036595ea8e2">~Singleton</a> ()</td></tr>
+<tr class="inherit_header pro_static_attribs_class_uni_dx_1_1_singleton"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_static_attribs_class_uni_dx_1_1_singleton')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_uni_dx_1_1_singleton.html">UniDx::Singleton&lt; D3DManager &gt;</a> に属する継承静的限定公開変数類</td></tr>
+<tr class="memitem:a6eac0ea64fb9420399b931a4cd451912 inherit pro_static_attribs_class_uni_dx_1_1_singleton" id="r_a6eac0ea64fb9420399b931a4cd451912"><td class="memItemLeft" align="right" valign="top">static unique_ptr&lt; <a class="el" href="class_uni_dx_1_1_d3_d_manager.html">D3DManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_singleton.html#a6eac0ea64fb9420399b931a4cd451912">instance_</a></td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
+<a id="a0446cbe29fca9e47c1a73ff1b5edee75" name="a0446cbe29fca9e47c1a73ff1b5edee75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0446cbe29fca9e47c1a73ff1b5edee75">&#9670;&#160;</a></span>~D3DManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UniDx::D3DManager::~D3DManager </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="ac706c5b044a1d5e2b06e2adbbbc77fce" name="ac706c5b044a1d5e2b06e2adbbbc77fce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac706c5b044a1d5e2b06e2adbbbc77fce">&#9670;&#160;</a></span>Clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UniDx::D3DManager::Clear </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>a</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac5ed036554e449b89ee9ea47efb65d18" name="ac5ed036554e449b89ee9ea47efb65d18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5ed036554e449b89ee9ea47efb65d18">&#9670;&#160;</a></span>GetContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const ComPtr&lt; ID3D11DeviceContext &gt; &amp; UniDx::D3DManager::GetContext </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afb6ad50949ba080ab75c94ef176ef731" name="afb6ad50949ba080ab75c94ef176ef731"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb6ad50949ba080ab75c94ef176ef731">&#9670;&#160;</a></span>getCurrentRenderingMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_uni_dx.html#a0ef83c78637931767d874f8b99300418">RenderingMode</a> UniDx::D3DManager::getCurrentRenderingMode </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a622df7eefdd47923594ebd9dc4c6360b" name="a622df7eefdd47923594ebd9dc4c6360b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a622df7eefdd47923594ebd9dc4c6360b">&#9670;&#160;</a></span>GetDevice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const ComPtr&lt; ID3D11Device &gt; &amp; UniDx::D3DManager::GetDevice </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd415b43a59c371a23d7640e9dcb7c63" name="abd415b43a59c371a23d7640e9dcb7c63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd415b43a59c371a23d7640e9dcb7c63">&#9670;&#160;</a></span>getScreenSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> &amp; UniDx::D3DManager::getScreenSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af2b4f6643c1f5d5613cde9c50396a28f" name="af2b4f6643c1f5d5613cde9c50396a28f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2b4f6643c1f5d5613cde9c50396a28f">&#9670;&#160;</a></span>Initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UniDx::D3DManager::Initialize </td>
+          <td>(</td>
+          <td class="paramtype">HWND</td>          <td class="paramname"><span class="paramname"><em>hWnd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe6ba981703df012c77616d35ccf26b4" name="afe6ba981703df012c77616d35ccf26b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe6ba981703df012c77616d35ccf26b4">&#9670;&#160;</a></span>Present()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UniDx::D3DManager::Present </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af676d12d0d9bf879559dce5edfaccad6" name="af676d12d0d9bf879559dce5edfaccad6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af676d12d0d9bf879559dce5edfaccad6">&#9670;&#160;</a></span>setCurrentCurrentRenderingMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UniDx::D3DManager::setCurrentCurrentRenderingMode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_uni_dx.html#a0ef83c78637931767d874f8b99300418">RenderingMode</a></td>          <td class="paramname"><span class="paramname"><em>r</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>include/UniDx/<a class="el" href="_d3_d_manager_8h_source.html">D3DManager.h</a></li>
+<li>src/<a class="el" href="_d3_d_manager_8cpp.html">D3DManager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_uni_dx.html">UniDx</a></li><li class="navelem"><a href="class_uni_dx_1_1_d3_d_manager.html">D3DManager</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

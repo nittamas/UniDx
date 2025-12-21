@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UniDx: include/UniDx/ConstantBuffer.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UniDx
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_constant_buffer_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ConstantBuffer.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_constant_buffer_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_uni_dx_define_8h.html">UniDxDefine.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_uni_dx.html">UniDx</a> {</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// UniDxで使用する定数バッファのスロット番号</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// すべてのシェーダーはこの番号に従って指定する</span></div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2">    9</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2">CbSlot</a> : uint8_t</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2a3beff05c2a87f6023b2ae30d669334ad">   11</a></span>    <a class="code hl_enumvalue" href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2a3beff05c2a87f6023b2ae30d669334ad">CB_UserStart</a> = 0,        <span class="comment">// ゲーム用バッファの開始番号</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2aa961aaad03a14c35f5e400434a96cef1">   12</a></span>    <a class="code hl_enumvalue" href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2aa961aaad03a14c35f5e400434a96cef1">CB_User0</a> = <a class="code hl_enumvalue" href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2a3beff05c2a87f6023b2ae30d669334ad">CB_UserStart</a>,</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2af4934947b4f44f03153dbfa71af53d7f">   13</a></span>    <a class="code hl_enumvalue" href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2af4934947b4f44f03153dbfa71af53d7f">CB_User1</a> = <a class="code hl_enumvalue" href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2a3beff05c2a87f6023b2ae30d669334ad">CB_UserStart</a> + 1,</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2a1e5994e80809afba0fbc03b3c8caa478">   14</a></span>    <a class="code hl_enumvalue" href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2a1e5994e80809afba0fbc03b3c8caa478">CB_User2</a> = <a class="code hl_enumvalue" href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2a3beff05c2a87f6023b2ae30d669334ad">CB_UserStart</a> + 2,</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2ac5633d441270cfff1986f06849947444">   15</a></span>    <a class="code hl_enumvalue" href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2ac5633d441270cfff1986f06849947444">CB_User3</a> = <a class="code hl_enumvalue" href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2a3beff05c2a87f6023b2ae30d669334ad">CB_UserStart</a> + 3,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2ac5517e72626120ba8713a2acf9320fd4">   17</a></span>    <a class="code hl_enumvalue" href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2ac5517e72626120ba8713a2acf9320fd4">CB_PerCamera</a> = 8,       <span class="comment">// カメラごと</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2a8406d6c97fe2546c0acae7775bbb0496">   18</a></span>    <a class="code hl_enumvalue" href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2a8406d6c97fe2546c0acae7775bbb0496">CB_PerObject</a> = 9,       <span class="comment">// オブジェクトごと</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2a4bec751d5fe959b586d093190dabb606">   19</a></span>    <a class="code hl_enumvalue" href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2a4bec751d5fe959b586d093190dabb606">CB_PerMaterial</a> = 10,    <span class="comment">// マテリアルごと</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2a19a051f74b6e49baa7ef477dc69ee783">   20</a></span>    <a class="code hl_enumvalue" href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2a19a051f74b6e49baa7ef477dc69ee783">CB_LightPerFrame</a> = 11,  <span class="comment">// フレーム共通ライト用</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2a31e8cb8885d7eba0392d89b303708b58">   21</a></span>    <a class="code hl_enumvalue" href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2a31e8cb8885d7eba0392d89b303708b58">CB_LightPerObject</a> = 12  <span class="comment">// オブジェクトごとライト用</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>};</div>
+</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">// -----------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">// シェーダー側と共有する、カメラと時間の定数バッファ</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">// -----------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_constant_buffer_per_camera.html">   28</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_uni_dx_1_1_constant_buffer_per_camera.html">ConstantBufferPerCamera</a></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_constant_buffer_per_camera.html#a6feedb14b146f0b046a15e83175ee338">   30</a></span>    <a class="code hl_struct" href="struct_uni_dx_1_1_matrix4x4.html">Matrix4x4</a> <a class="code hl_variable" href="struct_uni_dx_1_1_constant_buffer_per_camera.html#a6feedb14b146f0b046a15e83175ee338">view</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_constant_buffer_per_camera.html#a616304d6f97a5cd3b5ee0d54f70f2077">   31</a></span>    <a class="code hl_struct" href="struct_uni_dx_1_1_matrix4x4.html">Matrix4x4</a> <a class="code hl_variable" href="struct_uni_dx_1_1_constant_buffer_per_camera.html#a616304d6f97a5cd3b5ee0d54f70f2077">projection</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_constant_buffer_per_camera.html#a89ffaab24de8cb87cd5f8143ec40046a">   32</a></span>    <a class="code hl_struct" href="struct_uni_dx_1_1_vector3.html">Vector3</a>   <a class="code hl_variable" href="struct_uni_dx_1_1_constant_buffer_per_camera.html#a89ffaab24de8cb87cd5f8143ec40046a">cameraPosW</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_constant_buffer_per_camera.html#a4ea9459cfb980c62909a7d4f4839ccf9">   33</a></span>    <span class="keywordtype">float</span>     <a class="code hl_variable" href="struct_uni_dx_1_1_constant_buffer_per_camera.html#a4ea9459cfb980c62909a7d4f4839ccf9">cameraNear</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_constant_buffer_per_camera.html#a45739933a150785ab5be1b58ba1293e4">   34</a></span>    <a class="code hl_struct" href="struct_uni_dx_1_1_vector3.html">Vector3</a>   <a class="code hl_variable" href="struct_uni_dx_1_1_constant_buffer_per_camera.html#a45739933a150785ab5be1b58ba1293e4">cameraForwardW</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_constant_buffer_per_camera.html#af12ef1a55d4490e2e46dd41cc7cb99bc">   35</a></span>    <span class="keywordtype">float</span>     <a class="code hl_variable" href="struct_uni_dx_1_1_constant_buffer_per_camera.html#af12ef1a55d4490e2e46dd41cc7cb99bc">cameraFar</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_constant_buffer_per_camera.html#a95c52ea3137f7971d664185204f1bb42">   36</a></span>    <a class="code hl_struct" href="struct_uni_dx_1_1_vector4.html">Vector4</a>   <a class="code hl_variable" href="struct_uni_dx_1_1_constant_buffer_per_camera.html#a95c52ea3137f7971d664185204f1bb42">time</a>;       <span class="comment">// (t, dt, 1/dt, frameCount)</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>};</div>
+</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">/* HLSL</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">cbuffer VSConstants : register(b8)</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">{</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">    float4x4 view;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">    float4x4 projection;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">    float3   cameraPosW;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">    float    cameraNear;</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">    float3   cameraForwardW;</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">    float    cameraFar;</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">    float4   time; // (t, dt, 1/dt, frameCount)</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">};</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">// -----------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">// シェーダー側と共有する、モデルビュー行列の定数バッファ</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">// -----------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="};">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_constant_buffer_per_object.html">   54</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_uni_dx_1_1_constant_buffer_per_object.html">ConstantBufferPerObject</a></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>{</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_constant_buffer_per_object.html#a29c3fed50afa11f6c563e25923497e14">   56</a></span>    <a class="code hl_struct" href="struct_uni_dx_1_1_matrix4x4.html">Matrix4x4</a> <a class="code hl_variable" href="struct_uni_dx_1_1_constant_buffer_per_object.html#a29c3fed50afa11f6c563e25923497e14">world</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>};</div>
+</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">/* HLSL</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">cbuffer VSConstants : register(b9)</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">{</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">    float4x4 world;</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">};</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">// -----------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">// シェーダー側と共有する、マテリアルの定数バッファ</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">// -----------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="};">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_constant_buffer_per_material.html">   68</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_uni_dx_1_1_constant_buffer_per_material.html">ConstantBufferPerMaterial</a></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>{</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_constant_buffer_per_material.html#a87c35ee2e4e8752acfca66b9c7368a63">   70</a></span>    <a class="code hl_struct" href="struct_uni_dx_1_1_color.html">Color</a> <a class="code hl_variable" href="struct_uni_dx_1_1_constant_buffer_per_material.html#a87c35ee2e4e8752acfca66b9c7368a63">baseColor</a>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>};</div>
+</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">/* HLSL</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">cbuffer PSConstants : register(b10)</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">{</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">    float4 baseColor;</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">};</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">// -----------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">// シェーダー側と共有する、ワールドライトの定数バッファ</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">// -----------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00082" data-start="{" data-end="};">
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_constant_buffer_light_per_frame.html">   82</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_uni_dx_1_1_constant_buffer_light_per_frame.html">ConstantBufferLightPerFrame</a></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>{</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_constant_buffer_light_per_frame.html#a9365b5e1d6d18208f7440024a577bee2">   84</a></span>    <a class="code hl_struct" href="struct_uni_dx_1_1_color.html">Color</a> <a class="code hl_variable" href="struct_uni_dx_1_1_constant_buffer_light_per_frame.html#a9365b5e1d6d18208f7440024a577bee2">ambientColor</a>;     <span class="comment">// rgb=Color, a=Intensity</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_constant_buffer_light_per_frame.html#a732a08daeb6342f837b25c24041cd3be">   85</a></span>    <a class="code hl_struct" href="struct_uni_dx_1_1_color.html">Color</a> <a class="code hl_variable" href="struct_uni_dx_1_1_constant_buffer_light_per_frame.html#a732a08daeb6342f837b25c24041cd3be">directionalColor</a>; <span class="comment">// rgb=Color, a=Intensity</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_constant_buffer_light_per_frame.html#af51ca11728f3f083cceeef05e510a9d1">   86</a></span>    <a class="code hl_struct" href="struct_uni_dx_1_1_vector3.html">Vector3</a> <a class="code hl_variable" href="struct_uni_dx_1_1_constant_buffer_light_per_frame.html#af51ca11728f3f083cceeef05e510a9d1">directionW</a>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_constant_buffer_light_per_frame.html#abc2116ff52a9d1d593cb9c37cbdb5be7">   87</a></span>    uint32_t <a class="code hl_variable" href="struct_uni_dx_1_1_constant_buffer_light_per_frame.html#abc2116ff52a9d1d593cb9c37cbdb5be7">pad</a>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>};</div>
+</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment">/* HLSL</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">cbuffer LightPerFrame : register(b11)</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment">{</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment">    float4 ambientColor;</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment">    float4 directionalColor;</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment">    float3 directionW;</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="comment">    uint pad;</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="comment">};</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment">// -----------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">// シェーダー側と共有する、オブジェクトごとのライトの定数バッファ</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment">// -----------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">int</span> PointLightCountMax = 8;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">int</span> SpotLightCountMax = 8;</div>
+<div class="foldopen" id="foldopen00104" data-start="{" data-end="};">
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_point_light_buffer.html">  104</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_uni_dx_1_1_point_light_buffer.html">PointLightBuffer</a></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>{</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_point_light_buffer.html#a510580f43b8bf222e987a8601f76e949">  106</a></span>    <a class="code hl_struct" href="struct_uni_dx_1_1_color.html">Color</a> <a class="code hl_variable" href="struct_uni_dx_1_1_point_light_buffer.html#a510580f43b8bf222e987a8601f76e949">color</a>;        <span class="comment">// rgb=Color, a=Intensity</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_point_light_buffer.html#a6169e281cd6a50acbaceb961f28f6182">  107</a></span>    <a class="code hl_struct" href="struct_uni_dx_1_1_vector3.html">Vector3</a> <a class="code hl_variable" href="struct_uni_dx_1_1_point_light_buffer.html#a6169e281cd6a50acbaceb961f28f6182">positionW</a>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_point_light_buffer.html#afae7cb3cf1b61fa7f6d724f8923570d8">  108</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_uni_dx_1_1_point_light_buffer.html#afae7cb3cf1b61fa7f6d724f8923570d8">rangeInv</a>;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>};</div>
+</div>
+<div class="foldopen" id="foldopen00110" data-start="{" data-end="};">
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_spot_light_buffer.html">  110</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_uni_dx_1_1_spot_light_buffer.html">SpotLightBuffer</a></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>{</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_spot_light_buffer.html#a5bb1c2b3ae37e28c1bfc4d1bae81b2fb">  112</a></span>    <a class="code hl_struct" href="struct_uni_dx_1_1_color.html">Color</a> <a class="code hl_variable" href="struct_uni_dx_1_1_spot_light_buffer.html#a5bb1c2b3ae37e28c1bfc4d1bae81b2fb">color</a>;        <span class="comment">// rgb=Color, a=Intensity</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_spot_light_buffer.html#a5bb3aeb4f7e8267090c3004e2a9f58fd">  113</a></span>    <a class="code hl_struct" href="struct_uni_dx_1_1_vector3.html">Vector3</a> <a class="code hl_variable" href="struct_uni_dx_1_1_spot_light_buffer.html#a5bb3aeb4f7e8267090c3004e2a9f58fd">positionW</a>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_spot_light_buffer.html#aa00f065e71af2478332f13928139c0a6">  114</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_uni_dx_1_1_spot_light_buffer.html#aa00f065e71af2478332f13928139c0a6">rangeInv</a>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_spot_light_buffer.html#a05c7d8a6060e4277902f9ff6cc2390dd">  115</a></span>    <a class="code hl_struct" href="struct_uni_dx_1_1_vector3.html">Vector3</a> <a class="code hl_variable" href="struct_uni_dx_1_1_spot_light_buffer.html#a05c7d8a6060e4277902f9ff6cc2390dd">directionW</a>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_spot_light_buffer.html#a10204d893d82921adc4523e815430f2d">  116</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_uni_dx_1_1_spot_light_buffer.html#a10204d893d82921adc4523e815430f2d">outerCos</a>;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>};</div>
+</div>
+<div class="foldopen" id="foldopen00118" data-start="{" data-end="};">
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_constant_buffer_light_per_object.html">  118</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_uni_dx_1_1_constant_buffer_light_per_object.html">ConstantBufferLightPerObject</a></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>{</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_constant_buffer_light_per_object.html#a8f58f56bee0019686db5100496279fa4">  120</a></span>    <a class="code hl_struct" href="struct_uni_dx_1_1_point_light_buffer.html">PointLightBuffer</a>    <a class="code hl_variable" href="struct_uni_dx_1_1_constant_buffer_light_per_object.html#a8f58f56bee0019686db5100496279fa4">pointLights</a>[PointLightCountMax];</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_constant_buffer_light_per_object.html#ab424234c51e85eca2a9de275ef1f981e">  121</a></span>    <a class="code hl_struct" href="struct_uni_dx_1_1_spot_light_buffer.html">SpotLightBuffer</a>     <a class="code hl_variable" href="struct_uni_dx_1_1_constant_buffer_light_per_object.html#ab424234c51e85eca2a9de275ef1f981e">spotLights</a>[SpotLightCountMax];</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_constant_buffer_light_per_object.html#a8a78ef3651746a4780868671107420a4">  122</a></span>    uint32_t            <a class="code hl_variable" href="struct_uni_dx_1_1_constant_buffer_light_per_object.html#a8a78ef3651746a4780868671107420a4">pointLightCount</a>;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_constant_buffer_light_per_object.html#a6c5970b1ed9cc6d2eed3e6aab6778e1a">  123</a></span>    uint32_t            <a class="code hl_variable" href="struct_uni_dx_1_1_constant_buffer_light_per_object.html#a6c5970b1ed9cc6d2eed3e6aab6778e1a">spotLightCount</a>;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_constant_buffer_light_per_object.html#aa89f27c75a5f6a4a33a06ec3f484adf4">  124</a></span>    uint32_t            <a class="code hl_variable" href="struct_uni_dx_1_1_constant_buffer_light_per_object.html#aa89f27c75a5f6a4a33a06ec3f484adf4">pad</a>[2];</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>};</div>
+</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="comment">/* HLSL</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="comment">struct PointLight</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="comment">{</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="comment">    float4 color;</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="comment">    float3 positionW;</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="comment">    float rangeInv;</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="comment">};</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="comment">struct SpotLight</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="comment">{</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="comment">    float4 color;</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="comment">    float3 positionW;</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="comment">    float rangeInv;</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="comment">    float3 directionW;</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="comment">    float outerCos;</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="comment">};</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="comment">cbuffer LightPerObject : register(b12)</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="comment">{</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="comment">    PointLight pointLights[8]; // 最大8個</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="comment">    SpotLight spotLights[8];   // 最大8個</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="comment">    uint pointLightCount;</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="comment">    uint spotLightCount;</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="comment">    float2 _pad; // 16byte 境界合わせ</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="comment">};</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>}</div>
+<div class="ttc" id="a_uni_dx_define_8h_html"><div class="ttname"><a href="_uni_dx_define_8h.html">UniDxDefine.h</a></div></div>
+<div class="ttc" id="anamespace_uni_dx_html"><div class="ttname"><a href="namespace_uni_dx.html">UniDx</a></div><div class="ttdef"><b>Definition</b> AnimationCurve.cpp:5</div></div>
+<div class="ttc" id="anamespace_uni_dx_html_a0442243bfb9633c18075514c003a28c2"><div class="ttname"><a href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2">UniDx::CbSlot</a></div><div class="ttdeci">CbSlot</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:10</div></div>
+<div class="ttc" id="anamespace_uni_dx_html_a0442243bfb9633c18075514c003a28c2a19a051f74b6e49baa7ef477dc69ee783"><div class="ttname"><a href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2a19a051f74b6e49baa7ef477dc69ee783">UniDx::CB_LightPerFrame</a></div><div class="ttdeci">@ CB_LightPerFrame</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:20</div></div>
+<div class="ttc" id="anamespace_uni_dx_html_a0442243bfb9633c18075514c003a28c2a1e5994e80809afba0fbc03b3c8caa478"><div class="ttname"><a href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2a1e5994e80809afba0fbc03b3c8caa478">UniDx::CB_User2</a></div><div class="ttdeci">@ CB_User2</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:14</div></div>
+<div class="ttc" id="anamespace_uni_dx_html_a0442243bfb9633c18075514c003a28c2a31e8cb8885d7eba0392d89b303708b58"><div class="ttname"><a href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2a31e8cb8885d7eba0392d89b303708b58">UniDx::CB_LightPerObject</a></div><div class="ttdeci">@ CB_LightPerObject</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:21</div></div>
+<div class="ttc" id="anamespace_uni_dx_html_a0442243bfb9633c18075514c003a28c2a3beff05c2a87f6023b2ae30d669334ad"><div class="ttname"><a href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2a3beff05c2a87f6023b2ae30d669334ad">UniDx::CB_UserStart</a></div><div class="ttdeci">@ CB_UserStart</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:11</div></div>
+<div class="ttc" id="anamespace_uni_dx_html_a0442243bfb9633c18075514c003a28c2a4bec751d5fe959b586d093190dabb606"><div class="ttname"><a href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2a4bec751d5fe959b586d093190dabb606">UniDx::CB_PerMaterial</a></div><div class="ttdeci">@ CB_PerMaterial</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:19</div></div>
+<div class="ttc" id="anamespace_uni_dx_html_a0442243bfb9633c18075514c003a28c2a8406d6c97fe2546c0acae7775bbb0496"><div class="ttname"><a href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2a8406d6c97fe2546c0acae7775bbb0496">UniDx::CB_PerObject</a></div><div class="ttdeci">@ CB_PerObject</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:18</div></div>
+<div class="ttc" id="anamespace_uni_dx_html_a0442243bfb9633c18075514c003a28c2aa961aaad03a14c35f5e400434a96cef1"><div class="ttname"><a href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2aa961aaad03a14c35f5e400434a96cef1">UniDx::CB_User0</a></div><div class="ttdeci">@ CB_User0</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:12</div></div>
+<div class="ttc" id="anamespace_uni_dx_html_a0442243bfb9633c18075514c003a28c2ac5517e72626120ba8713a2acf9320fd4"><div class="ttname"><a href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2ac5517e72626120ba8713a2acf9320fd4">UniDx::CB_PerCamera</a></div><div class="ttdeci">@ CB_PerCamera</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:17</div></div>
+<div class="ttc" id="anamespace_uni_dx_html_a0442243bfb9633c18075514c003a28c2ac5633d441270cfff1986f06849947444"><div class="ttname"><a href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2ac5633d441270cfff1986f06849947444">UniDx::CB_User3</a></div><div class="ttdeci">@ CB_User3</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:15</div></div>
+<div class="ttc" id="anamespace_uni_dx_html_a0442243bfb9633c18075514c003a28c2af4934947b4f44f03153dbfa71af53d7f"><div class="ttname"><a href="namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2af4934947b4f44f03153dbfa71af53d7f">UniDx::CB_User1</a></div><div class="ttdeci">@ CB_User1</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:13</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_color_html"><div class="ttname"><a href="struct_uni_dx_1_1_color.html">UniDx::Color</a></div><div class="ttdoc">色 (RGBA, float)</div><div class="ttdef"><b>Definition</b> Math.h:189</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_constant_buffer_light_per_frame_html"><div class="ttname"><a href="struct_uni_dx_1_1_constant_buffer_light_per_frame.html">UniDx::ConstantBufferLightPerFrame</a></div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:83</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_constant_buffer_light_per_frame_html_a732a08daeb6342f837b25c24041cd3be"><div class="ttname"><a href="struct_uni_dx_1_1_constant_buffer_light_per_frame.html#a732a08daeb6342f837b25c24041cd3be">UniDx::ConstantBufferLightPerFrame::directionalColor</a></div><div class="ttdeci">Color directionalColor</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:85</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_constant_buffer_light_per_frame_html_a9365b5e1d6d18208f7440024a577bee2"><div class="ttname"><a href="struct_uni_dx_1_1_constant_buffer_light_per_frame.html#a9365b5e1d6d18208f7440024a577bee2">UniDx::ConstantBufferLightPerFrame::ambientColor</a></div><div class="ttdeci">Color ambientColor</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:84</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_constant_buffer_light_per_frame_html_abc2116ff52a9d1d593cb9c37cbdb5be7"><div class="ttname"><a href="struct_uni_dx_1_1_constant_buffer_light_per_frame.html#abc2116ff52a9d1d593cb9c37cbdb5be7">UniDx::ConstantBufferLightPerFrame::pad</a></div><div class="ttdeci">uint32_t pad</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:87</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_constant_buffer_light_per_frame_html_af51ca11728f3f083cceeef05e510a9d1"><div class="ttname"><a href="struct_uni_dx_1_1_constant_buffer_light_per_frame.html#af51ca11728f3f083cceeef05e510a9d1">UniDx::ConstantBufferLightPerFrame::directionW</a></div><div class="ttdeci">Vector3 directionW</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:86</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_constant_buffer_light_per_object_html"><div class="ttname"><a href="struct_uni_dx_1_1_constant_buffer_light_per_object.html">UniDx::ConstantBufferLightPerObject</a></div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:119</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_constant_buffer_light_per_object_html_a6c5970b1ed9cc6d2eed3e6aab6778e1a"><div class="ttname"><a href="struct_uni_dx_1_1_constant_buffer_light_per_object.html#a6c5970b1ed9cc6d2eed3e6aab6778e1a">UniDx::ConstantBufferLightPerObject::spotLightCount</a></div><div class="ttdeci">uint32_t spotLightCount</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:123</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_constant_buffer_light_per_object_html_a8a78ef3651746a4780868671107420a4"><div class="ttname"><a href="struct_uni_dx_1_1_constant_buffer_light_per_object.html#a8a78ef3651746a4780868671107420a4">UniDx::ConstantBufferLightPerObject::pointLightCount</a></div><div class="ttdeci">uint32_t pointLightCount</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:122</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_constant_buffer_light_per_object_html_a8f58f56bee0019686db5100496279fa4"><div class="ttname"><a href="struct_uni_dx_1_1_constant_buffer_light_per_object.html#a8f58f56bee0019686db5100496279fa4">UniDx::ConstantBufferLightPerObject::pointLights</a></div><div class="ttdeci">PointLightBuffer pointLights[PointLightCountMax]</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:120</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_constant_buffer_light_per_object_html_aa89f27c75a5f6a4a33a06ec3f484adf4"><div class="ttname"><a href="struct_uni_dx_1_1_constant_buffer_light_per_object.html#aa89f27c75a5f6a4a33a06ec3f484adf4">UniDx::ConstantBufferLightPerObject::pad</a></div><div class="ttdeci">uint32_t pad[2]</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:124</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_constant_buffer_light_per_object_html_ab424234c51e85eca2a9de275ef1f981e"><div class="ttname"><a href="struct_uni_dx_1_1_constant_buffer_light_per_object.html#ab424234c51e85eca2a9de275ef1f981e">UniDx::ConstantBufferLightPerObject::spotLights</a></div><div class="ttdeci">SpotLightBuffer spotLights[SpotLightCountMax]</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:121</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_constant_buffer_per_camera_html"><div class="ttname"><a href="struct_uni_dx_1_1_constant_buffer_per_camera.html">UniDx::ConstantBufferPerCamera</a></div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:29</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_constant_buffer_per_camera_html_a45739933a150785ab5be1b58ba1293e4"><div class="ttname"><a href="struct_uni_dx_1_1_constant_buffer_per_camera.html#a45739933a150785ab5be1b58ba1293e4">UniDx::ConstantBufferPerCamera::cameraForwardW</a></div><div class="ttdeci">Vector3 cameraForwardW</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:34</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_constant_buffer_per_camera_html_a4ea9459cfb980c62909a7d4f4839ccf9"><div class="ttname"><a href="struct_uni_dx_1_1_constant_buffer_per_camera.html#a4ea9459cfb980c62909a7d4f4839ccf9">UniDx::ConstantBufferPerCamera::cameraNear</a></div><div class="ttdeci">float cameraNear</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:33</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_constant_buffer_per_camera_html_a616304d6f97a5cd3b5ee0d54f70f2077"><div class="ttname"><a href="struct_uni_dx_1_1_constant_buffer_per_camera.html#a616304d6f97a5cd3b5ee0d54f70f2077">UniDx::ConstantBufferPerCamera::projection</a></div><div class="ttdeci">Matrix4x4 projection</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:31</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_constant_buffer_per_camera_html_a6feedb14b146f0b046a15e83175ee338"><div class="ttname"><a href="struct_uni_dx_1_1_constant_buffer_per_camera.html#a6feedb14b146f0b046a15e83175ee338">UniDx::ConstantBufferPerCamera::view</a></div><div class="ttdeci">Matrix4x4 view</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:30</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_constant_buffer_per_camera_html_a89ffaab24de8cb87cd5f8143ec40046a"><div class="ttname"><a href="struct_uni_dx_1_1_constant_buffer_per_camera.html#a89ffaab24de8cb87cd5f8143ec40046a">UniDx::ConstantBufferPerCamera::cameraPosW</a></div><div class="ttdeci">Vector3 cameraPosW</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:32</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_constant_buffer_per_camera_html_a95c52ea3137f7971d664185204f1bb42"><div class="ttname"><a href="struct_uni_dx_1_1_constant_buffer_per_camera.html#a95c52ea3137f7971d664185204f1bb42">UniDx::ConstantBufferPerCamera::time</a></div><div class="ttdeci">Vector4 time</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:36</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_constant_buffer_per_camera_html_af12ef1a55d4490e2e46dd41cc7cb99bc"><div class="ttname"><a href="struct_uni_dx_1_1_constant_buffer_per_camera.html#af12ef1a55d4490e2e46dd41cc7cb99bc">UniDx::ConstantBufferPerCamera::cameraFar</a></div><div class="ttdeci">float cameraFar</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:35</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_constant_buffer_per_material_html"><div class="ttname"><a href="struct_uni_dx_1_1_constant_buffer_per_material.html">UniDx::ConstantBufferPerMaterial</a></div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:69</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_constant_buffer_per_material_html_a87c35ee2e4e8752acfca66b9c7368a63"><div class="ttname"><a href="struct_uni_dx_1_1_constant_buffer_per_material.html#a87c35ee2e4e8752acfca66b9c7368a63">UniDx::ConstantBufferPerMaterial::baseColor</a></div><div class="ttdeci">Color baseColor</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:70</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_constant_buffer_per_object_html"><div class="ttname"><a href="struct_uni_dx_1_1_constant_buffer_per_object.html">UniDx::ConstantBufferPerObject</a></div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:55</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_constant_buffer_per_object_html_a29c3fed50afa11f6c563e25923497e14"><div class="ttname"><a href="struct_uni_dx_1_1_constant_buffer_per_object.html#a29c3fed50afa11f6c563e25923497e14">UniDx::ConstantBufferPerObject::world</a></div><div class="ttdeci">Matrix4x4 world</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:56</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_matrix4x4_html"><div class="ttname"><a href="struct_uni_dx_1_1_matrix4x4.html">UniDx::Matrix4x4</a></div><div class="ttdoc">4x4 行列 (行優先)</div><div class="ttdef"><b>Definition</b> Math.h:213</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_point_light_buffer_html"><div class="ttname"><a href="struct_uni_dx_1_1_point_light_buffer.html">UniDx::PointLightBuffer</a></div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:105</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_point_light_buffer_html_a510580f43b8bf222e987a8601f76e949"><div class="ttname"><a href="struct_uni_dx_1_1_point_light_buffer.html#a510580f43b8bf222e987a8601f76e949">UniDx::PointLightBuffer::color</a></div><div class="ttdeci">Color color</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:106</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_point_light_buffer_html_a6169e281cd6a50acbaceb961f28f6182"><div class="ttname"><a href="struct_uni_dx_1_1_point_light_buffer.html#a6169e281cd6a50acbaceb961f28f6182">UniDx::PointLightBuffer::positionW</a></div><div class="ttdeci">Vector3 positionW</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:107</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_point_light_buffer_html_afae7cb3cf1b61fa7f6d724f8923570d8"><div class="ttname"><a href="struct_uni_dx_1_1_point_light_buffer.html#afae7cb3cf1b61fa7f6d724f8923570d8">UniDx::PointLightBuffer::rangeInv</a></div><div class="ttdeci">float rangeInv</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:108</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_spot_light_buffer_html"><div class="ttname"><a href="struct_uni_dx_1_1_spot_light_buffer.html">UniDx::SpotLightBuffer</a></div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:111</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_spot_light_buffer_html_a05c7d8a6060e4277902f9ff6cc2390dd"><div class="ttname"><a href="struct_uni_dx_1_1_spot_light_buffer.html#a05c7d8a6060e4277902f9ff6cc2390dd">UniDx::SpotLightBuffer::directionW</a></div><div class="ttdeci">Vector3 directionW</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:115</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_spot_light_buffer_html_a10204d893d82921adc4523e815430f2d"><div class="ttname"><a href="struct_uni_dx_1_1_spot_light_buffer.html#a10204d893d82921adc4523e815430f2d">UniDx::SpotLightBuffer::outerCos</a></div><div class="ttdeci">float outerCos</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:116</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_spot_light_buffer_html_a5bb1c2b3ae37e28c1bfc4d1bae81b2fb"><div class="ttname"><a href="struct_uni_dx_1_1_spot_light_buffer.html#a5bb1c2b3ae37e28c1bfc4d1bae81b2fb">UniDx::SpotLightBuffer::color</a></div><div class="ttdeci">Color color</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:112</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_spot_light_buffer_html_a5bb3aeb4f7e8267090c3004e2a9f58fd"><div class="ttname"><a href="struct_uni_dx_1_1_spot_light_buffer.html#a5bb3aeb4f7e8267090c3004e2a9f58fd">UniDx::SpotLightBuffer::positionW</a></div><div class="ttdeci">Vector3 positionW</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:113</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_spot_light_buffer_html_aa00f065e71af2478332f13928139c0a6"><div class="ttname"><a href="struct_uni_dx_1_1_spot_light_buffer.html#aa00f065e71af2478332f13928139c0a6">UniDx::SpotLightBuffer::rangeInv</a></div><div class="ttdeci">float rangeInv</div><div class="ttdef"><b>Definition</b> ConstantBuffer.h:114</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_vector3_html"><div class="ttname"><a href="struct_uni_dx_1_1_vector3.html">UniDx::Vector3</a></div><div class="ttdoc">3D ベクトル</div><div class="ttdef"><b>Definition</b> Math.h:47</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_vector4_html"><div class="ttname"><a href="struct_uni_dx_1_1_vector4.html">UniDx::Vector4</a></div><div class="ttdoc">4D ベクトル</div><div class="ttdef"><b>Definition</b> Math.h:114</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_450094861a7bbaf444577c849cb4d1c8.html">UniDx</a></li><li class="navelem"><a href="_constant_buffer_8h.html">ConstantBuffer.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>
