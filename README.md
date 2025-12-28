@@ -103,8 +103,9 @@ https://nittamas.github.io/UniDx/
 （CC BY-SA 4.0）
 
 samples/resource 内のアセットは、著作者表記および継承（同一ライセンス配布）を
-条件として改変および再配布が可能です。詳しくは次のファイルを参照してください。
-samples/resource/LICENSE-CC-BY-SA.txt
+条件として改変および再配布が可能です。
+詳しくは次のファイルを参照してください。
+- [samples/resource/LICENSE-CC-BY-SA.txt](samples/resource/LICENSE-CC-BY-SA.txt)
 
 ### フォント
 サンプルで使用している M PLUS 1 フォント および
