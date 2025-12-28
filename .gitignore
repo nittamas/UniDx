@@ -11,6 +11,9 @@
 *.sln.docstates
 *.env
 
+# サンプルのDebug設定を追跡
+!samples/*/*.vcxproj.user
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
