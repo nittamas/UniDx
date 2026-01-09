@@ -155,6 +155,12 @@
     <ClInclude Include="..\external\tinygltf\tiny_gltf.h">
       <Filter>tinygltf</Filter>
     </ClInclude>
+    <ClInclude Include="private\PhysicsGrid.h">
+      <Filter>プライベートヘッダー</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UniDx\Func.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Camera.cpp">
@@ -243,6 +249,9 @@
     </ClCompile>
     <ClCompile Include="..\external\tinygltf\tiny_gltf.cc">
       <Filter>tinygltf</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PhysicsGrid.cpp">
+      <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

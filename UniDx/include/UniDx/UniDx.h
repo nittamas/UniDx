@@ -3,6 +3,7 @@
 #include "UniDxDefine.h"
 #include "Math.h"
 #include "Debug.h"
+#include "Func.h"
 
 #include "GameObject.h"
 #include "Transform.h"

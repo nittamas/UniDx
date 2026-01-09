@@ -36,6 +36,7 @@ class AABBGeometory;
 class SpheresGeometory;
 class CapsulesGeometory;
 class BoxGeometory;
+class PhysicsGrid;
 
 
 // --------------------
@@ -122,7 +123,11 @@ private:
 class Physics : public Singleton<Physics>
 {
 public:
+    typedef std::pair<PhysicsShape*, PhysicsShape*> PotentialPair;
+
     static inline float gravity = -9.81f;
+
+    Physics();
 
     void simulate(float setp);
     void simulatePositionCorrection(float step);
@@ -139,11 +144,9 @@ public:
     bool Raycast(Vector3 origin, Vector3 direction, float maxDistance,
         RaycastHit* hitInfo = nullptr, std::function<bool(const Collider*)> filter = nullptr);
 
+    void checkBounds(PhysicsShape* shape1, PhysicsShape* shape2);
+
 private:
-    struct PotentialPair {
-        PhysicsShape* a;
-        PhysicsShape* b;
-    };
     std::vector<PotentialPair> potentialPairs;
     std::vector<PotentialPair> potentialPairsTrigger;
 
@@ -151,6 +154,7 @@ private:
 
     std::map<Rigidbody*, PhysicsActor> physicsActors;
     std::vector<PhysicsShape> physicsShapes;
+    std::unique_ptr<PhysicsGrid> physicsGrid;
 
     void initializeSimulate(float step);
     void solveVelocityConstraint(Rigidbody* A, Rigidbody* B, const ContactManifold& m);

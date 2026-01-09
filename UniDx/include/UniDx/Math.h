@@ -41,6 +41,14 @@ namespace UniDx
 		static const Vector2 positiveInfinity;
 		static const Vector2 negativeInfinity;
 	};
+	[[nodiscard]] inline Vector2 Min(const Vector2& v1, const Vector2& v2) noexcept
+	{
+		return Vector2(v1.x < v2.x ? v1.x : v2.x, v1.y < v2.y ? v1.y : v2.y);
+	}
+	[[nodiscard]] inline Vector2 Max(const Vector2& v1, const Vector2& v2) noexcept
+	{
+		return Vector2(v1.x > v2.x ? v1.x : v2.x, v1.y > v2.y ? v1.y : v2.y);
+	}
 
 	/** @brief 3D ベクトル */
 	struct Vector3 : DirectX::XMFLOAT3
@@ -78,7 +86,7 @@ namespace UniDx
 		static const Vector3 negativeInfinity;
 	};
 	/** @brief ベクトルの内積 */
-	inline constexpr float Dot(const Vector3& v1, const Vector3& v2) noexcept { return v1.x * v2.x + v1.y * v2.y + v1.z * v2.z; }
+	[[nodiscard]] inline constexpr float Dot(const Vector3& v1, const Vector3& v2) noexcept { return v1.x * v2.x + v1.y * v2.y + v1.z * v2.z; }
 	/** @brief ベクトルの外積 */
 	[[nodiscard]] inline Vector3 Cross(const Vector3& v1, const Vector3& v2) noexcept
 	{
@@ -87,6 +95,14 @@ namespace UniDx
 		const XMVECTOR x2 = XMLoadFloat3(&v2);
 		const XMVECTOR X = XMVector3Cross(x1, x2);
 		return Vector3(X);
+	}
+	[[nodiscard]] inline Vector3 Min(const Vector3& v1, const Vector3& v2) noexcept
+	{
+		return Vector3(v1.x < v2.x ? v1.x : v2.x, v1.y < v2.y ? v1.y : v2.y, v1.z < v2.z ? v1.z : v2.z);
+	}
+	[[nodiscard]] inline Vector3 Max(const Vector3& v1, const Vector3& v2) noexcept
+	{
+		return Vector3(v1.x > v2.x ? v1.x : v2.x, v1.y > v2.y ? v1.y : v2.y, v1.z > v2.z ? v1.z : v2.z);
 	}
 	/** @brief 2点間の距離 */
 	inline float Distance(const Vector3& v1, const Vector3& v2) noexcept
@@ -125,6 +141,14 @@ namespace UniDx
 		constexpr Vector4 operator+() const noexcept { return *this; }
 		constexpr Vector4 operator-() const noexcept { return Vector4(-x, -y, -z, -w); }
 	};
+	[[nodiscard]] inline Vector4 Min(const Vector4& v1, const Vector4& v2) noexcept
+	{
+		return Vector4(v1.x < v2.x ? v1.x : v2.x, v1.y < v2.y ? v1.y : v2.y, v1.z < v2.z ? v1.z : v2.z, v1.w < v2.w ? v1.w : v2.w);
+	}
+	[[nodiscard]] inline Vector4 Max(const Vector4& v1, const Vector4& v2) noexcept
+	{
+		return Vector4(v1.x > v2.x ? v1.x : v2.x, v1.y > v2.y ? v1.y : v2.y, v1.z > v2.z ? v1.z : v2.z, v1.w > v2.w ? v1.w : v2.w);
+	}
 
 	/** @brief クォータニオン (回転表現) */
 	struct Quaternion
