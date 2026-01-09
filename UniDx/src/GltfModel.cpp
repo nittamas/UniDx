@@ -26,12 +26,18 @@ void ReadAccessorData(
     const unsigned char* data = buffer.data.data() + offset;
     out.resize(count);
 
+    size_t stride = bufferView.byteStride;
+    if(stride == 0)
+    {
+        stride = accessor.ByteStride(bufferView);
+    }
+
     // 型チェック
     if constexpr (is_same_v<T, Vector3>) {
         assert(accessor.type == TINYGLTF_TYPE_VEC3);
         assert(accessor.componentType == TINYGLTF_COMPONENT_TYPE_FLOAT);
         for (size_t i = 0; i < count; ++i) {
-            const float* v = reinterpret_cast<const float*>(data + i * bufferView.byteStride);
+            const float* v = reinterpret_cast<const float*>(data + i * stride);
             out[i] = Vector3(v[0], v[1], v[2]);
         }
     }
@@ -39,7 +45,7 @@ void ReadAccessorData(
         assert(accessor.type == TINYGLTF_TYPE_VEC2);
         assert(accessor.componentType == TINYGLTF_COMPONENT_TYPE_FLOAT);
         for (size_t i = 0; i < count; ++i) {
-            const float* v = reinterpret_cast<const float*>(data + i * bufferView.byteStride);
+            const float* v = reinterpret_cast<const float*>(data + i * stride);
             out[i] = Vector2(v[0], v[1]);
         }
     }
@@ -47,19 +53,19 @@ void ReadAccessorData(
         // glTFのCOLOR_0はfloat4またはubyte4
         if (accessor.type == TINYGLTF_TYPE_VEC3 && accessor.componentType == TINYGLTF_COMPONENT_TYPE_FLOAT) {
             for (size_t i = 0; i < count; ++i) {
-                const float* v = reinterpret_cast<const float*>(data + i * bufferView.byteStride);
+                const float* v = reinterpret_cast<const float*>(data + i * stride);
                 out[i] = Color(v[0], v[1], v[2], 1.0f);
             }
         }
         else if (accessor.type == TINYGLTF_TYPE_VEC4 && accessor.componentType == TINYGLTF_COMPONENT_TYPE_FLOAT) {
             for (size_t i = 0; i < count; ++i) {
-                const float* v = reinterpret_cast<const float*>(data + i * bufferView.byteStride);
+                const float* v = reinterpret_cast<const float*>(data + i * stride);
                 out[i] = Color(v[0], v[1], v[2], v[3]);
             }
         }
         else if (accessor.type == TINYGLTF_TYPE_VEC4 && accessor.componentType == TINYGLTF_COMPONENT_TYPE_UNSIGNED_BYTE) {
             for (size_t i = 0; i < count; ++i) {
-                const uint8_t* v = reinterpret_cast<const uint8_t*>(data + i * bufferView.byteStride);
+                const uint8_t* v = reinterpret_cast<const uint8_t*>(data + i * stride);
                 out[i] = Color(
                     v[0] / 255.0f, v[1] / 255.0f, v[2] / 255.0f, v[3] / 255.0f);
             }
@@ -75,7 +81,7 @@ void ReadAccessorData(
 // -----------------------------------------------------------------------------
 // gltfファイルを読み込み
 // -----------------------------------------------------------------------------
-bool GltfModel::load_(const wstring& filePath, bool makeTextureMaterial, std::shared_ptr<Shader> shader)
+bool GltfModel::load_(const char* filePath, bool makeTextureMaterial, std::shared_ptr<Shader> shader)
 {
     Debug::Log(filePath);
 
@@ -83,9 +89,7 @@ bool GltfModel::load_(const wstring& filePath, bool makeTextureMaterial, std::sh
     tinygltf::TinyGLTF loader;
     string err, warn;
 
-    auto path = ToUtf8(filePath);
-
-    bool ok = loader.LoadBinaryFromFile(model.get(), &err, &warn, path.c_str());
+    bool ok = loader.LoadBinaryFromFile(model.get(), &err, &warn, filePath);
     if (!warn.empty())
     {
         Debug::Log(warn);
@@ -204,12 +208,6 @@ bool GltfModel::load_(const wstring& filePath, bool makeTextureMaterial, std::sh
                 if (tex == nullptr)
                 {
                     tex = GetOrCreateTextureFromGltf_(texIndex, /*isSRGB*/true);
-                    if (tex != nullptr)
-                    {
-                        // モデル指定のラップモード
-                        SetAddressModeUV(tex.get(), texIndex);
-                        material->AddTexture(tex);
-                    }
                 }
                 material->AddTexture(tex);
             }
@@ -287,11 +285,15 @@ std::shared_ptr<Texture> GltfModel::GetOrCreateTextureFromGltf_(int textureIndex
     }
 
     auto outTex = std::make_shared<Texture>();
+
+    // モデル指定のラップモード
+    SetAddressModeUV(outTex.get(), textureIndex);
+
     if (!outTex->LoadFromMemoryRGBA8(rgba.data(), img.width, img.height, isSRGB))
     {
         return nullptr;
     }
-    outTex->setName(UniDx::ToUtf16(img.name));
+    outTex->setName(StringId::intern(img.name));
 
     return outTex;
 }
@@ -310,7 +312,8 @@ void GltfModel::createNodeRecursive(const tinygltf::Model& model,
 
     // GameObject を作成
     unique_ptr<GameObject> go = make_unique<GameObject>();
-    go->SetName(UniDx::ToUtf16(node.name));
+    go->SetName(StringId::intern(node.name));
+    Debug::Log(go->name.get());
 
     // 行列を取得
     Vector3 position;
@@ -336,8 +339,6 @@ void GltfModel::createNodeRecursive(const tinygltf::Model& model,
     go->transform->localScale = scale;
     go->transform->localRotation = rotation;
     go->transform->localPosition = position;
-    Debug::Log(go->name.get());
-    Debug::Log(position);
 
     // メッシュを持っていればアタッチ
     if (node.mesh >= 0 && node.mesh < meshes.size())
@@ -387,6 +388,8 @@ void GltfModel::createNodeRecursive(const tinygltf::Model& model,
 // -----------------------------------------------------------------------------
 void GltfModel::SetAddressModeUV(Texture* texture, int texIndex) const
 {
+    if(model->textures.size() <= texIndex) return;
+
     const tinygltf::Texture& tex = model->textures[texIndex];
 
     int samplerIndex = tex.sampler; // -1 の場合あり

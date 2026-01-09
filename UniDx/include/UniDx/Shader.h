@@ -1,18 +1,7 @@
 ﻿#pragma once
 
-// C++のSTL
-#include <string>
-#include <array>
-
-// Direct3Dの型・クラス・関数など
-#include <d3d11.h>
-#include <d3dcompiler.h>
-
-// ComPtr
-#include <wrl/client.h>
-using Microsoft::WRL::ComPtr;
-
 #include "UniDxDefine.h"
+#include "StringId.h"
 #include "Math.h"
 #include "Object.h"
 
@@ -135,19 +124,19 @@ struct VertexPNC
 class Shader : public Object
 {
 public:
-	Shader() : Object([this]() {return wstring_view(fileName);}) {}
+	Shader() : Object([this]() {return fileName;}) {}
 
 	// シェーダーのパスを指定してコンパイル
-	bool compile(const std::wstring& filePath, const D3D11_INPUT_ELEMENT_DESC* layout, size_t layout_size);
+	bool compile(const u8string& filePath, const D3D11_INPUT_ELEMENT_DESC* layout, size_t layout_size);
 
 	template<typename TVertex>
-	bool compile(const std::wstring& filePath) { return compile(filePath, TVertex::layout.data(), TVertex::layout.size()); }
+	bool compile(const u8string& filePath) { return compile(filePath, TVertex::layout.data(), TVertex::layout.size()); }
 
 	// 描画のため、D3DDeviceContextにこのシェーダーをセット
 	void setToContext() const;
 
 protected:
-	wstring fileName;
+	StringId fileName;
 
 private:
 	ComPtr<ID3D11VertexShader>	m_vertex = nullptr;	// 頂点シェーダー

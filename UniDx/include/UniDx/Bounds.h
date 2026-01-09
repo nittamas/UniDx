@@ -60,13 +60,7 @@ public:
     void Encapsulate(Vector3 point) noexcept {
         Vector3 mn = min();
         Vector3 mx = max();
-        mn.x = std::min(mn.x, point.x);
-        mn.y = std::min(mn.y, point.y);
-        mn.z = std::min(mn.z, point.z);
-        mx.x = std::max(mx.x, point.x);
-        mx.y = std::max(mx.y, point.y);
-        mx.z = std::max(mx.z, point.z);
-        SetMinMax(mn, mx);
+        SetMinMax(Min(mn, point), Max(mx, point));
     }
     /** @brief 指定Boundsを含むように拡張*/
     void Encapsulate(const Bounds& bounds) noexcept {
@@ -83,8 +77,8 @@ public:
     /** @brief 他のBoundsと交差しているか*/
     [[nodiscard]] bool Intersects(const Bounds& bounds) const noexcept {
         if(std::abs(Center.x - bounds.Center.x) > extents.x + bounds.extents.x) return false;
-        if(std::abs(Center.y - bounds.Center.y) > extents.y + bounds.extents.y) return false;
         if(std::abs(Center.z - bounds.Center.z) > extents.z + bounds.extents.z) return false;
+        if(std::abs(Center.y - bounds.Center.y) > extents.y + bounds.extents.y) return false;
         return true;
     }
 

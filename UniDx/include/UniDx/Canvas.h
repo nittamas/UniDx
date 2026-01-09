@@ -18,7 +18,7 @@ public:
 	virtual void OnDisable() override;
 	virtual void render() const;
 
-	void LoadDefaultMaterial(const wchar_t* assetPath);
+	void LoadDefaultMaterial(const char8_t* assetPath);
 
 	void registerUI(UIBehaviour* e);
 	void unregisterUI(UIBehaviour* e);

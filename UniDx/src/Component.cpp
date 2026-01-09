@@ -5,7 +5,7 @@ namespace UniDx{
 
 // コンストラクタ
 Component::Component() :
-    Object([this]() { return gameObject != nullptr ? gameObject->name : wstring_view(L""); }),
+    Object([this]() { return gameObject != nullptr ? gameObject->name : StringId(); }),
     enabled(
         // get
         [this]() { return _enabled && isCalledAwake; },

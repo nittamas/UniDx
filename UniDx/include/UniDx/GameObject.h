@@ -13,7 +13,6 @@ namespace UniDx {
 
 // 前方宣言
 class Component;
-class Behaviour;
 class Transform;
 class Collider;
 
@@ -34,20 +33,32 @@ public:
 
     const std::vector<std::unique_ptr<Component>>& GetComponents() const { return components; }
 
-    GameObject(wstring_view n = L"GameObject") : Object([this](){return wstring_view(name_);}), name_(n), isCalledDestroy(false)
+    GameObject(const char* n = "GameObject") : GameObject(StringId::intern(std::string_view(n))) {}
+    GameObject(const char8_t* n) : GameObject(StringId::intern(n)) {}
+    GameObject(StringId n) : Object([this](){return name_;}), name_(n), isCalledDestroy(false)
     {
         // デフォルトでTransformを追加
         transform = AddComponent<Transform>();
     }
+
     // 可変長引数でunique_ptr<Component>を受け取るコンストラクタ
     template<typename First, typename... ComponentPtrs>
         requires (!std::same_as<std::remove_cvref_t<First>, Vector3>)
-    GameObject(wstring_view name, First&& first, ComponentPtrs&&... rest) : GameObject(name)
+    GameObject(StringId name, First&& first, ComponentPtrs&&... rest) : GameObject(name)
     {
         Add(std::forward<First>(first), std::forward<ComponentPtrs>(rest)...);
     }
     template<typename... ComponentPtrs>
-    GameObject(const wstring& name, Vector3 position, ComponentPtrs&&... components);
+    GameObject(StringId name, Vector3 position, ComponentPtrs&&... components);
+
+    template<typename First, typename... ComponentPtrs>
+        requires (!std::same_as<std::remove_cvref_t<First>, Vector3>)
+    GameObject(const char8_t* name, First&& first, ComponentPtrs&&... rest) : GameObject(name)
+    {
+        Add(std::forward<First>(first), std::forward<ComponentPtrs>(rest)...);
+    }
+    template<typename... ComponentPtrs>
+    GameObject(const char8_t* name, Vector3 position, ComponentPtrs&&... components);
 
     // デストラクタ
     ~GameObject();
@@ -95,7 +106,7 @@ public:
     template<typename Predicate>
     GameObject* Find(Predicate pred) const;
 
-    void SetName(const wstring& n) { name_ = n; }
+    void SetName(StringId n) { name_ = n; }
     bool checkDestroy();
 
     virtual void onTriggerEnter(Collider* other);
@@ -106,7 +117,7 @@ public:
     virtual void onCollisionExit(const Collision& collision);
 
 protected:
-    wstring name_;
+    StringId name_;
     std::vector<std::unique_ptr<Component>> components;
     bool isCalledDestroy = false;
 

@@ -74,5 +74,4 @@ UniDx では以下を優先します。
 This project is independent and not affiliated with  
 Unity Technologies or Microsoft.
 
-UniDx は Unity Technologies および Microsoft とは無関係の  
-個人による独立プロジェクトです。
+UniDx は Unity Technologies および Microsoft と関係のない、独立したプロジェクトです。

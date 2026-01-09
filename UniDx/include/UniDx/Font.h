@@ -19,14 +19,16 @@ class Font : public Object
 public:
 	Font();
 
-	bool Load(const wchar_t* filePath);
-	bool Load(const wstring& filePath) { return Load(filePath.c_str()); }
+	bool Load(u8string filePath) { return Load(ToUtf16(filePath)); }
+	bool Load(std::wstring filePath);
 
 	DirectX::SpriteFont* getSpriteFont() const;
 
 private:
-	wstring fileName;
+	StringId fileName;
 	unique_ptr<DirectX::SpriteFont> spriteFont;
+
+	
 };
 
 }

@@ -18,8 +18,14 @@ namespace Debug
     }
     inline void log_(const char* value)
     {
-        OutputDebugStringA(value);
-        OutputDebugStringA("\n");
+        OutputDebugStringW( ToUtf16(reinterpret_cast<const char8_t*>(value)).c_str() );
+        // OutputDebugStringAだと多言語表示できない
+        OutputDebugStringW(L"\n");
+    }
+    inline void log_(const char8_t* value)
+    {
+        OutputDebugStringW(ToUtf16(value).c_str());
+        OutputDebugStringW(L"\n");
     }
 
     template<typename T>

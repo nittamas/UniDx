@@ -20,7 +20,7 @@ public:
     D3D11_TEXTURE_ADDRESS_MODE wrapModeU;
     D3D11_TEXTURE_ADDRESS_MODE wrapModeV;
 
-    Texture() : Object([this]() {return wstring_view(fileName); }),
+    Texture() : Object([this]() {return fileName; }),
         wrapModeU(D3D11_TEXTURE_ADDRESS_CLAMP),
         wrapModeV(D3D11_TEXTURE_ADDRESS_CLAMP),
         m_info()
@@ -28,7 +28,7 @@ public:
     }
 
     /** @brief 画像ファイルから読み込む*/
-    bool Load(const std::wstring& filePath);
+    bool Load(const u8string& filePath);
 
     /**
      * @brief メモリ上のRGBA8画像(UNORM)からテクスチャを生成する
@@ -38,11 +38,11 @@ public:
 
     void bind() const;
 
-    void setName(const wstring& n) { fileName = n; }
+    void setName(StringId n) { fileName = n; }
 
 protected:
     ComPtr<ID3D11SamplerState> samplerState;
-    wstring fileName;
+    StringId fileName;
 
     // シェーダーリソースビュー(画像データ読み取りハンドル)
     ComPtr<ID3D11ShaderResourceView> m_srv = nullptr;

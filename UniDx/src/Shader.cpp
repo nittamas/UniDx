@@ -51,13 +51,13 @@ const std::array< D3D11_INPUT_ELEMENT_DESC, 3> VertexPNC::layout =
 };
 
 
-bool Shader::compile(const std::wstring& filePath, const D3D11_INPUT_ELEMENT_DESC* layout, size_t layout_size)
+bool Shader::compile(const u8string& filePath, const D3D11_INPUT_ELEMENT_DESC* layout, size_t layout_size)
 {
 	ID3DBlob* error = nullptr;
 
 	// 頂点シェーダーを読み込み＆コンパイル
 	ComPtr<ID3DBlob> compiledVS;
-	if (FAILED(D3DCompileFromFile(filePath.c_str(), nullptr, D3D_COMPILE_STANDARD_FILE_INCLUDE, "VS", "vs_5_0", 0, 0, &compiledVS, &error)))
+	if (FAILED(D3DCompileFromFile(ToUtf16(filePath).c_str(), nullptr, D3D_COMPILE_STANDARD_FILE_INCLUDE, "VS", "vs_5_0", 0, 0, &compiledVS, &error)))
 	{
 		Debug::Log(L"頂点シェーダーのコンパイルエラー");
 		if (error)
@@ -69,7 +69,7 @@ bool Shader::compile(const std::wstring& filePath, const D3D11_INPUT_ELEMENT_DES
 	}
 	// ピクセルシェーダーを読み込み＆コンパイル
 	ComPtr<ID3DBlob> compiledPS;
-	if (FAILED(D3DCompileFromFile(filePath.c_str(), nullptr, nullptr, "PS", "ps_5_0", 0, 0, &compiledPS, &error)))
+	if (FAILED(D3DCompileFromFile(ToUtf16(filePath).c_str(), nullptr, nullptr, "PS", "ps_5_0", 0, 0, &compiledPS, &error)))
 	{
 		Debug::Log(L"ピクセルシェーダーシェーダーのコンパイルエラー");
 		if (error)
@@ -100,7 +100,7 @@ bool Shader::compile(const std::wstring& filePath, const D3D11_INPUT_ELEMENT_DES
 	}
 
 	std::filesystem::path path(filePath);
-	fileName = path.filename();
+	fileName = StringId::intern(path.filename().u8string());
 //	Debug::Log(fileName + L"は正常にコンパイルできました");
 
 	return true;

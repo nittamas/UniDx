@@ -250,7 +250,7 @@ public:
     void render(std::span<const std::shared_ptr<Material> > materials) const;
     
 protected:
-    wstring name_;
+    StringId name_;
 };
 
 

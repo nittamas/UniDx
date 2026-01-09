@@ -18,7 +18,7 @@ public:
 	virtual void Awake() override;
 	virtual void render(const Matrix4x4& proj) const;
 
-	wstring          text;
+	u8string         text;
 	shared_ptr<Font> font;
 	Color            color = Color::white;
 

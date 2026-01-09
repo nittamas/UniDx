@@ -1,22 +1,11 @@
 ﻿#include "pch.h"
 #include <UniDx/PlayerLoop.h>
 
-#include <string>
 #include <chrono>
-
-#include <Keyboard.h>          // DirectXTK
-using namespace DirectX;
-
-// DirectXテクスチャライブラリを使用できるようにする
-#include <DirectXTex.h>
-
-// DirextXフォントライブラリを使用できるようにする
-#include <SpriteFont.h>
 
 #include <UniDx/D3DManager.h>
 #include <UniDx/SceneManager.h>
 #include <UniDx/Scene.h>
-#include <UniDx/Behaviour.h>
 #include <UniDx/Renderer.h>
 #include <UniDx/LightManager.h>
 #include <UniDx/Input.h>

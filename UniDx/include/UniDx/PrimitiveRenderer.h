@@ -12,7 +12,7 @@ class CubeRenderer : public MeshRenderer
 {
 public:
     template<typename TVertex>
-    static std::unique_ptr<CubeRenderer> create(const std::wstring& shaderPath)
+    static std::unique_ptr<CubeRenderer> create(const u8string& shaderPath)
     {
         auto ptr = std::unique_ptr<CubeRenderer>(new CubeRenderer());
         ptr->AddMaterial<TVertex>(shaderPath);
@@ -20,7 +20,7 @@ public:
         return ptr;
     }
     template<typename TVertex>
-    static std::unique_ptr<CubeRenderer> create(const std::wstring& shaderPath, const std::wstring& texturePath)
+    static std::unique_ptr<CubeRenderer> create(const u8string& shaderPath, const u8string& texturePath)
     {
         auto ptr = std::unique_ptr<CubeRenderer>(new CubeRenderer());
         ptr->AddMaterial<TVertex>(shaderPath, texturePath);
@@ -55,7 +55,7 @@ class SphereRenderer : public MeshRenderer
 {
 public:
     template<typename TVertex>
-    static std::unique_ptr<SphereRenderer> create(const std::wstring& shaderPath)
+    static std::unique_ptr<SphereRenderer> create(const u8string& shaderPath)
     {
         auto ptr = std::unique_ptr<SphereRenderer>(new SphereRenderer());
         ptr->AddMaterial<TVertex>(shaderPath);
@@ -63,7 +63,7 @@ public:
         return ptr;
     }
     template<typename TVertex>
-    static std::unique_ptr<SphereRenderer> create(const std::wstring& shaderPath, const std::wstring& texturePath)
+    static std::unique_ptr<SphereRenderer> create(const u8string& shaderPath, const u8string& texturePath)
     {
         auto ptr = std::unique_ptr<SphereRenderer>(new SphereRenderer());
         ptr->AddMaterial<TVertex>(shaderPath, texturePath);

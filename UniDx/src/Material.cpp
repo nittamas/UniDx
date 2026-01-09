@@ -89,7 +89,10 @@ bool Material::bind() const
     shader->setToContext();
     for (auto& tex : textures)
     {
-        tex->bind();
+        if (tex != nullptr)
+        {
+            tex->bind();
+        }
     }
 
     // デプス

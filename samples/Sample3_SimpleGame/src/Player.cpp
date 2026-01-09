@@ -13,27 +13,27 @@ using namespace UniDx;
 
 namespace
 {
-    void debugNode(GameObject* p, wstring head)
+    void debugNode(GameObject* p, std::string head)
     {
-        wstring str = head;
-        str.append(p->name);
+        std::string str = head;
+        str.append(p->name.get().c_str());
         Debug::Log(str);
         str = head;
-        str.append( std::to_wstring(p->transform->position.get().y));
+        str.append( std::to_string(p->transform->position.get().y));
         Debug::Log(str);
-        str = head + L" ";
+        str = head + " ";
         for (int i = 0; i < p->transform->childCount(); ++i)
         {
             debugNode(p->transform->GetChild(i)->gameObject, str);
         }
     }
 
-    const wchar_t* PartsName[] =
+    const char* PartsName[] =
     {
-        L"LeftShoulder",
-        L"RightShoulder",
-        L"LeftUpperLeg",
-        L"RightUpperLeg"
+        "LeftShoulder",
+        "RightShoulder",
+        "LeftUpperLeg",
+        "RightUpperLeg"
     };
 }
 
@@ -48,11 +48,10 @@ void Player::OnEnable()
 
     for (int i = 0; i < (int)Parts::Max; ++i)
     {
-        GameObject * o = gameObject->Find([i](GameObject* p) { return p->name.get() == PartsName[i]; });
+        GameObject * o = gameObject->Find([i](GameObject* p) { return p->name.get().c_str() == PartsName[i]; });
         if (o != nullptr)
         {
             parts[i] = o->transform;
-            Debug::Log(parts[i]->name.get());
         }
     }
     animFrame = 0.0f;
@@ -126,7 +125,7 @@ void Player::OnTriggerExit(Collider* other)
 
 void Player::OnCollisionEnter(const Collision& collision)
 {
-    if (collision.collider->name.get() == L"Coin")
+    if (collision.collider->name.get() == StringId::intern("Coin"))
     {
         MainGame::getInstance()->AddScore(1);
         Destroy(collision.collider->gameObject);

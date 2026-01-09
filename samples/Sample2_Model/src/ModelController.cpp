@@ -1,4 +1,4 @@
-#include "ModelController.h"
+ï»¿#include "ModelController.h"
 
 #include <UniDx/Input.h>
 
@@ -18,7 +18,7 @@ void ModelController::Update()
 {
     const float angleSpeed = 120.0f;
 
-    // WASD‚É‚æ‚Á‚Äƒsƒbƒ`Šp‚Æƒˆ[Šp‚ð•Ï‚¦‚é
+    // WASDã«ã‚ˆã£ã¦ãƒ”ãƒƒãƒè§’ã¨ãƒ¨ãƒ¼è§’ã‚’å¤‰ãˆã‚‹
     Quaternion rot;
     if (Input::GetKey(Keyboard::A))
     {
@@ -37,6 +37,6 @@ void ModelController::Update()
         pitch -= angleSpeed * Time::deltaTime;
     }
 
-    // ƒ[ƒJƒ‹‚Ì•ûŒüQuaternion‚ÉæŽZ‚·‚é
+    // ãƒ­ãƒ¼ã‚«ãƒ«ã®æ–¹å‘Quaternionã«ä¹—ç®—ã™ã‚‹
     transform->localRotation = Quaternion::Euler(pitch, yaw, 0.0f);
 }

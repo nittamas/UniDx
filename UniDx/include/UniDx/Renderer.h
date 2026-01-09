@@ -36,7 +36,7 @@ public:
 
     /** @brief  シェーダー読み込んでマテリアルを追加 */
     template<typename TVertex>
-    void AddMaterial(const std::wstring& shaderPath)
+    void AddMaterial(const u8string& shaderPath)
     {
         // マテリアルを追加
         materials.push_back(std::make_shared<Material>());
@@ -47,7 +47,7 @@ public:
 
     /** @brief シェーダーとテクスチャを読み込んでマテリアルを追加 */
     template<typename TVertex>
-    void AddMaterial(const std::wstring& shaderPath, const std::wstring& textuePath)
+    void AddMaterial(const u8string& shaderPath, const u8string& textuePath)
     {
         AddMaterial<TVertex>(shaderPath);
 

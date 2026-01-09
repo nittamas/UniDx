@@ -13,7 +13,7 @@ public:
 	char getData(int x, int y) const;
 	size_t getHeight() const;
 	size_t getWidth() const;
-	bool load(std::string_view filename);
+	bool load(std::u8string_view filename);
 
 protected:
 	static inline std::unique_ptr<MapData> _instance;

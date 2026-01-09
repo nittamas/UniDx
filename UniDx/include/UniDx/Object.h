@@ -2,6 +2,7 @@
 #include <string>
 
 #include "UniDxDefine.h"
+#include "StringId.h"
 #include "Property.h"
 
 namespace UniDx {
@@ -14,9 +15,9 @@ class Object
 public:
     virtual ~Object() {}
 
-    ReadOnlyProperty<wstring_view> name;
+    ReadOnlyProperty<StringId> name;
 
-    Object(ReadOnlyProperty<wstring_view>::Getter nameGet) : name(nameGet) {}
+    Object(ReadOnlyProperty<StringId>::Getter nameGet) : name(nameGet) {}
 };
 
 } // namespace UniDx

@@ -18,9 +18,9 @@ size_t MapData::getWidth() const
 	return data[0].size();
 }
 
-bool MapData::load(std::string_view filename)
+bool MapData::load(std::u8string_view filename)
 {
-    std::ifstream file(filename.data());
+    std::ifstream file(reinterpret_cast<const char*>(filename.data()));
     if (!file) {
         return false; // ファイルが開けなかった
     }

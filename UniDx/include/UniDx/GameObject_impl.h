@@ -8,12 +8,17 @@ namespace UniDx
 {
 
 template<typename... ComponentPtrs>
-GameObject::GameObject(const std::wstring& name, Vector3 position, ComponentPtrs&&... components) : GameObject(name)
+GameObject::GameObject(StringId name, Vector3 position, ComponentPtrs&&... components) : GameObject(name)
 {
     transform->position = position;
     Add(std::forward<ComponentPtrs>(components)...);
 }
-
+template<typename... ComponentPtrs>
+GameObject::GameObject(const char8_t* name, Vector3 position, ComponentPtrs&&... components) : GameObject(name)
+{
+    transform->position = position;
+    Add(std::forward<ComponentPtrs>(components)...);
+}
 template<typename Predicate>
 GameObject* GameObject::Find(Predicate pred) const
 {

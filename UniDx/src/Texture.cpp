@@ -33,11 +33,11 @@ void Texture::ensureSampler_()
 }
 
 
-bool Texture::Load(const std::wstring& filePath)
+bool Texture::Load(const u8string& filePath)
 {
 	// WIC画像を読み込む
 	auto image = std::make_unique<DirectX::ScratchImage>();
-	if (FAILED(DirectX::LoadFromWICFile(filePath.c_str(), DirectX::WIC_FLAGS_NONE, &m_info, *image)))
+	if (FAILED(DirectX::LoadFromWICFile(ToUtf16(filePath).c_str(), DirectX::WIC_FLAGS_NONE, &m_info, *image)))
 	{
 		// 失敗
 		m_info = {};
@@ -63,7 +63,7 @@ bool Texture::Load(const std::wstring& filePath)
 	}
 
 	std::filesystem::path path(filePath);
-	fileName = path.filename();
+	fileName = StringId::intern(path.filename().u8string());
 
 	// サンプラ
     ensureSampler_();

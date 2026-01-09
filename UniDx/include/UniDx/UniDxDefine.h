@@ -13,8 +13,8 @@
 namespace UniDx
 {
 
-using std::wstring;
-using std::wstring_view;
+using std::u8string;
+using std::u8string_view;
 using std::unique_ptr;
 using std::shared_ptr;
 using std::make_unique;
@@ -33,27 +33,39 @@ enum RenderingMode
 	RenderingMode_Transparent
 };
 
+/** @brief utf8文字列へ変換*/
+u8string ToUtf8(std::wstring_view wstr);
+
+/** @brief utf16文字列へ変換*/
+std::wstring ToUtf16(std::u8string_view str);
+
+/** @brief stringへ変換*/
+inline std::string str(std::u8string_view u8) { return { reinterpret_cast<const char*>(u8.data()), u8.size() }; }
+
 template<typename T>
-inline std::wstring ToString(const T& v) { return std::to_wstring(v); }
-inline std::wstring ToString(const wstring& v) { return v; }
-inline std::wstring ToString(const wstring_view& v) { return std::wstring(v); }
-inline std::wstring ToString(const DirectX::XMFLOAT2& v)
+inline u8string ToString(const T& v) { return u8string( reinterpret_cast<const char8_t*>(std::to_string(v).c_str())); }
+inline u8string ToString(const char8_t* v) { return u8string(v); }
+inline u8string ToString(const std::wstring& v) { return ToUtf8(v); }
+inline u8string ToString(const std::wstring_view& v) { return ToUtf8(v); }
+inline u8string ToString(const char* v) { return u8string(reinterpret_cast<const char8_t*>(v)); }
+inline u8string ToString(const std::string& v) { return u8string(reinterpret_cast<const char8_t*>(v.data()), v.size()); }
+inline u8string ToString(const DirectX::XMFLOAT2& v)
 {
-    std::wostringstream ss;
-    ss << std::fixed << std::setprecision(3) << L"(" << v.x << L", " << v.y << L")";
-    return ss.str();
+    std::ostringstream ss;
+    ss << std::fixed << std::setprecision(3) << "(" << v.x << ", " << v.y << ")";
+    return u8string(reinterpret_cast<const char8_t*>(ss.str().c_str()));
 }
-inline std::wstring ToString(const DirectX::XMFLOAT3& v)
+inline u8string ToString(const DirectX::XMFLOAT3& v)
 {
-    std::wostringstream ss;
-    ss << std::fixed << std::setprecision(3) << L"(" << v.x << L", " << v.y << L", " << v.z << L")";
-    return ss.str();
+    std::ostringstream ss;
+    ss << std::fixed << std::setprecision(3) << "(" << v.x << ", " << v.y << ", " << v.z << ")";
+    return u8string(reinterpret_cast<const char8_t*>(ss.str().c_str()));
 }
-inline std::wstring ToString(const DirectX::XMFLOAT4& v)
+inline u8string ToString(const DirectX::XMFLOAT4& v)
 {
-    std::wostringstream ss;
-    ss << std::fixed << std::setprecision(3) << L"(" << v.x << L", " << v.y << L", " << v.z << L", " << v.w << L")";
-    return ss.str();
+    std::ostringstream ss;
+    ss << std::fixed << std::setprecision(3) << "(" << v.x << ", " << v.y << ", " << v.z << ", " << v.w << ")";
+    return u8string(reinterpret_cast<const char8_t*>(ss.str().c_str()));
 }
 
 }

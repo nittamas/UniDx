@@ -179,6 +179,7 @@
     <ClInclude Include="include\UniDx\Shader.h" />
     <ClInclude Include="include\UniDx\Singleton.h" />
     <ClInclude Include="include\UniDx\Sphere.h" />
+    <ClInclude Include="include\UniDx\StringId.h" />
     <ClInclude Include="include\UniDx\TextMesh.h" />
     <ClInclude Include="include\UniDx\Texture.h" />
     <ClInclude Include="include\UniDx\Time.h" />

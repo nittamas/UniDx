@@ -42,7 +42,7 @@ public:
     Material();
 
     // マテリアル情報設定。Render()内で呼び出す
-    bool bind() const;
+    virtual bool bind() const;
 
     // テクスチャの取得
     std::span<std::shared_ptr<Texture>> getTextures() { return textures; }

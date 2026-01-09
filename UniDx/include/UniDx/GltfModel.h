@@ -22,7 +22,7 @@ public:
      * 内部で階層構造を構築するので、あらかじめ GameObject にアタッチしておく必要がある
      */
     template<typename TVertex>
-    bool Load(const std::wstring& modelPath, const std::wstring& shaderPath)
+    bool Load(const u8string& modelPath, const u8string& shaderPath)
     {
         // 共有シェーダー
         auto shader = std::make_shared<Shader>();
@@ -38,7 +38,7 @@ public:
      * 内部で階層構造を構築するので、あらかじめ GameObject にアタッチしておく必要がある
      */
     template<typename TVertex>
-    bool Load(const std::wstring& modelPath, const std::wstring& shaderPath, std::shared_ptr<Texture> texture)
+    bool Load(const u8string& modelPath, const u8string& shaderPath, std::shared_ptr<Texture> texture)
     {
         // モデル
         if (!Load<TVertex>(modelPath, false, nullptr)) return false;
@@ -60,7 +60,7 @@ public:
      * 内部で階層構造を構築するので、あらかじめ GameObject にアタッチしておく必要がある
      */
     template<typename TVertex>
-    bool Load(const std::wstring& modelPath, const std::wstring& shaderPath, const std::wstring& texturePath)
+    bool Load(const u8string& modelPath, const u8string& shaderPath, const u8string& texturePath)
     {
         auto tex = std::make_shared<Texture>();
         if (!tex->Load(texturePath)) return false; // テクスチャ読み込み
@@ -73,7 +73,7 @@ public:
      * 内部で階層構造を構築するので、あらかじめ GameObject にアタッチしておく必要がある
      */
     template<typename TVertex>
-    bool Load(const std::wstring& modelPath, std::shared_ptr<Material> material)
+    bool Load(const u8string& modelPath, std::shared_ptr<Material> material)
     {
         if (!Load<TVertex>(modelPath, false, nullptr)) return false;
         AddMaterial(0, material);
@@ -82,9 +82,9 @@ public:
 
     // glTF形式のモデルファイルを読み込む
     template<typename TVertex>
-    bool Load(const std::wstring& filePath, bool makeTextureMaterial, std::shared_ptr<Shader> shader)
+    bool Load(const u8string& filePath, bool makeTextureMaterial, std::shared_ptr<Shader> shader)
     {
-        if (!load_(filePath, makeTextureMaterial, shader)) return false;
+        if (!load_(reinterpret_cast<const char*>(filePath.c_str()), makeTextureMaterial, shader)) return false;
         for (auto& mesh : meshes)
         {
             for (auto& sub : mesh->submesh)
@@ -115,7 +115,7 @@ protected:
     std::vector< std::shared_ptr<Mesh> > meshes; // model->meshesの順に従ったメッシュ
     std::map<int, std::shared_ptr<Texture>> textures;
 
-    bool load_(const std::wstring& filePath, bool makeTextureMaterial, std::shared_ptr<Shader> shader);
+    bool load_(const char* filePath, bool makeTextureMaterial, std::shared_ptr<Shader> shader);
     void createNodeRecursive(const tinygltf::Model& model, int nodeIndex, GameObject* parentGO, bool attachIncludeMaterial);
     std::shared_ptr<Texture> GetOrCreateTextureFromGltf_(int textureIndex, bool isSRGB);
 };

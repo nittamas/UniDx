@@ -17,11 +17,11 @@ Font::Font() : Object([this]() { return fileName; })
 {
 }
 
-bool Font::Load(const wchar_t* filePath)
+bool Font::Load(std::wstring filePath)
 {
-	spriteFont = std::make_unique<DirectX::SpriteFont>(D3DManager::getInstance()->GetDevice().Get(), filePath);
+	spriteFont = std::make_unique<DirectX::SpriteFont>(D3DManager::getInstance()->GetDevice().Get(), filePath.c_str());
 	std::filesystem::path path(filePath);
-	fileName = path.filename();
+	fileName = StringId::intern(path.filename().u8string());
 	return spriteFont != nullptr;
 }
 
