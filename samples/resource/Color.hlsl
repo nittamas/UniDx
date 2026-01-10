@@ -1,11 +1,17 @@
 // ----------------------------------------------------------
 // 頂点
 // ----------------------------------------------------------
-cbuffer VSConstants : register(b0)
+// カメラ定数バッファ
+cbuffer CBPerCamera : register(b8)
 {
-    float4x4 world;
     float4x4 view;
     float4x4 projection;
+};
+
+// オブジェクト定数バッファ
+cbuffer CBPerObject : register(b9)
+{
+    float4x4 world;
 };
 
 // 頂点シェーダーへ入力するデータ

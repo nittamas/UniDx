@@ -36,7 +36,7 @@ struct ConstantBufferPerCamera
     Vector4   time;       // (t, dt, 1/dt, frameCount)
 };
 /* HLSL
-cbuffer VSConstants : register(b8)
+cbuffer CBPerCamera : register(b8)
 {
     float4x4 view;
     float4x4 projection;
@@ -56,7 +56,7 @@ struct ConstantBufferPerObject
     Matrix4x4 world;
 };
 /* HLSL
-cbuffer VSConstants : register(b9)
+cbuffer CBPerObject : register(b9)
 {
     float4x4 world;
 };
@@ -70,7 +70,7 @@ struct ConstantBufferPerMaterial
     Color baseColor;
 };
 /* HLSL
-cbuffer PSConstants : register(b10)
+cbuffer CBPerMaterial : register(b10)
 {
     float4 baseColor;
 };
@@ -87,7 +87,7 @@ struct ConstantBufferLightPerFrame
     uint32_t pad;
 };
 /* HLSL
-cbuffer LightPerFrame : register(b11)
+cbuffer CBLightPerFrame : register(b11)
 {
     float4 ambientColor;
     float4 directionalColor;
@@ -138,7 +138,7 @@ struct SpotLight
     float3 directionW;
     float outerCos;
 };
-cbuffer LightPerObject : register(b12)
+cbuffer CBLightPerObject : register(b12)
 {
     PointLight pointLights[8]; // 最大8個
     SpotLight spotLights[8];   // 最大8個

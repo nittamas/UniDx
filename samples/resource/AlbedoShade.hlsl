@@ -2,7 +2,7 @@
 // 頂点
 // ----------------------------------------------------------
 // カメラ定数バッファ
-cbuffer VSConstants : register(b8)
+cbuffer CBPerCamera : register(b8)
 {
     float4x4 view;
     float4x4 projection;
@@ -13,8 +13,8 @@ cbuffer VSConstants : register(b8)
     float4   time; // (t, dt, 1/dt, frameCount)
 };
 
-// 行列定数バッファ
-cbuffer VSConstants : register(b9)
+// オブジェクト定数バッファ
+cbuffer CBPerObject : register(b9)
 {
     float4x4 world;
 };
@@ -62,13 +62,13 @@ PSInput VS(VSInput vin)
 // ピクセル
 // ----------------------------------------------------------
 // マテリアル定数バッファ
-cbuffer PSConstants : register(b10)
+cbuffer CBPerMaterial : register(b10)
 {
     float4 baseColor;
 };
 
 // ライト
-cbuffer LightPerFrame : register(b11)
+cbuffer CBLightPerFrame : register(b11)
 {
     float4 ambientColor;
     float4 directionalColor;
@@ -89,7 +89,7 @@ struct SpotLight
     float3 directionW;
     float outerCos;
 };
-cbuffer LightPerObject : register(b12)
+cbuffer CBLightPerObject : register(b12)
 {
     PointLight pointLights[8]; // 最大8個
     SpotLight spotLights[8];   // 最大8個

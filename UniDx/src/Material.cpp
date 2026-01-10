@@ -74,10 +74,59 @@ Material::Material() :
 }
 
 
+// マテリアル変数を取得
+const void* Material::GetBytes(StringId name) const
+{
+    if(shader == nullptr) return nullptr;
+
+    // シェーダーから該当する名前のレイアウトを取得
+    const auto* layout = shader->findVar(name);
+    if(!layout) return nullptr;
+
+    // シェーダーから該当する名前のレイアウトを取得
+    const uint32_t cbSize = shader->getCBPerMaterialSize();
+    if(cbStaging.size() != cbSize) nullptr;
+
+    return cbStaging.data() + layout->offset;
+}
+
+
+// マテリアル変数を設定
+bool Material::SetBytes(StringId name, const void* data, uint32_t size)
+{
+    if(shader == nullptr) return false;
+
+    const auto* layout = shader->findVar(name);
+    if(!layout) return false;
+
+    const uint32_t cbSize = shader->getCBPerMaterialSize();
+    if(cbStaging.size() != cbSize)
+    {
+        // シェーダーが変わってる可能性があるので作り直す
+        createConstantBuffer();
+    }
+
+    const uint32_t copySize = std::min<uint32_t>(size, layout->size);
+
+    // 範囲チェック（layoutが壊れてる時の保険）
+    if(layout->offset + copySize > cbStaging.size()) return false;
+
+    // コピー先の値と比較して、同じならデータもdirtyフラグもそのまま
+    uint8_t* dst = cbStaging.data() + layout->offset;
+    if(std::memcmp(dst, data, copySize) == 0) return true;
+
+    // データをコピー
+    std::memcpy(dst, data, copySize);
+    dirty = true;
+
+    return true;
+}
+
+
 // -----------------------------------------------------------------------------
 // レンダリング用にデバイスへ設定
 // -----------------------------------------------------------------------------
-bool Material::bind() const
+bool Material::bind()
 {
     // レンダリングモードが合わない場合は何もしない
     // レンダーキューを実装していない代わりの実装
@@ -102,13 +151,23 @@ bool Material::bind() const
     D3DManager::getInstance()->GetContext()->OMSetBlendState(blendState.Get(), NULL, 0xffffffff);
 
     // 定数バッファ更新
-    ConstantBufferPerMaterial cb{};
-    cb.baseColor = color;
+    if(cbStaging.size() != shader->getCBPerMaterialSize())
+    {
+        createConstantBuffer();
+    }
+
+    // カラーを設定
+    SetColor(StringId::intern("baseColor"), color);
+
+    if(dirty)
+    {
+        D3DManager::getInstance()->GetContext()->UpdateSubresource(constantBufferPerMaterial.Get(), 0, nullptr, cbStaging.data(), 0, 0);
+        dirty = false;
+    }
 
     ID3D11Buffer* cbs[1] = { constantBufferPerMaterial.Get() };
     D3DManager::getInstance()->GetContext()->VSSetConstantBuffers(CB_PerMaterial, 1, cbs);
     D3DManager::getInstance()->GetContext()->PSSetConstantBuffers(CB_PerMaterial, 1, cbs);
-    D3DManager::getInstance()->GetContext()->UpdateSubresource(constantBufferPerMaterial.Get(), 0, nullptr, &cb, 0, 0);
 
     return true;
 }
@@ -142,12 +201,27 @@ void Material::OnEnable()
     setBlendMode(blendMode);
 
     // マテリアル用の定数バッファ生成
+    if(cbStaging.size() != shader->getCBPerMaterialSize())
+    {
+        createConstantBuffer();
+    }
+}
+
+
+void Material::createConstantBuffer()
+{
+    if(shader == nullptr) return;
+
+    cbStaging.assign(shader->getCBPerMaterialSize(), 0);
+
     D3D11_BUFFER_DESC desc{};
-    desc.ByteWidth = sizeof(ConstantBufferPerMaterial);
+    desc.ByteWidth = shader->getCBPerMaterialSize();
     desc.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
     desc.CPUAccessFlags = 0;
     desc.Usage = D3D11_USAGE_DEFAULT;
     D3DManager::getInstance()->GetDevice()->CreateBuffer(&desc, nullptr, constantBufferPerMaterial.GetAddressOf());
+
+    dirty = true;
 }
 
 

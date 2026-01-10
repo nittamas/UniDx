@@ -7,14 +7,14 @@
 // 頂点シェーダ
 // ----------------------------------------------------------
 // カメラ定数バッファ
-cbuffer VSConstants : register(b8)
+cbuffer CBPerCamera : register(b8)
 {
     float4x4 view;
     float4x4 projection;
 };
 
-// 行列定数バッファ
-cbuffer VSConstants : register(b9)
+// オブジェクト定数バッファ
+cbuffer CBPerObject : register(b9)
 {
     float4x4 world;
 };
@@ -54,13 +54,13 @@ PSInput VS(VSInput vin)
 // ピクセルシェーダ
 // ----------------------------------------------------------
 // マテリアル定数バッファ
-cbuffer PSConstants : register(b10)
+cbuffer CBPerMaterial : register(b10)
 {
     float4 baseColor;
 };
 
 // 共通ライト
-cbuffer LightPerFrame : register(b11)
+cbuffer CBLightPerFrame : register(b11)
 {
     float4 ambientColor;
     float4 directionalColor;

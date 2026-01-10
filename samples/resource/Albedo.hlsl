@@ -2,7 +2,7 @@
 // 頂点
 // ----------------------------------------------------------
 // カメラ定数バッファ
-cbuffer VSConstants : register(b8)
+cbuffer CBPerCamera : register(b8)
 {
     float4x4 view;
     float4x4 projection;
@@ -13,7 +13,8 @@ cbuffer VSConstants : register(b8)
     float4 time; // (t, dt, 1/dt, frameCount)
 };
 
-cbuffer VSConstants : register(b9)
+// オブジェクト定数バッファ
+cbuffer CBPerObject : register(b9)
 {
     float4x4 world;
 };

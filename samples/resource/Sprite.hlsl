@@ -1,7 +1,7 @@
 // ----------------------------------------------------------
 // 頂点
 // ----------------------------------------------------------
-cbuffer VSConstants : register(b0)
+cbuffer CBPerCamera : register(b0)
 {
     float4x4 world;
     float4x4 view;

@@ -118,30 +118,46 @@ struct VertexPNC
 };
 
 
-// ----------------------------------------------------------
-// Shaderクラス
-// ----------------------------------------------------------
+struct ShaderVarLayout
+{
+	StringId  name;
+	uint32_t  offset;
+	uint32_t  size;
+};
+
+/** @brief シェーダーをコンパイルしてマテリアルの変数レイアウトを保持する*/
 class Shader : public Object
 {
 public:
 	Shader() : Object([this]() {return fileName;}) {}
 
-	// シェーダーのパスを指定してコンパイル
 	bool compile(const u8string& filePath, const D3D11_INPUT_ELEMENT_DESC* layout, size_t layout_size);
 
+	/** @brief 頂点タイプをテンプレート引数に、シェーダーのパスを引数に指定してコンパイル*/
 	template<typename TVertex>
 	bool compile(const u8string& filePath) { return compile(filePath, TVertex::layout.data(), TVertex::layout.size()); }
 
 	// 描画のため、D3DDeviceContextにこのシェーダーをセット
 	void setToContext() const;
 
+	// 変数の名前を指定してレイアウトを取得
+	const ShaderVarLayout* findVar(StringId nameId) const;
+	const int getCBPerMaterialSize() const { return cbPerMaterialSize; }
+
 protected:
 	StringId fileName;
 
+	// ピクセルシェーダーから変数のレイアウトを反映
+	void reflectPSLayout(ID3DBlob* psBlob);
+
 private:
-	ComPtr<ID3D11VertexShader>	m_vertex = nullptr;	// 頂点シェーダー
-	ComPtr<ID3D11PixelShader>	m_pixel = nullptr;	// ピクセルシェーダー
-	ComPtr<ID3D11InputLayout>	m_inputLayout = nullptr;// 入力レイアウト
+	ComPtr<ID3D11VertexShader>	vertex = nullptr;	// 頂点シェーダー
+	ComPtr<ID3D11PixelShader>	pixel = nullptr;	// ピクセルシェーダー
+	ComPtr<ID3D11InputLayout>	inputLayout = nullptr;// 入力レイアウト
+
+	std::vector<ShaderVarLayout> vars;
+	int cbPerMaterialSize = 0;
+	ComPtr<ID3D11Buffer> cbPerMaterial;
 };
 
 }
