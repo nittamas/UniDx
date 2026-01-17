@@ -18,6 +18,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -103,8 +104,13 @@ UniDx::Physics の継承関係図</div>
   </map>
 </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:ad872992d9e01ccfc3c85314f915f36a0" id="r_ad872992d9e01ccfc3c85314f915f36a0"><td class="memItemLeft" align="right" valign="top">typedef std::pair&lt; <a class="el" href="class_uni_dx_1_1_physics_shape.html">PhysicsShape</a> *, <a class="el" href="class_uni_dx_1_1_physics_shape.html">PhysicsShape</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad872992d9e01ccfc3c85314f915f36a0">PotentialPair</a></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
+<tr class="memitem:a75a9d6564ada05f4225499efb271edc7" id="r_a75a9d6564ada05f4225499efb271edc7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75a9d6564ada05f4225499efb271edc7">Physics</a> ()</td></tr>
 <tr class="memitem:aca632abd4a0a64c8770e10009b27aa8e" id="r_aca632abd4a0a64c8770e10009b27aa8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca632abd4a0a64c8770e10009b27aa8e">simulate</a> (float setp)</td></tr>
 <tr class="memitem:aaffdb001e2410b97e7a1ddc87019ef24" id="r_aaffdb001e2410b97e7a1ddc87019ef24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaffdb001e2410b97e7a1ddc87019ef24">simulatePositionCorrection</a> (float step)</td></tr>
 <tr class="memitem:aad2d525e9f030108827f91683607a2ae" id="r_aad2d525e9f030108827f91683607a2ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad2d525e9f030108827f91683607a2ae">registerRigidbody</a> (<a class="el" href="class_uni_dx_1_1_rigidbody.html">Rigidbody</a> *rigidbody)</td></tr>
@@ -113,6 +119,7 @@ UniDx::Physics の継承関係図</div>
 <tr class="memitem:a2e34db71eb050c83ca7830a32f557881" id="r_a2e34db71eb050c83ca7830a32f557881"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e34db71eb050c83ca7830a32f557881">unregister3d</a> (<a class="el" href="class_uni_dx_1_1_collider.html">Collider</a> *collider)</td></tr>
 <tr class="memitem:af9d1e1dfa6dc778b2fcc2065ea58f09d" id="r_af9d1e1dfa6dc778b2fcc2065ea58f09d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9d1e1dfa6dc778b2fcc2065ea58f09d">Raycast</a> (<a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> origin, <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> direction, float maxDistance, <a class="el" href="struct_uni_dx_1_1_raycast_hit.html">RaycastHit</a> *hitInfo=nullptr, std::function&lt; bool(const <a class="el" href="class_uni_dx_1_1_collider.html">Collider</a> *)&gt; filter=nullptr)</td></tr>
 <tr class="memdesc:af9d1e1dfa6dc778b2fcc2065ea58f09d"><td class="mdescLeft">&#160;</td><td class="mdescRight">origin, direction, maxDistance, filter (デフォルト nullptr =&gt; 全て含める)  <br /></td></tr>
+<tr class="memitem:a799b0bfc03c169b2b23cd8af2d077d6a" id="r_a799b0bfc03c169b2b23cd8af2d077d6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a799b0bfc03c169b2b23cd8af2d077d6a">checkBounds</a> (<a class="el" href="class_uni_dx_1_1_physics_shape.html">PhysicsShape</a> *shape1, <a class="el" href="class_uni_dx_1_1_physics_shape.html">PhysicsShape</a> *shape2)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 静的公開変数類</h2></td></tr>
@@ -130,7 +137,61 @@ UniDx::Physics の継承関係図</div>
 <tr class="inherit_header pro_static_attribs_class_uni_dx_1_1_singleton"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_static_attribs_class_uni_dx_1_1_singleton')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_uni_dx_1_1_singleton.html">UniDx::Singleton&lt; Physics &gt;</a> に属する継承静的限定公開変数類</td></tr>
 <tr class="memitem:a6eac0ea64fb9420399b931a4cd451912 inherit pro_static_attribs_class_uni_dx_1_1_singleton" id="r_a6eac0ea64fb9420399b931a4cd451912"><td class="memItemLeft" align="right" valign="top">static unique_ptr&lt; <a class="el" href="class_uni_dx_1_1_physics.html">Physics</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_singleton.html#a6eac0ea64fb9420399b931a4cd451912">instance_</a></td></tr>
 </table>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">型定義メンバ詳解</h2>
+<a id="ad872992d9e01ccfc3c85314f915f36a0" name="ad872992d9e01ccfc3c85314f915f36a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad872992d9e01ccfc3c85314f915f36a0">&#9670;&#160;</a></span>PotentialPair</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::pair&lt;<a class="el" href="class_uni_dx_1_1_physics_shape.html">PhysicsShape</a>*, <a class="el" href="class_uni_dx_1_1_physics_shape.html">PhysicsShape</a>*&gt; <a class="el" href="#ad872992d9e01ccfc3c85314f915f36a0">UniDx::Physics::PotentialPair</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
+<a id="a75a9d6564ada05f4225499efb271edc7" name="a75a9d6564ada05f4225499efb271edc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75a9d6564ada05f4225499efb271edc7">&#9670;&#160;</a></span>Physics()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UniDx::Physics::Physics </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="a799b0bfc03c169b2b23cd8af2d077d6a" name="a799b0bfc03c169b2b23cd8af2d077d6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a799b0bfc03c169b2b23cd8af2d077d6a">&#9670;&#160;</a></span>checkBounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UniDx::Physics::checkBounds </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_uni_dx_1_1_physics_shape.html">PhysicsShape</a> *</td>          <td class="paramname"><span class="paramname"><em>shape1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_uni_dx_1_1_physics_shape.html">PhysicsShape</a> *</td>          <td class="paramname"><span class="paramname"><em>shape2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="af9d1e1dfa6dc778b2fcc2065ea58f09d" name="af9d1e1dfa6dc778b2fcc2065ea58f09d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af9d1e1dfa6dc778b2fcc2065ea58f09d">&#9670;&#160;</a></span>Raycast()</h2>
 

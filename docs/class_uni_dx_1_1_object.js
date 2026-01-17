@@ -1,6 +1,6 @@
 var class_uni_dx_1_1_object =
 [
     [ "~Object", "class_uni_dx_1_1_object.html#af1f20702fde9b535a83a02a5f8663fec", null ],
-    [ "Object", "class_uni_dx_1_1_object.html#a8105112b7931a0c380dfe004d3efc959", null ],
-    [ "name", "class_uni_dx_1_1_object.html#a462b80cab72539ae5a42e9f39b479ff8", null ]
+    [ "Object", "class_uni_dx_1_1_object.html#a1d2a3979c7a097b2ce35a69347ea9b9f", null ],
+    [ "name", "class_uni_dx_1_1_object.html#ace975b5121f8f79f54fdf62d46c06049", null ]
 ];

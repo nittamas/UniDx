@@ -18,6 +18,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -91,90 +92,93 @@ $(function(){initNavTree('_renderer_8h_source.html','',''); });
   <div class="headertitle"><div class="title">Renderer.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_renderer_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;map&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_component_8h.html">Component.h</a>&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_shader_8h.html">Shader.h</a>&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_mesh_8h.html">Mesh.h</a>&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_texture_8h.html">Texture.h</a>&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="_material_8h.html">Material.h</a>&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="_constant_buffer_8h.html">ConstantBuffer.h</a>&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_uni_dx.html">UniDx</a> {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">class </span><a class="code hl_class" href="class_uni_dx_1_1_camera.html">Camera</a>;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">class </span><a class="code hl_class" href="class_uni_dx_1_1_material.html">Material</a>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
-<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_renderer.html">   24</a></span><span class="keyword">class </span><a class="code hl_class" href="class_uni_dx_1_1_renderer.html">Renderer</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_uni_dx_1_1_component.html#a6d0d42ab64e09768b102e1621ce72f0e">Component</a></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_renderer.html#a7e276866d0d989e99e39ca74f00b5f2e">   27</a></span>    std::vector&lt; std::shared_ptr&lt;Material&gt; &gt; <a class="code hl_variable" href="class_uni_dx_1_1_renderer.html#a7e276866d0d989e99e39ca74f00b5f2e">materials</a>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_renderer.html#a56dd522c5644a3605a642c4afdec5191">   29</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_renderer.html#a56dd522c5644a3605a642c4afdec5191">render</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_uni_dx_1_1_camera.html">Camera</a>&amp; camera)<span class="keyword"> const </span>{}</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
-<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_renderer.html#af06fbf43787c89a8a7cbf6c1ec47246c">   32</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_renderer.html#af06fbf43787c89a8a7cbf6c1ec47246c">AddMaterial</a>(std::shared_ptr&lt;Material&gt; material)</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_variable" href="class_uni_dx_1_1_renderer.html#a7e276866d0d989e99e39ca74f00b5f2e">materials</a>.push_back(material);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
+<a href="_renderer_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="_component_8h.html">Component.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="_shader_8h.html">Shader.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_mesh_8h.html">Mesh.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_texture_8h.html">Texture.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_material_8h.html">Material.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="_constant_buffer_8h.html">ConstantBuffer.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_uni_dx.html">UniDx</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">class </span><a class="code hl_class" href="class_uni_dx_1_1_camera.html">Camera</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">class </span><a class="code hl_class" href="class_uni_dx_1_1_material.html">Material</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_renderer.html">   25</a></span><span class="keyword">class </span><a class="code hl_class" href="class_uni_dx_1_1_renderer.html">Renderer</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_uni_dx_1_1_component.html#a6d0d42ab64e09768b102e1621ce72f0e">Component</a></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_renderer.html#a7e276866d0d989e99e39ca74f00b5f2e">   28</a></span>    std::vector&lt; std::shared_ptr&lt;Material&gt; &gt; <a class="code hl_variable" href="class_uni_dx_1_1_renderer.html#a7e276866d0d989e99e39ca74f00b5f2e">materials</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_renderer.html#a892e976f3bcbcb416cf175b3000332fd">   29</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_uni_dx_1_1_renderer.html#a892e976f3bcbcb416cf175b3000332fd">lightCount</a> = 0;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_renderer.html#acca5183cfec668a8db3c55fe8de16acc">   31</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_renderer.html#acca5183cfec668a8db3c55fe8de16acc">render</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_uni_dx_1_1_camera.html">Camera</a>&amp; camera) {}</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_renderer.html#af06fbf43787c89a8a7cbf6c1ec47246c">   34</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_renderer.html#af06fbf43787c89a8a7cbf6c1ec47246c">AddMaterial</a>(std::shared_ptr&lt;Material&gt; material)</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_variable" href="class_uni_dx_1_1_renderer.html#a7e276866d0d989e99e39ca74f00b5f2e">materials</a>.push_back(material);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
 </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TVertex&gt;</div>
-<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_renderer.html#a1e2d852fcd104725620f2f8d5dc54385">   39</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_renderer.html#a1e2d852fcd104725620f2f8d5dc54385">AddMaterial</a>(<span class="keyword">const</span> std::wstring&amp; shaderPath)</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="comment">// マテリアルを追加</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <a class="code hl_variable" href="class_uni_dx_1_1_renderer.html#a7e276866d0d989e99e39ca74f00b5f2e">materials</a>.push_back(std::make_shared&lt;Material&gt;());</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="comment">// マテリアルをシェーダーを読み込んで初期化</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <a class="code hl_variable" href="class_uni_dx_1_1_renderer.html#a7e276866d0d989e99e39ca74f00b5f2e">materials</a>.back()-&gt;shader-&gt;compile&lt;TVertex&gt;(shaderPath);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TVertex&gt;</div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_renderer.html#abbf58e82feaf29479a6b79b48dd0b8e9">   41</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_renderer.html#abbf58e82feaf29479a6b79b48dd0b8e9">AddMaterial</a>(<span class="keyword">const</span> u8string&amp; shaderPath)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="comment">// マテリアルを追加</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_variable" href="class_uni_dx_1_1_renderer.html#a7e276866d0d989e99e39ca74f00b5f2e">materials</a>.push_back(std::make_shared&lt;Material&gt;());</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="comment">// マテリアルをシェーダーを読み込んで初期化</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_variable" href="class_uni_dx_1_1_renderer.html#a7e276866d0d989e99e39ca74f00b5f2e">materials</a>.back()-&gt;shader-&gt;compile&lt;TVertex&gt;(shaderPath);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
 </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TVertex&gt;</div>
-<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_renderer.html#a2f0009b18dddc9217e9a48251c33186c">   50</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_renderer.html#a2f0009b18dddc9217e9a48251c33186c">AddMaterial</a>(<span class="keyword">const</span> std::wstring&amp; shaderPath, <span class="keyword">const</span> std::wstring&amp; textuePath)</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    {</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <a class="code hl_function" href="class_uni_dx_1_1_renderer.html#af06fbf43787c89a8a7cbf6c1ec47246c">AddMaterial&lt;TVertex&gt;</a>(shaderPath);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="comment">// テクスチャを読み込んでマテリアルに追加</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        std::unique_ptr&lt;Texture&gt; t = std::make_unique&lt;Texture&gt;();</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        t-&gt;Load(textuePath);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <a class="code hl_variable" href="class_uni_dx_1_1_renderer.html#a7e276866d0d989e99e39ca74f00b5f2e">materials</a>.back()-&gt;AddTexture(std::move(t));</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TVertex&gt;</div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_renderer.html#ac281311f0668d3557df83a470944da17">   52</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_renderer.html#ac281311f0668d3557df83a470944da17">AddMaterial</a>(<span class="keyword">const</span> u8string&amp; shaderPath, <span class="keyword">const</span> u8string&amp; textuePath)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_function" href="class_uni_dx_1_1_renderer.html#af06fbf43787c89a8a7cbf6c1ec47246c">AddMaterial&lt;TVertex&gt;</a>(shaderPath);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="comment">// テクスチャを読み込んでマテリアルに追加</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        std::unique_ptr&lt;Texture&gt; t = std::make_unique&lt;Texture&gt;();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        t-&gt;Load(textuePath);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <a class="code hl_variable" href="class_uni_dx_1_1_renderer.html#a7e276866d0d989e99e39ca74f00b5f2e">materials</a>.back()-&gt;AddTexture(std::move(t));</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
 </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_renderer.html#a8dd6d0cef2ec8cf0591e16bc7b26f6ff">   61</a></span>    ComPtr&lt;ID3D11Buffer&gt; <a class="code hl_variable" href="class_uni_dx_1_1_renderer.html#a8dd6d0cef2ec8cf0591e16bc7b26f6ff">constantBufferPerObject</a>;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_renderer.html#a06e577691e801bff13c219fa7cad9fe7">OnEnable</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_renderer.html#a1ff5ef38bc85344247bfd503894c0993">updatePositionCameraCBuffer</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>};</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_renderer.html#a8dd6d0cef2ec8cf0591e16bc7b26f6ff">   63</a></span>    ComPtr&lt;ID3D11Buffer&gt; <a class="code hl_variable" href="class_uni_dx_1_1_renderer.html#a8dd6d0cef2ec8cf0591e16bc7b26f6ff">constantBufferPerObject</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_renderer.html#a06e577691e801bff13c219fa7cad9fe7">OnEnable</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_renderer.html#a4a388e42d543709a37920acf3fabbc48">createConstantBufferPerObject</a>();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_renderer.html#a4ed7b7ae5673a0b83f14a61650abc00c">bindPerObject</a>();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_renderer.html#a68112796efdfcc00848ab9df4941e604">bindLightPerObject</a>();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>};</div>
 </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span></div>
-<div class="foldopen" id="foldopen00068" data-start="{" data-end="};">
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_mesh_renderer.html">   68</a></span><span class="keyword">class </span><a class="code hl_function" href="class_uni_dx_1_1_mesh_renderer.html#a09d523449e811e02af71d720e3baa28a">MeshRenderer</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_uni_dx_1_1_renderer.html">Renderer</a></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>{</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_mesh_renderer.html#a11c0dd829f9d87ea06f70b12f200bc94">   71</a></span>    <a class="code hl_class" href="class_uni_dx_1_1_mesh.html">Mesh</a> <a class="code hl_variable" href="class_uni_dx_1_1_mesh_renderer.html#a11c0dd829f9d87ea06f70b12f200bc94">mesh</a>;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_mesh_renderer.html#a92e6dbfd0b09c9bf65714e3901e5b9e0">   72</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_uni_dx_1_1_mesh_renderer.html#a92e6dbfd0b09c9bf65714e3901e5b9e0">lightCount</a>;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <a class="code hl_function" href="class_uni_dx_1_1_mesh_renderer.html#a09d523449e811e02af71d720e3baa28a">MeshRenderer</a>();</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="comment">// メッシュを使って描画</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_mesh_renderer.html#a58d51fa5bbb0960dca094f86d2bd716c">render</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_uni_dx_1_1_camera.html">Camera</a>&amp; camera) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>};</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span></div>
+<div class="foldopen" id="foldopen00072" data-start="{" data-end="};">
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_mesh_renderer.html">   72</a></span><span class="keyword">class </span><a class="code hl_function" href="class_uni_dx_1_1_mesh_renderer.html#a09d523449e811e02af71d720e3baa28a">MeshRenderer</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_uni_dx_1_1_renderer.html">Renderer</a></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>{</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_mesh_renderer.html#a11c0dd829f9d87ea06f70b12f200bc94">   75</a></span>    <a class="code hl_class" href="class_uni_dx_1_1_mesh.html">Mesh</a> <a class="code hl_variable" href="class_uni_dx_1_1_mesh_renderer.html#a11c0dd829f9d87ea06f70b12f200bc94">mesh</a>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_function" href="class_uni_dx_1_1_mesh_renderer.html#a09d523449e811e02af71d720e3baa28a">MeshRenderer</a>();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="comment">// メッシュを使って描画</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_mesh_renderer.html#aff373ec983b88f7b5228b10cef46fecc">render</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_uni_dx_1_1_camera.html">Camera</a>&amp; camera) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>};</div>
 </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>} <span class="comment">// namespace UniDx</span></div>
-<div class="ttc" id="a_component_8h_html"><div class="ttname"><a href="_component_8h.html">Component.h</a></div></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>} <span class="comment">// namespace UniDx</span></div>
+<div class="ttc" id="a_component_8h_html"><div class="ttname"><a href="_component_8h.html">Component.h</a></div><div class="ttdoc">コンポーネント GameObjectにアタッチして機能を追加する基本クラス</div></div>
 <div class="ttc" id="a_constant_buffer_8h_html"><div class="ttname"><a href="_constant_buffer_8h.html">ConstantBuffer.h</a></div></div>
 <div class="ttc" id="a_material_8h_html"><div class="ttname"><a href="_material_8h.html">Material.h</a></div></div>
 <div class="ttc" id="a_mesh_8h_html"><div class="ttname"><a href="_mesh_8h.html">Mesh.h</a></div></div>
@@ -183,20 +187,22 @@ $(function(){initNavTree('_renderer_8h_source.html','',''); });
 <div class="ttc" id="aclass_uni_dx_1_1_camera_html"><div class="ttname"><a href="class_uni_dx_1_1_camera.html">UniDx::Camera</a></div><div class="ttdef"><b>Definition</b> Camera.h:12</div></div>
 <div class="ttc" id="aclass_uni_dx_1_1_component_html_a6d0d42ab64e09768b102e1621ce72f0e"><div class="ttname"><a href="class_uni_dx_1_1_component.html#a6d0d42ab64e09768b102e1621ce72f0e">UniDx::Component::Component</a></div><div class="ttdeci">Component()</div><div class="ttdef"><b>Definition</b> Component.cpp:7</div></div>
 <div class="ttc" id="aclass_uni_dx_1_1_material_html"><div class="ttname"><a href="class_uni_dx_1_1_material.html">UniDx::Material</a></div><div class="ttdef"><b>Definition</b> Material.h:32</div></div>
-<div class="ttc" id="aclass_uni_dx_1_1_mesh_html"><div class="ttname"><a href="class_uni_dx_1_1_mesh.html">UniDx::Mesh</a></div><div class="ttdef"><b>Definition</b> Mesh.h:235</div></div>
-<div class="ttc" id="aclass_uni_dx_1_1_mesh_renderer_html_a09d523449e811e02af71d720e3baa28a"><div class="ttname"><a href="class_uni_dx_1_1_mesh_renderer.html#a09d523449e811e02af71d720e3baa28a">UniDx::MeshRenderer::MeshRenderer</a></div><div class="ttdeci">MeshRenderer()</div><div class="ttdef"><b>Definition</b> Renderer.cpp:54</div></div>
-<div class="ttc" id="aclass_uni_dx_1_1_mesh_renderer_html_a11c0dd829f9d87ea06f70b12f200bc94"><div class="ttname"><a href="class_uni_dx_1_1_mesh_renderer.html#a11c0dd829f9d87ea06f70b12f200bc94">UniDx::MeshRenderer::mesh</a></div><div class="ttdeci">Mesh mesh</div><div class="ttdef"><b>Definition</b> Renderer.h:71</div></div>
-<div class="ttc" id="aclass_uni_dx_1_1_mesh_renderer_html_a58d51fa5bbb0960dca094f86d2bd716c"><div class="ttname"><a href="class_uni_dx_1_1_mesh_renderer.html#a58d51fa5bbb0960dca094f86d2bd716c">UniDx::MeshRenderer::render</a></div><div class="ttdeci">virtual void render(const Camera &amp;camera) const override</div><div class="ttdef"><b>Definition</b> Renderer.cpp:63</div></div>
-<div class="ttc" id="aclass_uni_dx_1_1_mesh_renderer_html_a92e6dbfd0b09c9bf65714e3901e5b9e0"><div class="ttname"><a href="class_uni_dx_1_1_mesh_renderer.html#a92e6dbfd0b09c9bf65714e3901e5b9e0">UniDx::MeshRenderer::lightCount</a></div><div class="ttdeci">int lightCount</div><div class="ttdef"><b>Definition</b> Renderer.h:72</div></div>
-<div class="ttc" id="aclass_uni_dx_1_1_renderer_html"><div class="ttname"><a href="class_uni_dx_1_1_renderer.html">UniDx::Renderer</a></div><div class="ttdef"><b>Definition</b> Renderer.h:25</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_mesh_html"><div class="ttname"><a href="class_uni_dx_1_1_mesh.html">UniDx::Mesh</a></div><div class="ttdef"><b>Definition</b> Mesh.h:243</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_mesh_renderer_html_a09d523449e811e02af71d720e3baa28a"><div class="ttname"><a href="class_uni_dx_1_1_mesh_renderer.html#a09d523449e811e02af71d720e3baa28a">UniDx::MeshRenderer::MeshRenderer</a></div><div class="ttdeci">MeshRenderer()</div><div class="ttdef"><b>Definition</b> Renderer.cpp:75</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_mesh_renderer_html_a11c0dd829f9d87ea06f70b12f200bc94"><div class="ttname"><a href="class_uni_dx_1_1_mesh_renderer.html#a11c0dd829f9d87ea06f70b12f200bc94">UniDx::MeshRenderer::mesh</a></div><div class="ttdeci">Mesh mesh</div><div class="ttdef"><b>Definition</b> Renderer.h:75</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_mesh_renderer_html_aff373ec983b88f7b5228b10cef46fecc"><div class="ttname"><a href="class_uni_dx_1_1_mesh_renderer.html#aff373ec983b88f7b5228b10cef46fecc">UniDx::MeshRenderer::render</a></div><div class="ttdeci">virtual void render(const Camera &amp;camera) override</div><div class="ttdef"><b>Definition</b> Renderer.cpp:84</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_renderer_html"><div class="ttname"><a href="class_uni_dx_1_1_renderer.html">UniDx::Renderer</a></div><div class="ttdoc">3D描画を行う基本コンポーネント</div><div class="ttdef"><b>Definition</b> Renderer.h:26</div></div>
 <div class="ttc" id="aclass_uni_dx_1_1_renderer_html_a06e577691e801bff13c219fa7cad9fe7"><div class="ttname"><a href="class_uni_dx_1_1_renderer.html#a06e577691e801bff13c219fa7cad9fe7">UniDx::Renderer::OnEnable</a></div><div class="ttdeci">virtual void OnEnable() override</div><div class="ttdef"><b>Definition</b> Renderer.cpp:17</div></div>
-<div class="ttc" id="aclass_uni_dx_1_1_renderer_html_a1e2d852fcd104725620f2f8d5dc54385"><div class="ttname"><a href="class_uni_dx_1_1_renderer.html#a1e2d852fcd104725620f2f8d5dc54385">UniDx::Renderer::AddMaterial</a></div><div class="ttdeci">void AddMaterial(const std::wstring &amp;shaderPath)</div><div class="ttdoc">シェーダー読み込んでマテリアルを追加</div><div class="ttdef"><b>Definition</b> Renderer.h:39</div></div>
-<div class="ttc" id="aclass_uni_dx_1_1_renderer_html_a1ff5ef38bc85344247bfd503894c0993"><div class="ttname"><a href="class_uni_dx_1_1_renderer.html#a1ff5ef38bc85344247bfd503894c0993">UniDx::Renderer::updatePositionCameraCBuffer</a></div><div class="ttdeci">virtual void updatePositionCameraCBuffer() const</div><div class="ttdef"><b>Definition</b> Renderer.cpp:38</div></div>
-<div class="ttc" id="aclass_uni_dx_1_1_renderer_html_a2f0009b18dddc9217e9a48251c33186c"><div class="ttname"><a href="class_uni_dx_1_1_renderer.html#a2f0009b18dddc9217e9a48251c33186c">UniDx::Renderer::AddMaterial</a></div><div class="ttdeci">void AddMaterial(const std::wstring &amp;shaderPath, const std::wstring &amp;textuePath)</div><div class="ttdoc">シェーダーとテクスチャを読み込んでマテリアルを追加</div><div class="ttdef"><b>Definition</b> Renderer.h:50</div></div>
-<div class="ttc" id="aclass_uni_dx_1_1_renderer_html_a56dd522c5644a3605a642c4afdec5191"><div class="ttname"><a href="class_uni_dx_1_1_renderer.html#a56dd522c5644a3605a642c4afdec5191">UniDx::Renderer::render</a></div><div class="ttdeci">virtual void render(const Camera &amp;camera) const</div><div class="ttdef"><b>Definition</b> Renderer.h:29</div></div>
-<div class="ttc" id="aclass_uni_dx_1_1_renderer_html_a7e276866d0d989e99e39ca74f00b5f2e"><div class="ttname"><a href="class_uni_dx_1_1_renderer.html#a7e276866d0d989e99e39ca74f00b5f2e">UniDx::Renderer::materials</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; Material &gt; &gt; materials</div><div class="ttdef"><b>Definition</b> Renderer.h:27</div></div>
-<div class="ttc" id="aclass_uni_dx_1_1_renderer_html_a8dd6d0cef2ec8cf0591e16bc7b26f6ff"><div class="ttname"><a href="class_uni_dx_1_1_renderer.html#a8dd6d0cef2ec8cf0591e16bc7b26f6ff">UniDx::Renderer::constantBufferPerObject</a></div><div class="ttdeci">ComPtr&lt; ID3D11Buffer &gt; constantBufferPerObject</div><div class="ttdef"><b>Definition</b> Renderer.h:61</div></div>
-<div class="ttc" id="aclass_uni_dx_1_1_renderer_html_af06fbf43787c89a8a7cbf6c1ec47246c"><div class="ttname"><a href="class_uni_dx_1_1_renderer.html#af06fbf43787c89a8a7cbf6c1ec47246c">UniDx::Renderer::AddMaterial</a></div><div class="ttdeci">void AddMaterial(std::shared_ptr&lt; Material &gt; material)</div><div class="ttdoc">マテリアルを追加（共有）</div><div class="ttdef"><b>Definition</b> Renderer.h:32</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_renderer_html_a4a388e42d543709a37920acf3fabbc48"><div class="ttname"><a href="class_uni_dx_1_1_renderer.html#a4a388e42d543709a37920acf3fabbc48">UniDx::Renderer::createConstantBufferPerObject</a></div><div class="ttdeci">virtual void createConstantBufferPerObject()</div><div class="ttdef"><b>Definition</b> Renderer.cpp:33</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_renderer_html_a4ed7b7ae5673a0b83f14a61650abc00c"><div class="ttname"><a href="class_uni_dx_1_1_renderer.html#a4ed7b7ae5673a0b83f14a61650abc00c">UniDx::Renderer::bindPerObject</a></div><div class="ttdeci">virtual void bindPerObject()</div><div class="ttdef"><b>Definition</b> Renderer.cpp:47</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_renderer_html_a68112796efdfcc00848ab9df4941e604"><div class="ttname"><a href="class_uni_dx_1_1_renderer.html#a68112796efdfcc00848ab9df4941e604">UniDx::Renderer::bindLightPerObject</a></div><div class="ttdeci">virtual void bindLightPerObject()</div><div class="ttdef"><b>Definition</b> Renderer.cpp:63</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_renderer_html_a7e276866d0d989e99e39ca74f00b5f2e"><div class="ttname"><a href="class_uni_dx_1_1_renderer.html#a7e276866d0d989e99e39ca74f00b5f2e">UniDx::Renderer::materials</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; Material &gt; &gt; materials</div><div class="ttdef"><b>Definition</b> Renderer.h:28</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_renderer_html_a892e976f3bcbcb416cf175b3000332fd"><div class="ttname"><a href="class_uni_dx_1_1_renderer.html#a892e976f3bcbcb416cf175b3000332fd">UniDx::Renderer::lightCount</a></div><div class="ttdeci">int lightCount</div><div class="ttdef"><b>Definition</b> Renderer.h:29</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_renderer_html_a8dd6d0cef2ec8cf0591e16bc7b26f6ff"><div class="ttname"><a href="class_uni_dx_1_1_renderer.html#a8dd6d0cef2ec8cf0591e16bc7b26f6ff">UniDx::Renderer::constantBufferPerObject</a></div><div class="ttdeci">ComPtr&lt; ID3D11Buffer &gt; constantBufferPerObject</div><div class="ttdef"><b>Definition</b> Renderer.h:63</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_renderer_html_abbf58e82feaf29479a6b79b48dd0b8e9"><div class="ttname"><a href="class_uni_dx_1_1_renderer.html#abbf58e82feaf29479a6b79b48dd0b8e9">UniDx::Renderer::AddMaterial</a></div><div class="ttdeci">void AddMaterial(const u8string &amp;shaderPath)</div><div class="ttdoc">シェーダー読み込んでマテリアルを追加</div><div class="ttdef"><b>Definition</b> Renderer.h:41</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_renderer_html_ac281311f0668d3557df83a470944da17"><div class="ttname"><a href="class_uni_dx_1_1_renderer.html#ac281311f0668d3557df83a470944da17">UniDx::Renderer::AddMaterial</a></div><div class="ttdeci">void AddMaterial(const u8string &amp;shaderPath, const u8string &amp;textuePath)</div><div class="ttdoc">シェーダーとテクスチャを読み込んでマテリアルを追加</div><div class="ttdef"><b>Definition</b> Renderer.h:52</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_renderer_html_acca5183cfec668a8db3c55fe8de16acc"><div class="ttname"><a href="class_uni_dx_1_1_renderer.html#acca5183cfec668a8db3c55fe8de16acc">UniDx::Renderer::render</a></div><div class="ttdeci">virtual void render(const Camera &amp;camera)</div><div class="ttdef"><b>Definition</b> Renderer.h:31</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_renderer_html_af06fbf43787c89a8a7cbf6c1ec47246c"><div class="ttname"><a href="class_uni_dx_1_1_renderer.html#af06fbf43787c89a8a7cbf6c1ec47246c">UniDx::Renderer::AddMaterial</a></div><div class="ttdeci">void AddMaterial(std::shared_ptr&lt; Material &gt; material)</div><div class="ttdoc">マテリアルを追加（共有）</div><div class="ttdef"><b>Definition</b> Renderer.h:34</div></div>
 <div class="ttc" id="anamespace_uni_dx_html"><div class="ttname"><a href="namespace_uni_dx.html">UniDx</a></div><div class="ttdef"><b>Definition</b> AnimationCurve.cpp:5</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

@@ -9,5 +9,6 @@ var searchData=
   ['vertexpnc_6',['VertexPNC',['../struct_uni_dx_1_1_vertex_p_n_c.html',1,'UniDx']]],
   ['vertexpnt_7',['VertexPNT',['../struct_uni_dx_1_1_vertex_p_n_t.html',1,'UniDx']]],
   ['vertexpt_8',['VertexPT',['../struct_uni_dx_1_1_vertex_p_t.html',1,'UniDx']]],
-  ['vertexptc_9',['VertexPTC',['../struct_uni_dx_1_1_vertex_p_t_c.html',1,'UniDx']]]
+  ['vertexptc_9',['VertexPTC',['../struct_uni_dx_1_1_vertex_p_t_c.html',1,'UniDx']]],
+  ['vertexskin_10',['VertexSkin',['../struct_uni_dx_1_1_vertex_skin.html',1,'UniDx']]]
 ];

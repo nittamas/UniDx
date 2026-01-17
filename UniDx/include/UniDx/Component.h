@@ -1,4 +1,9 @@
-﻿#pragma once
+﻿/**
+ * @file Component.h
+ * @brief コンポーネント
+ * GameObjectにアタッチして機能を追加する基本クラス
+ */
+#pragma once
 
 #include "Object.h"
 #include "Property.h"
@@ -16,9 +21,7 @@ class GameObject;
 void Destroy(Component* component);
 
 
-// --------------------
-// Component基底クラス
-// --------------------
+/// @brief GameObjectにアタッチして機能を追加する基本クラス
 class Component : public Object
 {
 public:

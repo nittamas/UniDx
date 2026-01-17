@@ -18,6 +18,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -92,6 +93,9 @@ $(function(){initNavTree('class_uni_dx_1_1_shader.html','','class_uni_dx_1_1_sha
 </div><!--header-->
 <div class="contents">
 
+<p>シェーダーをコンパイルしてマテリアルの変数レイアウトを保持する  
+ <a href="#details">[詳解]</a></p>
+
 <p><code>#include &lt;<a class="el" href="_shader_8h_source.html">Shader.h</a>&gt;</code></p>
 <div class="dynheader">
 UniDx::Shader の継承関係図</div>
@@ -106,24 +110,33 @@ UniDx::Shader の継承関係図</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
 <tr class="memitem:aa45d9476e1d2391e3d955acc7879e13a" id="r_aa45d9476e1d2391e3d955acc7879e13a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa45d9476e1d2391e3d955acc7879e13a">Shader</a> ()</td></tr>
-<tr class="memitem:a7e4b0759bdf9e877ed24192986b998d3" id="r_a7e4b0759bdf9e877ed24192986b998d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e4b0759bdf9e877ed24192986b998d3">compile</a> (const std::wstring &amp;filePath, const D3D11_INPUT_ELEMENT_DESC *layout, size_t layout_size)</td></tr>
-<tr class="memitem:a5aba98e9d37fae872539cb91e04ba444" id="r_a5aba98e9d37fae872539cb91e04ba444"><td class="memTemplParams" colspan="2">template&lt;typename TVertex&gt; </td></tr>
-<tr class="memitem:a5aba98e9d37fae872539cb91e04ba444 template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5aba98e9d37fae872539cb91e04ba444">compile</a> (const std::wstring &amp;filePath)</td></tr>
+<tr class="memitem:a645e4832db25bf09c82debf5627fa87b" id="r_a645e4832db25bf09c82debf5627fa87b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a645e4832db25bf09c82debf5627fa87b">compile</a> (const u8string &amp;filePath, const D3D11_INPUT_ELEMENT_DESC *layout, size_t layout_size)</td></tr>
+<tr class="memitem:a9a0c14f6a3f8b965d31785b2f1c1b8b7" id="r_a9a0c14f6a3f8b965d31785b2f1c1b8b7"><td class="memTemplParams" colspan="2">template&lt;typename TVertex&gt; </td></tr>
+<tr class="memitem:a9a0c14f6a3f8b965d31785b2f1c1b8b7 template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a0c14f6a3f8b965d31785b2f1c1b8b7">compile</a> (const u8string &amp;filePath)</td></tr>
+<tr class="memdesc:a9a0c14f6a3f8b965d31785b2f1c1b8b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点タイプをテンプレート引数に、シェーダーのパスを引数に指定してコンパイル  <br /></td></tr>
 <tr class="memitem:ab5fa2ed3e6bf4a81a14bc7b528af1ea2" id="r_ab5fa2ed3e6bf4a81a14bc7b528af1ea2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5fa2ed3e6bf4a81a14bc7b528af1ea2">setToContext</a> () const</td></tr>
+<tr class="memitem:ae20b8b734c215fc7d059cad822f21137" id="r_ae20b8b734c215fc7d059cad822f21137"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_uni_dx_1_1_shader_var_layout.html">ShaderVarLayout</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae20b8b734c215fc7d059cad822f21137">findVar</a> (<a class="el" href="class_uni_dx_1_1_string_id.html">StringId</a> nameId) const</td></tr>
+<tr class="memitem:a911ea7121d72d9a71f9dbb68288a310e" id="r_a911ea7121d72d9a71f9dbb68288a310e"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a911ea7121d72d9a71f9dbb68288a310e">getCBPerMaterialSize</a> () const</td></tr>
 <tr class="inherit_header pub_methods_class_uni_dx_1_1_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_uni_dx_1_1_object')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_uni_dx_1_1_object.html">UniDx::Object</a> に属する継承公開メンバ関数</td></tr>
 <tr class="memitem:af1f20702fde9b535a83a02a5f8663fec inherit pub_methods_class_uni_dx_1_1_object" id="r_af1f20702fde9b535a83a02a5f8663fec"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_object.html#af1f20702fde9b535a83a02a5f8663fec">~Object</a> ()</td></tr>
-<tr class="memitem:a8105112b7931a0c380dfe004d3efc959 inherit pub_methods_class_uni_dx_1_1_object" id="r_a8105112b7931a0c380dfe004d3efc959"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_object.html#a8105112b7931a0c380dfe004d3efc959">Object</a> (<a class="el" href="class_uni_dx_1_1_read_only_property.html">ReadOnlyProperty</a>&lt; wstring_view &gt;<a class="el" href="class_uni_dx_1_1_read_only_property.html">::Getter</a> nameGet)</td></tr>
+<tr class="memitem:a1d2a3979c7a097b2ce35a69347ea9b9f inherit pub_methods_class_uni_dx_1_1_object" id="r_a1d2a3979c7a097b2ce35a69347ea9b9f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_object.html#a1d2a3979c7a097b2ce35a69347ea9b9f">Object</a> (<a class="el" href="class_uni_dx_1_1_read_only_property.html">ReadOnlyProperty</a>&lt; <a class="el" href="class_uni_dx_1_1_string_id.html">StringId</a> &gt;<a class="el" href="class_uni_dx_1_1_read_only_property.html">::Getter</a> nameGet)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a3d57c502bc4d60e33fe2354df6445953" id="r_a3d57c502bc4d60e33fe2354df6445953"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d57c502bc4d60e33fe2354df6445953">reflectPSLayout</a> (ID3DBlob *psBlob)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 限定公開変数類</h2></td></tr>
-<tr class="memitem:a1fa631e89c6cb74be762ba492c0b7818" id="r_a1fa631e89c6cb74be762ba492c0b7818"><td class="memItemLeft" align="right" valign="top">wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fa631e89c6cb74be762ba492c0b7818">fileName</a></td></tr>
+<tr class="memitem:ae2574043bdbf23d783b8c5ceb6aab997" id="r_ae2574043bdbf23d783b8c5ceb6aab997"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_uni_dx_1_1_string_id.html">StringId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2574043bdbf23d783b8c5ceb6aab997">fileName</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 その他の継承メンバ</h2></td></tr>
 <tr class="inherit_header pub_attribs_class_uni_dx_1_1_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_uni_dx_1_1_object')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_uni_dx_1_1_object.html">UniDx::Object</a> に属する継承公開変数類</td></tr>
-<tr class="memitem:a462b80cab72539ae5a42e9f39b479ff8 inherit pub_attribs_class_uni_dx_1_1_object" id="r_a462b80cab72539ae5a42e9f39b479ff8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_uni_dx_1_1_read_only_property.html">ReadOnlyProperty</a>&lt; wstring_view &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_object.html#a462b80cab72539ae5a42e9f39b479ff8">name</a></td></tr>
+<tr class="memitem:ace975b5121f8f79f54fdf62d46c06049 inherit pub_attribs_class_uni_dx_1_1_object" id="r_ace975b5121f8f79f54fdf62d46c06049"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_uni_dx_1_1_read_only_property.html">ReadOnlyProperty</a>&lt; <a class="el" href="class_uni_dx_1_1_string_id.html">StringId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_object.html#ace975b5121f8f79f54fdf62d46c06049">name</a></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>シェーダーをコンパイルしてマテリアルの変数レイアウトを保持する </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
 <a id="aa45d9476e1d2391e3d955acc7879e13a" name="aa45d9476e1d2391e3d955acc7879e13a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa45d9476e1d2391e3d955acc7879e13a">&#9670;&#160;</a></span>Shader()</h2>
 
@@ -150,8 +163,8 @@ UniDx::Shader の継承関係図</div>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
-<a id="a5aba98e9d37fae872539cb91e04ba444" name="a5aba98e9d37fae872539cb91e04ba444"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5aba98e9d37fae872539cb91e04ba444">&#9670;&#160;</a></span>compile() <span class="overload">[1/2]</span></h2>
+<a id="a9a0c14f6a3f8b965d31785b2f1c1b8b7" name="a9a0c14f6a3f8b965d31785b2f1c1b8b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a0c14f6a3f8b965d31785b2f1c1b8b7">&#9670;&#160;</a></span>compile() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -164,7 +177,7 @@ template&lt;typename TVertex&gt; </div>
         <tr>
           <td class="memname">bool UniDx::Shader::compile </td>
           <td>(</td>
-          <td class="paramtype">const std::wstring &amp;</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span></td><td>)</td>
+          <td class="paramtype">const u8string &amp;</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -175,10 +188,12 @@ template&lt;typename TVertex&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>頂点タイプをテンプレート引数に、シェーダーのパスを引数に指定してコンパイル </p>
+
 </div>
 </div>
-<a id="a7e4b0759bdf9e877ed24192986b998d3" name="a7e4b0759bdf9e877ed24192986b998d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e4b0759bdf9e877ed24192986b998d3">&#9670;&#160;</a></span>compile() <span class="overload">[2/2]</span></h2>
+<a id="a645e4832db25bf09c82debf5627fa87b" name="a645e4832db25bf09c82debf5627fa87b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a645e4832db25bf09c82debf5627fa87b">&#9670;&#160;</a></span>compile() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -186,7 +201,7 @@ template&lt;typename TVertex&gt; </div>
         <tr>
           <td class="memname">bool UniDx::Shader::compile </td>
           <td>(</td>
-          <td class="paramtype">const std::wstring &amp;</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span>, </td>
+          <td class="paramtype">const u8string &amp;</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -199,6 +214,73 @@ template&lt;typename TVertex&gt; </div>
           <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>layout_size</em></span>&#160;)</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae20b8b734c215fc7d059cad822f21137" name="ae20b8b734c215fc7d059cad822f21137"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae20b8b734c215fc7d059cad822f21137">&#9670;&#160;</a></span>findVar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_uni_dx_1_1_shader_var_layout.html">ShaderVarLayout</a> * UniDx::Shader::findVar </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_uni_dx_1_1_string_id.html">StringId</a></td>          <td class="paramname"><span class="paramname"><em>nameId</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a911ea7121d72d9a71f9dbb68288a310e" name="a911ea7121d72d9a71f9dbb68288a310e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a911ea7121d72d9a71f9dbb68288a310e">&#9670;&#160;</a></span>getCBPerMaterialSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int UniDx::Shader::getCBPerMaterialSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d57c502bc4d60e33fe2354df6445953" name="a3d57c502bc4d60e33fe2354df6445953"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d57c502bc4d60e33fe2354df6445953">&#9670;&#160;</a></span>reflectPSLayout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UniDx::Shader::reflectPSLayout </td>
+          <td>(</td>
+          <td class="paramtype">ID3DBlob *</td>          <td class="paramname"><span class="paramname"><em>psBlob</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -221,8 +303,8 @@ template&lt;typename TVertex&gt; </div>
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">メンバ詳解</h2>
-<a id="a1fa631e89c6cb74be762ba492c0b7818" name="a1fa631e89c6cb74be762ba492c0b7818"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fa631e89c6cb74be762ba492c0b7818">&#9670;&#160;</a></span>fileName</h2>
+<a id="ae2574043bdbf23d783b8c5ceb6aab997" name="ae2574043bdbf23d783b8c5ceb6aab997"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2574043bdbf23d783b8c5ceb6aab997">&#9670;&#160;</a></span>fileName</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -231,7 +313,7 @@ template&lt;typename TVertex&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">wstring UniDx::Shader::fileName</td>
+          <td class="memname"><a class="el" href="class_uni_dx_1_1_string_id.html">StringId</a> UniDx::Shader::fileName</td>
         </tr>
       </table>
   </td>

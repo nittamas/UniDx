@@ -1,4 +1,8 @@
-﻿#pragma once
+﻿/**
+ * @file D3DManager.h
+ * @brief DirectXの3D描画機能を提供する
+ */
+#pragma once
 
 // Direct3Dのライブラリを使用できるようにする
 #pragma comment(lib, "d3d11.lib")
@@ -19,20 +23,16 @@ constexpr UINT UNIDX_PS_SLOT_NORMAL = 5;  // t5
 namespace UniDx{
 
 
-/**
- * @file D3DManager.h
- * @brief DirectXの3D描画機能を提供する
- */
+/// @brief DirectXの3D描画機能を提供する
 class D3DManager : public Singleton<D3DManager>
 {
 public:
-
-	//--------------------------------------------
-	// Direct3Dを初期化し、使用できるようにする
-	// hWnd		: ウィンドウハンドル
-	// width	: 画面の幅
-	// height	: 画面の高さ
-	//--------------------------------------------
+	/**
+	 * @brief Direct3Dを初期化し、使用できるようにする
+	 * @param hWnd ウィンドウハンドル
+	 * @param width 画面の幅
+	 * @param height 画面の高さ
+	 */
 	bool Initialize(HWND hWnd, int width, int height);
 
 	const ComPtr<ID3D11Device>&			GetDevice() const { return m_device; }

@@ -1,4 +1,9 @@
-﻿#pragma once
+﻿/**
+ * @file Singleton.h
+ * @brief シングルトンテンプレート。
+ * 初期化と破棄のタイミングを制御したり、具体クラスで create できる
+ */
+#pragma once
 
 #include <memory>
 #include <assert.h>
@@ -8,9 +13,7 @@ namespace UniDx
 {
 
 /**
- * @file Singleton.h
- * @brief 初期化と破棄のタイミングを制御したり、
- * 具体クラスで create できるようにするため
+ * @brief シングルトンテンプレート。
  * 明示的な create と destroy が必要
  */
 template<class T>

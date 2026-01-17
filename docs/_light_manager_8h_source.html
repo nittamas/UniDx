@@ -18,6 +18,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -164,7 +165,7 @@ $(function(){initNavTree('_light_manager_8h_source.html','',''); });
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
 <div class="ttc" id="a_constant_buffer_8h_html"><div class="ttname"><a href="_constant_buffer_8h.html">ConstantBuffer.h</a></div></div>
-<div class="ttc" id="a_singleton_8h_html"><div class="ttname"><a href="_singleton_8h.html">Singleton.h</a></div><div class="ttdoc">初期化と破棄のタイミングを制御したり、 具体クラスで create できるようにするため 明示的な create と destroy が必要</div></div>
+<div class="ttc" id="a_singleton_8h_html"><div class="ttname"><a href="_singleton_8h.html">Singleton.h</a></div><div class="ttdoc">シングルトンテンプレート。 初期化と破棄のタイミングを制御したり、具体クラスで create できる</div></div>
 <div class="ttc" id="a_uni_dx_define_8h_html"><div class="ttname"><a href="_uni_dx_define_8h.html">UniDxDefine.h</a></div></div>
 <div class="ttc" id="aclass_uni_dx_1_1_light_html"><div class="ttname"><a href="class_uni_dx_1_1_light.html">UniDx::Light</a></div><div class="ttdef"><b>Definition</b> Light.h:21</div></div>
 <div class="ttc" id="aclass_uni_dx_1_1_light_manager_html_a0051aaeadc0b27f5bac8fdba353b9864"><div class="ttname"><a href="class_uni_dx_1_1_light_manager.html#a0051aaeadc0b27f5bac8fdba353b9864">UniDx::LightManager::unregisterLight</a></div><div class="ttdeci">void unregisterLight(Light *light)</div><div class="ttdef"><b>Definition</b> LightManager.cpp:97</div></div>
@@ -174,9 +175,9 @@ $(function(){initNavTree('_light_manager_8h_source.html','',''); });
 <div class="ttc" id="aclass_uni_dx_1_1_light_manager_html_ae24ce851d8819550667d44845e47cf67"><div class="ttname"><a href="class_uni_dx_1_1_light_manager.html#ae24ce851d8819550667d44845e47cf67">UniDx::LightManager::registerLight</a></div><div class="ttdeci">bool registerLight(Light *light)</div><div class="ttdef"><b>Definition</b> LightManager.cpp:71</div></div>
 <div class="ttc" id="aclass_uni_dx_1_1_light_manager_html_ae80716f7f66569a129c05fbb983a9127"><div class="ttname"><a href="class_uni_dx_1_1_light_manager.html#ae80716f7f66569a129c05fbb983a9127">UniDx::LightManager::updateLightCBuffer</a></div><div class="ttdeci">virtual void updateLightCBuffer()</div><div class="ttdef"><b>Definition</b> LightManager.cpp:111</div></div>
 <div class="ttc" id="aclass_uni_dx_1_1_light_manager_html_aebc80c8057a754dbf637b41f998b6489"><div class="ttname"><a href="class_uni_dx_1_1_light_manager.html#aebc80c8057a754dbf637b41f998b6489">UniDx::LightManager::updateLightCBufferObject</a></div><div class="ttdeci">virtual void updateLightCBufferObject(Vector3 objPos, int lightCountMax=PointLightCountMax+SpotLightCountMax)</div><div class="ttdef"><b>Definition</b> LightManager.cpp:149</div></div>
-<div class="ttc" id="aclass_uni_dx_1_1_singleton_html_aa1d5dc993efef5faa60dc69cb141ae1f"><div class="ttname"><a href="class_uni_dx_1_1_singleton.html#aa1d5dc993efef5faa60dc69cb141ae1f">UniDx::Singleton&lt; LightManager &gt;::Singleton</a></div><div class="ttdeci">Singleton()</div><div class="ttdef"><b>Definition</b> Singleton.h:37</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_singleton_html_aa1d5dc993efef5faa60dc69cb141ae1f"><div class="ttname"><a href="class_uni_dx_1_1_singleton.html#aa1d5dc993efef5faa60dc69cb141ae1f">UniDx::Singleton&lt; LightManager &gt;::Singleton</a></div><div class="ttdeci">Singleton()</div><div class="ttdef"><b>Definition</b> Singleton.h:40</div></div>
 <div class="ttc" id="anamespace_uni_dx_html"><div class="ttname"><a href="namespace_uni_dx.html">UniDx</a></div><div class="ttdef"><b>Definition</b> AnimationCurve.cpp:5</div></div>
-<div class="ttc" id="astruct_uni_dx_1_1_color_html"><div class="ttname"><a href="struct_uni_dx_1_1_color.html">UniDx::Color</a></div><div class="ttdoc">色 (RGBA, float)</div><div class="ttdef"><b>Definition</b> Math.h:239</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_color_html"><div class="ttname"><a href="struct_uni_dx_1_1_color.html">UniDx::Color</a></div><div class="ttdoc">色 (RGBA, float)</div><div class="ttdef"><b>Definition</b> Math.h:274</div></div>
 <div class="ttc" id="astruct_uni_dx_1_1_g_p_u_light_html"><div class="ttname"><a href="struct_uni_dx_1_1_g_p_u_light.html">UniDx::GPULight</a></div><div class="ttdef"><b>Definition</b> LightManager.h:20</div></div>
 <div class="ttc" id="astruct_uni_dx_1_1_g_p_u_light_html_a2e88ebe5f660b231241204ba25663e89"><div class="ttname"><a href="struct_uni_dx_1_1_g_p_u_light.html#a2e88ebe5f660b231241204ba25663e89">UniDx::GPULight::padding</a></div><div class="ttdeci">uint32_t padding[2]</div><div class="ttdef"><b>Definition</b> LightManager.h:28</div></div>
 <div class="ttc" id="astruct_uni_dx_1_1_g_p_u_light_html_a4d1df030d9b3cc46e568f8b945a170a6"><div class="ttname"><a href="struct_uni_dx_1_1_g_p_u_light.html#a4d1df030d9b3cc46e568f8b945a170a6">UniDx::GPULight::spotDirWS</a></div><div class="ttdeci">Vector3 spotDirWS</div><div class="ttdef"><b>Definition</b> LightManager.h:24</div></div>
@@ -186,7 +187,7 @@ $(function(){initNavTree('_light_manager_8h_source.html','',''); });
 <div class="ttc" id="astruct_uni_dx_1_1_g_p_u_light_html_acc3b5819ac17258c248900cc99e8ee8f"><div class="ttname"><a href="struct_uni_dx_1_1_g_p_u_light.html#acc3b5819ac17258c248900cc99e8ee8f">UniDx::GPULight::positionOrDirWS</a></div><div class="ttdeci">Vector3 positionOrDirWS</div><div class="ttdef"><b>Definition</b> LightManager.h:21</div></div>
 <div class="ttc" id="astruct_uni_dx_1_1_g_p_u_light_html_af423fe6bbc1a63f3aa09338596304363"><div class="ttname"><a href="struct_uni_dx_1_1_g_p_u_light.html#af423fe6bbc1a63f3aa09338596304363">UniDx::GPULight::spotOuterCos</a></div><div class="ttdeci">float spotOuterCos</div><div class="ttdef"><b>Definition</b> LightManager.h:25</div></div>
 <div class="ttc" id="astruct_uni_dx_1_1_g_p_u_light_html_afa0b2e8d05936cba1aaa1521d0dbb9d8"><div class="ttname"><a href="struct_uni_dx_1_1_g_p_u_light.html#afa0b2e8d05936cba1aaa1521d0dbb9d8">UniDx::GPULight::color</a></div><div class="ttdeci">Color color</div><div class="ttdef"><b>Definition</b> LightManager.h:23</div></div>
-<div class="ttc" id="astruct_uni_dx_1_1_vector3_html"><div class="ttname"><a href="struct_uni_dx_1_1_vector3.html">UniDx::Vector3</a></div><div class="ttdoc">3D ベクトル</div><div class="ttdef"><b>Definition</b> Math.h:47</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_vector3_html"><div class="ttname"><a href="struct_uni_dx_1_1_vector3.html">UniDx::Vector3</a></div><div class="ttdoc">3D ベクトル</div><div class="ttdef"><b>Definition</b> Math.h:57</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

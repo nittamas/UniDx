@@ -1,7 +1,13 @@
 var searchData=
 [
-  ['one_0',['one',['../struct_uni_dx_1_1_vector2.html#a63ec915521142821729ed58474076eaa',1,'UniDx::Vector2::one'],['../struct_uni_dx_1_1_vector3.html#a528d92a140d019fb0dc2981f84ff1894',1,'UniDx::Vector3::one'],['../struct_uni_dx_1_1_vector4.html#ab3d8632607b316a64cfcac338b5abcbc',1,'UniDx::Vector4::one']]],
-  ['outercos_1',['outerCos',['../struct_uni_dx_1_1_spot_light_buffer.html#a10204d893d82921adc4523e815430f2d',1,'UniDx::SpotLightBuffer']]],
-  ['outtangent_2',['outTangent',['../struct_uni_dx_1_1_keyframe.html#ac791c94df564b61924ee2a3578a3abe9',1,'UniDx::Keyframe']]],
-  ['owner_3',['owner',['../class_uni_dx_1_1_u_i_behaviour.html#a55b41f0be64ff9fe44b9f3a4dd32cca2',1,'UniDx::UIBehaviour']]]
+  ['name_0',['name',['../class_uni_dx_1_1_object.html#ace975b5121f8f79f54fdf62d46c06049',1,'UniDx::Object::name'],['../struct_uni_dx_1_1_shader_var_layout.html#ad79c2365be748afebbb9505d99185d39',1,'UniDx::ShaderVarLayout::name']]],
+  ['name_5f_1',['name_',['../class_uni_dx_1_1_game_object.html#ad69129ddfc9e7b87b69fe24bae932750',1,'UniDx::GameObject::name_'],['../class_uni_dx_1_1_mesh.html#accfe527ef2b009f8f4a15122b2884f31',1,'UniDx::Mesh::name_']]],
+  ['nearclip_2',['nearClip',['../class_uni_dx_1_1_camera.html#acbbae65b965b0ecdbb9c7222da3bf2d9',1,'UniDx::Camera']]],
+  ['negativeinfinity_3',['negativeInfinity',['../struct_uni_dx_1_1_vector2.html#a8ff0103e3393703b9553781832d9c272',1,'UniDx::Vector2::negativeInfinity'],['../struct_uni_dx_1_1_vector3.html#a4adcca652996f0ecd0d187e5abdb58ac',1,'UniDx::Vector3::negativeInfinity']]],
+  ['nodes_4',['nodes',['../class_uni_dx_1_1_gltf_model.html#ad9c84e317b5b788bf469d23c8a123562',1,'UniDx::GltfModel']]],
+  ['normal_5',['normal',['../struct_uni_dx_1_1_contact_point.html#a76d180bf3e674acbddf3e8ece50c63f8',1,'UniDx::ContactPoint::normal'],['../struct_uni_dx_1_1_raycast_hit.html#ad2c883f39b21423dd4de7b34801ac700',1,'UniDx::RaycastHit::normal'],['../struct_uni_dx_1_1_contact.html#a85fea060b70d803a78a9ce2375aa6f67',1,'UniDx::Contact::normal'],['../struct_uni_dx_1_1_vertex_p_n.html#afaaf21a62ecd582996bc25eeaa646438',1,'UniDx::VertexPN::normal']]],
+  ['normals_6',['normals',['../struct_uni_dx_1_1_sub_mesh.html#a3efcc2babb70bf904f7206627e63ad56',1,'UniDx::SubMesh::normals'],['../class_uni_dx_1_1_sphere_renderer.html#a3d648d31a51e3d24ec8423cf93bf6c7f',1,'UniDx::SphereRenderer::normals']]],
+  ['normalsdata_7',['normalsData',['../struct_uni_dx_1_1_owned_sub_mesh.html#ac2869a9f23116bb38bb361b2bc738b82',1,'UniDx::OwnedSubMesh']]],
+  ['nowkeystate_8',['nowKeyState',['../class_uni_dx_1_1_input.html#a6a9c0f0cffffc126d086e622f4aae9f0',1,'UniDx::Input']]],
+  ['numcontacts_9',['numContacts',['../struct_uni_dx_1_1_contact_manifold.html#ac280eae0550e4727554a4d8fa5d0a1ff',1,'UniDx::ContactManifold']]]
 ];

@@ -2,6 +2,7 @@ var _constant_buffer_8h =
 [
     [ "UniDx::ConstantBufferPerCamera", "struct_uni_dx_1_1_constant_buffer_per_camera.html", "struct_uni_dx_1_1_constant_buffer_per_camera" ],
     [ "UniDx::ConstantBufferPerObject", "struct_uni_dx_1_1_constant_buffer_per_object.html", "struct_uni_dx_1_1_constant_buffer_per_object" ],
+    [ "UniDx::ConstantBufferSkinPerObject", "struct_uni_dx_1_1_constant_buffer_skin_per_object.html", "struct_uni_dx_1_1_constant_buffer_skin_per_object" ],
     [ "UniDx::ConstantBufferPerMaterial", "struct_uni_dx_1_1_constant_buffer_per_material.html", "struct_uni_dx_1_1_constant_buffer_per_material" ],
     [ "UniDx::ConstantBufferLightPerFrame", "struct_uni_dx_1_1_constant_buffer_light_per_frame.html", "struct_uni_dx_1_1_constant_buffer_light_per_frame" ],
     [ "UniDx::PointLightBuffer", "struct_uni_dx_1_1_point_light_buffer.html", "struct_uni_dx_1_1_point_light_buffer" ],
@@ -18,5 +19,6 @@ var _constant_buffer_8h =
       [ "UniDx::CB_PerMaterial", "namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2a4bec751d5fe959b586d093190dabb606", null ],
       [ "UniDx::CB_LightPerFrame", "namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2a19a051f74b6e49baa7ef477dc69ee783", null ],
       [ "UniDx::CB_LightPerObject", "namespace_uni_dx.html#a0442243bfb9633c18075514c003a28c2a31e8cb8885d7eba0392d89b303708b58", null ]
-    ] ]
+    ] ],
+    [ "UniDx::SkinMeshBoneMax", "namespace_uni_dx.html#ab34cb1d7aeebd313f9b1176e8a27d9c6", null ]
 ];

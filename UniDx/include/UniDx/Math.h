@@ -1,22 +1,22 @@
-﻿#pragma once
+﻿/**
+ * @file Math.h
+ * @brief 基本的な数学型 (ベクトル・クォータニオン・行列・色) とユーティリティ関数
+ */
+#pragma once
 
 #include <cmath>
 #include <DirectXMath.h>
 
 namespace UniDx
 {
-	/**
-	 * @file Math.h
-	 * @brief 基本的な数学型 (ベクトル・クォータニオン・行列・色) とユーティリティ関数
-	 */
 	struct Vector3;
 	struct Vector4;
 
-	/** @brief 円周率 (float) */
+	/// @brief 円周率 (float)
 	constexpr float PI = 3.141592654f;
-	/** @brief 度 -> ラジアン変換係数 */
+	/// @brief 度 -> ラジアン変換係数
 	constexpr float Deg2Rad = PI / 180.0f;
-	/** @brief ラジアン -> 度変換係数 */
+	/// @brief ラジアン -> 度変換係数
 	constexpr float Rad2Deg = 180.0f / PI;
 
 	/** @brief 2D ベクトル */
@@ -27,7 +27,7 @@ namespace UniDx
 		constexpr explicit Vector2(float ix) noexcept : XMFLOAT2(ix, ix) {}
 		Vector2(const DirectX::XMFLOAT2& V) noexcept : XMFLOAT2(V.x, V.y) {}
 		explicit Vector2(const DirectX::XMVECTOR& v) { XMStoreFloat2(this, v); }
-		/** @brief 二乗長さを取得 */
+		/// @brief 二乗長さを取得
 		float sqrMagnitude() const noexcept { return x * x + y * y; }
 
 		// 演算子
@@ -61,11 +61,11 @@ namespace UniDx
 		constexpr explicit Vector3(float ix) noexcept : XMFLOAT3(ix, ix, ix) {}
 		Vector3(const DirectX::XMFLOAT3& V) noexcept : XMFLOAT3(V.x, V.y, V.z) {}
 		explicit Vector3(const DirectX::XMVECTOR& v) { XMStoreFloat3(this, v); }
-		/** @brief 長さを取得 */
+		/// @brief 長さを取得
 		float magnitude() const noexcept { return std::sqrt((x * x) + (y * y) + (z * z)); }
-		/** @brief 二乗長さを取得 */
+		/// @brief 二乗長さを取得
 		float sqrMagnitude() const noexcept { return x * x + y * y + z * z; }
-		/** @brief 正規化したベクトルを返す */
+		/// @brief 正規化したベクトルを返す
 		[[nodiscard]] Vector3 normalized() const noexcept
 		{
 			const DirectX::XMVECTOR v1 = DirectX::XMLoadFloat3(this);
@@ -89,9 +89,9 @@ namespace UniDx
 		static const Vector3 positiveInfinity;
 		static const Vector3 negativeInfinity;
 	};
-	/** @brief ベクトルの内積 */
+	/// @brief ベクトルの内積
 	[[nodiscard]] inline constexpr float Dot(const Vector3& v1, const Vector3& v2) noexcept { return v1.x * v2.x + v1.y * v2.y + v1.z * v2.z; }
-	/** @brief ベクトルの外積 */
+	/// @brief ベクトルの外積
 	[[nodiscard]] inline Vector3 Cross(const Vector3& v1, const Vector3& v2) noexcept
 	{
 		using namespace DirectX;
@@ -108,7 +108,7 @@ namespace UniDx
 	{
 		return Vector3(v1.x > v2.x ? v1.x : v2.x, v1.y > v2.y ? v1.y : v2.y, v1.z > v2.z ? v1.z : v2.z);
 	}
-	/** @brief 2点間の距離 */
+	/// @brief 2点間の距離
 	inline float Distance(const Vector3& v1, const Vector3& v2) noexcept
 	{
 		using namespace DirectX;
@@ -118,7 +118,7 @@ namespace UniDx
 		const XMVECTOR X = XMVector3Length(V);
 		return XMVectorGetX(X);
 	}
-	/** @brief 2点間の二乗距離 */
+	/// @brief 2点間の二乗距離
 	inline float SqrDistance(const Vector3& v1, const Vector3& v2) noexcept
 	{
 		using namespace DirectX;
@@ -129,7 +129,7 @@ namespace UniDx
 		return XMVectorGetX(X);
 	}
 
-	/** @brief 4D ベクトル */
+	/// @brief 4D ベクトル
 	struct Vector4 : DirectX::XMFLOAT4
 	{
 		constexpr Vector4() noexcept : XMFLOAT4(0.f, 0.f, 0.f, 0.f) {}
@@ -182,13 +182,13 @@ namespace UniDx
 
 		static const Quaternion identity;
 
-		/** @brief 指定軸・角度からクォータニオンを生成（度指定） */
+		/// @brief 指定軸・角度からクォータニオンを生成（度指定）
 		static Quaternion AngleAxis(float degree, Vector3 axis)
 		{
 			auto a = DirectX::XMLoadFloat3(&axis);
 			return Quaternion(DirectX::XMQuaternionRotationAxis(a, degree * Deg2Rad));
 		}
-		/** @brief オイラー角（度）からクォータニオンを生成（Z->X->Y の順で合成） */
+		/// @brief オイラー角（度）からクォータニオンを生成（Z->X->Y の順で合成）
 		static Quaternion Euler(float pitchDegree, float yawDegree, float rollDegree) noexcept
 		{
 			// pitch = X, yaw = Y, roll = Z
@@ -204,7 +204,7 @@ namespace UniDx
 			const XMVECTOR q = XMQuaternionMultiply(XMQuaternionMultiply(qz, qx), qy);
 			return Quaternion(q);
 		}
-		/** @brief fromDirからtoDirへ回転するクォータニオンを生成 */
+		/// @brief fromDirからtoDirへ回転するクォータニオンを生成
 		static Quaternion FromToRotation(const Vector3& fromDir, const Vector3& toDir) noexcept
 		{
 			using namespace DirectX;
@@ -239,7 +239,7 @@ namespace UniDx
 				return Quaternion(result);
 			}
 		}
-		/** @brief 前方向と上方向に回転するクォータニオンを生成 */
+		/// @brief 前方向と上方向に回転するクォータニオンを生成
 		static Quaternion LookRotation(const Vector3& forward, const Vector3& up) noexcept
 		{
 			using namespace DirectX;
@@ -262,7 +262,7 @@ namespace UniDx
 		explicit operator DirectX::XMFLOAT4& () { return *reinterpret_cast<DirectX::XMFLOAT4*>(this); }
 		explicit operator const DirectX::XMFLOAT4& () const { return *reinterpret_cast<const DirectX::XMFLOAT4*>(this); }
 	};
-	/** @brief クォータニオンの逆 */
+	/// @brief クォータニオンの逆
 	[[nodiscard]] inline Quaternion Inverse(const Quaternion& from) noexcept
 	{
 		auto q = DirectX::XMLoadFloat4(&static_cast<const DirectX::XMFLOAT4&>(from));
@@ -333,7 +333,7 @@ namespace UniDx
 			m30(f._41), m31(f._42), m32(f._43), m33(f._44) {
 		}
 		explicit Matrix4x4(DirectX::CXMMATRIX M) noexcept { XMStore(M); }
-		/** @brief 逆行列 */
+		/// @brief 逆行列
 		[[nodiscard]] Matrix4x4 inverse() const
 		{
 			using namespace DirectX;
@@ -341,11 +341,11 @@ namespace UniDx
 			XMVECTOR det;
 			return Matrix4x4(XMMatrixInverse(&det, M));
 		}
-		/** @brief 行列から平行移動成分を取得 */
+		/// @brief 行列から平行移動成分を取得
 		Vector3 translation() const noexcept { return Vector3(m30, m31, m32); }
-		/** @brief 平行移動成分を設定 */
+		/// @brief 平行移動成分を設定
 		void setTranslation(const Vector3& v) { m30 = v.x; m31 = v.y; m32 = v.z; }
-		/** @brief 行列をスケール・回転・平行移動に分解する（成功なら true） */
+		/// @brief 行列をスケール・回転・平行移動に分解する（成功なら true）
 		bool Decompose(Vector3& scale, Quaternion& rotation, Vector3& translation) const noexcept
 		{
 			using namespace DirectX;
@@ -358,7 +358,7 @@ namespace UniDx
 			XMStoreFloat3(&translation, t);
 			return true;
 		}
-		/** @brief 行列に位置をかけて変換 */
+		/// @brief 行列に位置をかけて変換
 		Vector3 MultiplyPoint(const DirectX::XMFLOAT3& v) const noexcept
 		{
 			using namespace DirectX;
@@ -367,7 +367,7 @@ namespace UniDx
 			const XMVECTOR R = XMVector3Transform(V, M);
 			return Vector3(R);
 		}
-		/** @brief 行列に方向ベクトルをかけて変換（平行移動は無視） */
+		/// @brief 行列に方向ベクトルをかけて変換（平行移動は無視）
 		Vector3 MultiplyVector(const Vector3& v) const noexcept
 		{
 			using namespace DirectX;
@@ -389,24 +389,24 @@ namespace UniDx
 		{
 			XMStoreFloat4x4(reinterpret_cast<DirectX::XMFLOAT4X4*>(this), mtx);
 		}
-		/** @brief ベクトルからスケール行列を生成 */
+		/// @brief ベクトルからスケール行列を生成
 		static Matrix4x4 Scale(const Vector3& scales) noexcept
 		{
 			return Matrix4x4(DirectX::XMMatrixScaling(scales.x, scales.y, scales.z));
 		}
-		/** @brief クォータニオンから回転行列を生成 */
+		/// @brief クォータニオンから回転行列を生成
 		static Matrix4x4 Rotate(const Quaternion& rotation) noexcept
 		{
 			using namespace DirectX;
 			const XMVECTOR quatv = rotation.XMLoad();
 			return Matrix4x4(XMMatrixRotationQuaternion(quatv));
 		}
-		/** @brief 平行移動行列を生成 */
+		/// @brief 平行移動行列を生成
 		static Matrix4x4 Translate(const Vector3& position) noexcept
 		{
 			return Matrix4x4(DirectX::XMMatrixTranslation(position.x, position.y, position.z));
 		}
-		/** @brief 列指向の4x4行列データから行列を生成 */
+		/// @brief 列指向の4x4行列データから行列を生成
 		template<typename T>
 		static Matrix4x4 FromColumnMajor16(const T* a)
 		{

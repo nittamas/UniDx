@@ -18,6 +18,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -94,14 +95,17 @@ $(function(){initNavTree('class_uni_dx_1_1_shader.html','',''); });
 
 <p>継承メンバを含む <a class="el" href="class_uni_dx_1_1_shader.html">UniDx::Shader</a> の全メンバ一覧です。</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_uni_dx_1_1_shader.html#a7e4b0759bdf9e877ed24192986b998d3">compile</a>(const std::wstring &amp;filePath, const D3D11_INPUT_ELEMENT_DESC *layout, size_t layout_size)</td><td class="entry"><a class="el" href="class_uni_dx_1_1_shader.html">UniDx::Shader</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_uni_dx_1_1_shader.html#a5aba98e9d37fae872539cb91e04ba444">compile</a>(const std::wstring &amp;filePath)</td><td class="entry"><a class="el" href="class_uni_dx_1_1_shader.html">UniDx::Shader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_uni_dx_1_1_shader.html#a1fa631e89c6cb74be762ba492c0b7818">fileName</a></td><td class="entry"><a class="el" href="class_uni_dx_1_1_shader.html">UniDx::Shader</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_uni_dx_1_1_object.html#a462b80cab72539ae5a42e9f39b479ff8">name</a></td><td class="entry"><a class="el" href="class_uni_dx_1_1_object.html">UniDx::Object</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_uni_dx_1_1_object.html#a8105112b7931a0c380dfe004d3efc959">Object</a>(ReadOnlyProperty&lt; wstring_view &gt;::Getter nameGet)</td><td class="entry"><a class="el" href="class_uni_dx_1_1_object.html">UniDx::Object</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_uni_dx_1_1_shader.html#ab5fa2ed3e6bf4a81a14bc7b528af1ea2">setToContext</a>() const</td><td class="entry"><a class="el" href="class_uni_dx_1_1_shader.html">UniDx::Shader</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_uni_dx_1_1_shader.html#aa45d9476e1d2391e3d955acc7879e13a">Shader</a>()</td><td class="entry"><a class="el" href="class_uni_dx_1_1_shader.html">UniDx::Shader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_uni_dx_1_1_object.html#af1f20702fde9b535a83a02a5f8663fec">~Object</a>()</td><td class="entry"><a class="el" href="class_uni_dx_1_1_object.html">UniDx::Object</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_uni_dx_1_1_shader.html#a645e4832db25bf09c82debf5627fa87b">compile</a>(const u8string &amp;filePath, const D3D11_INPUT_ELEMENT_DESC *layout, size_t layout_size)</td><td class="entry"><a class="el" href="class_uni_dx_1_1_shader.html">UniDx::Shader</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_uni_dx_1_1_shader.html#a9a0c14f6a3f8b965d31785b2f1c1b8b7">compile</a>(const u8string &amp;filePath)</td><td class="entry"><a class="el" href="class_uni_dx_1_1_shader.html">UniDx::Shader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_uni_dx_1_1_shader.html#ae2574043bdbf23d783b8c5ceb6aab997">fileName</a></td><td class="entry"><a class="el" href="class_uni_dx_1_1_shader.html">UniDx::Shader</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_uni_dx_1_1_shader.html#ae20b8b734c215fc7d059cad822f21137">findVar</a>(StringId nameId) const</td><td class="entry"><a class="el" href="class_uni_dx_1_1_shader.html">UniDx::Shader</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_uni_dx_1_1_shader.html#a911ea7121d72d9a71f9dbb68288a310e">getCBPerMaterialSize</a>() const</td><td class="entry"><a class="el" href="class_uni_dx_1_1_shader.html">UniDx::Shader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_uni_dx_1_1_object.html#ace975b5121f8f79f54fdf62d46c06049">name</a></td><td class="entry"><a class="el" href="class_uni_dx_1_1_object.html">UniDx::Object</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_uni_dx_1_1_object.html#a1d2a3979c7a097b2ce35a69347ea9b9f">Object</a>(ReadOnlyProperty&lt; StringId &gt;::Getter nameGet)</td><td class="entry"><a class="el" href="class_uni_dx_1_1_object.html">UniDx::Object</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_uni_dx_1_1_shader.html#a3d57c502bc4d60e33fe2354df6445953">reflectPSLayout</a>(ID3DBlob *psBlob)</td><td class="entry"><a class="el" href="class_uni_dx_1_1_shader.html">UniDx::Shader</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_uni_dx_1_1_shader.html#ab5fa2ed3e6bf4a81a14bc7b528af1ea2">setToContext</a>() const</td><td class="entry"><a class="el" href="class_uni_dx_1_1_shader.html">UniDx::Shader</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_uni_dx_1_1_shader.html#aa45d9476e1d2391e3d955acc7879e13a">Shader</a>()</td><td class="entry"><a class="el" href="class_uni_dx_1_1_shader.html">UniDx::Shader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_uni_dx_1_1_object.html#af1f20702fde9b535a83a02a5f8663fec">~Object</a>()</td><td class="entry"><a class="el" href="class_uni_dx_1_1_object.html">UniDx::Object</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

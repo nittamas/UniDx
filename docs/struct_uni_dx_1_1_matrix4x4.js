@@ -5,6 +5,7 @@ var struct_uni_dx_1_1_matrix4x4 =
     [ "Matrix4x4", "struct_uni_dx_1_1_matrix4x4.html#a0e7e418e6b39bbaed3e158c9bb5a9a6a", null ],
     [ "Matrix4x4", "struct_uni_dx_1_1_matrix4x4.html#acdcf021af3e1f5e48daa1c95e745e2a6", null ],
     [ "Decompose", "struct_uni_dx_1_1_matrix4x4.html#a3d94354aa2aa0447893b5f9adbb0af2b", null ],
+    [ "determinant", "struct_uni_dx_1_1_matrix4x4.html#a709c3f32da14a54458ec49ab210a0a8f", null ],
     [ "inverse", "struct_uni_dx_1_1_matrix4x4.html#ad97f2d7b4effe274aa7e9fef023e961f", null ],
     [ "MultiplyPoint", "struct_uni_dx_1_1_matrix4x4.html#a8afecc04295ac993bec4448f9de97f8c", null ],
     [ "MultiplyVector", "struct_uni_dx_1_1_matrix4x4.html#a851001cfb1e2eb4b9a269e37137fff93", null ],

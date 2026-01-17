@@ -60,19 +60,18 @@ bool Shader::compile(const u8string& filePath, const D3D11_INPUT_ELEMENT_DESC* l
 	ComPtr<ID3DBlob> compiledVS;
 	if (FAILED(D3DCompileFromFile(ToUtf16(filePath).c_str(), nullptr, D3D_COMPILE_STANDARD_FILE_INCLUDE, "VS", "vs_5_0", 0, 0, &compiledVS, &error)))
 	{
-		Debug::Log(L"頂点シェーダーのコンパイルエラー");
+		Debug::Log(u8"頂点シェーダーのコンパイルエラー");
 		if (error)
 		{
 			Debug::Log(static_cast<const char*>(error->GetBufferPointer()));
 		}
-		abort();
 		return false;
 	}
 	// ピクセルシェーダーを読み込み＆コンパイル
 	ComPtr<ID3DBlob> compiledPS;
 	if (FAILED(D3DCompileFromFile(ToUtf16(filePath).c_str(), nullptr, nullptr, "PS", "ps_5_0", 0, 0, &compiledPS, &error)))
 	{
-		Debug::Log(L"ピクセルシェーダーシェーダーのコンパイルエラー");
+		Debug::Log(u8"ピクセルシェーダーのコンパイルエラー");
 		if (error)
 		{
 			Debug::Log(static_cast<const char*>(error->GetBufferPointer()));
@@ -83,20 +82,20 @@ bool Shader::compile(const u8string& filePath, const D3D11_INPUT_ELEMENT_DESC* l
 	// 頂点シェーダー作成
 	if (FAILED(D3DManager::getInstance()->GetDevice()->CreateVertexShader(compiledVS->GetBufferPointer(), compiledVS->GetBufferSize(), nullptr, &vertex)))
 	{
-		Debug::Log(L"頂点シェーダーの作成エラー");
+		Debug::Log(u8"頂点シェーダーの作成エラー");
 		return false;
 	}
 	// ピクセルシェーダー作成
 	if (FAILED(D3DManager::getInstance()->GetDevice()->CreatePixelShader(compiledPS->GetBufferPointer(), compiledPS->GetBufferSize(), nullptr, &pixel)))
 	{
-		Debug::Log(L"ピクセルシェーダーの作成エラー");
+		Debug::Log(u8"ピクセルシェーダーの作成エラー");
 		return false;
 	}
 
 	// 頂点インプットレイアウト作成
 	if (FAILED(D3DManager::getInstance()->GetDevice()->CreateInputLayout(layout, (UINT)layout_size, compiledVS->GetBufferPointer(), compiledVS->GetBufferSize(), &inputLayout)))
 	{
-		Debug::Log(L"頂点インプットレイアウトの作成エラー");
+		Debug::Log(u8"頂点インプットレイアウトの作成エラー");
 		return false;
 	}
 

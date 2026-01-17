@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UniDx: include/UniDx/StringId.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UniDx
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_string_id_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">StringId.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_string_id_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;string_view&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;unordered_set&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;memory_resource&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="_uni_dx_define_8h.html">UniDxDefine.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="_debug_8h.html">Debug.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_uni_dx.html">UniDx</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_string_id.html">   20</a></span><span class="keyword">class </span><a class="code hl_function" href="class_uni_dx_1_1_string_id.html#a608fd526f094e20558868264f61951a7">StringId</a></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_string_id.html#a2532693229c5d75d7c0431e70aca2179">   24</a></span>    <span class="keyword">static</span> <a class="code hl_function" href="class_uni_dx_1_1_string_id.html#a608fd526f094e20558868264f61951a7">StringId</a> <a class="code hl_function" href="class_uni_dx_1_1_string_id.html#a2532693229c5d75d7c0431e70aca2179">intern</a>(std::string_view sv) { <span class="keywordflow">return</span> <a class="code hl_function" href="class_uni_dx_1_1_string_id.html#a2532693229c5d75d7c0431e70aca2179">intern</a>(std::u8string_view(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char8_t</span>*<span class="keyword">&gt;</span>(sv.data()), sv.size())); }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_string_id.html#ad088613c961f3aaccb4ad68915eed5ce">   26</a></span>    <span class="keyword">static</span> <a class="code hl_function" href="class_uni_dx_1_1_string_id.html#a608fd526f094e20558868264f61951a7">StringId</a> <a class="code hl_function" href="class_uni_dx_1_1_string_id.html#ad088613c961f3aaccb4ad68915eed5ce">intern</a>(<span class="keyword">const</span> <span class="keywordtype">char8_t</span>* s) { <span class="keywordflow">return</span> <a class="code hl_function" href="class_uni_dx_1_1_string_id.html#ad088613c961f3aaccb4ad68915eed5ce">intern</a>(std::u8string_view(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char8_t</span>*<span class="keyword">&gt;</span>(s))); }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">static</span> <a class="code hl_class" href="class_uni_dx_1_1_string_id.html">StringId</a> <a class="code hl_function" href="class_uni_dx_1_1_string_id.html#a2532693229c5d75d7c0431e70aca2179">intern</a>(std::u8string_view sv);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_string_id.html#a608fd526f094e20558868264f61951a7">   30</a></span>    <a class="code hl_function" href="class_uni_dx_1_1_string_id.html#a608fd526f094e20558868264f61951a7">StringId</a>() {}</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_string_id.html#afb4ba32733df3c7d8a9fc90065348104">   31</a></span>    <span class="keyword">constexpr</span> std::u8string_view <a class="code hl_function" href="class_uni_dx_1_1_string_id.html#afb4ba32733df3c7d8a9fc90065348104">view</a>() const noexcept { <span class="keywordflow">return</span> view_; }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_string_id.html#ab5409968786a451c23e0f3d6d709516d">   32</a></span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="class_uni_dx_1_1_string_id.html#ab5409968786a451c23e0f3d6d709516d">c_str</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>* <span class="keyword">&gt;</span>(view_.data()); } <span class="comment">// NULL終端文字列あり</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_string_id.html#a4c76490c8843385b9f14833b94895f73">   35</a></span>    <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code hl_friend" href="class_uni_dx_1_1_string_id.html#a4c76490c8843385b9f14833b94895f73">operator==</a>(<a class="code hl_function" href="class_uni_dx_1_1_string_id.html#a608fd526f094e20558868264f61951a7">StringId</a> a, <a class="code hl_function" href="class_uni_dx_1_1_string_id.html#a608fd526f094e20558868264f61951a7">StringId</a> b) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">return</span> a.view_.data() == b.view_.data(); <span class="comment">// 同一性比較</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
+</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_string_id.html#ac6ef105decf16620e4403d3d5d9fc287">   38</a></span>    <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code hl_friend" href="class_uni_dx_1_1_string_id.html#ac6ef105decf16620e4403d3d5d9fc287">operator!=</a>(<a class="code hl_function" href="class_uni_dx_1_1_string_id.html#a608fd526f094e20558868264f61951a7">StringId</a> a, <a class="code hl_function" href="class_uni_dx_1_1_string_id.html#a608fd526f094e20558868264f61951a7">StringId</a> b) <span class="keyword">noexcept</span> { <span class="keywordflow">return</span> !(a == b); }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_string_id.html#a2f9bff1f63e8835dfb297959feab15d1">   40</a></span>    <span class="keyword">explicit</span> <span class="keyword">operator</span> u8string()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> u8string(view_.data(), view_.size()); }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_string_id.html#af11d9fc3a11e9341cf18639af53c0eb2">   41</a></span>    <span class="keyword">explicit</span> <span class="keyword">operator</span> std::string()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> std::string(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(view_.data()), view_.size()); }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_string_id.html#ac38fc6e8027feef3ca3ceda045eaf9a0">   42</a></span>    <span class="keyword">explicit</span> <span class="keyword">operator</span> u8string_view()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> u8string_view(view_.data(), view_.size()); }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_string_id.html#aef3f7600e19aba4f25f2e60fa845b772">   43</a></span>    <span class="keyword">explicit</span> <span class="keyword">operator</span> std::string_view()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> std::string_view(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(view_.data()), view_.size()); }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    std::u8string_view view_;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">// InternPool側でNULL終端文字列を保証した文字列を渡す</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">explicit</span> <a class="code hl_function" href="class_uni_dx_1_1_string_id.html#a608fd526f094e20558868264f61951a7">StringId</a>(<span class="keyword">const</span> <span class="keywordtype">char8_t</span>* v, <span class="keywordtype">size_t</span> s) : view_(v, s) {}</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_string_id.html#a433f6d02460fa65d3c31400459639ccf">   51</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_friend" href="class_uni_dx_1_1_string_id.html#a433f6d02460fa65d3c31400459639ccf">InternPool</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>};</div>
+</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="namespace_uni_dx.html#a0179702806c33183c89bbf785f563e70">   53</a></span><span class="keyword">inline</span> u8string <a class="code hl_function" href="namespace_uni_dx.html#a969fc94d7447408e0495fb423002f660">ToString</a>(<a class="code hl_class" href="class_uni_dx_1_1_string_id.html">StringId</a> s) { <span class="keywordflow">return</span> u8string(s); }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="};">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_intern_pool.html">   59</a></span><span class="keyword">class </span><a class="code hl_function" href="class_uni_dx_1_1_intern_pool.html#aaf0f5e162c559f37e495afe30a5d4789">InternPool</a></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>{</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_intern_pool.html#a2fd36fde159e2e252597878d96e25686">   62</a></span>    <span class="keyword">typedef</span> std::pmr::u8string <a class="code hl_typedef" href="class_uni_dx_1_1_intern_pool.html#a2fd36fde159e2e252597878d96e25686">String</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">// 透明検索用の Hash/Equal（std::u8string_view で find できるようにする）</span></div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="};">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_intern_pool_1_1_transparent_hash.html">   64</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_uni_dx_1_1_intern_pool_1_1_transparent_hash.html">TransparentHash</a> {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_intern_pool_1_1_transparent_hash.html#a26ee0ca6adfa123b9d89dfb1d5c521b2">   65</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="struct_uni_dx_1_1_intern_pool_1_1_transparent_hash.html#a26ee0ca6adfa123b9d89dfb1d5c521b2">is_transparent</a> = void;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_intern_pool_1_1_transparent_hash.html#a600d69333906d2ff0bb853815d57a98e">   66</a></span>        <span class="keywordtype">size_t</span> <a class="code hl_function" href="struct_uni_dx_1_1_intern_pool_1_1_transparent_hash.html#a600d69333906d2ff0bb853815d57a98e">operator()</a>(std::u8string_view v) <span class="keyword">const</span> <span class="keyword">noexcept</span> { <span class="keywordflow">return</span> std::hash&lt;std::u8string_view&gt;{}(v); }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_intern_pool_1_1_transparent_hash.html#ab301f4050e2f6816263081fb53879888">   67</a></span>        <span class="keywordtype">size_t</span> <a class="code hl_function" href="struct_uni_dx_1_1_intern_pool_1_1_transparent_hash.html#ab301f4050e2f6816263081fb53879888">operator()</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="class_uni_dx_1_1_intern_pool.html#a2fd36fde159e2e252597878d96e25686">String</a>&amp; s) <span class="keyword">const</span> <span class="keyword">noexcept</span> { <span class="keywordflow">return</span> std::hash&lt;std::u8string_view&gt;{}(std::u8string_view{ s }); }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    };</div>
+</div>
+<div class="foldopen" id="foldopen00069" data-start="{" data-end="};">
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_intern_pool_1_1_transparent_eq.html">   69</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_uni_dx_1_1_intern_pool_1_1_transparent_eq.html">TransparentEq</a> {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_intern_pool_1_1_transparent_eq.html#a45bf1f684680415ff7d5c81869ac6cc2">   70</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="struct_uni_dx_1_1_intern_pool_1_1_transparent_eq.html#a45bf1f684680415ff7d5c81869ac6cc2">is_transparent</a> = void;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_intern_pool_1_1_transparent_eq.html#a67cd2bfef567b94523c30df17597e534">   71</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_uni_dx_1_1_intern_pool_1_1_transparent_eq.html#a67cd2bfef567b94523c30df17597e534">operator()</a>(std::u8string_view a, std::u8string_view b) <span class="keyword">const</span> <span class="keyword">noexcept</span> { <span class="keywordflow">return</span> a == b; }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_intern_pool_1_1_transparent_eq.html#a6672040e38462615ea9aaf505f31fc8c">   72</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_uni_dx_1_1_intern_pool_1_1_transparent_eq.html#a6672040e38462615ea9aaf505f31fc8c">operator()</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="class_uni_dx_1_1_intern_pool.html#a2fd36fde159e2e252597878d96e25686">String</a>&amp; a, std::u8string_view b) <span class="keyword">const</span> <span class="keyword">noexcept</span> { <span class="keywordflow">return</span> a == b; }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_intern_pool_1_1_transparent_eq.html#aae1ea31e6ea0a8d891ec8e6f08f5fe54">   73</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_uni_dx_1_1_intern_pool_1_1_transparent_eq.html#aae1ea31e6ea0a8d891ec8e6f08f5fe54">operator()</a>(std::u8string_view a, <span class="keyword">const</span> <a class="code hl_typedef" href="class_uni_dx_1_1_intern_pool.html#a2fd36fde159e2e252597878d96e25686">String</a>&amp; b) <span class="keyword">const</span> <span class="keyword">noexcept</span> { <span class="keywordflow">return</span> a == b; }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_intern_pool_1_1_transparent_eq.html#adc47deb83424814c2172c9cc47228f66">   74</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_uni_dx_1_1_intern_pool_1_1_transparent_eq.html#adc47deb83424814c2172c9cc47228f66">operator()</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="class_uni_dx_1_1_intern_pool.html#a2fd36fde159e2e252597878d96e25686">String</a>&amp; a, <span class="keyword">const</span> <a class="code hl_typedef" href="class_uni_dx_1_1_intern_pool.html#a2fd36fde159e2e252597878d96e25686">String</a>&amp; b) <span class="keyword">const</span> <span class="keyword">noexcept</span> { <span class="keywordflow">return</span> a == b; }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    };</div>
+</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_intern_pool.html#ab0ea13e9d43547f972596b44b97764c6">   76</a></span>    <span class="keyword">typedef</span> std::pmr::unordered_set&lt;String, TransparentHash, TransparentEq&gt; <a class="code hl_typedef" href="class_uni_dx_1_1_intern_pool.html#ab0ea13e9d43547f972596b44b97764c6">Strings</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
+<div class="foldopen" id="foldopen00079" data-start="{" data-end="}">
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_intern_pool.html#a45e36d07e1328eb1230a1f9a92bbafc6">   79</a></span>    <span class="keyword">static</span> <a class="code hl_function" href="class_uni_dx_1_1_intern_pool.html#aaf0f5e162c559f37e495afe30a5d4789">InternPool</a>&amp; <a class="code hl_function" href="class_uni_dx_1_1_intern_pool.html#a45e36d07e1328eb1230a1f9a92bbafc6">instance</a>()</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keyword">static</span> <a class="code hl_function" href="class_uni_dx_1_1_intern_pool.html#aaf0f5e162c559f37e495afe30a5d4789">InternPool</a> pool; <span class="comment">// 静的初期化対応のため、UniDxの中では例外的に関数ローカルstaticにする</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">return</span> pool;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }</div>
+</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="foldopen" id="foldopen00085" data-start="{" data-end="}">
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_intern_pool.html#aaf0f5e162c559f37e495afe30a5d4789">   85</a></span>    <a class="code hl_function" href="class_uni_dx_1_1_intern_pool.html#aaf0f5e162c559f37e495afe30a5d4789">InternPool</a>()</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        : arena_(std::pmr::get_default_resource())</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        , strings_(&amp;arena_)</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
+</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="foldopen" id="foldopen00091" data-start="{" data-end="}">
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_intern_pool.html#a79e0ef4cf272eff0394c6596f442e583">   91</a></span>    <a class="code hl_class" href="class_uni_dx_1_1_string_id.html">StringId</a> <a class="code hl_function" href="class_uni_dx_1_1_intern_pool.html#a79e0ef4cf272eff0394c6596f442e583">intern</a>(std::u8string_view sv)</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordflow">if</span>(sv.empty()) <span class="keywordflow">return</span> <a class="code hl_class" href="class_uni_dx_1_1_string_id.html">StringId</a>();</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        std::lock_guard lock(mtx_);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keyword">auto</span> it = strings_.find(sv); <span class="comment">// 透明検索で string_view のまま探す</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keywordflow">if</span>(it != strings_.end()) <span class="keywordflow">return</span> <a class="code hl_class" href="class_uni_dx_1_1_string_id.html">StringId</a>(it-&gt;c_str(), it-&gt;size());</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="comment">// 新規に arena に確保して登録</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keyword">auto</span> result = strings_.emplace(sv); <span class="comment">// pmr::u8string(sv) が作られる</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="class_uni_dx_1_1_string_id.html">StringId</a>(result.first-&gt;c_str(), result.first-&gt;size());</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
+</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_intern_pool.html#a97c8095eb28a91da53c841bbd5745d8f">  105</a></span>    <span class="keyword">const</span> <a class="code hl_typedef" href="class_uni_dx_1_1_intern_pool.html#ab0ea13e9d43547f972596b44b97764c6">Strings</a>&amp; <a class="code hl_function" href="class_uni_dx_1_1_intern_pool.html#a97c8095eb28a91da53c841bbd5745d8f">getStrings</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> strings_; }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    std::mutex mtx_;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    std::pmr::monotonic_buffer_resource arena_;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    std::pmr::unordered_set&lt;String, TransparentHash, TransparentEq&gt; strings_;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>};</div>
+</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_string_id.html#a6c564d7c98d7f83674dc73fbaa91f7a1">  112</a></span><span class="keyword">inline</span> <a class="code hl_function" href="class_uni_dx_1_1_string_id.html#a608fd526f094e20558868264f61951a7">StringId</a> <a class="code hl_function" href="class_uni_dx_1_1_string_id.html#a2532693229c5d75d7c0431e70aca2179">StringId::intern</a>(std::u8string_view sv) { <span class="keywordflow">return</span> <a class="code hl_function" href="class_uni_dx_1_1_intern_pool.html#a45e36d07e1328eb1230a1f9a92bbafc6">InternPool::instance</a>().<a class="code hl_function" href="class_uni_dx_1_1_intern_pool.html#a79e0ef4cf272eff0394c6596f442e583">intern</a>(sv); }</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>}</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="keyword">namespace </span>std</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>{</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keyword">struct </span>hash&lt;<a class="code hl_namespace" href="namespace_uni_dx.html">UniDx</a>::StringId&gt;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <span class="keywordtype">size_t</span> operator()(<span class="keyword">const</span> <a class="code hl_class" href="class_uni_dx_1_1_string_id.html">UniDx::StringId</a>&amp; <span class="keywordtype">id</span>) <span class="keyword">const</span> <span class="keyword">noexcept</span> { <span class="keywordflow">return</span> std::hash&lt;const void*&gt;{}(<span class="keywordtype">id</span>.view().data()); }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    };</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>}</div>
+<div class="ttc" id="a_debug_8h_html"><div class="ttname"><a href="_debug_8h.html">Debug.h</a></div></div>
+<div class="ttc" id="a_uni_dx_define_8h_html"><div class="ttname"><a href="_uni_dx_define_8h.html">UniDxDefine.h</a></div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_intern_pool_html_a2fd36fde159e2e252597878d96e25686"><div class="ttname"><a href="class_uni_dx_1_1_intern_pool.html#a2fd36fde159e2e252597878d96e25686">UniDx::InternPool::String</a></div><div class="ttdeci">std::pmr::u8string String</div><div class="ttdef"><b>Definition</b> StringId.h:62</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_intern_pool_html_a45e36d07e1328eb1230a1f9a92bbafc6"><div class="ttname"><a href="class_uni_dx_1_1_intern_pool.html#a45e36d07e1328eb1230a1f9a92bbafc6">UniDx::InternPool::instance</a></div><div class="ttdeci">static InternPool &amp; instance()</div><div class="ttdoc">インスタンスの取得</div><div class="ttdef"><b>Definition</b> StringId.h:79</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_intern_pool_html_a79e0ef4cf272eff0394c6596f442e583"><div class="ttname"><a href="class_uni_dx_1_1_intern_pool.html#a79e0ef4cf272eff0394c6596f442e583">UniDx::InternPool::intern</a></div><div class="ttdeci">StringId intern(std::u8string_view sv)</div><div class="ttdef"><b>Definition</b> StringId.h:91</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_intern_pool_html_a97c8095eb28a91da53c841bbd5745d8f"><div class="ttname"><a href="class_uni_dx_1_1_intern_pool.html#a97c8095eb28a91da53c841bbd5745d8f">UniDx::InternPool::getStrings</a></div><div class="ttdeci">const Strings &amp; getStrings() const</div><div class="ttdef"><b>Definition</b> StringId.h:105</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_intern_pool_html_aaf0f5e162c559f37e495afe30a5d4789"><div class="ttname"><a href="class_uni_dx_1_1_intern_pool.html#aaf0f5e162c559f37e495afe30a5d4789">UniDx::InternPool::InternPool</a></div><div class="ttdeci">InternPool()</div><div class="ttdef"><b>Definition</b> StringId.h:85</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_intern_pool_html_ab0ea13e9d43547f972596b44b97764c6"><div class="ttname"><a href="class_uni_dx_1_1_intern_pool.html#ab0ea13e9d43547f972596b44b97764c6">UniDx::InternPool::Strings</a></div><div class="ttdeci">std::pmr::unordered_set&lt; String, TransparentHash, TransparentEq &gt; Strings</div><div class="ttdef"><b>Definition</b> StringId.h:76</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_string_id_html"><div class="ttname"><a href="class_uni_dx_1_1_string_id.html">UniDx::StringId</a></div><div class="ttdoc">インターンプールに貯めて使う文字列 高速に比較できる</div><div class="ttdef"><b>Definition</b> StringId.h:21</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_string_id_html_a2532693229c5d75d7c0431e70aca2179"><div class="ttname"><a href="class_uni_dx_1_1_string_id.html#a2532693229c5d75d7c0431e70aca2179">UniDx::StringId::intern</a></div><div class="ttdeci">static StringId intern(std::string_view sv)</div><div class="ttdoc">文字列を必要に応じてプールに貯めてID化</div><div class="ttdef"><b>Definition</b> StringId.h:24</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_string_id_html_a433f6d02460fa65d3c31400459639ccf"><div class="ttname"><a href="class_uni_dx_1_1_string_id.html#a433f6d02460fa65d3c31400459639ccf">UniDx::StringId::InternPool</a></div><div class="ttdeci">friend class InternPool</div><div class="ttdef"><b>Definition</b> StringId.h:51</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_string_id_html_a4c76490c8843385b9f14833b94895f73"><div class="ttname"><a href="class_uni_dx_1_1_string_id.html#a4c76490c8843385b9f14833b94895f73">UniDx::StringId::operator==</a></div><div class="ttdeci">friend bool operator==(StringId a, StringId b) noexcept</div><div class="ttdoc">比較演算。内容比較しないので高速</div><div class="ttdef"><b>Definition</b> StringId.h:35</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_string_id_html_a608fd526f094e20558868264f61951a7"><div class="ttname"><a href="class_uni_dx_1_1_string_id.html#a608fd526f094e20558868264f61951a7">UniDx::StringId::StringId</a></div><div class="ttdeci">StringId()</div><div class="ttdef"><b>Definition</b> StringId.h:30</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_string_id_html_ab5409968786a451c23e0f3d6d709516d"><div class="ttname"><a href="class_uni_dx_1_1_string_id.html#ab5409968786a451c23e0f3d6d709516d">UniDx::StringId::c_str</a></div><div class="ttdeci">const char * c_str() const</div><div class="ttdef"><b>Definition</b> StringId.h:32</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_string_id_html_ac6ef105decf16620e4403d3d5d9fc287"><div class="ttname"><a href="class_uni_dx_1_1_string_id.html#ac6ef105decf16620e4403d3d5d9fc287">UniDx::StringId::operator!=</a></div><div class="ttdeci">friend bool operator!=(StringId a, StringId b) noexcept</div><div class="ttdef"><b>Definition</b> StringId.h:38</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_string_id_html_ad088613c961f3aaccb4ad68915eed5ce"><div class="ttname"><a href="class_uni_dx_1_1_string_id.html#ad088613c961f3aaccb4ad68915eed5ce">UniDx::StringId::intern</a></div><div class="ttdeci">static StringId intern(const char8_t *s)</div><div class="ttdoc">文字列を必要に応じてプールに貯めてID化</div><div class="ttdef"><b>Definition</b> StringId.h:26</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_string_id_html_afb4ba32733df3c7d8a9fc90065348104"><div class="ttname"><a href="class_uni_dx_1_1_string_id.html#afb4ba32733df3c7d8a9fc90065348104">UniDx::StringId::view</a></div><div class="ttdeci">constexpr std::u8string_view view() const noexcept</div><div class="ttdef"><b>Definition</b> StringId.h:31</div></div>
+<div class="ttc" id="anamespace_uni_dx_html"><div class="ttname"><a href="namespace_uni_dx.html">UniDx</a></div><div class="ttdef"><b>Definition</b> AnimationCurve.cpp:5</div></div>
+<div class="ttc" id="anamespace_uni_dx_html_a969fc94d7447408e0495fb423002f660"><div class="ttname"><a href="namespace_uni_dx.html#a969fc94d7447408e0495fb423002f660">UniDx::ToString</a></div><div class="ttdeci">u8string ToString(const Vector2 &amp;v)</div><div class="ttdoc">各型の文字列化</div><div class="ttdef"><b>Definition</b> Math.h:554</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_intern_pool_1_1_transparent_eq_html"><div class="ttname"><a href="struct_uni_dx_1_1_intern_pool_1_1_transparent_eq.html">UniDx::InternPool::TransparentEq</a></div><div class="ttdef"><b>Definition</b> StringId.h:69</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_intern_pool_1_1_transparent_eq_html_a45bf1f684680415ff7d5c81869ac6cc2"><div class="ttname"><a href="struct_uni_dx_1_1_intern_pool_1_1_transparent_eq.html#a45bf1f684680415ff7d5c81869ac6cc2">UniDx::InternPool::TransparentEq::is_transparent</a></div><div class="ttdeci">void is_transparent</div><div class="ttdef"><b>Definition</b> StringId.h:70</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_intern_pool_1_1_transparent_eq_html_a6672040e38462615ea9aaf505f31fc8c"><div class="ttname"><a href="struct_uni_dx_1_1_intern_pool_1_1_transparent_eq.html#a6672040e38462615ea9aaf505f31fc8c">UniDx::InternPool::TransparentEq::operator()</a></div><div class="ttdeci">bool operator()(const String &amp;a, std::u8string_view b) const noexcept</div><div class="ttdef"><b>Definition</b> StringId.h:72</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_intern_pool_1_1_transparent_eq_html_a67cd2bfef567b94523c30df17597e534"><div class="ttname"><a href="struct_uni_dx_1_1_intern_pool_1_1_transparent_eq.html#a67cd2bfef567b94523c30df17597e534">UniDx::InternPool::TransparentEq::operator()</a></div><div class="ttdeci">bool operator()(std::u8string_view a, std::u8string_view b) const noexcept</div><div class="ttdef"><b>Definition</b> StringId.h:71</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_intern_pool_1_1_transparent_eq_html_aae1ea31e6ea0a8d891ec8e6f08f5fe54"><div class="ttname"><a href="struct_uni_dx_1_1_intern_pool_1_1_transparent_eq.html#aae1ea31e6ea0a8d891ec8e6f08f5fe54">UniDx::InternPool::TransparentEq::operator()</a></div><div class="ttdeci">bool operator()(std::u8string_view a, const String &amp;b) const noexcept</div><div class="ttdef"><b>Definition</b> StringId.h:73</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_intern_pool_1_1_transparent_eq_html_adc47deb83424814c2172c9cc47228f66"><div class="ttname"><a href="struct_uni_dx_1_1_intern_pool_1_1_transparent_eq.html#adc47deb83424814c2172c9cc47228f66">UniDx::InternPool::TransparentEq::operator()</a></div><div class="ttdeci">bool operator()(const String &amp;a, const String &amp;b) const noexcept</div><div class="ttdef"><b>Definition</b> StringId.h:74</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_intern_pool_1_1_transparent_hash_html"><div class="ttname"><a href="struct_uni_dx_1_1_intern_pool_1_1_transparent_hash.html">UniDx::InternPool::TransparentHash</a></div><div class="ttdef"><b>Definition</b> StringId.h:64</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_intern_pool_1_1_transparent_hash_html_a26ee0ca6adfa123b9d89dfb1d5c521b2"><div class="ttname"><a href="struct_uni_dx_1_1_intern_pool_1_1_transparent_hash.html#a26ee0ca6adfa123b9d89dfb1d5c521b2">UniDx::InternPool::TransparentHash::is_transparent</a></div><div class="ttdeci">void is_transparent</div><div class="ttdef"><b>Definition</b> StringId.h:65</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_intern_pool_1_1_transparent_hash_html_a600d69333906d2ff0bb853815d57a98e"><div class="ttname"><a href="struct_uni_dx_1_1_intern_pool_1_1_transparent_hash.html#a600d69333906d2ff0bb853815d57a98e">UniDx::InternPool::TransparentHash::operator()</a></div><div class="ttdeci">size_t operator()(std::u8string_view v) const noexcept</div><div class="ttdef"><b>Definition</b> StringId.h:66</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_intern_pool_1_1_transparent_hash_html_ab301f4050e2f6816263081fb53879888"><div class="ttname"><a href="struct_uni_dx_1_1_intern_pool_1_1_transparent_hash.html#ab301f4050e2f6816263081fb53879888">UniDx::InternPool::TransparentHash::operator()</a></div><div class="ttdeci">size_t operator()(const String &amp;s) const noexcept</div><div class="ttdef"><b>Definition</b> StringId.h:67</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_450094861a7bbaf444577c849cb4d1c8.html">UniDx</a></li><li class="navelem"><a href="_string_id_8h.html">StringId.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

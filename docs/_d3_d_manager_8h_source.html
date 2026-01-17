@@ -18,6 +18,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -91,38 +92,32 @@ $(function(){initNavTree('_d3_d_manager_8h_source.html','',''); });
   <div class="headertitle"><div class="title">D3DManager.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_d3_d_manager_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// Direct3Dのライブラリを使用できるようにする</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#pragma comment(lib, &quot;d3d11.lib&quot;)</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma comment(lib, &quot;dxgi.lib&quot;)</span></div>
+<a href="_d3_d_manager_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;d3dcompiler.h&gt;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_uni_dx_define_8h.html">UniDxDefine.h</a>&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="_singleton_8h.html">Singleton.h</a>&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// Direct3Dのライブラリを使用できるようにする</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#pragma comment(lib, &quot;d3d11.lib&quot;)</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#pragma comment(lib, &quot;dxgi.lib&quot;)</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;d3dcompiler.h&gt;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="_d3_d_manager_8h.html#a5a2c8ecd9e3a5fe500942147ed48006e">   13</a></span><span class="keyword">constexpr</span> UINT <a class="code hl_variable" href="_d3_d_manager_8h.html#a5a2c8ecd9e3a5fe500942147ed48006e">UNIDX_PS_SLOT_LIGHTS</a> = 0;  <span class="comment">// t0</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="_d3_d_manager_8h.html#a286855ae4623bf7ba20576a42b069e08">   14</a></span><span class="keyword">constexpr</span> UINT <a class="code hl_variable" href="_d3_d_manager_8h.html#a286855ae4623bf7ba20576a42b069e08">UNIDX_PS_SLOT_LIGHT_INDICES</a> = 1;  <span class="comment">// t1</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="_d3_d_manager_8h.html#ae0f0a337b20dfd2854017de8fbc5b25e">   15</a></span><span class="keyword">constexpr</span> UINT <a class="code hl_variable" href="_d3_d_manager_8h.html#ae0f0a337b20dfd2854017de8fbc5b25e">UNIDX_PS_SLOT_ALBEDO</a> = 4;  <span class="comment">// t4</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="_d3_d_manager_8h.html#a123815f06458a93ef18bf911836a5e95">   16</a></span><span class="keyword">constexpr</span> UINT <a class="code hl_variable" href="_d3_d_manager_8h.html#a123815f06458a93ef18bf911836a5e95">UNIDX_PS_SLOT_NORMAL</a> = 5;  <span class="comment">// t5</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_uni_dx.html">UniDx</a>{</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
-<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_d3_d_manager.html">   26</a></span><span class="keyword">class </span><a class="code hl_class" href="class_uni_dx_1_1_d3_d_manager.html">D3DManager</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_uni_dx_1_1_singleton.html#aa1d5dc993efef5faa60dc69cb141ae1f">Singleton</a>&lt;D3DManager&gt;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">//--------------------------------------------</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">// Direct3Dを初期化し、使用できるようにする</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">// hWnd     : ウィンドウハンドル</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="comment">// width    : 画面の幅</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="comment">// height   : 画面の高さ</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">//--------------------------------------------</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_uni_dx_define_8h.html">UniDxDefine.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_singleton_8h.html">Singleton.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="_d3_d_manager_8h.html#a5a2c8ecd9e3a5fe500942147ed48006e">   17</a></span><span class="keyword">constexpr</span> UINT <a class="code hl_variable" href="_d3_d_manager_8h.html#a5a2c8ecd9e3a5fe500942147ed48006e">UNIDX_PS_SLOT_LIGHTS</a> = 0;  <span class="comment">// t0</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="_d3_d_manager_8h.html#a286855ae4623bf7ba20576a42b069e08">   18</a></span><span class="keyword">constexpr</span> UINT <a class="code hl_variable" href="_d3_d_manager_8h.html#a286855ae4623bf7ba20576a42b069e08">UNIDX_PS_SLOT_LIGHT_INDICES</a> = 1;  <span class="comment">// t1</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="_d3_d_manager_8h.html#ae0f0a337b20dfd2854017de8fbc5b25e">   19</a></span><span class="keyword">constexpr</span> UINT <a class="code hl_variable" href="_d3_d_manager_8h.html#ae0f0a337b20dfd2854017de8fbc5b25e">UNIDX_PS_SLOT_ALBEDO</a> = 4;  <span class="comment">// t4</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="_d3_d_manager_8h.html#a123815f06458a93ef18bf911836a5e95">   20</a></span><span class="keyword">constexpr</span> UINT <a class="code hl_variable" href="_d3_d_manager_8h.html#a123815f06458a93ef18bf911836a5e95">UNIDX_PS_SLOT_NORMAL</a> = 5;  <span class="comment">// t5</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_uni_dx.html">UniDx</a>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_d3_d_manager.html">   27</a></span><span class="keyword">class </span><a class="code hl_class" href="class_uni_dx_1_1_d3_d_manager.html">D3DManager</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_uni_dx_1_1_singleton.html#aa1d5dc993efef5faa60dc69cb141ae1f">Singleton</a>&lt;D3DManager&gt;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>{</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_uni_dx_1_1_d3_d_manager.html#af2b4f6643c1f5d5613cde9c50396a28f">Initialize</a>(HWND hWnd, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height);</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_d3_d_manager.html#a622df7eefdd47923594ebd9dc4c6360b">   38</a></span>    <span class="keyword">const</span> ComPtr&lt;ID3D11Device&gt;&amp;         <a class="code hl_function" href="class_uni_dx_1_1_d3_d_manager.html#a622df7eefdd47923594ebd9dc4c6360b">GetDevice</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_device; }</div>
@@ -163,26 +158,26 @@ $(function(){initNavTree('_d3_d_manager_8h_source.html','',''); });
 </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>} <span class="comment">// UniDx</span></div>
-<div class="ttc" id="a_d3_d_manager_8h_html_a123815f06458a93ef18bf911836a5e95"><div class="ttname"><a href="_d3_d_manager_8h.html#a123815f06458a93ef18bf911836a5e95">UNIDX_PS_SLOT_NORMAL</a></div><div class="ttdeci">constexpr UINT UNIDX_PS_SLOT_NORMAL</div><div class="ttdef"><b>Definition</b> D3DManager.h:16</div></div>
-<div class="ttc" id="a_d3_d_manager_8h_html_a286855ae4623bf7ba20576a42b069e08"><div class="ttname"><a href="_d3_d_manager_8h.html#a286855ae4623bf7ba20576a42b069e08">UNIDX_PS_SLOT_LIGHT_INDICES</a></div><div class="ttdeci">constexpr UINT UNIDX_PS_SLOT_LIGHT_INDICES</div><div class="ttdef"><b>Definition</b> D3DManager.h:14</div></div>
-<div class="ttc" id="a_d3_d_manager_8h_html_a5a2c8ecd9e3a5fe500942147ed48006e"><div class="ttname"><a href="_d3_d_manager_8h.html#a5a2c8ecd9e3a5fe500942147ed48006e">UNIDX_PS_SLOT_LIGHTS</a></div><div class="ttdeci">constexpr UINT UNIDX_PS_SLOT_LIGHTS</div><div class="ttdef"><b>Definition</b> D3DManager.h:13</div></div>
-<div class="ttc" id="a_d3_d_manager_8h_html_ae0f0a337b20dfd2854017de8fbc5b25e"><div class="ttname"><a href="_d3_d_manager_8h.html#ae0f0a337b20dfd2854017de8fbc5b25e">UNIDX_PS_SLOT_ALBEDO</a></div><div class="ttdeci">constexpr UINT UNIDX_PS_SLOT_ALBEDO</div><div class="ttdef"><b>Definition</b> D3DManager.h:15</div></div>
-<div class="ttc" id="a_singleton_8h_html"><div class="ttname"><a href="_singleton_8h.html">Singleton.h</a></div><div class="ttdoc">初期化と破棄のタイミングを制御したり、 具体クラスで create できるようにするため 明示的な create と destroy が必要</div></div>
+<div class="ttc" id="a_d3_d_manager_8h_html_a123815f06458a93ef18bf911836a5e95"><div class="ttname"><a href="_d3_d_manager_8h.html#a123815f06458a93ef18bf911836a5e95">UNIDX_PS_SLOT_NORMAL</a></div><div class="ttdeci">constexpr UINT UNIDX_PS_SLOT_NORMAL</div><div class="ttdef"><b>Definition</b> D3DManager.h:20</div></div>
+<div class="ttc" id="a_d3_d_manager_8h_html_a286855ae4623bf7ba20576a42b069e08"><div class="ttname"><a href="_d3_d_manager_8h.html#a286855ae4623bf7ba20576a42b069e08">UNIDX_PS_SLOT_LIGHT_INDICES</a></div><div class="ttdeci">constexpr UINT UNIDX_PS_SLOT_LIGHT_INDICES</div><div class="ttdef"><b>Definition</b> D3DManager.h:18</div></div>
+<div class="ttc" id="a_d3_d_manager_8h_html_a5a2c8ecd9e3a5fe500942147ed48006e"><div class="ttname"><a href="_d3_d_manager_8h.html#a5a2c8ecd9e3a5fe500942147ed48006e">UNIDX_PS_SLOT_LIGHTS</a></div><div class="ttdeci">constexpr UINT UNIDX_PS_SLOT_LIGHTS</div><div class="ttdef"><b>Definition</b> D3DManager.h:17</div></div>
+<div class="ttc" id="a_d3_d_manager_8h_html_ae0f0a337b20dfd2854017de8fbc5b25e"><div class="ttname"><a href="_d3_d_manager_8h.html#ae0f0a337b20dfd2854017de8fbc5b25e">UNIDX_PS_SLOT_ALBEDO</a></div><div class="ttdeci">constexpr UINT UNIDX_PS_SLOT_ALBEDO</div><div class="ttdef"><b>Definition</b> D3DManager.h:19</div></div>
+<div class="ttc" id="a_singleton_8h_html"><div class="ttname"><a href="_singleton_8h.html">Singleton.h</a></div><div class="ttdoc">シングルトンテンプレート。 初期化と破棄のタイミングを制御したり、具体クラスで create できる</div></div>
 <div class="ttc" id="a_uni_dx_define_8h_html"><div class="ttname"><a href="_uni_dx_define_8h.html">UniDxDefine.h</a></div></div>
-<div class="ttc" id="aclass_uni_dx_1_1_d3_d_manager_html"><div class="ttname"><a href="class_uni_dx_1_1_d3_d_manager.html">UniDx::D3DManager</a></div><div class="ttdef"><b>Definition</b> D3DManager.h:27</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_d3_d_manager_html"><div class="ttname"><a href="class_uni_dx_1_1_d3_d_manager.html">UniDx::D3DManager</a></div><div class="ttdoc">DirectXの3D描画機能を提供する</div><div class="ttdef"><b>Definition</b> D3DManager.h:28</div></div>
 <div class="ttc" id="aclass_uni_dx_1_1_d3_d_manager_html_a0446cbe29fca9e47c1a73ff1b5edee75"><div class="ttname"><a href="class_uni_dx_1_1_d3_d_manager.html#a0446cbe29fca9e47c1a73ff1b5edee75">UniDx::D3DManager::~D3DManager</a></div><div class="ttdeci">~D3DManager()</div><div class="ttdef"><b>Definition</b> D3DManager.cpp:180</div></div>
 <div class="ttc" id="aclass_uni_dx_1_1_d3_d_manager_html_a622df7eefdd47923594ebd9dc4c6360b"><div class="ttname"><a href="class_uni_dx_1_1_d3_d_manager.html#a622df7eefdd47923594ebd9dc4c6360b">UniDx::D3DManager::GetDevice</a></div><div class="ttdeci">const ComPtr&lt; ID3D11Device &gt; &amp; GetDevice() const</div><div class="ttdef"><b>Definition</b> D3DManager.h:38</div></div>
 <div class="ttc" id="aclass_uni_dx_1_1_d3_d_manager_html_abd415b43a59c371a23d7640e9dcb7c63"><div class="ttname"><a href="class_uni_dx_1_1_d3_d_manager.html#abd415b43a59c371a23d7640e9dcb7c63">UniDx::D3DManager::getScreenSize</a></div><div class="ttdeci">const Vector2 &amp; getScreenSize() const</div><div class="ttdef"><b>Definition</b> D3DManager.h:53</div></div>
 <div class="ttc" id="aclass_uni_dx_1_1_d3_d_manager_html_ac5ed036554e449b89ee9ea47efb65d18"><div class="ttname"><a href="class_uni_dx_1_1_d3_d_manager.html#ac5ed036554e449b89ee9ea47efb65d18">UniDx::D3DManager::GetContext</a></div><div class="ttdeci">const ComPtr&lt; ID3D11DeviceContext &gt; &amp; GetContext() const</div><div class="ttdef"><b>Definition</b> D3DManager.h:39</div></div>
 <div class="ttc" id="aclass_uni_dx_1_1_d3_d_manager_html_ac706c5b044a1d5e2b06e2adbbbc77fce"><div class="ttname"><a href="class_uni_dx_1_1_d3_d_manager.html#ac706c5b044a1d5e2b06e2adbbbc77fce">UniDx::D3DManager::Clear</a></div><div class="ttdeci">void Clear(float r, float g, float b, float a)</div><div class="ttdef"><b>Definition</b> D3DManager.cpp:171</div></div>
-<div class="ttc" id="aclass_uni_dx_1_1_d3_d_manager_html_af2b4f6643c1f5d5613cde9c50396a28f"><div class="ttname"><a href="class_uni_dx_1_1_d3_d_manager.html#af2b4f6643c1f5d5613cde9c50396a28f">UniDx::D3DManager::Initialize</a></div><div class="ttdeci">bool Initialize(HWND hWnd, int width, int height)</div><div class="ttdef"><b>Definition</b> D3DManager.cpp:10</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_d3_d_manager_html_af2b4f6643c1f5d5613cde9c50396a28f"><div class="ttname"><a href="class_uni_dx_1_1_d3_d_manager.html#af2b4f6643c1f5d5613cde9c50396a28f">UniDx::D3DManager::Initialize</a></div><div class="ttdeci">bool Initialize(HWND hWnd, int width, int height)</div><div class="ttdoc">Direct3Dを初期化し、使用できるようにする</div><div class="ttdef"><b>Definition</b> D3DManager.cpp:10</div></div>
 <div class="ttc" id="aclass_uni_dx_1_1_d3_d_manager_html_af676d12d0d9bf879559dce5edfaccad6"><div class="ttname"><a href="class_uni_dx_1_1_d3_d_manager.html#af676d12d0d9bf879559dce5edfaccad6">UniDx::D3DManager::setCurrentCurrentRenderingMode</a></div><div class="ttdeci">void setCurrentCurrentRenderingMode(RenderingMode r)</div><div class="ttdef"><b>Definition</b> D3DManager.h:57</div></div>
 <div class="ttc" id="aclass_uni_dx_1_1_d3_d_manager_html_afb6ad50949ba080ab75c94ef176ef731"><div class="ttname"><a href="class_uni_dx_1_1_d3_d_manager.html#afb6ad50949ba080ab75c94ef176ef731">UniDx::D3DManager::getCurrentRenderingMode</a></div><div class="ttdeci">RenderingMode getCurrentRenderingMode() const</div><div class="ttdef"><b>Definition</b> D3DManager.h:56</div></div>
 <div class="ttc" id="aclass_uni_dx_1_1_d3_d_manager_html_afe6ba981703df012c77616d35ccf26b4"><div class="ttname"><a href="class_uni_dx_1_1_d3_d_manager.html#afe6ba981703df012c77616d35ccf26b4">UniDx::D3DManager::Present</a></div><div class="ttdeci">void Present()</div><div class="ttdef"><b>Definition</b> D3DManager.h:48</div></div>
-<div class="ttc" id="aclass_uni_dx_1_1_singleton_html_aa1d5dc993efef5faa60dc69cb141ae1f"><div class="ttname"><a href="class_uni_dx_1_1_singleton.html#aa1d5dc993efef5faa60dc69cb141ae1f">UniDx::Singleton&lt; D3DManager &gt;::Singleton</a></div><div class="ttdeci">Singleton()</div><div class="ttdef"><b>Definition</b> Singleton.h:37</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_singleton_html_aa1d5dc993efef5faa60dc69cb141ae1f"><div class="ttname"><a href="class_uni_dx_1_1_singleton.html#aa1d5dc993efef5faa60dc69cb141ae1f">UniDx::Singleton&lt; D3DManager &gt;::Singleton</a></div><div class="ttdeci">Singleton()</div><div class="ttdef"><b>Definition</b> Singleton.h:40</div></div>
 <div class="ttc" id="anamespace_uni_dx_html"><div class="ttname"><a href="namespace_uni_dx.html">UniDx</a></div><div class="ttdef"><b>Definition</b> AnimationCurve.cpp:5</div></div>
 <div class="ttc" id="anamespace_uni_dx_html_a0ef83c78637931767d874f8b99300418"><div class="ttname"><a href="namespace_uni_dx.html#a0ef83c78637931767d874f8b99300418">UniDx::RenderingMode</a></div><div class="ttdeci">RenderingMode</div><div class="ttdef"><b>Definition</b> UniDxDefine.h:31</div></div>
-<div class="ttc" id="astruct_uni_dx_1_1_vector2_html"><div class="ttname"><a href="struct_uni_dx_1_1_vector2.html">UniDx::Vector2</a></div><div class="ttdoc">2D ベクトル</div><div class="ttdef"><b>Definition</b> Math.h:22</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_vector2_html"><div class="ttname"><a href="struct_uni_dx_1_1_vector2.html">UniDx::Vector2</a></div><div class="ttdoc">2D ベクトル</div><div class="ttdef"><b>Definition</b> Math.h:24</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

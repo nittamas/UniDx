@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UniDx: include/UniDx/BoneMath.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UniDx
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_bone_math_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">BoneMath.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_bone_math_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_math_8h.html">Math.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_uni_dx.html">UniDx</a> {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span></div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_bone_mat3x4.html">   11</a></span><span class="keyword">struct </span><span class="keyword">alignas</span>(16) <a class="code hl_function" href="struct_uni_dx_1_1_bone_mat3x4.html#a7b434c390fcf03ac6820a8ff7ed22df0">BoneMat3x4</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_bone_mat3x4.html#a08664f0f08342d24ae78e2965b5ed74e">   13</a></span>    <a class="code hl_struct" href="struct_uni_dx_1_1_vector4.html">Vector4</a> <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#a08664f0f08342d24ae78e2965b5ed74e">c0</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_bone_mat3x4.html#ad459ce923c6633fb306d27bd6bfed94b">   14</a></span>    <a class="code hl_struct" href="struct_uni_dx_1_1_vector4.html">Vector4</a> <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#ad459ce923c6633fb306d27bd6bfed94b">c1</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_bone_mat3x4.html#abbb8750a40ab0da50a18b57401921f27">   15</a></span>    <a class="code hl_struct" href="struct_uni_dx_1_1_vector4.html">Vector4</a> <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#abbb8750a40ab0da50a18b57401921f27">c2</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_bone_mat3x4.html#a00c0f9e2eaa757b7aad5e57db3f5b4aa">   17</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_function" href="struct_uni_dx_1_1_bone_mat3x4.html#a7b434c390fcf03ac6820a8ff7ed22df0">BoneMat3x4</a> <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#a00c0f9e2eaa757b7aad5e57db3f5b4aa">identity</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_bone_mat3x4.html#a7b434c390fcf03ac6820a8ff7ed22df0">   19</a></span>    <span class="keyword">constexpr</span> <a class="code hl_function" href="struct_uni_dx_1_1_bone_mat3x4.html#a7b434c390fcf03ac6820a8ff7ed22df0">BoneMat3x4</a>() noexcept</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        : <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#a08664f0f08342d24ae78e2965b5ed74e">c0</a>(1, 0, 0, 0)</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        , <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#ad459ce923c6633fb306d27bd6bfed94b">c1</a>(0, 1, 0, 0)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        , <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#abbb8750a40ab0da50a18b57401921f27">c2</a>(0, 0, 1, 0)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    {}</div>
+</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_bone_mat3x4.html#ac913f251018b045657d0c3616aaa6184">   25</a></span>    <span class="keyword">constexpr</span> <a class="code hl_function" href="struct_uni_dx_1_1_bone_mat3x4.html#ac913f251018b045657d0c3616aaa6184">BoneMat3x4</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_uni_dx_1_1_vector4.html">Vector4</a>&amp; ic0, <span class="keyword">const</span> <a class="code hl_struct" href="struct_uni_dx_1_1_vector4.html">Vector4</a>&amp; ic1, <span class="keyword">const</span> <a class="code hl_struct" href="struct_uni_dx_1_1_vector4.html">Vector4</a>&amp; ic2) noexcept</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        : <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#a08664f0f08342d24ae78e2965b5ed74e">c0</a>(ic0), <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#ad459ce923c6633fb306d27bd6bfed94b">c1</a>(ic1), <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#abbb8750a40ab0da50a18b57401921f27">c2</a>(ic2)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    {}</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="}">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_bone_mat3x4.html#a6d9a9215bc44d0da8d7e3310b5507549">   30</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <a class="code hl_function" href="struct_uni_dx_1_1_bone_mat3x4.html#a7b434c390fcf03ac6820a8ff7ed22df0">BoneMat3x4</a> <a class="code hl_function" href="struct_uni_dx_1_1_bone_mat3x4.html#a6d9a9215bc44d0da8d7e3310b5507549">FromMatrix4x4</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_uni_dx_1_1_matrix4x4.html">Matrix4x4</a>&amp; m) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="struct_uni_dx_1_1_bone_mat3x4.html#a7b434c390fcf03ac6820a8ff7ed22df0">BoneMat3x4</a>(</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <a class="code hl_struct" href="struct_uni_dx_1_1_vector4.html">Vector4</a>(m.m00, m.m10, m.m20, m.m30),</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <a class="code hl_struct" href="struct_uni_dx_1_1_vector4.html">Vector4</a>(m.m01, m.m11, m.m21, m.m31),</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <a class="code hl_struct" href="struct_uni_dx_1_1_vector4.html">Vector4</a>(m.m02, m.m12, m.m22, m.m32)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        );</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
+</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_bone_mat3x4.html#af2ba747ee510baab844352b50e3943cc">   40</a></span>    <span class="keyword">constexpr</span> <a class="code hl_struct" href="struct_uni_dx_1_1_matrix4x4.html">Matrix4x4</a> <a class="code hl_function" href="struct_uni_dx_1_1_bone_mat3x4.html#af2ba747ee510baab844352b50e3943cc">ToMatrix4x4</a>() const noexcept</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">return</span> <a class="code hl_struct" href="struct_uni_dx_1_1_matrix4x4.html">Matrix4x4</a>(</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#a08664f0f08342d24ae78e2965b5ed74e">c0</a>.x, <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#ad459ce923c6633fb306d27bd6bfed94b">c1</a>.x, <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#abbb8750a40ab0da50a18b57401921f27">c2</a>.x, 0.0f,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#a08664f0f08342d24ae78e2965b5ed74e">c0</a>.y, <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#ad459ce923c6633fb306d27bd6bfed94b">c1</a>.y, <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#abbb8750a40ab0da50a18b57401921f27">c2</a>.y, 0.0f,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#a08664f0f08342d24ae78e2965b5ed74e">c0</a>.z, <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#ad459ce923c6633fb306d27bd6bfed94b">c1</a>.z, <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#abbb8750a40ab0da50a18b57401921f27">c2</a>.z, 0.0f,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#a08664f0f08342d24ae78e2965b5ed74e">c0</a>.w, <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#ad459ce923c6633fb306d27bd6bfed94b">c1</a>.w, <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#abbb8750a40ab0da50a18b57401921f27">c2</a>.w, 1.0f</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        );</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
+</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_bone_mat3x4.html#a8cf4d9c6d7c9ea5173d9999e6309b935">   51</a></span>    <span class="keyword">constexpr</span> <a class="code hl_struct" href="struct_uni_dx_1_1_vector3.html">Vector3</a> <a class="code hl_function" href="struct_uni_dx_1_1_bone_mat3x4.html#a8cf4d9c6d7c9ea5173d9999e6309b935">translation</a>() const noexcept { <span class="keywordflow">return</span> <a class="code hl_struct" href="struct_uni_dx_1_1_vector3.html">Vector3</a>(<a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#a08664f0f08342d24ae78e2965b5ed74e">c0</a>.w, <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#ad459ce923c6633fb306d27bd6bfed94b">c1</a>.w, <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#abbb8750a40ab0da50a18b57401921f27">c2</a>.w); }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_bone_mat3x4.html#af3c949468ab9763887ec7e268d136eff">   52</a></span>    <span class="keyword">constexpr</span> <span class="keywordtype">void</span> <a class="code hl_function" href="struct_uni_dx_1_1_bone_mat3x4.html#af3c949468ab9763887ec7e268d136eff">setTranslation</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_uni_dx_1_1_vector3.html">Vector3</a>&amp; t) <span class="keyword">noexcept</span> { <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#a08664f0f08342d24ae78e2965b5ed74e">c0</a>.w = t.x; <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#ad459ce923c6633fb306d27bd6bfed94b">c1</a>.w = t.y; <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#abbb8750a40ab0da50a18b57401921f27">c2</a>.w = t.z; }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_bone_mat3x4.html#a3f900ddf43d794da5513610b777c57d4">   55</a></span>    <span class="keyword">constexpr</span> <a class="code hl_struct" href="struct_uni_dx_1_1_vector3.html">Vector3</a> <a class="code hl_function" href="struct_uni_dx_1_1_bone_mat3x4.html#a3f900ddf43d794da5513610b777c57d4">TransformPoint</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_uni_dx_1_1_vector3.html">Vector3</a>&amp; p) <span class="keyword">const</span> <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">return</span> <a class="code hl_struct" href="struct_uni_dx_1_1_vector3.html">Vector3</a>(</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            p.x * <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#a08664f0f08342d24ae78e2965b5ed74e">c0</a>.x + p.y * <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#ad459ce923c6633fb306d27bd6bfed94b">c1</a>.x + p.z * <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#abbb8750a40ab0da50a18b57401921f27">c2</a>.x + <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#a08664f0f08342d24ae78e2965b5ed74e">c0</a>.w,</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            p.x * <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#a08664f0f08342d24ae78e2965b5ed74e">c0</a>.y + p.y * <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#ad459ce923c6633fb306d27bd6bfed94b">c1</a>.y + p.z * <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#abbb8750a40ab0da50a18b57401921f27">c2</a>.y + <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#ad459ce923c6633fb306d27bd6bfed94b">c1</a>.w,</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            p.x * <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#a08664f0f08342d24ae78e2965b5ed74e">c0</a>.z + p.y * <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#ad459ce923c6633fb306d27bd6bfed94b">c1</a>.z + p.z * <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#abbb8750a40ab0da50a18b57401921f27">c2</a>.z + <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#abbb8750a40ab0da50a18b57401921f27">c2</a>.w</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        );</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span></div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_bone_mat3x4.html#ac9ed46d46938b56d581066cfaaa59204">   65</a></span>    <span class="keyword">constexpr</span> <a class="code hl_struct" href="struct_uni_dx_1_1_vector3.html">Vector3</a> <a class="code hl_function" href="struct_uni_dx_1_1_bone_mat3x4.html#ac9ed46d46938b56d581066cfaaa59204">TransformVector</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_uni_dx_1_1_vector3.html">Vector3</a>&amp; v) <span class="keyword">const</span> <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">return</span> <a class="code hl_struct" href="struct_uni_dx_1_1_vector3.html">Vector3</a>(</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            v.x * <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#a08664f0f08342d24ae78e2965b5ed74e">c0</a>.x + v.y * <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#ad459ce923c6633fb306d27bd6bfed94b">c1</a>.x + v.z * <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#abbb8750a40ab0da50a18b57401921f27">c2</a>.x,</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            v.x * <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#a08664f0f08342d24ae78e2965b5ed74e">c0</a>.y + v.y * <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#ad459ce923c6633fb306d27bd6bfed94b">c1</a>.y + v.z * <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#abbb8750a40ab0da50a18b57401921f27">c2</a>.y,</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            v.x * <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#a08664f0f08342d24ae78e2965b5ed74e">c0</a>.z + v.y * <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#ad459ce923c6633fb306d27bd6bfed94b">c1</a>.z + v.z * <a class="code hl_variable" href="struct_uni_dx_1_1_bone_mat3x4.html#abbb8750a40ab0da50a18b57401921f27">c2</a>.z</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        );</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
+</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>};</div>
+</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>} <span class="comment">// namespace UniDx</span></div>
+<div class="ttc" id="a_math_8h_html"><div class="ttname"><a href="_math_8h.html">Math.h</a></div><div class="ttdoc">基本的な数学型 (ベクトル・クォータニオン・行列・色) とユーティリティ関数</div></div>
+<div class="ttc" id="anamespace_uni_dx_html"><div class="ttname"><a href="namespace_uni_dx.html">UniDx</a></div><div class="ttdef"><b>Definition</b> AnimationCurve.cpp:5</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_bone_mat3x4_html_a00c0f9e2eaa757b7aad5e57db3f5b4aa"><div class="ttname"><a href="struct_uni_dx_1_1_bone_mat3x4.html#a00c0f9e2eaa757b7aad5e57db3f5b4aa">UniDx::BoneMat3x4::identity</a></div><div class="ttdeci">static const BoneMat3x4 identity</div><div class="ttdef"><b>Definition</b> BoneMath.h:17</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_bone_mat3x4_html_a08664f0f08342d24ae78e2965b5ed74e"><div class="ttname"><a href="struct_uni_dx_1_1_bone_mat3x4.html#a08664f0f08342d24ae78e2965b5ed74e">UniDx::BoneMat3x4::c0</a></div><div class="ttdeci">Vector4 c0</div><div class="ttdef"><b>Definition</b> BoneMath.h:13</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_bone_mat3x4_html_a3f900ddf43d794da5513610b777c57d4"><div class="ttname"><a href="struct_uni_dx_1_1_bone_mat3x4.html#a3f900ddf43d794da5513610b777c57d4">UniDx::BoneMat3x4::TransformPoint</a></div><div class="ttdeci">constexpr Vector3 TransformPoint(const Vector3 &amp;p) const noexcept</div><div class="ttdoc">点を変換（平行移動込み）</div><div class="ttdef"><b>Definition</b> BoneMath.h:55</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_bone_mat3x4_html_a6d9a9215bc44d0da8d7e3310b5507549"><div class="ttname"><a href="struct_uni_dx_1_1_bone_mat3x4.html#a6d9a9215bc44d0da8d7e3310b5507549">UniDx::BoneMat3x4::FromMatrix4x4</a></div><div class="ttdeci">static constexpr BoneMat3x4 FromMatrix4x4(const Matrix4x4 &amp;m) noexcept</div><div class="ttdoc">Matrix4x4（row-major）から作る</div><div class="ttdef"><b>Definition</b> BoneMath.h:30</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_bone_mat3x4_html_a7b434c390fcf03ac6820a8ff7ed22df0"><div class="ttname"><a href="struct_uni_dx_1_1_bone_mat3x4.html#a7b434c390fcf03ac6820a8ff7ed22df0">UniDx::BoneMat3x4::BoneMat3x4</a></div><div class="ttdeci">constexpr BoneMat3x4() noexcept</div><div class="ttdef"><b>Definition</b> BoneMath.h:19</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_bone_mat3x4_html_a8cf4d9c6d7c9ea5173d9999e6309b935"><div class="ttname"><a href="struct_uni_dx_1_1_bone_mat3x4.html#a8cf4d9c6d7c9ea5173d9999e6309b935">UniDx::BoneMat3x4::translation</a></div><div class="ttdeci">constexpr Vector3 translation() const noexcept</div><div class="ttdoc">平行移動成分</div><div class="ttdef"><b>Definition</b> BoneMath.h:51</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_bone_mat3x4_html_abbb8750a40ab0da50a18b57401921f27"><div class="ttname"><a href="struct_uni_dx_1_1_bone_mat3x4.html#abbb8750a40ab0da50a18b57401921f27">UniDx::BoneMat3x4::c2</a></div><div class="ttdeci">Vector4 c2</div><div class="ttdef"><b>Definition</b> BoneMath.h:15</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_bone_mat3x4_html_ac913f251018b045657d0c3616aaa6184"><div class="ttname"><a href="struct_uni_dx_1_1_bone_mat3x4.html#ac913f251018b045657d0c3616aaa6184">UniDx::BoneMat3x4::BoneMat3x4</a></div><div class="ttdeci">constexpr BoneMat3x4(const Vector4 &amp;ic0, const Vector4 &amp;ic1, const Vector4 &amp;ic2) noexcept</div><div class="ttdef"><b>Definition</b> BoneMath.h:25</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_bone_mat3x4_html_ac9ed46d46938b56d581066cfaaa59204"><div class="ttname"><a href="struct_uni_dx_1_1_bone_mat3x4.html#ac9ed46d46938b56d581066cfaaa59204">UniDx::BoneMat3x4::TransformVector</a></div><div class="ttdeci">constexpr Vector3 TransformVector(const Vector3 &amp;v) const noexcept</div><div class="ttdoc">方向ベクトルを変換（平行移動なし）</div><div class="ttdef"><b>Definition</b> BoneMath.h:65</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_bone_mat3x4_html_ad459ce923c6633fb306d27bd6bfed94b"><div class="ttname"><a href="struct_uni_dx_1_1_bone_mat3x4.html#ad459ce923c6633fb306d27bd6bfed94b">UniDx::BoneMat3x4::c1</a></div><div class="ttdeci">Vector4 c1</div><div class="ttdef"><b>Definition</b> BoneMath.h:14</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_bone_mat3x4_html_af2ba747ee510baab844352b50e3943cc"><div class="ttname"><a href="struct_uni_dx_1_1_bone_mat3x4.html#af2ba747ee510baab844352b50e3943cc">UniDx::BoneMat3x4::ToMatrix4x4</a></div><div class="ttdeci">constexpr Matrix4x4 ToMatrix4x4() const noexcept</div><div class="ttdoc">Matrix4x4 に戻す</div><div class="ttdef"><b>Definition</b> BoneMath.h:40</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_bone_mat3x4_html_af3c949468ab9763887ec7e268d136eff"><div class="ttname"><a href="struct_uni_dx_1_1_bone_mat3x4.html#af3c949468ab9763887ec7e268d136eff">UniDx::BoneMat3x4::setTranslation</a></div><div class="ttdeci">constexpr void setTranslation(const Vector3 &amp;t) noexcept</div><div class="ttdef"><b>Definition</b> BoneMath.h:52</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_matrix4x4_html"><div class="ttname"><a href="struct_uni_dx_1_1_matrix4x4.html">UniDx::Matrix4x4</a></div><div class="ttdoc">4x4 行列 (行ベクトル行優先)</div><div class="ttdef"><b>Definition</b> Math.h:307</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_vector3_html"><div class="ttname"><a href="struct_uni_dx_1_1_vector3.html">UniDx::Vector3</a></div><div class="ttdoc">3D ベクトル</div><div class="ttdef"><b>Definition</b> Math.h:57</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_vector4_html"><div class="ttname"><a href="struct_uni_dx_1_1_vector4.html">UniDx::Vector4</a></div><div class="ttdoc">4D ベクトル</div><div class="ttdef"><b>Definition</b> Math.h:134</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_450094861a7bbaf444577c849cb4d1c8.html">UniDx</a></li><li class="navelem"><a href="_bone_math_8h.html">BoneMath.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

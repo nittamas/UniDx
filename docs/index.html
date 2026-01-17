@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>UniDx: 総合概要</title>
+<title>UniDx: UniDx</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -18,6 +18,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -87,10 +88,87 @@ $(function(){initNavTree('index.html','',''); });
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">UniDx 詳解</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title"><a class="el" href="namespace_uni_dx.html">UniDx</a> </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md_doxygen_2mainpage"></a></p>
+<p>Unity-like DirectX framework for learning purposes. ※ This project is primarily documented in Japanese.</p>
+<p>UniDxは、UnityライクなDirectX用ゲームフレームワークです。</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
+用途</h1>
+<ul>
+<li>DirectX 入門（特にUnity経験者）</li>
+<li>ゲームフレームワークの構造理解に</li>
+<li>フレームワーク作成の参考・たたき台として</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
+特徴</h1>
+<p><a class="el" href="class_uni_dx_1_1_game_object.html">GameObject</a>, <a class="el" href="class_uni_dx_1_1_component.html">Component</a>, <a class="el" href="class_uni_dx_1_1_transform.html">Transform</a>, <a class="el" href="class_uni_dx_1_1_behaviour.html">Behaviour</a> など、Unityでおなじみの階層構造</p>
+<ul>
+<li>簡易的な物理計算をサポート</li>
+<li>glTF形式の3Dモデルが使用可能</li>
+<li>比較的コンパクトで理解しやすいコード</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
+動作環境</h1>
+<ul>
+<li>Windows 10/11</li>
+<li>Visual Studio 2022</li>
+<li>DirectX 11</li>
+<li>C++20</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+依存ライブラリ</h1>
+<ul>
+<li>DirectXTK</li>
+<li>DirectXTex</li>
+<li>tinygltf</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+サンプル実行手順</h1>
+<h2>準備</h2>
+<p>このリポジトリは外部ライブラリを Git submodule として管理しています。 <br  />
+ clone 後、以下のコマンドをはじめに一度、実行してください。</p>
+<div class="fragment"><div class="line">git submodule update --init --recursive</div>
+</div><!-- fragment --><p> または、このリポジトリ自体を以下のコマンドでcloneしても構いません。</p>
+<div class="fragment"><div class="line">git clone --recursive https://github.com/nittamas/UniDx.git</div>
+</div><!-- fragment --><h2>実行</h2>
+<p>/samples/UniDxSamples.sln を Visual Studio 2022 で開いてください。</p>
+<p>ソリューションエクスプローラーで、Sample1_Sphereを右クリックして、 [スタートアップ プロジェクトに設定]を選択してください。</p>
+<p>メニューから[デバッグ]-[デバッグの開始]を選択してください。</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+Unityとの比較</h1>
+<h2>座標系</h2>
+<ul>
+<li><b>座標系</b>: Unity と同じ左手座標系（Y-up、Z-forward）</li>
+<li><b>行列レイアウト</b>: Row-Major（DirectX標準）<ul>
+<li>Unity は Column-Major</li>
+</ul>
+</li>
+</ul>
+<h2>行列・クォータニオン演算の順序</h2>
+<div class="fragment"><div class="line"><span class="comment">// UniDx: ベクトル * 行列（行ベクトル）</span></div>
+<div class="line">Vector3 worldPos = localPos * worldMatrix;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// UniDx: ベクトル * クォータニオン</span></div>
+<div class="line">Vector3 direction = localDir * rotation;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Unity: 行列 * ベクトル（列ベクトル）</span></div>
+<div class="line"><span class="comment">// Vector3 worldPos = worldMatrix * localPos;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Unity: クォータニオン * ベクトル</span></div>
+<div class="line"><span class="comment">// Vector3 direction = rotation * localDir;</span></div>
+</div><!-- fragment --><h2>シェーダー内での行列演算</h2>
+<div class="fragment"><div class="line">// UniDx (HLSL)</div>
+<div class="line">float4 worldPos = mul(float4(localPos, 1), world);</div>
+<div class="line">float4 clipPos  = mul(worldPos, view);</div>
+<div class="line">clipPos         = mul(clipPos, projection);</div>
+<div class="line"> </div>
+<div class="line">// Unity (ShaderLab)</div>
+<div class="line">// float4 clipPos = mul(UNITY_MATRIX_MVP, float4(localPos, 1));</div>
+</div><!-- fragment --><p>※ <a class="el" href="namespace_uni_dx.html">UniDx</a> は Unity Technologies および Microsoft と関係のない、独立したプロジェクトです。 </p>
+</div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
 </div><!-- doc-content -->

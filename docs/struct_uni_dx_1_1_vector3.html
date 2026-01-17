@@ -18,6 +18,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -107,6 +108,7 @@ UniDx::Vector3 の継承関係図</div>
 公開メンバ関数</h2></td></tr>
 <tr class="memitem:af1236c0b75210fed6781ff2fd3e4723e" id="r_af1236c0b75210fed6781ff2fd3e4723e"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1236c0b75210fed6781ff2fd3e4723e">Vector3</a> () noexcept</td></tr>
 <tr class="memitem:a62136ece80b0f4a4f516e3c4c42c3580" id="r_a62136ece80b0f4a4f516e3c4c42c3580"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62136ece80b0f4a4f516e3c4c42c3580">Vector3</a> (float ix, float iy, float iz) noexcept</td></tr>
+<tr class="memitem:a364386bd6d4d80be3713884fd8401c6e" id="r_a364386bd6d4d80be3713884fd8401c6e"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a364386bd6d4d80be3713884fd8401c6e">Vector3</a> (<a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> v, float iz) noexcept</td></tr>
 <tr class="memitem:abaf9b008e37c7ddd1eaa3844dbf4556b" id="r_abaf9b008e37c7ddd1eaa3844dbf4556b"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abaf9b008e37c7ddd1eaa3844dbf4556b">Vector3</a> (float ix) noexcept</td></tr>
 <tr class="memitem:afd4206f7fd012bcb9d88ab84439ace6b" id="r_afd4206f7fd012bcb9d88ab84439ace6b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd4206f7fd012bcb9d88ab84439ace6b">Vector3</a> (const DirectX::XMFLOAT3 &amp;V) noexcept</td></tr>
 <tr class="memitem:af8979b1253d6a45a4a12f691b0835f5a" id="r_af8979b1253d6a45a4a12f691b0835f5a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8979b1253d6a45a4a12f691b0835f5a">Vector3</a> (const DirectX::XMVECTOR &amp;v)</td></tr>
@@ -118,6 +120,7 @@ UniDx::Vector3 の継承関係図</div>
 <tr class="memdesc:a4711c7351ba0010894c90a96eca35957"><td class="mdescLeft">&#160;</td><td class="mdescRight">正規化したベクトルを返す  <br /></td></tr>
 <tr class="memitem:a8241f42b53c4dcc371656d267f5ceb91" id="r_a8241f42b53c4dcc371656d267f5ceb91"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#af1236c0b75210fed6781ff2fd3e4723e">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8241f42b53c4dcc371656d267f5ceb91">operator+</a> () const noexcept</td></tr>
 <tr class="memitem:acf1d0d90de69c8e4ceb30bb7cf52028c" id="r_acf1d0d90de69c8e4ceb30bb7cf52028c"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#af1236c0b75210fed6781ff2fd3e4723e">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf1d0d90de69c8e4ceb30bb7cf52028c">operator-</a> () const noexcept</td></tr>
+<tr class="memitem:a943a912f84649eceb357ef9f1dea9108" id="r_a943a912f84649eceb357ef9f1dea9108"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a943a912f84649eceb357ef9f1dea9108">operator Vector2</a> () const noexcept</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 静的公開変数類</h2></td></tr>
@@ -136,7 +139,7 @@ UniDx::Vector3 の継承関係図</div>
 <div class="textblock"><p>3D ベクトル </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
 <a id="af1236c0b75210fed6781ff2fd3e4723e" name="af1236c0b75210fed6781ff2fd3e4723e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1236c0b75210fed6781ff2fd3e4723e">&#9670;&#160;</a></span>Vector3() <span class="overload">[1/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af1236c0b75210fed6781ff2fd3e4723e">&#9670;&#160;</a></span>Vector3() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -161,7 +164,7 @@ UniDx::Vector3 の継承関係図</div>
 </div>
 </div>
 <a id="a62136ece80b0f4a4f516e3c4c42c3580" name="a62136ece80b0f4a4f516e3c4c42c3580"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62136ece80b0f4a4f516e3c4c42c3580">&#9670;&#160;</a></span>Vector3() <span class="overload">[2/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a62136ece80b0f4a4f516e3c4c42c3580">&#9670;&#160;</a></span>Vector3() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -194,8 +197,37 @@ UniDx::Vector3 の継承関係図</div>
 
 </div>
 </div>
+<a id="a364386bd6d4d80be3713884fd8401c6e" name="a364386bd6d4d80be3713884fd8401c6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a364386bd6d4d80be3713884fd8401c6e">&#9670;&#160;</a></span>Vector3() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UniDx::Vector3::Vector3 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a></td>          <td class="paramname"><span class="paramname"><em>v</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>iz</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="abaf9b008e37c7ddd1eaa3844dbf4556b" name="abaf9b008e37c7ddd1eaa3844dbf4556b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abaf9b008e37c7ddd1eaa3844dbf4556b">&#9670;&#160;</a></span>Vector3() <span class="overload">[3/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abaf9b008e37c7ddd1eaa3844dbf4556b">&#9670;&#160;</a></span>Vector3() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -220,7 +252,7 @@ UniDx::Vector3 の継承関係図</div>
 </div>
 </div>
 <a id="afd4206f7fd012bcb9d88ab84439ace6b" name="afd4206f7fd012bcb9d88ab84439ace6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd4206f7fd012bcb9d88ab84439ace6b">&#9670;&#160;</a></span>Vector3() <span class="overload">[4/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afd4206f7fd012bcb9d88ab84439ace6b">&#9670;&#160;</a></span>Vector3() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -245,7 +277,7 @@ UniDx::Vector3 の継承関係図</div>
 </div>
 </div>
 <a id="af8979b1253d6a45a4a12f691b0835f5a" name="af8979b1253d6a45a4a12f691b0835f5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8979b1253d6a45a4a12f691b0835f5a">&#9670;&#160;</a></span>Vector3() <span class="overload">[5/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af8979b1253d6a45a4a12f691b0835f5a">&#9670;&#160;</a></span>Vector3() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -321,6 +353,31 @@ UniDx::Vector3 の継承関係図</div>
 </div><div class="memdoc">
 
 <p>正規化したベクトルを返す </p>
+
+</div>
+</div>
+<a id="a943a912f84649eceb357ef9f1dea9108" name="a943a912f84649eceb357ef9f1dea9108"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a943a912f84649eceb357ef9f1dea9108">&#9670;&#160;</a></span>operator Vector2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UniDx::Vector3::operator <a class="el" href="struct_uni_dx_1_1_vector2.html">Vector2</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

@@ -1,4 +1,8 @@
-﻿#pragma once
+﻿/**
+ * @file Renderer.h
+ * @brief 3D描画を行うコンポーネント
+ */
+#pragma once
 
 #include <memory>
 #include <map>
@@ -17,10 +21,7 @@ class Camera;
 class Material;
 
 
-/**
- * @file Renderer.h
- * @brief 3D描画を行う基本コンポーネント
- */
+ /// @brief 3D描画を行う基本コンポーネント
 class Renderer : public Component
 {
 public:
@@ -67,7 +68,7 @@ protected:
     virtual void bindLightPerObject();
 };
 
-/** @brief メッシュ用のレンダラーコンポーネント */
+/// @brief メッシュ用のレンダラーコンポーネント
 class MeshRenderer : public Renderer
 {
 public:

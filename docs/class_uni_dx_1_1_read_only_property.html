@@ -18,6 +18,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -92,6 +93,9 @@ $(function(){initNavTree('class_uni_dx_1_1_read_only_property.html','','class_un
 </div><!--header-->
 <div class="contents">
 
+<p>読み取り専用プロパティ  
+ <a href="#details">[詳解]</a></p>
+
 <p><code>#include &lt;<a class="el" href="_property_8h_source.html">Property.h</a>&gt;</code></p>
 <div class="dynheader">
 UniDx::ReadOnlyProperty&lt; T &gt; の継承関係図</div>
@@ -99,7 +103,7 @@ UniDx::ReadOnlyProperty&lt; T &gt; の継承関係図</div>
  <div class="center">
   <img src="class_uni_dx_1_1_read_only_property.png" usemap="#UniDx_3A_3AReadOnlyProperty_3C_20T_20_3E_map" alt=""/>
   <map id="UniDx_3A_3AReadOnlyProperty_3C_20T_20_3E_map" name="UniDx_3A_3AReadOnlyProperty_3C_20T_20_3E_map">
-<area href="class_uni_dx_1_1_property.html" alt="UniDx::Property&lt; T &gt;" shape="rect" coords="0,56,187,80"/>
+<area href="class_uni_dx_1_1_property.html" title="読み書きプロパティ" alt="UniDx::Property&lt; T &gt;" shape="rect" coords="0,56,187,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -110,16 +114,23 @@ UniDx::ReadOnlyProperty&lt; T &gt; の継承関係図</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
 <tr class="memitem:ac31e52abc7c8c2ad3f92893612794dd8" id="r_ac31e52abc7c8c2ad3f92893612794dd8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac31e52abc7c8c2ad3f92893612794dd8">ReadOnlyProperty</a> (<a class="el" href="#a40ff4620646d58240e119e02a378d1b8">Getter</a> getter)</td></tr>
+<tr class="memdesc:ac31e52abc7c8c2ad3f92893612794dd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getterを与えるコンストラクタ  <br /></td></tr>
 <tr class="memitem:ac05c2db23177be404b8e3022149f034e" id="r_ac05c2db23177be404b8e3022149f034e"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac05c2db23177be404b8e3022149f034e">get</a> () const</td></tr>
+<tr class="memdesc:ac05c2db23177be404b8e3022149f034e"><td class="mdescLeft">&#160;</td><td class="mdescRight">値の取得  <br /></td></tr>
 <tr class="memitem:a338bcc7c596d466f1d58a92e1e3c0df8" id="r_a338bcc7c596d466f1d58a92e1e3c0df8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a338bcc7c596d466f1d58a92e1e3c0df8">operator T</a> () const</td></tr>
+<tr class="memdesc:a338bcc7c596d466f1d58a92e1e3c0df8"><td class="mdescLeft">&#160;</td><td class="mdescRight">値の変換  <br /></td></tr>
 <tr class="memitem:a2757cbac91022135bbfa6f210c0e1c00" id="r_a2757cbac91022135bbfa6f210c0e1c00"><td class="memTemplParams" colspan="2">template&lt;typename U&gt; </td></tr>
 <tr class="memitem:a2757cbac91022135bbfa6f210c0e1c00 template"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2757cbac91022135bbfa6f210c0e1c00">operator&lt;=&gt;</a> (const U &amp;rhs) const</td></tr>
+<tr class="memdesc:a2757cbac91022135bbfa6f210c0e1c00"><td class="mdescLeft">&#160;</td><td class="mdescRight">三方比較演算  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 限定公開変数類</h2></td></tr>
 <tr class="memitem:a9779cf47e9263511daf4f24358261c3c" id="r_a9779cf47e9263511daf4f24358261c3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a40ff4620646d58240e119e02a378d1b8">Getter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9779cf47e9263511daf4f24358261c3c">getter_</a></td></tr>
 </table>
-<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">型定義メンバ詳解</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+class UniDx::ReadOnlyProperty&lt; T &gt;</div><p>読み取り専用プロパティ </p>
+</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">型定義メンバ詳解</h2>
 <a id="a40ff4620646d58240e119e02a378d1b8" name="a40ff4620646d58240e119e02a378d1b8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a40ff4620646d58240e119e02a378d1b8">&#9670;&#160;</a></span>Getter</h2>
 
@@ -162,6 +173,8 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Getterを与えるコンストラクタ </p>
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
@@ -190,6 +203,8 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>値の取得 </p>
+
 </div>
 </div>
 <a id="a338bcc7c596d466f1d58a92e1e3c0df8" name="a338bcc7c596d466f1d58a92e1e3c0df8"></a>
@@ -216,6 +231,8 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>値の変換 </p>
 
 </div>
 </div>
@@ -245,6 +262,8 @@ template&lt;typename U&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>三方比較演算 </p>
 
 </div>
 </div>

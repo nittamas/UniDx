@@ -268,5 +268,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Doxyfile" />
+    <None Include="..\README.md" />
+    <None Include="..\CHANGELOG.md" />
   </ItemGroup>
 </Project>

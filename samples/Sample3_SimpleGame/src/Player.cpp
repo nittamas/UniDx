@@ -32,7 +32,7 @@ namespace
         Vector3(-80,  0,  0),
         Vector3( 30,  0, 45),
         Vector3(-30,  0, 45),
-        Vector3(  0,-60,  0),
+        Vector3( 30,  0,  0),
     };
     // アニメーションさせる角度のオフセット（pitch, yaw, roll）
     const Vector3 Offset[] =

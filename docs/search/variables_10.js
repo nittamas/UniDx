@@ -1,15 +1,17 @@
 var searchData=
 [
-  ['samplerstate_0',['samplerState',['../class_uni_dx_1_1_texture.html#af06265cf7e6e8b95bffde3e6c5506030',1,'UniDx::Texture']]],
-  ['shader_1',['shader',['../class_uni_dx_1_1_material.html#ab85da794c38ee8e6508cd677effa9a83',1,'UniDx::Material']]],
-  ['shadowindex_2',['shadowIndex',['../struct_uni_dx_1_1_g_p_u_light.html#abc26da642a89a5f8a8c1a7b74cebb71f',1,'UniDx::GPULight']]],
-  ['singleton_3c_20t_20_3e_3a_3ainstance_5f_3',['instance_',['../namespace_uni_dx.html#a2536a42f921589946dd431cf3cff17d2',1,'UniDx']]],
-  ['size_4',['size',['../class_uni_dx_1_1_canvas.html#ab31f358af0925883db7bae0c476489f0',1,'UniDx::Canvas::size'],['../class_uni_dx_1_1_a_a_b_b_collider.html#af88c8a9d6520387a009372cc33df78b4',1,'UniDx::AABBCollider::size']]],
-  ['spotangle_5',['spotAngle',['../class_uni_dx_1_1_light.html#a0ba683d79d6482d96be7af227a871ae1',1,'UniDx::Light']]],
-  ['spotdirws_6',['spotDirWS',['../struct_uni_dx_1_1_g_p_u_light.html#a4d1df030d9b3cc46e568f8b945a170a6',1,'UniDx::GPULight']]],
-  ['spotlightcount_7',['spotLightCount',['../struct_uni_dx_1_1_constant_buffer_light_per_object.html#a6c5970b1ed9cc6d2eed3e6aab6778e1a',1,'UniDx::ConstantBufferLightPerObject']]],
-  ['spotlights_8',['spotLights',['../struct_uni_dx_1_1_constant_buffer_light_per_object.html#ab424234c51e85eca2a9de275ef1f981e',1,'UniDx::ConstantBufferLightPerObject']]],
-  ['spotoutercos_9',['spotOuterCos',['../struct_uni_dx_1_1_g_p_u_light.html#af423fe6bbc1a63f3aa09338596304363',1,'UniDx::GPULight']]],
-  ['stride_10',['stride',['../struct_uni_dx_1_1_sub_mesh.html#a5a8e3dd8197b9373069844c65ce37026',1,'UniDx::SubMesh']]],
-  ['submesh_11',['submesh',['../class_uni_dx_1_1_mesh.html#ae17b6b9585021385bcfa3f00b3da185b',1,'UniDx::Mesh']]]
+  ['r_0',['r',['../struct_uni_dx_1_1_color.html#adb3d679370671be2a4c0f8cd1a9d68ff',1,'UniDx::Color']]],
+  ['rad2deg_1',['Rad2Deg',['../namespace_uni_dx.html#aea74f475116138d687bdf01556cf2c19',1,'UniDx']]],
+  ['radius_2',['radius',['../class_uni_dx_1_1_sphere_collider.html#a37fe2aab85463714de0854399f1efb02',1,'UniDx::SphereCollider']]],
+  ['range_3',['range',['../class_uni_dx_1_1_light.html#ae118c1c55e8350b1761738ade4fb37f2',1,'UniDx::Light']]],
+  ['rangeinv_4',['rangeInv',['../struct_uni_dx_1_1_point_light_buffer.html#afae7cb3cf1b61fa7f6d724f8923570d8',1,'UniDx::PointLightBuffer::rangeInv'],['../struct_uni_dx_1_1_spot_light_buffer.html#aa00f065e71af2478332f13928139c0a6',1,'UniDx::SpotLightBuffer::rangeInv']]],
+  ['rangeorinvcos_5',['rangeOrInvCos',['../struct_uni_dx_1_1_g_p_u_light.html#aa67bc3fc0658a950802d3c53dddd853e',1,'UniDx::GPULight']]],
+  ['rasterizerstate_6',['rasterizerState',['../class_uni_dx_1_1_material.html#a715dc38dc2acb701520d82162fec4eb1',1,'UniDx::Material']]],
+  ['red_7',['red',['../struct_uni_dx_1_1_color.html#ad3c04a9a8c6e2bd14cc887d68cf8eb14',1,'UniDx::Color']]],
+  ['reference_8',['reference',['../struct_uni_dx_1_1_skin_instance.html#a863c4f020fc16db721def7c876500110',1,'UniDx::SkinInstance']]],
+  ['renderer_9',['renderer',['../class_uni_dx_1_1_gltf_model.html#a2fdd284c54c57cf556f5279a365af141',1,'UniDx::GltfModel']]],
+  ['renderingmode_10',['renderingMode',['../class_uni_dx_1_1_material.html#ac06b6333620f336cc0e19ee0e9c995a8',1,'UniDx::Material']]],
+  ['right_11',['right',['../struct_uni_dx_1_1_vector2.html#a0cbac58fb80b7196943a527db878c389',1,'UniDx::Vector2::right'],['../struct_uni_dx_1_1_vector3.html#af86157c5daad276f8a916e799cdc44c1',1,'UniDx::Vector3::right'],['../class_uni_dx_1_1_transform.html#afda010016d9c7abda9a5b8831ff4a22d',1,'UniDx::Transform::right']]],
+  ['rotation_12',['rotation',['../class_uni_dx_1_1_rigidbody.html#a7a77240d830204c4ef58302ec4174d61',1,'UniDx::Rigidbody::rotation'],['../class_uni_dx_1_1_transform.html#ad1504b6273a741386f0d74afe7541485',1,'UniDx::Transform::rotation']]],
+  ['routegameobjects_13',['routeGameObjects',['../class_uni_dx_1_1_scene.html#a35778959257e86180153cde39fd7dbf4',1,'UniDx::Scene']]]
 ];

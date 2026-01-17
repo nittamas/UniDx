@@ -11,8 +11,9 @@ var searchData=
   ['constantbufferpercamera_8',['ConstantBufferPerCamera',['../struct_uni_dx_1_1_constant_buffer_per_camera.html',1,'UniDx']]],
   ['constantbufferpermaterial_9',['ConstantBufferPerMaterial',['../struct_uni_dx_1_1_constant_buffer_per_material.html',1,'UniDx']]],
   ['constantbufferperobject_10',['ConstantBufferPerObject',['../struct_uni_dx_1_1_constant_buffer_per_object.html',1,'UniDx']]],
-  ['contact_11',['Contact',['../struct_uni_dx_1_1_contact.html',1,'UniDx']]],
-  ['contactmanifold_12',['ContactManifold',['../struct_uni_dx_1_1_contact_manifold.html',1,'UniDx']]],
-  ['contactpoint_13',['ContactPoint',['../struct_uni_dx_1_1_contact_point.html',1,'UniDx']]],
-  ['cuberenderer_14',['CubeRenderer',['../class_uni_dx_1_1_cube_renderer.html',1,'UniDx']]]
+  ['constantbufferskinperobject_11',['ConstantBufferSkinPerObject',['../struct_uni_dx_1_1_constant_buffer_skin_per_object.html',1,'UniDx']]],
+  ['contact_12',['Contact',['../struct_uni_dx_1_1_contact.html',1,'UniDx']]],
+  ['contactmanifold_13',['ContactManifold',['../struct_uni_dx_1_1_contact_manifold.html',1,'UniDx']]],
+  ['contactpoint_14',['ContactPoint',['../struct_uni_dx_1_1_contact_point.html',1,'UniDx']]],
+  ['cuberenderer_15',['CubeRenderer',['../class_uni_dx_1_1_cube_renderer.html',1,'UniDx']]]
 ];

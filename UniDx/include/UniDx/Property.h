@@ -1,20 +1,20 @@
-﻿#pragma once
+﻿/**
+ * @file Property.h
+ *
+ * @brief C#のプロパティライクな記述を実現するクラス
+ * ReadOnlyProperty<> 読み取り専用プロパティ
+ * Property<> 読み書きプロパティ
+ * メンバアクセス(.演算)が使えないなどの制約がある
+ */
+#pragma once
 
 #include <functional>
 #include "UniDxDefine.h"
 
-/**
- * @file Property.h
- *
- * @brief C#のプロパティライクな記述を実現するクラス
- * ReadOnlyProperty<>
- * Property<>
- * メンバアクセス(.演算)が使えないなどの制約がある
- */
 namespace UniDx
 {
 
-/** @brief 読み取り専用プロパティ */
+/// @brief 読み取り専用プロパティ
 template<typename T>
 class ReadOnlyProperty
 {
@@ -40,7 +40,7 @@ protected:
     Getter getter_;
 };
 
-/** @brief 読み取り専用プロパティポインタ版 */
+/// @brief 読み取り専用プロパティポインタ版
 template<typename T>
 class ReadOnlyProperty<T*>
 {
@@ -72,7 +72,7 @@ protected:
 };
 
 
-/** @brief 読み書きプロパティ */
+/// @brief 読み書きプロパティ
 template<typename T>
 class Property : public ReadOnlyProperty<T>
 {

@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UniDx: include/UniDx/Func.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UniDx
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_func_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Func.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_func_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_uni_dx.html">UniDx</a></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">template</span>&lt;<span class="keyword">class </span>C, <span class="keyword">class </span>R, <span class="keyword">class</span>... Args&gt;</div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_member_func.html">   11</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_uni_dx_1_1_member_func.html">MemberFunc</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_member_func.html#a9af25df79eccdf7312aff402ac52ffca">   13</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="struct_uni_dx_1_1_member_func.html#a9af25df79eccdf7312aff402ac52ffca">MemFn</a>       = R (C::*)(Args...);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_member_func.html#a709280b286fbf342bc9839f42f9f3762">   15</a></span>    C*    <span class="keywordtype">object</span> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_member_func.html#ac495098bf84fdd81a7922dd3e754f843">   16</a></span>    <a class="code hl_typedef" href="struct_uni_dx_1_1_member_func.html#a9af25df79eccdf7312aff402ac52ffca">MemFn</a> <a class="code hl_variable" href="struct_uni_dx_1_1_member_func.html#ac495098bf84fdd81a7922dd3e754f843">func</a>   = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_member_func.html#aaced5b6a939cfe7a3cd407e31e8fbe5b">   18</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_uni_dx_1_1_member_func.html#aaced5b6a939cfe7a3cd407e31e8fbe5b">isValid</a>() const noexcept { <span class="keywordflow">return</span> <span class="keywordtype">object</span> &amp;&amp; <a class="code hl_variable" href="struct_uni_dx_1_1_member_func.html#ac495098bf84fdd81a7922dd3e754f843">func</a>; }</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_member_func.html#a550306ccf8c91dd78e26c7739f69633f">   20</a></span>    R <a class="code hl_function" href="struct_uni_dx_1_1_member_func.html#a550306ccf8c91dd78e26c7739f69633f">operator()</a>(Args... args)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordflow">return</span> (<a class="code hl_variable" href="struct_uni_dx_1_1_member_func.html#a709280b286fbf342bc9839f42f9f3762">object</a>-&gt;*<a class="code hl_variable" href="struct_uni_dx_1_1_member_func.html#ac495098bf84fdd81a7922dd3e754f843">func</a>)(std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    }</div>
+</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>};</div>
+</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">template</span>&lt;<span class="keyword">class </span>C, <span class="keyword">class </span>R, <span class="keyword">class</span>... Args&gt;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="namespace_uni_dx.html#a0709857b4cce35af54f3d09f213e9b90">   26</a></span><a class="code hl_struct" href="struct_uni_dx_1_1_member_func.html">MemberFunc</a>&lt;C, R, Args...&gt; <a class="code hl_function" href="namespace_uni_dx.html#a0709857b4cce35af54f3d09f213e9b90">MakeMemberFunc</a>(C* obj, R (C::* func)(Args...)) { <span class="keywordflow">return</span> { obj, func }; }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">template</span>&lt;<span class="keyword">class </span>C, <span class="keyword">class</span>... Args&gt;</div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="};">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_member_action.html">   34</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_uni_dx_1_1_member_action.html">MemberAction</a></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>{</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_member_action.html#a0755bfa1e42044d5926db5aebc17ebc9">   36</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="struct_uni_dx_1_1_member_action.html#a0755bfa1e42044d5926db5aebc17ebc9">MemFn</a> = void(C::*)(Args...);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_member_action.html#ae0ca1ccd541e446c48ecb3583f49d3b7">   38</a></span>    C* <span class="keywordtype">object</span> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_member_action.html#a6c1e57393fc92d4975498efb7e2b5792">   39</a></span>    <a class="code hl_typedef" href="struct_uni_dx_1_1_member_action.html#a0755bfa1e42044d5926db5aebc17ebc9">MemFn</a> <a class="code hl_variable" href="struct_uni_dx_1_1_member_action.html#a6c1e57393fc92d4975498efb7e2b5792">func</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_member_action.html#afbb74f9ddc29281eee90f1122550c7b3">   41</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_uni_dx_1_1_member_action.html#afbb74f9ddc29281eee90f1122550c7b3">isValid</a>() const noexcept { <span class="keywordflow">return</span> <span class="keywordtype">object</span> &amp;&amp; <a class="code hl_variable" href="struct_uni_dx_1_1_member_action.html#a6c1e57393fc92d4975498efb7e2b5792">func</a>; }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="struct_uni_dx_1_1_member_action.html#a89d7a87a5cd57f75c77a39dad01e2a70">   43</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="struct_uni_dx_1_1_member_action.html#a89d7a87a5cd57f75c77a39dad01e2a70">operator()</a>(Args... args)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        (<span class="keywordtype">object</span>-&gt;*<a class="code hl_variable" href="struct_uni_dx_1_1_member_action.html#a6c1e57393fc92d4975498efb7e2b5792">func</a>)(std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>};</div>
+</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">template</span>&lt;<span class="keyword">class </span>C, <span class="keyword">class</span>... Args&gt;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="namespace_uni_dx.html#ab2cee7cf33d835d7f1b38112e6774b7c">   49</a></span><a class="code hl_struct" href="struct_uni_dx_1_1_member_action.html">MemberAction</a>&lt;C, Args...&gt; <a class="code hl_function" href="namespace_uni_dx.html#ab2cee7cf33d835d7f1b38112e6774b7c">MakeMemberAction</a>(C* obj, <span class="keywordtype">void</span>(C::* func)(Args...)) { <span class="keywordflow">return</span> { obj, func }; }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
+<div class="ttc" id="anamespace_uni_dx_html"><div class="ttname"><a href="namespace_uni_dx.html">UniDx</a></div><div class="ttdef"><b>Definition</b> AnimationCurve.cpp:5</div></div>
+<div class="ttc" id="anamespace_uni_dx_html_a0709857b4cce35af54f3d09f213e9b90"><div class="ttname"><a href="namespace_uni_dx.html#a0709857b4cce35af54f3d09f213e9b90">UniDx::MakeMemberFunc</a></div><div class="ttdeci">MemberFunc&lt; C, R, Args... &gt; MakeMemberFunc(C *obj, R(C::*func)(Args...))</div><div class="ttdef"><b>Definition</b> Func.h:26</div></div>
+<div class="ttc" id="anamespace_uni_dx_html_ab2cee7cf33d835d7f1b38112e6774b7c"><div class="ttname"><a href="namespace_uni_dx.html#ab2cee7cf33d835d7f1b38112e6774b7c">UniDx::MakeMemberAction</a></div><div class="ttdeci">MemberAction&lt; C, Args... &gt; MakeMemberAction(C *obj, void(C::*func)(Args...))</div><div class="ttdef"><b>Definition</b> Func.h:49</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_member_action_html"><div class="ttname"><a href="struct_uni_dx_1_1_member_action.html">UniDx::MemberAction</a></div><div class="ttdoc">戻り値のないメンバー関数オブジェクト コンパイル時に型を指定するので高速</div><div class="ttdef"><b>Definition</b> Func.h:35</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_member_action_html_a0755bfa1e42044d5926db5aebc17ebc9"><div class="ttname"><a href="struct_uni_dx_1_1_member_action.html#a0755bfa1e42044d5926db5aebc17ebc9">UniDx::MemberAction::MemFn</a></div><div class="ttdeci">void(C::*)(Args...) MemFn</div><div class="ttdef"><b>Definition</b> Func.h:36</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_member_action_html_a6c1e57393fc92d4975498efb7e2b5792"><div class="ttname"><a href="struct_uni_dx_1_1_member_action.html#a6c1e57393fc92d4975498efb7e2b5792">UniDx::MemberAction::func</a></div><div class="ttdeci">MemFn func</div><div class="ttdef"><b>Definition</b> Func.h:39</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_member_action_html_a89d7a87a5cd57f75c77a39dad01e2a70"><div class="ttname"><a href="struct_uni_dx_1_1_member_action.html#a89d7a87a5cd57f75c77a39dad01e2a70">UniDx::MemberAction::operator()</a></div><div class="ttdeci">void operator()(Args... args) const</div><div class="ttdef"><b>Definition</b> Func.h:43</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_member_action_html_afbb74f9ddc29281eee90f1122550c7b3"><div class="ttname"><a href="struct_uni_dx_1_1_member_action.html#afbb74f9ddc29281eee90f1122550c7b3">UniDx::MemberAction::isValid</a></div><div class="ttdeci">bool isValid() const noexcept</div><div class="ttdef"><b>Definition</b> Func.h:41</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_member_func_html"><div class="ttname"><a href="struct_uni_dx_1_1_member_func.html">UniDx::MemberFunc</a></div><div class="ttdoc">メンバー関数オブジェクト コンパイル時に型を指定するので高速</div><div class="ttdef"><b>Definition</b> Func.h:12</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_member_func_html_a550306ccf8c91dd78e26c7739f69633f"><div class="ttname"><a href="struct_uni_dx_1_1_member_func.html#a550306ccf8c91dd78e26c7739f69633f">UniDx::MemberFunc::operator()</a></div><div class="ttdeci">R operator()(Args... args) const</div><div class="ttdef"><b>Definition</b> Func.h:20</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_member_func_html_a709280b286fbf342bc9839f42f9f3762"><div class="ttname"><a href="struct_uni_dx_1_1_member_func.html#a709280b286fbf342bc9839f42f9f3762">UniDx::MemberFunc::object</a></div><div class="ttdeci">C * object</div><div class="ttdef"><b>Definition</b> Func.h:15</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_member_func_html_a9af25df79eccdf7312aff402ac52ffca"><div class="ttname"><a href="struct_uni_dx_1_1_member_func.html#a9af25df79eccdf7312aff402ac52ffca">UniDx::MemberFunc::MemFn</a></div><div class="ttdeci">R(C::*)(Args...) MemFn</div><div class="ttdef"><b>Definition</b> Func.h:13</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_member_func_html_aaced5b6a939cfe7a3cd407e31e8fbe5b"><div class="ttname"><a href="struct_uni_dx_1_1_member_func.html#aaced5b6a939cfe7a3cd407e31e8fbe5b">UniDx::MemberFunc::isValid</a></div><div class="ttdeci">bool isValid() const noexcept</div><div class="ttdef"><b>Definition</b> Func.h:18</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_member_func_html_ac495098bf84fdd81a7922dd3e754f843"><div class="ttname"><a href="struct_uni_dx_1_1_member_func.html#ac495098bf84fdd81a7922dd3e754f843">UniDx::MemberFunc::func</a></div><div class="ttdeci">MemFn func</div><div class="ttdef"><b>Definition</b> Func.h:16</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_450094861a7bbaf444577c849cb4d1c8.html">UniDx</a></li><li class="navelem"><a href="_func_8h.html">Func.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

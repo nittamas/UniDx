@@ -7,5 +7,6 @@ var _shader_8h =
     [ "UniDx::VertexPTC", "struct_uni_dx_1_1_vertex_p_t_c.html", "struct_uni_dx_1_1_vertex_p_t_c" ],
     [ "UniDx::VertexPNT", "struct_uni_dx_1_1_vertex_p_n_t.html", "struct_uni_dx_1_1_vertex_p_n_t" ],
     [ "UniDx::VertexPNC", "struct_uni_dx_1_1_vertex_p_n_c.html", "struct_uni_dx_1_1_vertex_p_n_c" ],
+    [ "UniDx::ShaderVarLayout", "struct_uni_dx_1_1_shader_var_layout.html", "struct_uni_dx_1_1_shader_var_layout" ],
     [ "UniDx::Shader", "class_uni_dx_1_1_shader.html", "class_uni_dx_1_1_shader" ]
 ];

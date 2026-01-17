@@ -4,6 +4,7 @@ var struct_uni_dx_1_1_quaternion =
     [ "Quaternion", "struct_uni_dx_1_1_quaternion.html#aaf9183f8dc9903541ec92ac5fa0a1f64", null ],
     [ "Quaternion", "struct_uni_dx_1_1_quaternion.html#ac1e8371e96fc42ae4047f1f49deda565", null ],
     [ "Quaternion", "struct_uni_dx_1_1_quaternion.html#a59d8fb3d8cc07b0ff9b110bc2d1529de", null ],
+    [ "magnitude", "struct_uni_dx_1_1_quaternion.html#a52e199cc31ae88e981324667c58c4fcd", null ],
     [ "operator const DirectX::XMFLOAT4 &", "struct_uni_dx_1_1_quaternion.html#a0bf67fa63d9186e7e60bf6ef737203c0", null ],
     [ "operator DirectX::XMFLOAT4 &", "struct_uni_dx_1_1_quaternion.html#abf7563140bccc0251efdcf38b2c9dff2", null ],
     [ "operator+", "struct_uni_dx_1_1_quaternion.html#a9a906808ea90bf1448f08b903460c2c4", null ],

@@ -18,6 +18,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -92,6 +93,9 @@ $(function(){initNavTree('class_uni_dx_1_1_singleton.html','','class_uni_dx_1_1_
 </div><!--header-->
 <div class="contents">
 
+<p>シングルトンテンプレート。 明示的な create と destroy が必要  
+ <a href="#details">[詳解]</a></p>
+
 <p><code>#include &lt;<a class="el" href="_singleton_8h_source.html">Singleton.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
@@ -109,7 +113,10 @@ $(function(){initNavTree('class_uni_dx_1_1_singleton.html','','class_uni_dx_1_1_
 静的限定公開変数類</h2></td></tr>
 <tr class="memitem:a6eac0ea64fb9420399b931a4cd451912" id="r_a6eac0ea64fb9420399b931a4cd451912"><td class="memItemLeft" align="right" valign="top">static unique_ptr&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6eac0ea64fb9420399b931a4cd451912">instance_</a></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class T&gt;<br />
+class UniDx::Singleton&lt; T &gt;</div><p>シングルトンテンプレート。 明示的な create と destroy が必要 </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
 <a id="aa1d5dc993efef5faa60dc69cb141ae1f" name="aa1d5dc993efef5faa60dc69cb141ae1f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa1d5dc993efef5faa60dc69cb141ae1f">&#9670;&#160;</a></span>Singleton()</h2>
 

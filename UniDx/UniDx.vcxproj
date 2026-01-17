@@ -113,6 +113,7 @@
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)\include;$(ProjectDir)\private;$(ProjectDir)\..\external\tinygltf;$(ProjectDir)\..\external\DirectXTK\Inc;$(ProjectDir)\..\external\DirectXTex\DirectXTex</AdditionalIncludeDirectories>
       <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -133,6 +134,7 @@
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)\include;$(ProjectDir)\private;$(ProjectDir)\..\external\tinygltf;$(ProjectDir)\..\external\DirectXTK\Inc;$(ProjectDir)\..\external\DirectXTex\DirectXTex</AdditionalIncludeDirectories>
       <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -233,6 +235,8 @@
     <ClCompile Include="src\UniDx.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\CHANGELOG.md" />
+    <None Include="..\README.md" />
     <None Include="Doxyfile" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,4 +1,8 @@
-﻿#pragma once
+﻿/**
+ * @file GameObject.h
+ * @brief キャラクターや背景、カメラなどの基礎となるオブジェクト
+ */
+#pragma once
 #include <vector>
 #include <memory>
 #include <type_traits>
@@ -16,16 +20,10 @@ class Component;
 class Transform;
 class Collider;
 
-/**
-  * @brief GameObjectを破棄
-  * 実際に削除されるタイミングはフレームの終了時
-  */
+/// @brief GameObjectを破棄
 void Destroy(GameObject* component);
 
-
-// --------------------
-// GameObjectクラス
-// --------------------
+ /// @brief キャラクターや背景カメラなどの基礎となるオブジェクト
 class GameObject : public Object
 {
 public:

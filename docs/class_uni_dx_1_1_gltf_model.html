@@ -18,6 +18,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -92,6 +93,9 @@ $(function(){initNavTree('class_uni_dx_1_1_gltf_model.html','','class_uni_dx_1_1
 </div><!--header-->
 <div class="contents">
 
+<p>glTF形式（.glb）のモデルデータを読み込んでレンダラーを生成するコンポーネント  
+ <a href="#details">[詳解]</a></p>
+
 <p><code>#include &lt;<a class="el" href="_gltf_model_8h_source.html">GltfModel.h</a>&gt;</code></p>
 <div class="dynheader">
 UniDx::GltfModel の継承関係図</div>
@@ -99,28 +103,28 @@ UniDx::GltfModel の継承関係図</div>
  <div class="center">
   <img src="class_uni_dx_1_1_gltf_model.png" usemap="#UniDx_3A_3AGltfModel_map" alt=""/>
   <map id="UniDx_3A_3AGltfModel_map" name="UniDx_3A_3AGltfModel_map">
-<area href="class_uni_dx_1_1_component.html" alt="UniDx::Component" shape="rect" coords="0,56,114,80"/>
+<area href="class_uni_dx_1_1_component.html" title="GameObjectにアタッチして機能を追加する基本クラス" alt="UniDx::Component" shape="rect" coords="0,56,114,80"/>
 <area href="class_uni_dx_1_1_object.html" alt="UniDx::Object" shape="rect" coords="0,0,114,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:ac1ada03e6698413e6951bad09b351d1d" id="r_ac1ada03e6698413e6951bad09b351d1d"><td class="memItemLeft" align="right" valign="top">const std::map&lt; int, std::shared_ptr&lt; <a class="el" href="class_uni_dx_1_1_material.html">Material</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1ada03e6698413e6951bad09b351d1d">GetMaterials</a> ()</td></tr>
-<tr class="memitem:abfb40a361261b58f50a7decdda13d5bf" id="r_abfb40a361261b58f50a7decdda13d5bf"><td class="memTemplParams" colspan="2">template&lt;typename TVertex&gt; </td></tr>
-<tr class="memitem:abfb40a361261b58f50a7decdda13d5bf template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfb40a361261b58f50a7decdda13d5bf">Load</a> (const std::wstring &amp;modelPath, const std::wstring &amp;shaderPath)</td></tr>
-<tr class="memdesc:abfb40a361261b58f50a7decdda13d5bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">glTF形式のモデルファイルを読み込む（モデルファイル、シェーダを指定） glb 内包テクスチャが存在する場合は、baseColorTexture を生成してマテリアルに設定する 内部で階層構造を構築するので、あらかじめ <a class="el" href="class_uni_dx_1_1_game_object.html">GameObject</a> にアタッチしておく必要がある  <br /></td></tr>
-<tr class="memitem:a49b59e5e0e3f0f2b79d70bfc6f3b5efc" id="r_a49b59e5e0e3f0f2b79d70bfc6f3b5efc"><td class="memTemplParams" colspan="2">template&lt;typename TVertex&gt; </td></tr>
-<tr class="memitem:a49b59e5e0e3f0f2b79d70bfc6f3b5efc template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49b59e5e0e3f0f2b79d70bfc6f3b5efc">Load</a> (const std::wstring &amp;modelPath, const std::wstring &amp;shaderPath, std::shared_ptr&lt; <a class="el" href="class_uni_dx_1_1_texture.html">Texture</a> &gt; texture)</td></tr>
-<tr class="memdesc:a49b59e5e0e3f0f2b79d70bfc6f3b5efc"><td class="mdescLeft">&#160;</td><td class="mdescRight">glTF形式のモデルファイルを読み込む（モデル、シェーダ、テクスチャ1枚を指定） 内部で階層構造を構築するので、あらかじめ <a class="el" href="class_uni_dx_1_1_game_object.html">GameObject</a> にアタッチしておく必要がある  <br /></td></tr>
-<tr class="memitem:a54157ec6cb97724464fd8ef7371ba3c2" id="r_a54157ec6cb97724464fd8ef7371ba3c2"><td class="memTemplParams" colspan="2">template&lt;typename TVertex&gt; </td></tr>
-<tr class="memitem:a54157ec6cb97724464fd8ef7371ba3c2 template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54157ec6cb97724464fd8ef7371ba3c2">Load</a> (const std::wstring &amp;modelPath, const std::wstring &amp;shaderPath, const std::wstring &amp;texturePath)</td></tr>
-<tr class="memdesc:a54157ec6cb97724464fd8ef7371ba3c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">glTF形式のモデルファイルを読み込む（モデル、シェーダ、1枚のテクスチャファイルを指定） 内部で階層構造を構築するので、あらかじめ <a class="el" href="class_uni_dx_1_1_game_object.html">GameObject</a> にアタッチしておく必要がある  <br /></td></tr>
-<tr class="memitem:aaee4840b0b5b625817e24d53bcc2137b" id="r_aaee4840b0b5b625817e24d53bcc2137b"><td class="memTemplParams" colspan="2">template&lt;typename TVertex&gt; </td></tr>
-<tr class="memitem:aaee4840b0b5b625817e24d53bcc2137b template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaee4840b0b5b625817e24d53bcc2137b">Load</a> (const std::wstring &amp;modelPath, std::shared_ptr&lt; <a class="el" href="class_uni_dx_1_1_material.html">Material</a> &gt; material)</td></tr>
-<tr class="memdesc:aaee4840b0b5b625817e24d53bcc2137b"><td class="mdescLeft">&#160;</td><td class="mdescRight">glTF形式のモデルファイルを読み込む（モデルファイル、共有マテリアルを指定） 内部で階層構造を構築するので、あらかじめ <a class="el" href="class_uni_dx_1_1_game_object.html">GameObject</a> にアタッチしておく必要がある  <br /></td></tr>
-<tr class="memitem:aee2c973d263bc55eb38fa23882fc4edd" id="r_aee2c973d263bc55eb38fa23882fc4edd"><td class="memTemplParams" colspan="2">template&lt;typename TVertex&gt; </td></tr>
-<tr class="memitem:aee2c973d263bc55eb38fa23882fc4edd template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee2c973d263bc55eb38fa23882fc4edd">Load</a> (const std::wstring &amp;filePath, bool makeTextureMaterial, std::shared_ptr&lt; <a class="el" href="class_uni_dx_1_1_shader.html">Shader</a> &gt; shader)</td></tr>
+<tr class="memitem:a11b8ffef28b2777bc47af182a9dbb272" id="r_a11b8ffef28b2777bc47af182a9dbb272"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; int, std::shared_ptr&lt; <a class="el" href="class_uni_dx_1_1_material.html">Material</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11b8ffef28b2777bc47af182a9dbb272">GetMaterials</a> ()</td></tr>
+<tr class="memitem:a2e4d77350d57b0f00e6f262a03bc92b8" id="r_a2e4d77350d57b0f00e6f262a03bc92b8"><td class="memTemplParams" colspan="2">template&lt;typename TVertex&gt; </td></tr>
+<tr class="memitem:a2e4d77350d57b0f00e6f262a03bc92b8 template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e4d77350d57b0f00e6f262a03bc92b8">Load</a> (const u8string &amp;modelPath, const u8string &amp;shaderPath)</td></tr>
+<tr class="memdesc:a2e4d77350d57b0f00e6f262a03bc92b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">glTF形式のモデルファイルを読み込む（モデルファイル、シェーダを指定） glb 内包テクスチャが存在する場合は、baseColorTexture を生成してマテリアルに設定する 内部で階層構造を構築するので、あらかじめ <a class="el" href="class_uni_dx_1_1_game_object.html" title="キャラクターや背景カメラなどの基礎となるオブジェクト">GameObject</a> にアタッチしておく必要がある  <br /></td></tr>
+<tr class="memitem:a5c4bbcbac4c4f90cafac0399b5eae937" id="r_a5c4bbcbac4c4f90cafac0399b5eae937"><td class="memTemplParams" colspan="2">template&lt;typename TVertex&gt; </td></tr>
+<tr class="memitem:a5c4bbcbac4c4f90cafac0399b5eae937 template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c4bbcbac4c4f90cafac0399b5eae937">Load</a> (const u8string &amp;modelPath, const u8string &amp;shaderPath, std::shared_ptr&lt; <a class="el" href="class_uni_dx_1_1_texture.html">Texture</a> &gt; texture)</td></tr>
+<tr class="memdesc:a5c4bbcbac4c4f90cafac0399b5eae937"><td class="mdescLeft">&#160;</td><td class="mdescRight">glTF形式のモデルファイルを読み込む（モデル、シェーダ、テクスチャ1枚を指定） 内部で階層構造を構築するので、あらかじめ <a class="el" href="class_uni_dx_1_1_game_object.html" title="キャラクターや背景カメラなどの基礎となるオブジェクト">GameObject</a> にアタッチしておく必要がある  <br /></td></tr>
+<tr class="memitem:a80733d84531458ba2431bc9c1187d205" id="r_a80733d84531458ba2431bc9c1187d205"><td class="memTemplParams" colspan="2">template&lt;typename TVertex&gt; </td></tr>
+<tr class="memitem:a80733d84531458ba2431bc9c1187d205 template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80733d84531458ba2431bc9c1187d205">Load</a> (const u8string &amp;modelPath, const u8string &amp;shaderPath, const u8string &amp;texturePath)</td></tr>
+<tr class="memdesc:a80733d84531458ba2431bc9c1187d205"><td class="mdescLeft">&#160;</td><td class="mdescRight">glTF形式のモデルファイルを読み込む（モデル、シェーダ、1枚のテクスチャファイルを指定） 内部で階層構造を構築するので、あらかじめ <a class="el" href="class_uni_dx_1_1_game_object.html" title="キャラクターや背景カメラなどの基礎となるオブジェクト">GameObject</a> にアタッチしておく必要がある  <br /></td></tr>
+<tr class="memitem:a9cdff4723c07735cdedf1c99dde716ba" id="r_a9cdff4723c07735cdedf1c99dde716ba"><td class="memTemplParams" colspan="2">template&lt;typename TVertex&gt; </td></tr>
+<tr class="memitem:a9cdff4723c07735cdedf1c99dde716ba template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cdff4723c07735cdedf1c99dde716ba">Load</a> (const u8string &amp;modelPath, std::shared_ptr&lt; <a class="el" href="class_uni_dx_1_1_material.html">Material</a> &gt; material)</td></tr>
+<tr class="memdesc:a9cdff4723c07735cdedf1c99dde716ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">glTF形式のモデルファイルを読み込む（モデルファイル、共有マテリアルを指定） 内部で階層構造を構築するので、あらかじめ <a class="el" href="class_uni_dx_1_1_game_object.html" title="キャラクターや背景カメラなどの基礎となるオブジェクト">GameObject</a> にアタッチしておく必要がある  <br /></td></tr>
+<tr class="memitem:ac0e39cfd800e467bdc0c276a4ba34671" id="r_ac0e39cfd800e467bdc0c276a4ba34671"><td class="memTemplParams" colspan="2">template&lt;typename TVertex&gt; </td></tr>
+<tr class="memitem:ac0e39cfd800e467bdc0c276a4ba34671 template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0e39cfd800e467bdc0c276a4ba34671">Load</a> (const u8string &amp;filePath, bool makeTextureMaterial, std::shared_ptr&lt; <a class="el" href="class_uni_dx_1_1_shader.html">Shader</a> &gt; shader)</td></tr>
 <tr class="memitem:aa839dcaed00df807a780c83fc8b108d4" id="r_aa839dcaed00df807a780c83fc8b108d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa839dcaed00df807a780c83fc8b108d4">AddMaterial</a> (int index, std::shared_ptr&lt; <a class="el" href="class_uni_dx_1_1_material.html">Material</a> &gt; material)</td></tr>
 <tr class="memitem:a99ec6ce06e5b3b76e1fbf97b84103c5f" id="r_a99ec6ce06e5b3b76e1fbf97b84103c5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99ec6ce06e5b3b76e1fbf97b84103c5f">SetAddressModeUV</a> (<a class="el" href="class_uni_dx_1_1_texture.html">Texture</a> *texture, int texIndex) const</td></tr>
 <tr class="inherit_header pub_methods_class_uni_dx_1_1_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_uni_dx_1_1_component')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_uni_dx_1_1_component.html">UniDx::Component</a> に属する継承公開メンバ関数</td></tr>
@@ -130,13 +134,14 @@ UniDx::GltfModel の継承関係図</div>
 <tr class="memitem:adfaad805015736afd6d469fab365eceb inherit pub_methods_class_uni_dx_1_1_component" id="r_adfaad805015736afd6d469fab365eceb"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#adfaad805015736afd6d469fab365eceb">~Component</a> ()</td></tr>
 <tr class="inherit_header pub_methods_class_uni_dx_1_1_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_uni_dx_1_1_object')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_uni_dx_1_1_object.html">UniDx::Object</a> に属する継承公開メンバ関数</td></tr>
 <tr class="memitem:af1f20702fde9b535a83a02a5f8663fec inherit pub_methods_class_uni_dx_1_1_object" id="r_af1f20702fde9b535a83a02a5f8663fec"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_object.html#af1f20702fde9b535a83a02a5f8663fec">~Object</a> ()</td></tr>
-<tr class="memitem:a8105112b7931a0c380dfe004d3efc959 inherit pub_methods_class_uni_dx_1_1_object" id="r_a8105112b7931a0c380dfe004d3efc959"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_object.html#a8105112b7931a0c380dfe004d3efc959">Object</a> (<a class="el" href="class_uni_dx_1_1_read_only_property.html">ReadOnlyProperty</a>&lt; wstring_view &gt;<a class="el" href="class_uni_dx_1_1_read_only_property.html">::Getter</a> nameGet)</td></tr>
+<tr class="memitem:a1d2a3979c7a097b2ce35a69347ea9b9f inherit pub_methods_class_uni_dx_1_1_object" id="r_a1d2a3979c7a097b2ce35a69347ea9b9f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_object.html#a1d2a3979c7a097b2ce35a69347ea9b9f">Object</a> (<a class="el" href="class_uni_dx_1_1_read_only_property.html">ReadOnlyProperty</a>&lt; <a class="el" href="class_uni_dx_1_1_string_id.html">StringId</a> &gt;<a class="el" href="class_uni_dx_1_1_read_only_property.html">::Getter</a> nameGet)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 限定公開メンバ関数</h2></td></tr>
-<tr class="memitem:aa6b546d6ca10e495e52f7080a7c19b3f" id="r_aa6b546d6ca10e495e52f7080a7c19b3f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6b546d6ca10e495e52f7080a7c19b3f">load_</a> (const std::wstring &amp;filePath, bool makeTextureMaterial, std::shared_ptr&lt; <a class="el" href="class_uni_dx_1_1_shader.html">Shader</a> &gt; shader)</td></tr>
-<tr class="memitem:adbc04f5320ec17b82dd3f249d5f7ab29" id="r_adbc04f5320ec17b82dd3f249d5f7ab29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbc04f5320ec17b82dd3f249d5f7ab29">createNodeRecursive</a> (const tinygltf::Model &amp;<a class="el" href="#adba50a91ffe8aadb3399b73694416767">model</a>, int nodeIndex, <a class="el" href="class_uni_dx_1_1_component.html#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *parentGO, bool attachIncludeMaterial)</td></tr>
-<tr class="memitem:a70845794dea0192065d2a191ac105b24" id="r_a70845794dea0192065d2a191ac105b24"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_uni_dx_1_1_texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70845794dea0192065d2a191ac105b24">GetOrCreateTextureFromGltf_</a> (int textureIndex, bool isSRGB)</td></tr>
+<tr class="memitem:ae4156bed14f18fd54be2d3d80c5f5654" id="r_ae4156bed14f18fd54be2d3d80c5f5654"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4156bed14f18fd54be2d3d80c5f5654">load_</a> (const char *filePath, bool makeTextureMaterial, std::shared_ptr&lt; <a class="el" href="class_uni_dx_1_1_shader.html">Shader</a> &gt; shader)</td></tr>
+<tr class="memitem:adcf8f0428a731e71c8e0a150ad2c994a" id="r_adcf8f0428a731e71c8e0a150ad2c994a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adcf8f0428a731e71c8e0a150ad2c994a">readPrimitive</a> (<a class="el" href="class_uni_dx_1_1_mesh.html">UniDx::Mesh</a> *mesh, const tinygltf::Primitive &amp;primitive)</td></tr>
+<tr class="memitem:adbc04f5320ec17b82dd3f249d5f7ab29" id="r_adbc04f5320ec17b82dd3f249d5f7ab29"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbc04f5320ec17b82dd3f249d5f7ab29">createNodeRecursive</a> (const tinygltf::Model &amp;<a class="el" href="#adba50a91ffe8aadb3399b73694416767">model</a>, int nodeIndex, <a class="el" href="class_uni_dx_1_1_component.html#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *parentGO, bool attachIncludeMaterial)</td></tr>
+<tr class="memitem:a20c5d6b194c830847b9ced24417c6fa7" id="r_a20c5d6b194c830847b9ced24417c6fa7"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="class_uni_dx_1_1_texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20c5d6b194c830847b9ced24417c6fa7">getOrCreateTextureFromGltf_</a> (int textureIndex, bool isSRGB)</td></tr>
 <tr class="inherit_header pro_methods_class_uni_dx_1_1_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_uni_dx_1_1_component')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_uni_dx_1_1_component.html">UniDx::Component</a> に属する継承限定公開メンバ関数</td></tr>
 <tr class="memitem:ade9bdf0c41f0485c3b46df47f074b48e inherit pro_methods_class_uni_dx_1_1_component" id="r_ade9bdf0c41f0485c3b46df47f074b48e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#ade9bdf0c41f0485c3b46df47f074b48e">Awake</a> ()</td></tr>
 <tr class="memitem:afbb63a49fcd4c32476bf7b8875f8b9fd inherit pro_methods_class_uni_dx_1_1_component" id="r_afbb63a49fcd4c32476bf7b8875f8b9fd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#afbb63a49fcd4c32476bf7b8875f8b9fd">Start</a> ()</td></tr>
@@ -149,10 +154,12 @@ UniDx::GltfModel の継承関係図</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 限定公開変数類</h2></td></tr>
 <tr class="memitem:a2fdd284c54c57cf556f5279a365af141" id="r_a2fdd284c54c57cf556f5279a365af141"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_uni_dx_1_1_mesh_renderer.html">MeshRenderer</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fdd284c54c57cf556f5279a365af141">renderer</a></td></tr>
-<tr class="memitem:ab5064768d4d2f347502f87f113c27670" id="r_ab5064768d4d2f347502f87f113c27670"><td class="memItemLeft" align="right" valign="top">std::map&lt; int, std::shared_ptr&lt; <a class="el" href="class_uni_dx_1_1_material.html">Material</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5064768d4d2f347502f87f113c27670">materials</a></td></tr>
+<tr class="memitem:a708c453a2e476e1000c2c30335e7b54e" id="r_a708c453a2e476e1000c2c30335e7b54e"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; int, std::shared_ptr&lt; <a class="el" href="class_uni_dx_1_1_material.html">Material</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a708c453a2e476e1000c2c30335e7b54e">materials</a></td></tr>
 <tr class="memitem:adba50a91ffe8aadb3399b73694416767" id="r_adba50a91ffe8aadb3399b73694416767"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; tinygltf::Model &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adba50a91ffe8aadb3399b73694416767">model</a></td></tr>
 <tr class="memitem:aa14ff88e6039bc3d79558fbef1b34327" id="r_aa14ff88e6039bc3d79558fbef1b34327"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_uni_dx_1_1_mesh.html">Mesh</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa14ff88e6039bc3d79558fbef1b34327">meshes</a></td></tr>
-<tr class="memitem:a3c4a8ddbc5ff3a149bec20a7633bca75" id="r_a3c4a8ddbc5ff3a149bec20a7633bca75"><td class="memItemLeft" align="right" valign="top">std::map&lt; int, std::shared_ptr&lt; <a class="el" href="class_uni_dx_1_1_texture.html">Texture</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c4a8ddbc5ff3a149bec20a7633bca75">textures</a></td></tr>
+<tr class="memitem:aff0d53675d51f71ccad465ced87961fa" id="r_aff0d53675d51f71ccad465ced87961fa"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; int, std::shared_ptr&lt; <a class="el" href="class_uni_dx_1_1_texture.html">Texture</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff0d53675d51f71ccad465ced87961fa">textures</a></td></tr>
+<tr class="memitem:ad9c84e317b5b788bf469d23c8a123562" id="r_ad9c84e317b5b788bf469d23c8a123562"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; int, <a class="el" href="class_uni_dx_1_1_transform.html">Transform</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9c84e317b5b788bf469d23c8a123562">nodes</a></td></tr>
+<tr class="memitem:a155e41d4c6af11fb00614362fbc8cc8e" id="r_a155e41d4c6af11fb00614362fbc8cc8e"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; int, <a class="el" href="struct_uni_dx_1_1_skin_instance.html">SkinInstance</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a155e41d4c6af11fb00614362fbc8cc8e">skinInstance</a></td></tr>
 <tr class="inherit_header pro_attribs_class_uni_dx_1_1_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_uni_dx_1_1_component')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_uni_dx_1_1_component.html">UniDx::Component</a> に属する継承限定公開変数類</td></tr>
 <tr class="memitem:a1be773279b79168c81a7b25d76c1476d inherit pro_attribs_class_uni_dx_1_1_component" id="r_a1be773279b79168c81a7b25d76c1476d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#a1be773279b79168c81a7b25d76c1476d">isCalledAwake</a></td></tr>
 <tr class="memitem:a25f03307ef83efdf1853475790f0c800 inherit pro_attribs_class_uni_dx_1_1_component" id="r_a25f03307ef83efdf1853475790f0c800"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#a25f03307ef83efdf1853475790f0c800">isCalledStart</a></td></tr>
@@ -166,9 +173,11 @@ UniDx::GltfModel の継承関係図</div>
 <tr class="memitem:ac0c376f02458a8e1f3ed23ccc8299eab inherit pub_attribs_class_uni_dx_1_1_component" id="r_ac0c376f02458a8e1f3ed23ccc8299eab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_uni_dx_1_1_read_only_property.html">ReadOnlyProperty</a>&lt; <a class="el" href="class_uni_dx_1_1_transform.html">Transform</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#ac0c376f02458a8e1f3ed23ccc8299eab">transform</a></td></tr>
 <tr class="memitem:a8b7c735570cdb78e7a9a400649d1b32f inherit pub_attribs_class_uni_dx_1_1_component" id="r_a8b7c735570cdb78e7a9a400649d1b32f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_uni_dx_1_1_component.html#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#a8b7c735570cdb78e7a9a400649d1b32f">gameObject</a> = nullptr</td></tr>
 <tr class="inherit_header pub_attribs_class_uni_dx_1_1_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_uni_dx_1_1_object')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_uni_dx_1_1_object.html">UniDx::Object</a> に属する継承公開変数類</td></tr>
-<tr class="memitem:a462b80cab72539ae5a42e9f39b479ff8 inherit pub_attribs_class_uni_dx_1_1_object" id="r_a462b80cab72539ae5a42e9f39b479ff8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_uni_dx_1_1_read_only_property.html">ReadOnlyProperty</a>&lt; wstring_view &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_object.html#a462b80cab72539ae5a42e9f39b479ff8">name</a></td></tr>
+<tr class="memitem:ace975b5121f8f79f54fdf62d46c06049 inherit pub_attribs_class_uni_dx_1_1_object" id="r_ace975b5121f8f79f54fdf62d46c06049"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_uni_dx_1_1_read_only_property.html">ReadOnlyProperty</a>&lt; <a class="el" href="class_uni_dx_1_1_string_id.html">StringId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_object.html#ace975b5121f8f79f54fdf62d46c06049">name</a></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>glTF形式（.glb）のモデルデータを読み込んでレンダラーを生成するコンポーネント </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
 <a id="aa839dcaed00df807a780c83fc8b108d4" name="aa839dcaed00df807a780c83fc8b108d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa839dcaed00df807a780c83fc8b108d4">&#9670;&#160;</a></span>AddMaterial()</h2>
 
@@ -230,15 +239,15 @@ UniDx::GltfModel の継承関係図</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ac1ada03e6698413e6951bad09b351d1d" name="ac1ada03e6698413e6951bad09b351d1d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1ada03e6698413e6951bad09b351d1d">&#9670;&#160;</a></span>GetMaterials()</h2>
+<a id="a11b8ffef28b2777bc47af182a9dbb272" name="a11b8ffef28b2777bc47af182a9dbb272"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11b8ffef28b2777bc47af182a9dbb272">&#9670;&#160;</a></span>GetMaterials()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -247,7 +256,7 @@ UniDx::GltfModel の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::map&lt; int, std::shared_ptr&lt; <a class="el" href="class_uni_dx_1_1_material.html">Material</a> &gt; &gt; &amp; UniDx::GltfModel::GetMaterials </td>
+          <td class="memname">const std::unordered_map&lt; int, std::shared_ptr&lt; <a class="el" href="class_uni_dx_1_1_material.html">Material</a> &gt; &gt; &amp; UniDx::GltfModel::GetMaterials </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -262,8 +271,8 @@ UniDx::GltfModel の継承関係図</div>
 
 </div>
 </div>
-<a id="a70845794dea0192065d2a191ac105b24" name="a70845794dea0192065d2a191ac105b24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70845794dea0192065d2a191ac105b24">&#9670;&#160;</a></span>GetOrCreateTextureFromGltf_()</h2>
+<a id="a20c5d6b194c830847b9ced24417c6fa7" name="a20c5d6b194c830847b9ced24417c6fa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20c5d6b194c830847b9ced24417c6fa7">&#9670;&#160;</a></span>getOrCreateTextureFromGltf_()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -272,7 +281,7 @@ UniDx::GltfModel の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt; <a class="el" href="class_uni_dx_1_1_texture.html">Texture</a> &gt; UniDx::GltfModel::GetOrCreateTextureFromGltf_ </td>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="class_uni_dx_1_1_texture.html">Texture</a> &gt; UniDx::GltfModel::getOrCreateTextureFromGltf_ </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>textureIndex</em></span>, </td>
         </tr>
@@ -284,15 +293,15 @@ UniDx::GltfModel の継承関係図</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="aee2c973d263bc55eb38fa23882fc4edd" name="aee2c973d263bc55eb38fa23882fc4edd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee2c973d263bc55eb38fa23882fc4edd">&#9670;&#160;</a></span>Load() <span class="overload">[1/5]</span></h2>
+<a id="ac0e39cfd800e467bdc0c276a4ba34671" name="ac0e39cfd800e467bdc0c276a4ba34671"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0e39cfd800e467bdc0c276a4ba34671">&#9670;&#160;</a></span>Load() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -305,7 +314,7 @@ template&lt;typename TVertex&gt; </div>
         <tr>
           <td class="memname">bool UniDx::GltfModel::Load </td>
           <td>(</td>
-          <td class="paramtype">const std::wstring &amp;</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span>, </td>
+          <td class="paramtype">const u8string &amp;</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -327,8 +336,8 @@ template&lt;typename TVertex&gt; </div>
 
 </div>
 </div>
-<a id="abfb40a361261b58f50a7decdda13d5bf" name="abfb40a361261b58f50a7decdda13d5bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abfb40a361261b58f50a7decdda13d5bf">&#9670;&#160;</a></span>Load() <span class="overload">[2/5]</span></h2>
+<a id="a2e4d77350d57b0f00e6f262a03bc92b8" name="a2e4d77350d57b0f00e6f262a03bc92b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e4d77350d57b0f00e6f262a03bc92b8">&#9670;&#160;</a></span>Load() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -341,12 +350,12 @@ template&lt;typename TVertex&gt; </div>
         <tr>
           <td class="memname">bool UniDx::GltfModel::Load </td>
           <td>(</td>
-          <td class="paramtype">const std::wstring &amp;</td>          <td class="paramname"><span class="paramname"><em>modelPath</em></span>, </td>
+          <td class="paramtype">const u8string &amp;</td>          <td class="paramname"><span class="paramname"><em>modelPath</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::wstring &amp;</td>          <td class="paramname"><span class="paramname"><em>shaderPath</em></span>&#160;)</td>
+          <td class="paramtype">const u8string &amp;</td>          <td class="paramname"><span class="paramname"><em>shaderPath</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -356,12 +365,12 @@ template&lt;typename TVertex&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>glTF形式のモデルファイルを読み込む（モデルファイル、シェーダを指定） glb 内包テクスチャが存在する場合は、baseColorTexture を生成してマテリアルに設定する 内部で階層構造を構築するので、あらかじめ <a class="el" href="class_uni_dx_1_1_game_object.html">GameObject</a> にアタッチしておく必要がある </p>
+<p>glTF形式のモデルファイルを読み込む（モデルファイル、シェーダを指定） glb 内包テクスチャが存在する場合は、baseColorTexture を生成してマテリアルに設定する 内部で階層構造を構築するので、あらかじめ <a class="el" href="class_uni_dx_1_1_game_object.html" title="キャラクターや背景カメラなどの基礎となるオブジェクト">GameObject</a> にアタッチしておく必要がある </p>
 
 </div>
 </div>
-<a id="a54157ec6cb97724464fd8ef7371ba3c2" name="a54157ec6cb97724464fd8ef7371ba3c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54157ec6cb97724464fd8ef7371ba3c2">&#9670;&#160;</a></span>Load() <span class="overload">[3/5]</span></h2>
+<a id="a80733d84531458ba2431bc9c1187d205" name="a80733d84531458ba2431bc9c1187d205"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80733d84531458ba2431bc9c1187d205">&#9670;&#160;</a></span>Load() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -374,17 +383,17 @@ template&lt;typename TVertex&gt; </div>
         <tr>
           <td class="memname">bool UniDx::GltfModel::Load </td>
           <td>(</td>
-          <td class="paramtype">const std::wstring &amp;</td>          <td class="paramname"><span class="paramname"><em>modelPath</em></span>, </td>
+          <td class="paramtype">const u8string &amp;</td>          <td class="paramname"><span class="paramname"><em>modelPath</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::wstring &amp;</td>          <td class="paramname"><span class="paramname"><em>shaderPath</em></span>, </td>
+          <td class="paramtype">const u8string &amp;</td>          <td class="paramname"><span class="paramname"><em>shaderPath</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::wstring &amp;</td>          <td class="paramname"><span class="paramname"><em>texturePath</em></span>&#160;)</td>
+          <td class="paramtype">const u8string &amp;</td>          <td class="paramname"><span class="paramname"><em>texturePath</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -394,12 +403,12 @@ template&lt;typename TVertex&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>glTF形式のモデルファイルを読み込む（モデル、シェーダ、1枚のテクスチャファイルを指定） 内部で階層構造を構築するので、あらかじめ <a class="el" href="class_uni_dx_1_1_game_object.html">GameObject</a> にアタッチしておく必要がある </p>
+<p>glTF形式のモデルファイルを読み込む（モデル、シェーダ、1枚のテクスチャファイルを指定） 内部で階層構造を構築するので、あらかじめ <a class="el" href="class_uni_dx_1_1_game_object.html" title="キャラクターや背景カメラなどの基礎となるオブジェクト">GameObject</a> にアタッチしておく必要がある </p>
 
 </div>
 </div>
-<a id="a49b59e5e0e3f0f2b79d70bfc6f3b5efc" name="a49b59e5e0e3f0f2b79d70bfc6f3b5efc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49b59e5e0e3f0f2b79d70bfc6f3b5efc">&#9670;&#160;</a></span>Load() <span class="overload">[4/5]</span></h2>
+<a id="a5c4bbcbac4c4f90cafac0399b5eae937" name="a5c4bbcbac4c4f90cafac0399b5eae937"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c4bbcbac4c4f90cafac0399b5eae937">&#9670;&#160;</a></span>Load() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -412,12 +421,12 @@ template&lt;typename TVertex&gt; </div>
         <tr>
           <td class="memname">bool UniDx::GltfModel::Load </td>
           <td>(</td>
-          <td class="paramtype">const std::wstring &amp;</td>          <td class="paramname"><span class="paramname"><em>modelPath</em></span>, </td>
+          <td class="paramtype">const u8string &amp;</td>          <td class="paramname"><span class="paramname"><em>modelPath</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::wstring &amp;</td>          <td class="paramname"><span class="paramname"><em>shaderPath</em></span>, </td>
+          <td class="paramtype">const u8string &amp;</td>          <td class="paramname"><span class="paramname"><em>shaderPath</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -432,12 +441,12 @@ template&lt;typename TVertex&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>glTF形式のモデルファイルを読み込む（モデル、シェーダ、テクスチャ1枚を指定） 内部で階層構造を構築するので、あらかじめ <a class="el" href="class_uni_dx_1_1_game_object.html">GameObject</a> にアタッチしておく必要がある </p>
+<p>glTF形式のモデルファイルを読み込む（モデル、シェーダ、テクスチャ1枚を指定） 内部で階層構造を構築するので、あらかじめ <a class="el" href="class_uni_dx_1_1_game_object.html" title="キャラクターや背景カメラなどの基礎となるオブジェクト">GameObject</a> にアタッチしておく必要がある </p>
 
 </div>
 </div>
-<a id="aaee4840b0b5b625817e24d53bcc2137b" name="aaee4840b0b5b625817e24d53bcc2137b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaee4840b0b5b625817e24d53bcc2137b">&#9670;&#160;</a></span>Load() <span class="overload">[5/5]</span></h2>
+<a id="a9cdff4723c07735cdedf1c99dde716ba" name="a9cdff4723c07735cdedf1c99dde716ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cdff4723c07735cdedf1c99dde716ba">&#9670;&#160;</a></span>Load() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -450,7 +459,7 @@ template&lt;typename TVertex&gt; </div>
         <tr>
           <td class="memname">bool UniDx::GltfModel::Load </td>
           <td>(</td>
-          <td class="paramtype">const std::wstring &amp;</td>          <td class="paramname"><span class="paramname"><em>modelPath</em></span>, </td>
+          <td class="paramtype">const u8string &amp;</td>          <td class="paramname"><span class="paramname"><em>modelPath</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -465,12 +474,12 @@ template&lt;typename TVertex&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>glTF形式のモデルファイルを読み込む（モデルファイル、共有マテリアルを指定） 内部で階層構造を構築するので、あらかじめ <a class="el" href="class_uni_dx_1_1_game_object.html">GameObject</a> にアタッチしておく必要がある </p>
+<p>glTF形式のモデルファイルを読み込む（モデルファイル、共有マテリアルを指定） 内部で階層構造を構築するので、あらかじめ <a class="el" href="class_uni_dx_1_1_game_object.html" title="キャラクターや背景カメラなどの基礎となるオブジェクト">GameObject</a> にアタッチしておく必要がある </p>
 
 </div>
 </div>
-<a id="aa6b546d6ca10e495e52f7080a7c19b3f" name="aa6b546d6ca10e495e52f7080a7c19b3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6b546d6ca10e495e52f7080a7c19b3f">&#9670;&#160;</a></span>load_()</h2>
+<a id="ae4156bed14f18fd54be2d3d80c5f5654" name="ae4156bed14f18fd54be2d3d80c5f5654"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4156bed14f18fd54be2d3d80c5f5654">&#9670;&#160;</a></span>load_()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -481,7 +490,7 @@ template&lt;typename TVertex&gt; </div>
         <tr>
           <td class="memname">bool UniDx::GltfModel::load_ </td>
           <td>(</td>
-          <td class="paramtype">const std::wstring &amp;</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -496,7 +505,36 @@ template&lt;typename TVertex&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adcf8f0428a731e71c8e0a150ad2c994a" name="adcf8f0428a731e71c8e0a150ad2c994a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcf8f0428a731e71c8e0a150ad2c994a">&#9670;&#160;</a></span>readPrimitive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UniDx::GltfModel::readPrimitive </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_uni_dx_1_1_mesh.html">UniDx::Mesh</a> *</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const tinygltf::Primitive &amp;</td>          <td class="paramname"><span class="paramname"><em>primitive</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -525,8 +563,8 @@ template&lt;typename TVertex&gt; </div>
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">メンバ詳解</h2>
-<a id="ab5064768d4d2f347502f87f113c27670" name="ab5064768d4d2f347502f87f113c27670"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5064768d4d2f347502f87f113c27670">&#9670;&#160;</a></span>materials</h2>
+<a id="a708c453a2e476e1000c2c30335e7b54e" name="a708c453a2e476e1000c2c30335e7b54e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a708c453a2e476e1000c2c30335e7b54e">&#9670;&#160;</a></span>materials</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -535,7 +573,7 @@ template&lt;typename TVertex&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::map&lt;int, std::shared_ptr&lt;<a class="el" href="class_uni_dx_1_1_material.html">Material</a>&gt; &gt; UniDx::GltfModel::materials</td>
+          <td class="memname">std::unordered_map&lt;int, std::shared_ptr&lt;<a class="el" href="class_uni_dx_1_1_material.html">Material</a>&gt; &gt; UniDx::GltfModel::materials</td>
         </tr>
       </table>
   </td>
@@ -591,6 +629,28 @@ template&lt;typename TVertex&gt; </div>
 
 </div>
 </div>
+<a id="ad9c84e317b5b788bf469d23c8a123562" name="ad9c84e317b5b788bf469d23c8a123562"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9c84e317b5b788bf469d23c8a123562">&#9670;&#160;</a></span>nodes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;int, <a class="el" href="class_uni_dx_1_1_transform.html">Transform</a>*&gt; UniDx::GltfModel::nodes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a2fdd284c54c57cf556f5279a365af141" name="a2fdd284c54c57cf556f5279a365af141"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2fdd284c54c57cf556f5279a365af141">&#9670;&#160;</a></span>renderer</h2>
 
@@ -613,8 +673,8 @@ template&lt;typename TVertex&gt; </div>
 
 </div>
 </div>
-<a id="a3c4a8ddbc5ff3a149bec20a7633bca75" name="a3c4a8ddbc5ff3a149bec20a7633bca75"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c4a8ddbc5ff3a149bec20a7633bca75">&#9670;&#160;</a></span>textures</h2>
+<a id="a155e41d4c6af11fb00614362fbc8cc8e" name="a155e41d4c6af11fb00614362fbc8cc8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a155e41d4c6af11fb00614362fbc8cc8e">&#9670;&#160;</a></span>skinInstance</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -623,7 +683,29 @@ template&lt;typename TVertex&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::map&lt;int, std::shared_ptr&lt;<a class="el" href="class_uni_dx_1_1_texture.html">Texture</a>&gt; &gt; UniDx::GltfModel::textures</td>
+          <td class="memname">std::unordered_map&lt;int, <a class="el" href="struct_uni_dx_1_1_skin_instance.html">SkinInstance</a>&gt; UniDx::GltfModel::skinInstance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff0d53675d51f71ccad465ced87961fa" name="aff0d53675d51f71ccad465ced87961fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff0d53675d51f71ccad465ced87961fa">&#9670;&#160;</a></span>textures</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;int, std::shared_ptr&lt;<a class="el" href="class_uni_dx_1_1_texture.html">Texture</a>&gt; &gt; UniDx::GltfModel::textures</td>
         </tr>
       </table>
   </td>

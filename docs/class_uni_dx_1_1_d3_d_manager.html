@@ -18,6 +18,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -92,6 +93,9 @@ $(function(){initNavTree('class_uni_dx_1_1_d3_d_manager.html','','class_uni_dx_1
 </div><!--header-->
 <div class="contents">
 
+<p>DirectXの3D描画機能を提供する  
+ <a href="#details">[詳解]</a></p>
+
 <p><code>#include &lt;<a class="el" href="_d3_d_manager_8h_source.html">D3DManager.h</a>&gt;</code></p>
 <div class="dynheader">
 UniDx::D3DManager の継承関係図</div>
@@ -106,6 +110,7 @@ UniDx::D3DManager の継承関係図</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
 <tr class="memitem:af2b4f6643c1f5d5613cde9c50396a28f" id="r_af2b4f6643c1f5d5613cde9c50396a28f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2b4f6643c1f5d5613cde9c50396a28f">Initialize</a> (HWND hWnd, int width, int height)</td></tr>
+<tr class="memdesc:af2b4f6643c1f5d5613cde9c50396a28f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Direct3Dを初期化し、使用できるようにする  <br /></td></tr>
 <tr class="memitem:a622df7eefdd47923594ebd9dc4c6360b" id="r_a622df7eefdd47923594ebd9dc4c6360b"><td class="memItemLeft" align="right" valign="top">const ComPtr&lt; ID3D11Device &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a622df7eefdd47923594ebd9dc4c6360b">GetDevice</a> () const</td></tr>
 <tr class="memitem:ac5ed036554e449b89ee9ea47efb65d18" id="r_ac5ed036554e449b89ee9ea47efb65d18"><td class="memItemLeft" align="right" valign="top">const ComPtr&lt; ID3D11DeviceContext &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5ed036554e449b89ee9ea47efb65d18">GetContext</a> () const</td></tr>
 <tr class="memitem:a0446cbe29fca9e47c1a73ff1b5edee75" id="r_a0446cbe29fca9e47c1a73ff1b5edee75"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0446cbe29fca9e47c1a73ff1b5edee75">~D3DManager</a> ()</td></tr>
@@ -127,7 +132,9 @@ UniDx::D3DManager の継承関係図</div>
 <tr class="inherit_header pro_static_attribs_class_uni_dx_1_1_singleton"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_static_attribs_class_uni_dx_1_1_singleton')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_uni_dx_1_1_singleton.html">UniDx::Singleton&lt; D3DManager &gt;</a> に属する継承静的限定公開変数類</td></tr>
 <tr class="memitem:a6eac0ea64fb9420399b931a4cd451912 inherit pro_static_attribs_class_uni_dx_1_1_singleton" id="r_a6eac0ea64fb9420399b931a4cd451912"><td class="memItemLeft" align="right" valign="top">static unique_ptr&lt; <a class="el" href="class_uni_dx_1_1_d3_d_manager.html">D3DManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_singleton.html#a6eac0ea64fb9420399b931a4cd451912">instance_</a></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>DirectXの3D描画機能を提供する </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
 <a id="a0446cbe29fca9e47c1a73ff1b5edee75" name="a0446cbe29fca9e47c1a73ff1b5edee75"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0446cbe29fca9e47c1a73ff1b5edee75">&#9670;&#160;</a></span>~D3DManager()</h2>
 
@@ -300,6 +307,16 @@ UniDx::D3DManager の継承関係図</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Direct3Dを初期化し、使用できるようにする </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hWnd</td><td>ウィンドウハンドル </td></tr>
+    <tr><td class="paramname">width</td><td>画面の幅 </td></tr>
+    <tr><td class="paramname">height</td><td>画面の高さ </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

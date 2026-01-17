@@ -1,4 +1,8 @@
-﻿#pragma once
+﻿/**
+ * @file GltfModel.h
+ * @brief glTF形式（.glb）のモデルデータを読み込んでレンダラーを生成する
+ */
+#pragma once
 
 #include <tiny_gltf.h>
 
@@ -7,10 +11,7 @@
 
 namespace UniDx {
 
-/**
- * @file GltfModel.h
- * @brief glTF形式（.glb）のモデルデータを読み込んでレンダラーを生成するコンポーネント
- */
+/// @brief glTF形式（.glb）のモデルデータを読み込んでレンダラーを生成するコンポーネント
 class GltfModel : public Component
 {
 public:
@@ -121,10 +122,10 @@ protected:
     std::unordered_map<int, Transform*> nodes;
     std::unordered_map<int, SkinInstance> skinInstance;
 
-    bool load_(const char* filePath, bool makeTextureMaterial, std::shared_ptr<Shader> shader);
-    void readPrimitive(UniDx::Mesh* mesh, const tinygltf::Primitive& primitive);
-    void createNodeRecursive(const tinygltf::Model& model, int nodeIndex, GameObject* parentGO, bool attachIncludeMaterial);
-    std::shared_ptr<Texture> getOrCreateTextureFromGltf_(int textureIndex, bool isSRGB);
+    virtual bool load_(const char* filePath, bool makeTextureMaterial, std::shared_ptr<Shader> shader);
+    virtual void readPrimitive(UniDx::Mesh* mesh, const tinygltf::Primitive& primitive);
+    virtual void createNodeRecursive(const tinygltf::Model& model, int nodeIndex, GameObject* parentGO, bool attachIncludeMaterial);
+    virtual std::shared_ptr<Texture> getOrCreateTextureFromGltf_(int textureIndex, bool isSRGB);
 };
 
 

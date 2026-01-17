@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['keyboard_0',['keyboard',['../class_uni_dx_1_1_input.html#a45304e8749bad88456ca3040979178b0',1,'UniDx::Input']]],
-  ['keyframe_1',['Keyframe',['../struct_uni_dx_1_1_keyframe.html',1,'UniDx::Keyframe'],['../struct_uni_dx_1_1_keyframe.html#a783a0e1e2941267ba727e13e6eedd4f2',1,'UniDx::Keyframe::Keyframe()']]]
+  ['joints_0',['Joints',['../struct_uni_dx_1_1_vertex_skin.html#adbc631549aa90e7b83160ea30bd37ebf',1,'UniDx::VertexSkin']]],
+  ['joints_1',['joints',['../struct_uni_dx_1_1_skin_instance.html#accdaafc7a6b3b8e189f97fab8eafe5a5',1,'UniDx::SkinInstance::joints'],['../struct_uni_dx_1_1_vertex_skin.html#a523b40942c72dc6b80d2c2afa2b3f17f',1,'UniDx::VertexSkin::joints']]],
+  ['jointsdata_2',['jointsData',['../struct_uni_dx_1_1_skinned_sub_mesh.html#ae0f91b80527a9352ca9ed3d643e4616e',1,'UniDx::SkinnedSubMesh']]]
 ];

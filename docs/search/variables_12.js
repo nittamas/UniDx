@@ -1,20 +1,14 @@
 var searchData=
 [
-  ['unidx_5fps_5fslot_5falbedo_0',['UNIDX_PS_SLOT_ALBEDO',['../_d3_d_manager_8h.html#ae0f0a337b20dfd2854017de8fbc5b25e',1,'D3DManager.h']]],
-  ['unidx_5fps_5fslot_5flight_5findices_1',['UNIDX_PS_SLOT_LIGHT_INDICES',['../_d3_d_manager_8h.html#a286855ae4623bf7ba20576a42b069e08',1,'D3DManager.h']]],
-  ['unidx_5fps_5fslot_5flights_2',['UNIDX_PS_SLOT_LIGHTS',['../_d3_d_manager_8h.html#a5a2c8ecd9e3a5fe500942147ed48006e',1,'D3DManager.h']]],
-  ['unidx_5fps_5fslot_5fnormal_3',['UNIDX_PS_SLOT_NORMAL',['../_d3_d_manager_8h.html#a123815f06458a93ef18bf911836a5e95',1,'D3DManager.h']]],
-  ['unscaleddeltatime_4',['unscaledDeltaTime',['../class_uni_dx_1_1_time.html#ad2f9f574ff69dc4204f9532fe709aa56',1,'UniDx::Time']]],
-  ['unscaledtime_5',['unscaledTime',['../class_uni_dx_1_1_time.html#a0767ca0c92c7252ef334463b109a3207',1,'UniDx::Time']]],
-  ['up_6',['up',['../struct_uni_dx_1_1_vector2.html#a1099699f98c5d53b460b72803501731a',1,'UniDx::Vector2::up'],['../struct_uni_dx_1_1_vector3.html#a99f79b728d3f6a2d42967035d59f4ba0',1,'UniDx::Vector3::up'],['../class_uni_dx_1_1_transform.html#ab1c9995929136fc2fe9bb6d9365a5c15',1,'UniDx::Transform::up']]],
-  ['uv_7',['uv',['../struct_uni_dx_1_1_sub_mesh.html#a5db00745a692f4c40b186cfab36394b9',1,'UniDx::SubMesh']]],
-  ['uv0_8',['uv0',['../struct_uni_dx_1_1_vertex_p_t.html#ab2732604aa988541e9f8a491ff135227',1,'UniDx::VertexPT::uv0'],['../struct_uni_dx_1_1_vertex_p_t_c.html#a7bf740d6fd9eeabece8ce08ded38ea18',1,'UniDx::VertexPTC::uv0'],['../struct_uni_dx_1_1_vertex_p_n_t.html#ac6689e0f87f79b91b98279afb15c4369',1,'UniDx::VertexPNT::uv0']]],
-  ['uv2_9',['uv2',['../struct_uni_dx_1_1_sub_mesh.html#a26863ce7718faaafbc98e61228077567',1,'UniDx::SubMesh']]],
-  ['uv2_5fdata_10',['uv2_data',['../struct_uni_dx_1_1_owned_sub_mesh.html#ab13bb69a05ab4074d4cbe017dcba6d51',1,'UniDx::OwnedSubMesh']]],
-  ['uv3_11',['uv3',['../struct_uni_dx_1_1_sub_mesh.html#a7c9ecd78db63d17aa3a79f32e69a8a05',1,'UniDx::SubMesh']]],
-  ['uv3_5fdata_12',['uv3_data',['../struct_uni_dx_1_1_owned_sub_mesh.html#ad8b6649ed996709945b777a9e0716a40',1,'UniDx::OwnedSubMesh']]],
-  ['uv4_13',['uv4',['../struct_uni_dx_1_1_sub_mesh.html#aa6766215271e05485b5fa85fe0180bd2',1,'UniDx::SubMesh']]],
-  ['uv4_5fdata_14',['uv4_data',['../struct_uni_dx_1_1_owned_sub_mesh.html#a35ea1cf9669cfe9def65141132454ade',1,'UniDx::OwnedSubMesh']]],
-  ['uv_5fdata_15',['uv_data',['../struct_uni_dx_1_1_owned_sub_mesh.html#a623f5ad76c1628ceddd70ee24deea0fa',1,'UniDx::OwnedSubMesh']]],
-  ['uvs_16',['uvs',['../class_uni_dx_1_1_sphere_renderer.html#a9dc23722df4af3e836a33aac1d27cd84',1,'UniDx::SphereRenderer']]]
+  ['tangent_0',['tangent',['../struct_uni_dx_1_1_vertex_skin.html#af4ad0f1b28b39394fec5668e45aa6cfb',1,'UniDx::VertexSkin']]],
+  ['tangents_1',['tangents',['../struct_uni_dx_1_1_sub_mesh.html#a78f32e4641d291ec7444b2eb429b8b98',1,'UniDx::SubMesh']]],
+  ['tangentsdata_2',['tangentsData',['../struct_uni_dx_1_1_owned_sub_mesh.html#a32d22a3613750a798ec0c54bac498015',1,'UniDx::OwnedSubMesh']]],
+  ['text_3',['text',['../class_uni_dx_1_1_text_mesh.html#a45b146549a5aa1a4b575c75ac1a66e34',1,'UniDx::TextMesh']]],
+  ['texture_4',['texture',['../class_uni_dx_1_1_image.html#a5912d03c2694b1c4f343039f1da73fe9',1,'UniDx::Image']]],
+  ['textures_5',['textures',['../class_uni_dx_1_1_gltf_model.html#aff0d53675d51f71ccad465ced87961fa',1,'UniDx::GltfModel::textures'],['../class_uni_dx_1_1_material.html#a0220919aedd428a99db1db59db6b1408',1,'UniDx::Material::textures']]],
+  ['time_6',['time',['../struct_uni_dx_1_1_keyframe.html#a300a632a84631b75710d523c0d29f469',1,'UniDx::Keyframe::time'],['../struct_uni_dx_1_1_constant_buffer_per_camera.html#a95c52ea3137f7971d664185204f1bb42',1,'UniDx::ConstantBufferPerCamera::time'],['../class_uni_dx_1_1_time.html#aa694b7911d0afac280bb555a977717c6',1,'UniDx::Time::time']]],
+  ['timescale_7',['timeScale',['../class_uni_dx_1_1_time.html#aee87c8126ac554571e2ed954915c3d5e',1,'UniDx::Time']]],
+  ['topology_8',['topology',['../struct_uni_dx_1_1_sub_mesh.html#a7406ef7f75feba9705a65f39a3316f62',1,'UniDx::SubMesh']]],
+  ['transform_9',['transform',['../class_uni_dx_1_1_component.html#ac0c376f02458a8e1f3ed23ccc8299eab',1,'UniDx::Component::transform'],['../class_uni_dx_1_1_game_object.html#ae4cc15a46c5c931ac05c96a4c9479812',1,'UniDx::GameObject::transform']]],
+  ['type_10',['type',['../class_uni_dx_1_1_light.html#ac46ddaf611cce5c20d5ae8765c39fd85',1,'UniDx::Light::type'],['../struct_uni_dx_1_1_g_p_u_light.html#a97ceff9e080a6340533f861f4b2ec34a',1,'UniDx::GPULight::type']]]
 ];

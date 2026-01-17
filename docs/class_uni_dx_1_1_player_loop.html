@@ -18,6 +18,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -92,6 +93,9 @@ $(function(){initNavTree('class_uni_dx_1_1_player_loop.html','','class_uni_dx_1_
 </div><!--header-->
 <div class="contents">
 
+<p>フレームワーク全体のループ処理を行うクラス。 Unityでは実行リストが作られるが、簡略化のため、全てのGameObjectとComponentを巡回して実行する。  
+ <a href="#details">[詳解]</a></p>
+
 <p><code>#include &lt;<a class="el" href="_player_loop_8h_source.html">PlayerLoop.h</a>&gt;</code></p>
 <div class="dynheader">
 UniDx::PlayerLoop の継承関係図</div>
@@ -142,7 +146,9 @@ UniDx::PlayerLoop の継承関係図</div>
 <tr class="inherit_header pro_static_attribs_class_uni_dx_1_1_singleton"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_static_attribs_class_uni_dx_1_1_singleton')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_uni_dx_1_1_singleton.html">UniDx::Singleton&lt; PlayerLoop &gt;</a> に属する継承静的限定公開変数類</td></tr>
 <tr class="memitem:a6eac0ea64fb9420399b931a4cd451912 inherit pro_static_attribs_class_uni_dx_1_1_singleton" id="r_a6eac0ea64fb9420399b931a4cd451912"><td class="memItemLeft" align="right" valign="top">static unique_ptr&lt; <a class="el" href="class_uni_dx_1_1_player_loop.html">PlayerLoop</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_singleton.html#a6eac0ea64fb9420399b931a4cd451912">instance_</a></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>フレームワーク全体のループ処理を行うクラス。 Unityでは実行リストが作られるが、簡略化のため、全てのGameObjectとComponentを巡回して実行する。 </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
 <a id="af48c722d7fcac3d766f6d01752594ec0" name="af48c722d7fcac3d766f6d01752594ec0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af48c722d7fcac3d766f6d01752594ec0">&#9670;&#160;</a></span>awake()</h2>
 

@@ -18,6 +18,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -92,7 +93,7 @@ $(function(){initNavTree('struct_uni_dx_1_1_matrix4x4.html','','struct_uni_dx_1_
 </div><!--header-->
 <div class="contents">
 
-<p>4x4 行列 (行優先)  
+<p>4x4 行列 (行ベクトル行優先)  
  <a href="#details">[詳解]</a></p>
 
 <p><code>#include &lt;<a class="el" href="_math_8h_source.html">Math.h</a>&gt;</code></p>
@@ -115,6 +116,7 @@ $(function(){initNavTree('struct_uni_dx_1_1_matrix4x4.html','','struct_uni_dx_1_
 <tr class="memdesc:a8afecc04295ac993bec4448f9de97f8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列に位置をかけて変換  <br /></td></tr>
 <tr class="memitem:a851001cfb1e2eb4b9a269e37137fff93" id="r_a851001cfb1e2eb4b9a269e37137fff93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a851001cfb1e2eb4b9a269e37137fff93">MultiplyVector</a> (const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;v) const noexcept</td></tr>
 <tr class="memdesc:a851001cfb1e2eb4b9a269e37137fff93"><td class="mdescLeft">&#160;</td><td class="mdescRight">行列に方向ベクトルをかけて変換（平行移動は無視）  <br /></td></tr>
+<tr class="memitem:a709c3f32da14a54458ec49ab210a0a8f" id="r_a709c3f32da14a54458ec49ab210a0a8f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a709c3f32da14a54458ec49ab210a0a8f">determinant</a> () const noexcept</td></tr>
 <tr class="memitem:aa38db859d004a100b8cdd64b31b1a57d" id="r_aa38db859d004a100b8cdd64b31b1a57d"><td class="memItemLeft" align="right" valign="top">const DirectX::XMMATRIX&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa38db859d004a100b8cdd64b31b1a57d">XMLoad</a> () const</td></tr>
 <tr class="memitem:a6adc6903a94247ada4ec048ce57bcb7e" id="r_a6adc6903a94247ada4ec048ce57bcb7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6adc6903a94247ada4ec048ce57bcb7e">XMStore</a> (const DirectX::XMMATRIX &amp;mtx)</td></tr>
 <tr class="memitem:ac388261404cda1ff9dc4e596564d1dd6" id="r_ac388261404cda1ff9dc4e596564d1dd6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a7fadb7024df617e5065f817f1cc96c93">Matrix4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac388261404cda1ff9dc4e596564d1dd6">operator+</a> () const noexcept</td></tr>
@@ -124,10 +126,15 @@ $(function(){initNavTree('struct_uni_dx_1_1_matrix4x4.html','','struct_uni_dx_1_
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:aec67c8b2bd5673f5a1be3d7f78c36dcb" id="r_aec67c8b2bd5673f5a1be3d7f78c36dcb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a7fadb7024df617e5065f817f1cc96c93">Matrix4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec67c8b2bd5673f5a1be3d7f78c36dcb">Scale</a> (const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;scales) noexcept</td></tr>
+<tr class="memdesc:aec67c8b2bd5673f5a1be3d7f78c36dcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">ベクトルからスケール行列を生成  <br /></td></tr>
 <tr class="memitem:aa7e799ddf1de97787fbbaf0e0ae999c6" id="r_aa7e799ddf1de97787fbbaf0e0ae999c6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a7fadb7024df617e5065f817f1cc96c93">Matrix4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7e799ddf1de97787fbbaf0e0ae999c6">Rotate</a> (const <a class="el" href="struct_uni_dx_1_1_quaternion.html">Quaternion</a> &amp;rotation) noexcept</td></tr>
 <tr class="memdesc:aa7e799ddf1de97787fbbaf0e0ae999c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">クォータニオンから回転行列を生成  <br /></td></tr>
 <tr class="memitem:aab90e34e9717047cbfb267d8c487166e" id="r_aab90e34e9717047cbfb267d8c487166e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a7fadb7024df617e5065f817f1cc96c93">Matrix4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab90e34e9717047cbfb267d8c487166e">Translate</a> (const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;position) noexcept</td></tr>
 <tr class="memdesc:aab90e34e9717047cbfb267d8c487166e"><td class="mdescLeft">&#160;</td><td class="mdescRight">平行移動行列を生成  <br /></td></tr>
+<tr class="memitem:ae33fac02b05f49eacfe186d55d20fa48" id="r_ae33fac02b05f49eacfe186d55d20fa48"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ae33fac02b05f49eacfe186d55d20fa48 template"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a7fadb7024df617e5065f817f1cc96c93">Matrix4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae33fac02b05f49eacfe186d55d20fa48">FromColumnMajor16</a> (const T *a)</td></tr>
+<tr class="memdesc:ae33fac02b05f49eacfe186d55d20fa48"><td class="mdescLeft">&#160;</td><td class="mdescRight">列指向の4x4行列データから行列を生成  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 公開変数類</h2></td></tr>
@@ -153,7 +160,7 @@ $(function(){initNavTree('struct_uni_dx_1_1_matrix4x4.html','','struct_uni_dx_1_
 <tr class="memitem:a38103f4d4136493f4657c9a0e8148a18" id="r_a38103f4d4136493f4657c9a0e8148a18"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="#a7fadb7024df617e5065f817f1cc96c93">Matrix4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38103f4d4136493f4657c9a0e8148a18">identity</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
-<div class="textblock"><p>4x4 行列 (行優先) </p>
+<div class="textblock"><p>4x4 行列 (行ベクトル行優先) </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
 <a id="a7fadb7024df617e5065f817f1cc96c93" name="a7fadb7024df617e5065f817f1cc96c93"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7fadb7024df617e5065f817f1cc96c93">&#9670;&#160;</a></span>Matrix4x4() <span class="overload">[1/4]</span></h2>
@@ -366,6 +373,60 @@ $(function(){initNavTree('struct_uni_dx_1_1_matrix4x4.html','','struct_uni_dx_1_
 
 </div>
 </div>
+<a id="a709c3f32da14a54458ec49ab210a0a8f" name="a709c3f32da14a54458ec49ab210a0a8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a709c3f32da14a54458ec49ab210a0a8f">&#9670;&#160;</a></span>determinant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UniDx::Matrix4x4::determinant </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae33fac02b05f49eacfe186d55d20fa48" name="ae33fac02b05f49eacfe186d55d20fa48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae33fac02b05f49eacfe186d55d20fa48">&#9670;&#160;</a></span>FromColumnMajor16()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a7fadb7024df617e5065f817f1cc96c93">Matrix4x4</a> UniDx::Matrix4x4::FromColumnMajor16 </td>
+          <td>(</td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>列指向の4x4行列データから行列を生成 </p>
+
+</div>
+</div>
 <a id="ad97f2d7b4effe274aa7e9fef023e961f" name="ad97f2d7b4effe274aa7e9fef023e961f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad97f2d7b4effe274aa7e9fef023e961f">&#9670;&#160;</a></span>inverse()</h2>
 
@@ -574,6 +635,33 @@ $(function(){initNavTree('struct_uni_dx_1_1_matrix4x4.html','','struct_uni_dx_1_
 
 </div>
 </div>
+<a id="aec67c8b2bd5673f5a1be3d7f78c36dcb" name="aec67c8b2bd5673f5a1be3d7f78c36dcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec67c8b2bd5673f5a1be3d7f78c36dcb">&#9670;&#160;</a></span>Scale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a7fadb7024df617e5065f817f1cc96c93">Matrix4x4</a> UniDx::Matrix4x4::Scale </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>scales</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ベクトルからスケール行列を生成 </p>
+
+</div>
+</div>
 <a id="a82478869b4a8a5a42db2132e82e367a5" name="a82478869b4a8a5a42db2132e82e367a5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a82478869b4a8a5a42db2132e82e367a5">&#9670;&#160;</a></span>setTranslation()</h2>
 
@@ -731,7 +819,7 @@ $(function(){initNavTree('struct_uni_dx_1_1_matrix4x4.html','','struct_uni_dx_1_
 <div class="line">        0.f, 0.f, 1.f, 0.f,</div>
 <div class="line">        0.f, 0.f, 0.f, 1.f</div>
 <div class="line">    )</div>
-<div class="ttc" id="astruct_uni_dx_1_1_matrix4x4_html_a7fadb7024df617e5065f817f1cc96c93"><div class="ttname"><a href="#a7fadb7024df617e5065f817f1cc96c93">UniDx::Matrix4x4::Matrix4x4</a></div><div class="ttdeci">Matrix4x4()</div><div class="ttdef"><b>Definition</b> Math.h:280</div></div>
+<div class="ttc" id="astruct_uni_dx_1_1_matrix4x4_html_a7fadb7024df617e5065f817f1cc96c93"><div class="ttname"><a href="#a7fadb7024df617e5065f817f1cc96c93">UniDx::Matrix4x4::Matrix4x4</a></div><div class="ttdeci">Matrix4x4()</div><div class="ttdef"><b>Definition</b> Math.h:315</div></div>
 </div><!-- fragment -->
 </div>
 </div>

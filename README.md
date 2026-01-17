@@ -22,6 +22,7 @@ UniDxは、UnityライクなDirectX用ゲームフレームワークです。
 - Windows 10/11
 - Visual Studio 2022
 - DirectX 11
+- C++20
 
 
 ## 依存ライブラリ

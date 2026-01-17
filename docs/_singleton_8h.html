@@ -18,6 +18,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -92,7 +93,7 @@ $(function(){initNavTree('_singleton_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>初期化と破棄のタイミングを制御したり、 具体クラスで create できるようにするため 明示的な create と destroy が必要  
+<p>シングルトンテンプレート。 初期化と破棄のタイミングを制御したり、具体クラスで create できる  
 <a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;assert.h&gt;</code><br />
@@ -103,6 +104,7 @@ $(function(){initNavTree('_singleton_8h.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 クラス</h2></td></tr>
 <tr class="memitem:UniDx_3A_3ASingleton_3C_20T_20_3E" id="r_UniDx_3A_3ASingleton_3C_20T_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_singleton.html">UniDx::Singleton&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">シングルトンテンプレート。 明示的な create と destroy が必要  <a href="class_uni_dx_1_1_singleton.html#details">[詳解]</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 名前空間</h2></td></tr>
@@ -114,7 +116,7 @@ $(function(){initNavTree('_singleton_8h.html','',''); });
 <tr class="memitem:a2536a42f921589946dd431cf3cff17d2 template"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_uni_dx.html#a2536a42f921589946dd431cf3cff17d2">UniDx::Singleton&lt; T &gt;::instance_</a> = nullptr</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
-<div class="textblock"><p>初期化と破棄のタイミングを制御したり、 具体クラスで create できるようにするため 明示的な create と destroy が必要 </p>
+<div class="textblock"><p>シングルトンテンプレート。 初期化と破棄のタイミングを制御したり、具体クラスで create できる </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
