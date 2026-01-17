@@ -1,11 +1,14 @@
 ﻿#include "pch.h"
 #include <UniDx/Physics.h>
 
+#include <numbers>
 #include <algorithm>
 
 #include <UniDx/Collider.h>
 #include <UniDx/Rigidbody.h>
+#include <PhysicsGrid.h>
 
+#define UNIDX_PHYSICS_USE_GRID true
 
 namespace UniDx
 {
@@ -87,6 +90,18 @@ namespace UniDx
         std::swap(collisions_, collisionsNew_);
     }
 
+    // コンストラクタ
+    Physics::Physics()
+    {
+        // 毎フレームクリアされるデータはできるだけ再利用する
+        // 最初にある程度の数を予約
+        potentialPairs.reserve(128);
+        potentialPairsTrigger.reserve(128);
+#if UNIDX_PHYSICS_USE_GRID
+        physicsGrid = make_unique<PhysicsGrid>(MakeMemberAction(this, &Physics::checkBounds));
+#endif
+
+    }
 
     // Rigidbodyを登録
     void Physics::registerRigidbody(Rigidbody* rigidbody)
@@ -175,7 +190,7 @@ namespace UniDx
             act.second.initCorrectBounds();
         }
 
-        // Shapeの移動Boundsと次に当たるコライダーを初期化を更新
+        // Shapeの移動Boundsと次に当たるコライダーを初期化
         for (auto& shape : physicsShapes)
         {
             shape.initOtherNew();
@@ -191,7 +206,10 @@ namespace UniDx
             Rigidbody* r = shape.getCollider()->attachedRigidbody;
             if (r != nullptr)
             {
-                shape.actor = &physicsActors.at(r);
+                if (shape.actor == nullptr)
+                {
+                    shape.actor = &physicsActors.at(r);
+                }
             }
             else
             {
@@ -204,35 +222,43 @@ namespace UniDx
     // 位置補正法（射影法）による物理計算のシミュレート
     void Physics::simulatePositionCorrection(float step)
     {
+        auto start = std::chrono::system_clock::now(); // 開始時刻を記録
+
         initializeSimulate(step);
+
+        static double totalTime = 0.0;
+        static double totalInsert = 0.0;
+        static int timeCount = 0;
 
         // まずは当たりそうなペアをAABBで判定して抽出
         potentialPairs.clear();
         potentialPairsTrigger.clear();
+
+#if UNIDX_PHYSICS_USE_GRID
+        physicsGrid->update(physicsShapes);
+        auto insert = std::chrono::system_clock::now(); // 終了時刻を記録
+        totalInsert += std::chrono::duration_cast<std::chrono::microseconds>(insert - start).count() * 0.001;
+        physicsGrid->gatherPairs();
+#else
         for (size_t i = 0; i < physicsShapes.size(); ++i)
         {
             for (size_t j = i + 1; j < physicsShapes.size(); ++j)
             {
-                if (physicsShapes[i].moveBounds.Intersects(physicsShapes[j].moveBounds))
-                {
-                    // 同じ Rigidbody に属しているコンパウンド同士は自己衝突なのでスキップ
-                    auto rbA = physicsShapes[i].getCollider()->attachedRigidbody;
-                    auto rbB = physicsShapes[j].getCollider()->attachedRigidbody;
-                    if (rbA && rbA == rbB) continue;
-
-                    // ペアを記憶
-                    if (physicsShapes[i].getCollider()->isTrigger || physicsShapes[j].getCollider()->isTrigger)
-                    {
-                        // トリガー
-                        potentialPairsTrigger.push_back({ &physicsShapes[i], &physicsShapes[j] });
-                    }
-                    else
-                    {
-                        // コリジョン
-                        potentialPairs.push_back({ &physicsShapes[i], &physicsShapes[j] });
-                    }
-                }
+                checkBounds(&physicsShapes[i], &physicsShapes[j]);
             }
+        }
+#endif
+        auto end = std::chrono::system_clock::now(); // 終了時刻を記録
+        std::chrono::microseconds elapsed = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+        totalTime += elapsed.count() * 0.001;
+        timeCount++;
+        if (timeCount % 100 == 0)
+        {
+//            Debug::Log(totalInsert);
+//            Debug::Log(totalTime);
+            totalInsert = 0.0;
+            totalTime = 0.0;
+            timeCount = 0;
         }
 
         // 先に位置を更新する
@@ -244,25 +270,25 @@ namespace UniDx
         // トリガーチェックする
         for (auto& pair : potentialPairsTrigger)
         {
-            if (pair.a->getCollider()->intersects(pair.b->getCollider()))
+            if (pair.first->getCollider()->intersects(pair.second->getCollider()))
             {
-                pair.a->addTrigger(pair.b->getCollider());
-                pair.b->addTrigger(pair.a->getCollider());
+                pair.first->addTrigger(pair.second->getCollider());
+                pair.second->addTrigger(pair.first->getCollider());
             }
         }
 
         // 衝突をチェックする
         for (auto& pair : potentialPairs)
         {
-            if (pair.a->getCollider()->checkIntersect(pair.b->getCollider(), pair.a->actor, pair.b->actor))
+            if (pair.first->getCollider()->checkIntersect(pair.second->getCollider(), pair.first->actor, pair.second->actor))
             {
                 Collision ca;
-                ca.collider = pair.b->getCollider();
-                pair.a->addCollide(ca);
+                ca.collider = pair.second->getCollider();
+                pair.first->addCollide(ca);
 
                 Collision cb;
-                cb.collider = pair.a->getCollider();
-                pair.b->addCollide(cb);
+                cb.collider = pair.first->getCollider();
+                pair.second->addCollide(cb);
             }
         }
 
@@ -283,8 +309,31 @@ namespace UniDx
         }
     }
 
+    void Physics::checkBounds(PhysicsShape* shape1, PhysicsShape* shape2)
+    {
+        if (shape1->moveBounds.Intersects(shape2->moveBounds))
+        {
+            auto rbA = shape1->getCollider()->attachedRigidbody;
+            auto rbB = shape2->getCollider()->attachedRigidbody;
 
-    // 物理計算のシミュレート
+            // 同じ Rigidbody に属しているコンパウンド同士は自己衝突なのでスキップ
+            if (rbA && rbA == rbB) return;
+
+            // ペアを記憶
+            if (shape1->getCollider()->isTrigger || shape2->getCollider()->isTrigger)
+            {
+                // トリガー
+                potentialPairsTrigger.push_back({ shape1, shape2 });
+            }
+            else
+            {
+                // コリジョン
+                potentialPairs.push_back({ shape1, shape2 });
+            }
+        }
+    }
+
+    // 物理計算のシミュレート（未完成）
     void Physics::simulate(float step)
     {
         initializeSimulate(step);
@@ -313,7 +362,7 @@ namespace UniDx
         for (auto& pair : potentialPairs)
         {
             ContactManifold m;
-            //        if (intersectShapes(*pair.a, *pair.b, &m)) {  // ← ここが Narrow-phase
+            //        if (intersectShapes(*pair.first, *pair.second, &m)) {  // ← ここが Narrow-phase
             //            manifolds.push_back(m);
             //        }
         }

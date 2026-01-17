@@ -164,6 +164,12 @@
     <ClInclude Include="include\UniDx\BoneMath.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="private\PhysicsGrid.h">
+      <Filter>プライベートヘッダー</Filter>
+    </ClInclude>
+    <ClInclude Include="include\UniDx\Func.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Camera.cpp">
@@ -254,6 +260,9 @@
       <Filter>tinygltf</Filter>
     </ClCompile>
     <ClCompile Include="src\SkinnedMeshRenderer.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PhysicsGrid.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>

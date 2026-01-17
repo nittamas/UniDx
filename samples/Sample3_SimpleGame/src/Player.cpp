@@ -28,20 +28,20 @@ namespace
     // アニメーションさせる角度の範囲（pitch, yaw, roll）
     const Vector3 Range[] =
     {
-        Vector3( 80, 0,  0),
-        Vector3(-80, 0,  0),
-        Vector3( 30, 0, 45),
-        Vector3(-30, 0, 45),
-        Vector3( 30, 0,  0),
+        Vector3( 80,  0,  0),
+        Vector3(-80,  0,  0),
+        Vector3( 30,  0, 45),
+        Vector3(-30,  0, 45),
+        Vector3(  0,-60,  0),
     };
     // アニメーションさせる角度のオフセット（pitch, yaw, roll）
     const Vector3 Offset[] =
     {
-        Vector3( 0, 0, 30),
-        Vector3( 0, 0,-30),
-        Vector3( 0, 5,  0),
-        Vector3( 0,-5,  0),
-        Vector3(20, 0,  0),
+        Vector3(  0,  0, 30),
+        Vector3(  0,  0,-30),
+        Vector3(  0,  5,  0),
+        Vector3(  0, -5,  0),
+        Vector3( 20,  0,  0),
     };
     constexpr size_t BoneMax = sizeof(BoneName) / sizeof(StringId);
     constexpr float animSpeed = 0.07f;

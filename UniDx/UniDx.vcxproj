@@ -156,6 +156,7 @@
     <ClInclude Include="include\UniDx\ConstantBuffer.h" />
     <ClInclude Include="include\UniDx\D3DManager.h" />
     <ClInclude Include="include\UniDx\Debug.h" />
+    <ClInclude Include="include\UniDx\Func.h" />
     <ClInclude Include="include\UniDx\PlayerLoop.h" />
     <ClInclude Include="include\UniDx\Font.h" />
     <ClInclude Include="include\UniDx\GameObject.h" />
@@ -190,6 +191,7 @@
     <ClInclude Include="include\UniDx\UniDx.h" />
     <ClInclude Include="include\UniDx\UniDxDefine.h" />
     <ClInclude Include="private\pch.h" />
+    <ClInclude Include="private\PhysicsGrid.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\external\tinygltf\tiny_gltf.cc">
@@ -202,6 +204,7 @@
     <ClCompile Include="src\Collider.cpp" />
     <ClCompile Include="src\Component.cpp" />
     <ClCompile Include="src\D3DManager.cpp" />
+    <ClCompile Include="src\PhysicsGrid.cpp" />
     <ClCompile Include="src\PlayerLoop.cpp" />
     <ClCompile Include="src\Font.cpp" />
     <ClCompile Include="src\GameObject.cpp" />
