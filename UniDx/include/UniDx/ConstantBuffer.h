@@ -1,8 +1,12 @@
 ﻿#pragma once
 
 #include "UniDxDefine.h"
+#include "BoneMath.h"
 
 namespace UniDx {
+
+// スキンメッシュに使うボーンの最大値
+constexpr int SkinMeshBoneMax = 256;
 
 // UniDxで使用する定数バッファのスロット番号
 // すべてのシェーダーはこの番号に従って指定する
@@ -38,8 +42,8 @@ struct ConstantBufferPerCamera
 /* HLSL
 cbuffer CBPerCamera : register(b8)
 {
-    float4x4 view;
-    float4x4 projection;
+    row_major float4x4 view;
+    row_major float4x4 projection;
     float3   cameraPosW;
     float    cameraNear;
     float3   cameraForwardW;
@@ -58,7 +62,19 @@ struct ConstantBufferPerObject
 /* HLSL
 cbuffer CBPerObject : register(b9)
 {
-    float4x4 world;
+    row_major float4x4 world;
+};
+*/
+struct ConstantBufferSkinPerObject
+{
+    Matrix4x4 world;
+    BoneMat3x4 bones[SkinMeshBoneMax];
+};
+/* HLSL
+cbuffer CBSkinPerObject : register(b9)
+{
+    row_major float4x4 world;
+    BoneMat3x4 bones[256];
 };
 */
 

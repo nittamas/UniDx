@@ -26,11 +26,12 @@ struct SubMesh
 
     std::span<const Vector3> positions;
     std::span<const Vector3> normals;
+    std::span<const Vector4> tangents;
     std::span<const Color> colors;
     std::span<const Vector2> uv;
+    std::span<const Vector2> uv1;
     std::span<const Vector2> uv2;
     std::span<const Vector2> uv3;
-    std::span<const Vector2> uv4;
     std::span<const uint32_t> indices;
 
     ComPtr<ID3D11Buffer> vertexBuffer;
@@ -51,14 +52,17 @@ struct SubMesh
         // 法線のコピー
         copyNormalTo(vertex);
 
+        // 接線のコピー
+        copyTangentTo(vertex);
+
         // カラーのコピー
         copyColorTo(vertex);
 
         // uvのコピー
         copyUVTo(vertex);
+        copyUV1To(vertex);
         copyUV2To(vertex);
         copyUV3To(vertex);
-        copyUV4To(vertex);
 
         return positions.size();
     }
@@ -127,6 +131,15 @@ struct SubMesh
         for (int i = 0; i < positions.size(); ++i) vertex[i].setNormal(normals[i]);
     }
 
+    // 接線のコピー
+    template<typename TVertex>
+    void copyTangentTo(std::span<TVertex> vertex)
+    {
+        if(tangents.size() == 0) return;
+        assert(tangents.size() == positions.size());
+        for(int i = 0; i < positions.size(); ++i) vertex[i].setTangent(tangents[i]);
+    }
+
     // カラーのコピー
     template<typename TVertex>
     void copyColorTo(std::span<TVertex> vertex)
@@ -145,6 +158,13 @@ struct SubMesh
         for (int i = 0; i < positions.size(); ++i) vertex[i].setUV(uv[i]);
     }
     template<typename TVertex>
+    void copyUV1To(std::span<TVertex> vertex)
+    {
+        if(uv1.size() == 0) return;
+        assert(uv1.size() == positions.size());
+        for(int i = 0; i < positions.size(); ++i) vertex[i].setUV1(uv1[i]);
+    }
+    template<typename TVertex>
     void copyUV2To(std::span<TVertex> vertex)
     {
         if(uv2.size() == 0) return;
@@ -158,13 +178,6 @@ struct SubMesh
         assert(uv3.size() == positions.size());
         for (int i = 0; i < positions.size(); ++i) vertex[i].setUV3(uv3[i]);
     }
-    template<typename TVertex>
-    void copyUV4To(std::span<TVertex> vertex)
-    {
-        if(uv4.size() == 0) return;
-        assert(uv4.size() == positions.size());
-        for (int i = 0; i < positions.size(); ++i) vertex[i].setUV4(uv4[i]);
-    }
 };
 
 
@@ -173,58 +186,53 @@ struct SubMesh
 // --------------------
 struct OwnedSubMesh : public SubMesh
 {
-    const std::vector<Vector3>& mutablePositions() { return positions_data; }
-    const std::vector<Vector3>& mutableNormals() { return normals_data; }
-    const std::vector<Color>&   mutableColors() { return colors_data; }
-    const std::vector<Vector2>& mutableUV() { return uv_data; }
-    const std::vector<Vector2>& mutableUV2() { return uv2_data; }
-    const std::vector<Vector2>& mutableUV3() { return uv3_data; }
-    const std::vector<Vector2>& mutableUV4() { return uv4_data; }
-    const std::vector<uint32_t>& mutableIndices() { return indices_data; }
+    std::vector<Vector3> positionsData;
+    std::vector<Vector3> normalsData;
+    std::vector<Vector4> tangentsData;
+    std::vector<Color> colorsData;
+    std::vector<Vector2> uvData;
+    std::vector<Vector2> uv2Data;
+    std::vector<Vector2> uv3Data;
+    std::vector<Vector2> uv4Data;
+    std::vector<uint32_t> indicesData;
 
     // 必要なサイズだけ確保し、spanを設定
     void resizePositions(size_t n) {
-        positions_data.resize(n);
-        positions = std::span<const Vector3>(positions_data.data(), n);
+        positionsData.resize(n);
+        positions = positionsData;
     }
     void resizeNormals(size_t n) {
-        normals_data.resize(n);
-        normals = std::span<const Vector3>(normals_data.data(), n);
+        normalsData.resize(n);
+        normals = normalsData;
+    }
+    void resizeTangents(size_t n) {
+        tangentsData.resize(n);
+        tangents = tangentsData;
     }
     void resizeColors(size_t n) {
-        colors_data.resize(n);
-        colors = std::span<const Color>(colors_data.data(), n);
+        colorsData.resize(n);
+        colors = colorsData;
     }
     void resizeUV(size_t n) {
-        uv_data.resize(n);
-        uv = std::span<const Vector2>(uv_data.data(), n);
+        uvData.resize(n);
+        uv = uvData;
     }
     void resizeUV2(size_t n) {
-        uv2_data.resize(n);
-        uv2 = std::span<const Vector2>(uv2_data.data(), n);
+        uv2Data.resize(n);
+        uv1 = uv2Data;
     }
     void resizeUV3(size_t n) {
-        uv3_data.resize(n);
-        uv3 = std::span<const Vector2>(uv3_data.data(), n);
+        uv3Data.resize(n);
+        uv2 = uv3Data;
     }
     void resizeUV4(size_t n) {
-        uv4_data.resize(n);
-        uv4 = std::span<const Vector2>(uv4_data.data(), n);
+        uv4Data.resize(n);
+        uv3 = uv4Data;
     }
     void resizeIndices(size_t n) {
-        indices_data.resize(n);
-        indices = std::span<const uint32_t>(indices_data.data(), n);
+        indicesData.resize(n);
+        indices = indicesData;
     }
-
-protected:
-    std::vector<Vector3> positions_data;
-    std::vector<Vector3> normals_data;
-    std::vector<Color> colors_data;
-    std::vector<Vector2> uv_data;
-    std::vector<Vector2> uv2_data;
-    std::vector<Vector2> uv3_data;
-    std::vector<Vector2> uv4_data;
-    std::vector<uint32_t> indices_data;
 };
 
 

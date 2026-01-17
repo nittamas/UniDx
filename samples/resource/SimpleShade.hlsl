@@ -1,6 +1,7 @@
 // ----------------------------------------------------------
-// テクスチャ１枚、環境光、ディレクショナルライト、
-// マテリアルカラーだけの単純な陰影シェーダー
+// マテリアルカラーに環境光とディレクショナルライトを
+// 当てる単純な陰影シェーダー
+// 頂点に VertexPN を使う
 // ----------------------------------------------------------
 
 // ----------------------------------------------------------
@@ -9,14 +10,14 @@
 // カメラ定数バッファ
 cbuffer CBPerCamera : register(b8)
 {
-    float4x4 view;
-    float4x4 projection;
+    row_major float4x4 view;
+    row_major float4x4 projection;
 };
 
 // オブジェクト定数バッファ
 cbuffer CBPerObject : register(b9)
 {
-    float4x4 world;
+    row_major float4x4 world;
 };
 
 // 頂点シェーダーへ入力するデータ
@@ -39,13 +40,13 @@ PSInput VS(VSInput vin)
     PSInput Out;
 
     float4 p = float4(vin.pos.xyz, 1);
-    p = mul(world, p);      // ワールド変換
-    p = mul(view, p);       // ビュー変換
-    p = mul(projection, p); // プロジェクション変換
+    p = mul(p, world);      // ワールド変換
+    p = mul(p, view); // ビュー変換
+    p = mul(p, projection); // プロジェクション変換
     Out.posH = p;
 
     float3x3 world3x3 = (float3x3) world;
-    Out.nrmW = mul(world3x3, vin.nrm);
+    Out.nrmW = mul(vin.nrm, world3x3);
     return Out;
 }
 

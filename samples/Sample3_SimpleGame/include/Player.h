@@ -20,14 +20,7 @@ public:
     UniDx::Rigidbody* rb = nullptr;
 
 private:
-    enum class Parts
-    {
-        LeftShoulder,
-        RightShoulder,
-        LeftLeg,
-        RightLeg,
-        Max
-    };
-    UniDx::Transform* parts[(size_t)Parts::Max];
+    std::vector<UniDx::Transform*> bones;
+    std::vector<UniDx::Quaternion> initialRotate;
     float animFrame;
 };

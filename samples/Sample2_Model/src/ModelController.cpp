@@ -9,7 +9,7 @@ using namespace UniDx;
 
 void ModelController::OnEnable()
 {
-    pitch = -10.0f;
+    pitch = -5.0f;
     yaw = 0.0f;
 }
 

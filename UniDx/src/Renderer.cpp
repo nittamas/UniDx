@@ -23,6 +23,15 @@ void Renderer::OnEnable()
     }
 
     // 行列用の定数バッファ生成
+    createConstantBufferPerObject();
+}
+
+
+// -----------------------------------------------------------------------------
+// 行列用の定数バッファ生成
+// -----------------------------------------------------------------------------
+void Renderer::createConstantBufferPerObject()
+{
     D3D11_BUFFER_DESC desc{};
     desc.ByteWidth = sizeof(ConstantBufferPerObject);
     desc.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
@@ -33,9 +42,9 @@ void Renderer::OnEnable()
 
 
 // -----------------------------------------------------------------------------
-// 現在の姿勢とカメラをシェーダーの定数バッファに転送
+// 現在の姿勢をシェーダーの定数バッファに転送
 // -----------------------------------------------------------------------------
-void Renderer::updatePositionCameraCBuffer() const
+void Renderer::bindPerObject()
 {
     // ワールド行列を transform から合わせて作成
     ConstantBufferPerObject cb{};
@@ -45,6 +54,18 @@ void Renderer::updatePositionCameraCBuffer() const
     // 定数バッファ更新
     ID3D11Buffer* cbs[1] = { constantBufferPerObject.Get() };
     D3DManager::getInstance()->GetContext()->VSSetConstantBuffers(CB_PerObject, 1, cbs);
+}
+
+
+// -----------------------------------------------------------------------------
+// オブジェクトに合わせたライト情報をシェーダーの定数バッファに転送
+// -----------------------------------------------------------------------------
+void Renderer::bindLightPerObject()
+{
+    if(lightCount > 0)
+    {
+        LightManager::getInstance()->updateLightCBufferObject(transform->position, lightCount);
+    }
 }
 
 
@@ -60,13 +81,23 @@ MeshRenderer::MeshRenderer()
 // -----------------------------------------------------------------------------
 // メッシュを使って描画
 // -----------------------------------------------------------------------------
-void MeshRenderer::render(const Camera& camera) const
+void MeshRenderer::render(const Camera& camera)
 {
-    // 現在のTransformとカメラの情報をシェーダーのConstantBufferに転送
-    updatePositionCameraCBuffer();
+    // レンダーモードが一致するマテリアルがあるか確認
+    auto it = std::ranges::find_if(materials, 
+        [](auto& m){
+            return m != nullptr && m->renderingMode == D3DManager::getInstance()->getCurrentRenderingMode();
+        });
+    if(it == materials.end())
+    {
+        return;
+    }
 
-    // ライト影響をConstantBufferに転送
-    LightManager::getInstance()->updateLightCBufferObject(transform->position, lightCount);
+    // 現在のTransformの情報をシェーダーのConstantBufferに転送
+    bindPerObject();
+
+    // オブジェクトに合わせたライト情報をシェーダーのConstantBufferに転送
+    bindLightPerObject();
 
     //-----------------------------
     // 描画実行

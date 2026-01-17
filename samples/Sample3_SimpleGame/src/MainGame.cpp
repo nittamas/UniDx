@@ -153,9 +153,9 @@ unique_ptr<UniDx::Scene> MainGame::CreateScene()
         make_unique<Player>()
         );
     auto model = playerObj->GetComponent<GltfModel>(true);
-    model->Load<VertexPNT>(
+    model->Load<VertexSkin>(
         u8"resource/mini_emma.glb",
-        u8"resource/AlbedoShadeSpec.hlsl");
+        u8"resource/SkinBasic.hlsl");
     playerObj->transform->localPosition = Vector3(0, -1, 0);
     playerObj->transform->localRotation = Quaternion::Euler(0, 180, 0);
 

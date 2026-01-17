@@ -38,6 +38,7 @@ public:
     ReadOnlyProperty<Texture*> mainTexture;
     D3D11_DEPTH_WRITE_MASK depthWrite;
     D3D11_COMPARISON_FUNC ztest;
+    D3D11_CULL_MODE cullMode;
     RenderingMode renderingMode;
 
     // コンストラクタ
@@ -85,6 +86,7 @@ protected:
     ComPtr<ID3D11Buffer> constantBufferPerMaterial;
     ComPtr<ID3D11DepthStencilState> depthStencilState;
     ComPtr<ID3D11BlendState> blendState;
+    ComPtr<ID3D11RasterizerState> rasterizerState;
 
     std::vector<std::shared_ptr<Texture>> textures;
     BlendMode blendMode;

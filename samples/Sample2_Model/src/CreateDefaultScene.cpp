@@ -29,9 +29,9 @@ unique_ptr<Scene> CreateDefaultScene()
 
     // .glbファイルからモデルデータをロード
     // 先にGameObjectにアタッチしておく
-    model->Load<VertexPNT>(
+    model->Load<VertexSkin>(
         u8"resource/mini_emma.glb",
-        u8"resource/AlbedoShadeSpec.hlsl");
+        u8"resource/SkinBasic.hlsl");
     character->transform->localRotation = Quaternion::Euler(0, 180, 0);
 
     // -- ライト --
@@ -43,7 +43,7 @@ unique_ptr<Scene> CreateDefaultScene()
         // ライト操作プログラム
         make_unique<LightController>()
     );
-    light->transform->localPosition = Vector3(-1.0f, 4.0f, -2.5f);
+    light->transform->localPosition = Vector3(-1.0f, 3.0f, -4.0f);
     light->GetComponent<Light>(true)->intensity = 0.6f;
 
     // 環境光

@@ -1,18 +1,23 @@
 // ----------------------------------------------------------
+// テクスチャと頂点カラーを使う単純なシェーダー
+// 頂点に VertexPTC を使う
+// ----------------------------------------------------------
+
+// ----------------------------------------------------------
 // 頂点
 // ----------------------------------------------------------
 cbuffer CBPerCamera : register(b0)
 {
-    float4x4 world;
-    float4x4 view;
-    float4x4 projection;
+    row_major float4x4 world;
+    row_major float4x4 view;
+    row_major float4x4 projection;
 };
 
 // 頂点シェーダーへ入力するデータ
 struct VSInput
 {
     float3 pos : POSITION;
-    float2 uv : TEXUV;
+    float2 uv : TEXCOORD0;
     float4 color : COLOR0;
 };
 
@@ -30,9 +35,9 @@ PSInput VS(VSInput vin)
 {
     PSInput Out;
     float4 p = float4(vin.pos.xyz, 1);
-    p = mul(world, p);
-    p = mul(view, p);
-    p = mul(projection, p);
+    p = mul(p, world);
+    p = mul(p, view);
+    p = mul(p, projection);
     Out.pos = p;
     Out.uv = vin.uv;
     Out.color = vin.color;

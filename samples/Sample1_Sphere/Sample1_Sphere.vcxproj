@@ -113,9 +113,12 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration);$(ProjectDir)\..\..\UniDx\$(Platform)\$(Configuration);$(ProjectDir)\..\..\external\DirectXTK\Bin\Desktop_2022_Win10\$(Platform)\$(Configuration);$(ProjectDir)\..\..\external\DirectXTex\DirectXTex\Bin\Desktop_2022_Win10\$(Platform)\$(Configuration);</AdditionalLibraryDirectories>
-      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);UniDx.lib;DirectXTK.lib;DirectXTex.lib</AdditionalDependencies>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);dxguid.lib;UniDx.lib;DirectXTK.lib;DirectXTex.lib</AdditionalDependencies>
       <MapExports>true</MapExports>
     </Link>
+    <CopyFileToFolders>
+      <DestinationFolders>$(OutDir)\resource</DestinationFolders>
+    </CopyFileToFolders>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -134,10 +137,13 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);UniDx.lib;DirectXTK.lib;DirectXTex.lib</AdditionalDependencies>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);dxguid.lib;UniDx.lib;DirectXTK.lib;DirectXTex.lib</AdditionalDependencies>
       <MapExports>true</MapExports>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration);$(ProjectDir)\..\..\UniDx\$(Platform)\$(Configuration);$(ProjectDir)\..\..\external\DirectXTK\Bin\Desktop_2022_Win10\$(Platform)\$(Configuration);$(ProjectDir)\..\..\external\DirectXTex\DirectXTex\Bin\Desktop_2022_Win10\$(Platform)\$(Configuration);</AdditionalLibraryDirectories>
     </Link>
+    <CopyFileToFolders>
+      <DestinationFolders>$(OutDir)\resource</DestinationFolders>
+    </CopyFileToFolders>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ResourceCompile Include="Sample1_Sphere.rc" />

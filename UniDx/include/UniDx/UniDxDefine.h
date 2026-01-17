@@ -47,6 +47,8 @@ inline u8string ToString(const T& v) { return u8string( reinterpret_cast<const c
 inline u8string ToString(const char8_t* v) { return u8string(v); }
 inline u8string ToString(const std::wstring& v) { return ToUtf8(v); }
 inline u8string ToString(const std::wstring_view& v) { return ToUtf8(v); }
+inline u8string ToString(const std::u8string& v) { return v; }
+inline u8string ToString(const std::u8string_view& v) { return std::u8string(v).c_str(); }
 inline u8string ToString(const char* v) { return u8string(reinterpret_cast<const char8_t*>(v)); }
 inline u8string ToString(const std::string& v) { return u8string(reinterpret_cast<const char8_t*>(v.data()), v.size()); }
 inline u8string ToString(const DirectX::XMFLOAT2& v)

@@ -3,6 +3,7 @@
 
 #include <UniDx/D3DManager.h>
 #include <UniDx/Material.h>
+#include <UniDx/SkinnedMeshRenderer.h>
 
 namespace UniDx{
 
@@ -25,6 +26,7 @@ void SubMesh::createVertexBuffer(void* data)
     D3D11_SUBRESOURCE_DATA initData = { data, byteSize, 0 };	// 書き込むデータ
 
     // 頂点バッファの作成
+    std::span<VertexSkin> a(static_cast<VertexSkin*>(data), positions.size());
     D3DManager::getInstance()->GetDevice()->CreateBuffer(&vbDesc, &initData, &vertexBuffer);
 }
 
@@ -82,7 +84,10 @@ void Mesh::render(std::span<const std::shared_ptr<Material>> materials) const
         auto& sub = submesh[i];
         if (i < materials.size() && materials[i] != nullptr)
         {
-            materials[i]->bind();
+            if(!materials[i]->bind())
+            {
+                return; // 描画するマテリアルでなければ render を呼ばない
+            }
         }
         sub->render();
     }

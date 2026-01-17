@@ -15,109 +15,59 @@ struct VertexP
 
 	void setPosition(Vector3 v) { position = v; }
 	void setNormal(Vector3 v) {}
+	void setTangent(Vector4 v) {}
 	void setColor(Color c) {}
 	void setUV(Vector2 v) {}
+	void setUV1(Vector2 v) {}
 	void setUV2(Vector2 v) {}
 	void setUV3(Vector2 v) {}
-	void setUV4(Vector2 v) {}
 
 	static const std::array< D3D11_INPUT_ELEMENT_DESC, 1> layout;
 };
-struct VertexPN
+struct VertexPN : public VertexP
 {
-	Vector3 position;
 	Vector3 normal;
-
-	void setPosition(Vector3 v) { position = v; }
 	void setNormal(Vector3 v) { normal = v; }
-	void setColor(Color c) {}
-	void setUV(Vector2 v) {}
-	void setUV2(Vector2 v) {}
-	void setUV3(Vector2 v) {}
-	void setUV4(Vector2 v) {}
 
 	static const std::array< D3D11_INPUT_ELEMENT_DESC, 2> layout;
 };
-struct VertexPT
+struct VertexPT : public VertexP
 {
-	Vector3 position;
 	Vector2 uv0;
-
-	void setPosition(Vector3 v) { position = v; }
-	void setNormal(Vector3 v) {}
-	void setColor(Color c) {}
 	void setUV(Vector2 v) { uv0 = v; }
-	void setUV2(Vector2 v) { }
-	void setUV3(Vector2 v) {}
-	void setUV4(Vector2 v) {}
 
 	static const std::array< D3D11_INPUT_ELEMENT_DESC, 2> layout;
 };
-struct VertexPC
+struct VertexPC : public VertexP
 {
-	Vector3 position;
 	Color color;
-
-	void setPosition(Vector3 v) { position = v; }
-	void setNormal(Vector3 v) {}
 	void setColor(Color c) { color = c; }
-	void setUV(Vector2 v) {}
-	void setUV2(Vector2 v) {}
-	void setUV3(Vector2 v) {}
-	void setUV4(Vector2 v) {}
 
 	static const std::array< D3D11_INPUT_ELEMENT_DESC, 2> layout;
 };
-struct VertexPTC
+struct VertexPTC : public VertexPT
 {
-	Vector3 position;
-	Vector2 uv0;
 	Color color;
-
-	void setPosition(Vector3 v) { position = v; }
-	void setNormal(Vector3 v) {}
 	void setColor(Color c) { color = c; }
-	void setUV(Vector2 v) { uv0 = v; }
-	void setUV2(Vector2 v) {}
-	void setUV3(Vector2 v) {}
-	void setUV4(Vector2 v) {}
 
 	static const std::array< D3D11_INPUT_ELEMENT_DESC, 3> layout;
 };
-struct VertexPNT
+struct VertexPNT : public VertexPN
 {
-	Vector3 position;
-	Vector3 normal;
 	Vector2 uv0;
-
-	void setPosition(Vector3 v) { position = v; }
-	void setNormal(Vector3 v) { normal = v; }
-	void setColor(Color c) {}
 	void setUV(Vector2 v) { uv0 = v; }
-	void setUV2(Vector2 v) {}
-	void setUV3(Vector2 v) {}
-	void setUV4(Vector2 v) {}
 
 	static const std::array< D3D11_INPUT_ELEMENT_DESC, 3> layout;
 };
-struct VertexPNC
+struct VertexPNC : public VertexPN
 {
-	Vector3 position;
-	Vector3 normal;
 	Color color;
-
-	void setPosition(Vector3 v) { position = v; }
-	void setNormal(Vector3 v) { normal = v; }
 	void setColor(Color c) { color = c; }
-	void setUV(Vector2 v) {}
-	void setUV2(Vector2 v) {}
-	void setUV3(Vector2 v) {}
-	void setUV4(Vector2 v) {}
 
 	static const std::array< D3D11_INPUT_ELEMENT_DESC, 3> layout;
 };
 
-
+// シェーダーが扱う変数のレイアウト情報
 struct ShaderVarLayout
 {
 	StringId  name;

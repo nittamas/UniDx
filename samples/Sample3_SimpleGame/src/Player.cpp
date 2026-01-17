@@ -1,10 +1,11 @@
-#pragma once
+﻿#pragma once
 
 #include "Player.h"
 
 #include <UniDx/Input.h>
 #include <UniDx/Collider.h>
 #include <UniDx/Time.h>
+#include <UniDx/PrimitiveRenderer.h>
 
 #include "MainGame.h"
 
@@ -13,28 +14,37 @@ using namespace UniDx;
 
 namespace
 {
-    void debugNode(GameObject* p, std::string head)
-    {
-        std::string str = head;
-        str.append(p->name.get().c_str());
-        Debug::Log(str);
-        str = head;
-        str.append( std::to_string(p->transform->position.get().y));
-        Debug::Log(str);
-        str = head + " ";
-        for (int i = 0; i < p->transform->childCount(); ++i)
-        {
-            debugNode(p->transform->GetChild(i)->gameObject, str);
-        }
-    }
+    const StringId CoinName = StringId::intern("Coin");
 
-    const char* PartsName[] =
+    // アニメショーンさせるボーン名
+    const StringId BoneName[] =
     {
-        "LeftShoulder",
-        "RightShoulder",
-        "LeftUpperLeg",
-        "RightUpperLeg"
+        StringId::intern("LeftUpperArm"),
+        StringId::intern("RightUpperArm"),
+        StringId::intern("LeftUpperLeg"),
+        StringId::intern("RightUpperLeg"),
+        StringId::intern("Tail")
     };
+    // アニメーションさせる角度の範囲（pitch, yaw, roll）
+    const Vector3 Range[] =
+    {
+        Vector3( 80, 0,  0),
+        Vector3(-80, 0,  0),
+        Vector3( 30, 0, 45),
+        Vector3(-30, 0, 45),
+        Vector3( 30, 0,  0),
+    };
+    // アニメーションさせる角度のオフセット（pitch, yaw, roll）
+    const Vector3 Offset[] =
+    {
+        Vector3( 0, 0, 30),
+        Vector3( 0, 0,-30),
+        Vector3( 0, 5,  0),
+        Vector3( 0,-5,  0),
+        Vector3(20, 0,  0),
+    };
+    constexpr size_t BoneMax = sizeof(BoneName) / sizeof(StringId);
+    constexpr float animSpeed = 0.07f;
 }
 
 
@@ -46,12 +56,16 @@ void Player::OnEnable()
     rb->gravityScale = 1.5f;
     GetComponent<Collider>(true)->bounciness = 0.0f;
 
-    for (int i = 0; i < (int)Parts::Max; ++i)
+    // アニメーションさせるボーンを検索し、初期姿勢の回転を記録
+    bones.resize(BoneMax);
+    initialRotate.resize(BoneMax);
+    for (int i = 0; i < BoneMax; ++i)
     {
-        GameObject * o = gameObject->Find([i](GameObject* p) { return p->name.get().c_str() == PartsName[i]; });
+        GameObject * o = gameObject->Find([i](GameObject* p) { return p->name == BoneName[i]; });
         if (o != nullptr)
         {
-            parts[i] = o->transform;
+            bones[i] = o->transform;
+            initialRotate[i] = o->transform->localRotation;
         }
     }
     animFrame = 0.0f;
@@ -60,9 +74,9 @@ void Player::OnEnable()
 
 void Player::Update()
 {
-    const float moveSpeed = 4;
+    const float moveSpeed = 5;
 
-    // �������
+    // 操作方向
     Vector3 cont;
     if (Input::GetKey(Keyboard::A))
     {
@@ -91,10 +105,10 @@ void Player::Update()
     }
     cont = cont.normalized();
 
-    // �J�����������l�����đ��x�x�N�g�����v�Z
+    // カメラ方向を考慮して速度ベクトルを計算
     Vector3 camF = Camera::main->transform->forward;
     float camAngle = std::atan2(camF.x, camF.z) * UniDx::Rad2Deg;
-    Vector3 velocity = (cont.normalized() * moveSpeed) * Quaternion::AngleAxis(camAngle, Vector3::up);
+    Vector3 velocity = cont * moveSpeed * Quaternion::AngleAxis(camAngle, Vector3::up);
     float vAngle = std::atan2(velocity.x, velocity.z) * UniDx::Rad2Deg;
 
     rb->linearVelocity = velocity;
@@ -103,8 +117,21 @@ void Player::Update()
         rb->rotation = Quaternion::Euler(0, vAngle, 0);
     }
 
-    // �A�j���i���Ή��j
+    // プログラムアニメ
     animFrame += cont.magnitude();
+    for(int i = 0; i < bones.size(); ++i)
+    {
+        auto& bone = bones[i];
+        if(bone == nullptr) continue;
+
+        Quaternion r = bone->localRotation;
+        float sn = std::sin(animFrame * animSpeed);
+        r = Quaternion::Euler(
+            sn * Range[i].x + Offset[i].x,
+            sn * Range[i].y + Offset[i].y,
+            sn * Range[i].z + Offset[i].z);
+        bone->localRotation = r * initialRotate[i]; // 頂点×回転×初期姿勢
+    }
 }
 
 
@@ -123,9 +150,10 @@ void Player::OnTriggerExit(Collider* other)
 }
 
 
+// コライダーに当たったときのコールバック
 void Player::OnCollisionEnter(const Collision& collision)
 {
-    if (collision.collider->name.get() == StringId::intern("Coin"))
+    if (collision.collider->name == CoinName)
     {
         MainGame::getInstance()->AddScore(1);
         Destroy(collision.collider->gameObject);

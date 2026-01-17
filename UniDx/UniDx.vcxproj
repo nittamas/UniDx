@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -146,6 +146,7 @@
     <ClInclude Include="include\UniDx.h" />
     <ClInclude Include="include\UniDx\AnimationCurve.h" />
     <ClInclude Include="include\UniDx\Behaviour.h" />
+    <ClInclude Include="include\UniDx\BoneMath.h" />
     <ClInclude Include="include\UniDx\Bounds.h" />
     <ClInclude Include="include\UniDx\Camera.h" />
     <ClInclude Include="include\UniDx\Canvas.h" />
@@ -178,6 +179,7 @@
     <ClInclude Include="include\UniDx\SceneManager.h" />
     <ClInclude Include="include\UniDx\Shader.h" />
     <ClInclude Include="include\UniDx\Singleton.h" />
+    <ClInclude Include="include\UniDx\SkinnedMeshRenderer.h" />
     <ClInclude Include="include\UniDx\Sphere.h" />
     <ClInclude Include="include\UniDx\StringId.h" />
     <ClInclude Include="include\UniDx\TextMesh.h" />
@@ -220,6 +222,7 @@
     <ClCompile Include="src\Renderer.cpp" />
     <ClCompile Include="src\SceneManager.cpp" />
     <ClCompile Include="src\Shader.cpp" />
+    <ClCompile Include="src\SkinnedMeshRenderer.cpp" />
     <ClCompile Include="src\TextMesh.cpp" />
     <ClCompile Include="src\Texture.cpp" />
     <ClCompile Include="src\Transform.cpp" />

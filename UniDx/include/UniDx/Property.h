@@ -1,6 +1,7 @@
 ﻿#pragma once
 
 #include <functional>
+#include "UniDxDefine.h"
 
 /**
  * @file Property.h
@@ -87,10 +88,17 @@ public:
     void set(const T& value) { setter_(value); }
 
     /** @brief C#風代入アクセス*/
-    Property& operator=(const T& value) { set(value); return *this; }
+    template<typename U>
+    Property& operator=(const U& value) { set(T(value)); return *this; }
 
 private:
     Setter setter_;
 };
+
+template<typename T>
+inline u8string ToString(const ReadOnlyProperty<T>& v) { return ToString(v.get()); }
+template<typename T>
+inline u8string ToString(const Property<T>& v) { return ToString(v.get()); }
+
 
 }

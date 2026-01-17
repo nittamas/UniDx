@@ -1,4 +1,4 @@
-#include "ShpereController.h"
+ï»¿#include "ShpereController.h"
 
 #include <UniDx/Input.h>
 
@@ -11,25 +11,25 @@ void ShpereController::Update()
 {
     const float angleSpeed = 90.0f;
 
-    // WASD‚É‚æ‚Á‚Ä‰ñ“]‚·‚éQuaternion‚ðì‚é
+    // WASDã«ã‚ˆã£ã¦å›žè»¢ã™ã‚‹Quaternionã‚’ä½œã‚‹
     Quaternion rot;
     if (Input::GetKey(Keyboard::A))
     {
-        rot = rot * Quaternion::AngleAxis(angleSpeed * Time::deltaTime, Vector3::up);
+        rot = rot * Quaternion::AngleAxis(-angleSpeed * Time::deltaTime, Vector3::up);
     }
     if (Input::GetKey(Keyboard::D))
     {
-        rot = rot * Quaternion::AngleAxis(-angleSpeed * Time::deltaTime, Vector3::up);
+        rot = rot * Quaternion::AngleAxis(angleSpeed * Time::deltaTime, Vector3::up);
     }
     if (Input::GetKey(Keyboard::W))
     {
-        rot = rot * Quaternion::AngleAxis(angleSpeed * Time::deltaTime, Vector3::right);
+        rot = rot * Quaternion::AngleAxis(-angleSpeed * Time::deltaTime, Vector3::right);
     }
     if (Input::GetKey(Keyboard::S))
     {
-        rot = rot * Quaternion::AngleAxis(-angleSpeed * Time::deltaTime, Vector3::right);
+        rot = rot * Quaternion::AngleAxis(angleSpeed * Time::deltaTime, Vector3::right);
     }
 
-    // ƒ[ƒJƒ‹‚Ì•ûŒüQuaternion‚ÉæŽZ‚·‚é
-    transform->localRotation = transform->localRotation * rot;
+    // ãƒ­ãƒ¼ã‚«ãƒ«ã®æ–¹å‘Quaternionã«ä¹—ç®—ã™ã‚‹
+    transform->localRotation = rot * transform->localRotation;
 }

@@ -25,8 +25,9 @@ class Renderer : public Component
 {
 public:
     std::vector< std::shared_ptr<Material> > materials;
+    int lightCount = 0;
 
-    virtual void render(const Camera& camera) const {}
+    virtual void render(const Camera& camera) {}
 
     /** @brief マテリアルを追加（共有） */
     void AddMaterial(std::shared_ptr<Material> material)
@@ -61,7 +62,9 @@ protected:
     ComPtr<ID3D11Buffer> constantBufferPerObject;
 
     virtual void OnEnable() override;
-    virtual void updatePositionCameraCBuffer() const;
+    virtual void createConstantBufferPerObject();
+    virtual void bindPerObject();
+    virtual void bindLightPerObject();
 };
 
 /** @brief メッシュ用のレンダラーコンポーネント */
@@ -69,12 +72,11 @@ class MeshRenderer : public Renderer
 {
 public:
     Mesh mesh;
-    int lightCount;
 
     MeshRenderer();
 
     // メッシュを使って描画
-    virtual void render(const Camera& camera) const override;
+    virtual void render(const Camera& camera) override;
 };
 
 

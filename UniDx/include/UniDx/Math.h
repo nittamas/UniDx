@@ -139,6 +139,8 @@ namespace UniDx
 		constexpr explicit Vector4(float ix) noexcept : XMFLOAT4(ix, ix, ix, ix) {}
 		Vector4(const DirectX::XMFLOAT4& V) noexcept : XMFLOAT4(V.x, V.y, V.z, V.w) {}
 		explicit Vector4(const DirectX::XMVECTOR& v) { XMStoreFloat4(this, v); }
+		/** @brief 長さを取得 */
+		float magnitude() const noexcept { return std::sqrt((x * x) + (y * y) + (z * z) + (w * w)); }
 
 		static const Vector4 zero;
 		static const Vector4 one;
@@ -167,6 +169,7 @@ namespace UniDx
 		constexpr Quaternion(float ix, float iy, float iz, float iw) noexcept : x(ix), y(iy), z(iz), w(iw) {}
 		Quaternion(const DirectX::XMFLOAT4& V) noexcept : x(V.x), y(V.y), z(V.z), w(V.w) {}
 		explicit Quaternion(const DirectX::XMVECTOR& v) { DirectX::XMStoreFloat4(reinterpret_cast<DirectX::XMFLOAT4*>(this), v); }
+		float magnitude() const noexcept { return std::sqrt((x * x) + (y * y) + (z * z) + (w * w)); }
 
 		const DirectX::XMVECTOR XMLoad() const
 		{
@@ -299,7 +302,7 @@ namespace UniDx
 		explicit operator DirectX::XMFLOAT4() const { return DirectX::XMFLOAT4(r, g, b, a); }
 	};
 
-	/** @brief 4x4 行列 (行優先) */
+	/** @brief 4x4 行列 (行ベクトル行優先) */
 	struct Matrix4x4
 	{
 		float m00, m01, m02, m03;
@@ -373,6 +376,10 @@ namespace UniDx
 			const XMVECTOR X = XMVector3TransformNormal(v1, M);
 			return Vector3(X);
 		}
+		float determinant() const noexcept
+		{
+			return DirectX::XMVectorGetX(DirectX::XMMatrixDeterminant(XMLoad()));
+		}
 
 		const DirectX::XMMATRIX XMLoad() const
 		{
@@ -382,7 +389,11 @@ namespace UniDx
 		{
 			XMStoreFloat4x4(reinterpret_cast<DirectX::XMFLOAT4X4*>(this), mtx);
 		}
-
+		/** @brief ベクトルからスケール行列を生成 */
+		static Matrix4x4 Scale(const Vector3& scales) noexcept
+		{
+			return Matrix4x4(DirectX::XMMatrixScaling(scales.x, scales.y, scales.z));
+		}
 		/** @brief クォータニオンから回転行列を生成 */
 		static Matrix4x4 Rotate(const Quaternion& rotation) noexcept
 		{
@@ -394,6 +405,15 @@ namespace UniDx
 		static Matrix4x4 Translate(const Vector3& position) noexcept
 		{
 			return Matrix4x4(DirectX::XMMatrixTranslation(position.x, position.y, position.z));
+		}
+		/** @brief 列指向の4x4行列データから行列を生成 */
+		template<typename T>
+		static Matrix4x4 FromColumnMajor16(const T* a)
+		{
+			return Matrix4x4( float(a[0]), float(a[4]), float(a[8]),  float(a[12]),
+				              float(a[1]), float(a[5]), float(a[9]),  float(a[13]),
+				              float(a[2]), float(a[6]), float(a[10]), float(a[14]),
+				              float(a[3]), float(a[7]), float(a[11]), float(a[15]) );
 		}
 
 		// 単項演算子

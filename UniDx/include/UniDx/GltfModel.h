@@ -2,7 +2,7 @@
 
 #include <tiny_gltf.h>
 
-#include "Renderer.h"
+#include "SkinnedMeshRenderer.h"
 
 
 namespace UniDx {
@@ -14,7 +14,7 @@ namespace UniDx {
 class GltfModel : public Component
 {
 public:
-    const std::map<int, std::shared_ptr<Material>>& GetMaterials() { return materials; }
+    const std::unordered_map<int, std::shared_ptr<Material>>& GetMaterials() { return materials; }
 
     /**
      * @brief glTF形式のモデルファイルを読み込む（モデルファイル、シェーダを指定）
@@ -89,7 +89,11 @@ public:
         {
             for (auto& sub : mesh->submesh)
             {
-                sub->createBuffer<TVertex>();
+                auto buf = sub->createBuffer<TVertex>(
+                    // バッファを作るときにスキニング用のデータもコピー
+                    [sub](auto buf)
+                    { static_cast<SkinnedSubMesh&>(*sub).copySkinTo(buf); }
+                );
             }
         }
         return true;
@@ -110,14 +114,17 @@ public:
 
 protected:
     std::vector<MeshRenderer*> renderer;
-    std::map<int, std::shared_ptr<Material>> materials;
+    std::unordered_map<int, std::shared_ptr<Material>> materials;
     std::unique_ptr< tinygltf::Model> model;
     std::vector< std::shared_ptr<Mesh> > meshes; // model->meshesの順に従ったメッシュ
-    std::map<int, std::shared_ptr<Texture>> textures;
+    std::unordered_map<int, std::shared_ptr<Texture>> textures;
+    std::unordered_map<int, Transform*> nodes;
+    std::unordered_map<int, SkinInstance> skinInstance;
 
     bool load_(const char* filePath, bool makeTextureMaterial, std::shared_ptr<Shader> shader);
+    void readPrimitive(UniDx::Mesh* mesh, const tinygltf::Primitive& primitive);
     void createNodeRecursive(const tinygltf::Model& model, int nodeIndex, GameObject* parentGO, bool attachIncludeMaterial);
-    std::shared_ptr<Texture> GetOrCreateTextureFromGltf_(int textureIndex, bool isSRGB);
+    std::shared_ptr<Texture> getOrCreateTextureFromGltf_(int textureIndex, bool isSRGB);
 };
 
 

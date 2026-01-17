@@ -188,6 +188,7 @@ GameObject* Transform::SetParent(Transform * newParent)
     assert(gameObject_ptr != nullptr);
 
     // 元の親から削除
+    auto gameObject_owner = move(*it);
     siblings.erase(it);
 
     // 新しい親を設定
@@ -196,7 +197,7 @@ GameObject* Transform::SetParent(Transform * newParent)
     if (parent)
     {
         // 新しい親に自分を持つGameObjectを追加
-        parent->children.push_back(std::move(*it));
+        parent->children.push_back(std::move(gameObject_owner));
     }
     m_dirty = true;
 
@@ -258,7 +259,6 @@ void Transform::updateMatrices() const
             * DirectX::SimpleMath::Matrix::CreateFromQuaternion(DirectX::XMFLOAT4(_localRotation))
             * DirectX::SimpleMath::Matrix::CreateTranslation(_localPosition);
         if (parent) {
-            parent->updateMatrices();
             m_worldMatrix = m_localMatrix * parent->m_worldMatrix;
         }
         else {

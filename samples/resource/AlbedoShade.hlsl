@@ -1,11 +1,16 @@
 // ----------------------------------------------------------
+// テクスチャを使って簡単な陰影を付けるシェーダー
+// 頂点に VertexPNT を使う
+// ----------------------------------------------------------
+
+// ----------------------------------------------------------
 // 頂点
 // ----------------------------------------------------------
 // カメラ定数バッファ
 cbuffer CBPerCamera : register(b8)
 {
-    float4x4 view;
-    float4x4 projection;
+    row_major float4x4 view;
+    row_major float4x4 projection;
     float3   cameraPosW;
     float    cameraNear;
     float3   cameraForwardW;
@@ -16,7 +21,7 @@ cbuffer CBPerCamera : register(b8)
 // オブジェクト定数バッファ
 cbuffer CBPerObject : register(b9)
 {
-    float4x4 world;
+    row_major float4x4 world;
 };
 
 // 頂点シェーダーへ入力するデータ
@@ -24,7 +29,7 @@ struct VSInput
 {
     float3 pos : POSITION;
     float3 nrm : NORMAL;
-    float2 uv  : TEXUV;
+    float2 uv  : TEXCOORD0;
 };
 
 // 頂点シェーダーから出力するデータ＝ピクセルシェーダーに入力するデータ
@@ -42,15 +47,15 @@ PSInput VS(VSInput vin)
 {
     PSInput Out;
     float4 p = float4(vin.pos.xyz, 1);
-    p = mul(world, p);      // ワールド変換
+    p = mul(p, world);      // ワールド変換
     Out.posW = (float3)p;
 
-    p = mul(view, p);       // ビュー変換
-    p = mul(projection, p); // プロジェクション変換
+    p = mul(p, view); // ビュー変換
+    p = mul(p, projection); // プロジェクション変換
     Out.posH = p;
 
     float3x3 world3x3 = (float3x3) world;
-    Out.nrmW = mul(world3x3, vin.nrm);
+    Out.nrmW = mul(vin.nrm, world3x3);
 
     Out.uv = vin.uv;
 
@@ -102,7 +107,7 @@ cbuffer CBLightPerObject : register(b12)
 Texture2D texture0 : register(t4);
 SamplerState sampler0 : register(s4);
 
-
+// ポイントライトの影響を計算
 void EvaluatePointLight(in PointLight L, in float3 posW, in half3 nrmW,
     out half NdotL, out half atten)
 {
@@ -114,6 +119,7 @@ void EvaluatePointLight(in PointLight L, in float3 posW, in half3 nrmW,
     NdotL = dot(nrmW, Ldir);
 }
 
+// スポットライトの影響を計算
 void EvaluateSpotLight(in SpotLight L, in float3 posW, in half3 nrmW,
     out half NdotL, out half atten)
 {

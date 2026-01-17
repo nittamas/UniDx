@@ -1,4 +1,4 @@
-#include "CameraController.h"
+﻿#include "CameraController.h"
 
 #include <UniDx/Input.h>
 #include <UniDx/Time.h>
@@ -14,6 +14,7 @@ void CameraController::OnEnable()
     Quaternion rot = Quaternion::AngleAxis(35, Vector3::right);
     transform->localRotation = rot;
 
+    // 配置位置から角度と距離を記録
     auto dir = player->transform->position - transform->position;
     float planar = std::sqrt(dir.x * dir.x + dir.z * dir.z);
     length = dir.magnitude();
@@ -24,6 +25,7 @@ void CameraController::OnEnable()
 
 void CameraController::Update()
 {
+    // 操作に応じて角度を変更
     const float angleSpeed = 90.0f;
     if (Input::GetKey(Keyboard::J))
     {

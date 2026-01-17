@@ -116,6 +116,9 @@
       <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);UniDx.lib;DirectXTK.lib;DirectXTex.lib</AdditionalDependencies>
       <MapExports>true</MapExports>
     </Link>
+    <CopyFileToFolders>
+      <DestinationFolders>$(OutDir)\resource</DestinationFolders>
+    </CopyFileToFolders>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -138,6 +141,9 @@
       <MapExports>true</MapExports>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration);$(ProjectDir)\..\..\UniDx\$(Platform)\$(Configuration);$(ProjectDir)\..\..\external\DirectXTK\Bin\Desktop_2022_Win10\$(Platform)\$(Configuration);$(ProjectDir)\..\..\external\DirectXTex\DirectXTex\Bin\Desktop_2022_Win10\$(Platform)\$(Configuration);</AdditionalLibraryDirectories>
     </Link>
+    <CopyFileToFolders>
+      <DestinationFolders>$(OutDir)\resource</DestinationFolders>
+    </CopyFileToFolders>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ResourceCompile Include="Sample3_SimpleGame.rc" />
@@ -235,17 +241,8 @@
     </CopyFileToFolders>
   </ItemGroup>
   <ItemGroup>
-    <CopyFileToFolders Include="..\resource\VRoidT1.vrm">
+    <CopyFileToFolders Include="..\resource\SkinBasic.hlsl">
       <FileType>Document</FileType>
-      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)\resource</DestinationFolders>
-      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)\resource</DestinationFolders>
-    </CopyFileToFolders>
-  </ItemGroup>
-  <ItemGroup>
-    <CopyFileToFolders Include="..\resource\VRoidT1.glb">
-      <FileType>Document</FileType>
-      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)\resource</DestinationFolders>
-      <DestinationFolders Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)\resource</DestinationFolders>
     </CopyFileToFolders>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

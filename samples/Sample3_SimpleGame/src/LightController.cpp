@@ -7,6 +7,7 @@ using namespace UniDx;
 
 void LightController::OnEnable()
 {
+    // 配置位置から距離と角度を記録
     auto pos = transform->localPosition.get();
     float planar = std::sqrt(pos.x * pos.x + pos.z * pos.z);
     length = pos.magnitude();
@@ -17,6 +18,7 @@ void LightController::OnEnable()
 
 void LightController::Update()
 {
+    // 操作に応じて角度を変更
     const float angleSpeed = 90.0f;
     if (Input::GetKey(Keyboard::O))
     {

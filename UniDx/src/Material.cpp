@@ -68,6 +68,7 @@ Material::Material() :
     ),
     depthWrite(D3D11_DEPTH_WRITE_MASK_ALL), // デフォルトは書き込み有効
     ztest(D3D11_COMPARISON_LESS), // デフォルトは小さい値が手前
+    cullMode(D3D11_CULL_BACK), // デフォルトは裏面非表示
     renderingMode(RenderingMode_Opaque), // デフォルトは不透明
     blendMode(BlendMode_Alpha) // デフォルトは標準ブレンド
 {
@@ -150,6 +151,9 @@ bool Material::bind()
     // ブレンド
     D3DManager::getInstance()->GetContext()->OMSetBlendState(blendState.Get(), NULL, 0xffffffff);
 
+    // ラスタライザステート
+    D3DManager::getInstance()->GetContext()->RSSetState(rasterizerState.Get());
+
     // 定数バッファ更新
     if(cbStaging.size() != shader->getCBPerMaterialSize())
     {
@@ -161,7 +165,10 @@ bool Material::bind()
 
     if(dirty)
     {
-        D3DManager::getInstance()->GetContext()->UpdateSubresource(constantBufferPerMaterial.Get(), 0, nullptr, cbStaging.data(), 0, 0);
+        if(cbStaging.size() > 0)
+        {
+            D3DManager::getInstance()->GetContext()->UpdateSubresource(constantBufferPerMaterial.Get(), 0, nullptr, cbStaging.data(), 0, 0);
+        }
         dirty = false;
     }
 
@@ -205,6 +212,12 @@ void Material::OnEnable()
     {
         createConstantBuffer();
     }
+
+    // ラスタライザステート
+    D3D11_RASTERIZER_DESC desc = {};
+    desc.FillMode = D3D11_FILL_SOLID;
+    desc.CullMode = cullMode;
+    D3DManager::getInstance()->GetDevice()->CreateRasterizerState(&desc, &rasterizerState);
 }
 
 

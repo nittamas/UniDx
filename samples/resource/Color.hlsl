@@ -1,17 +1,22 @@
 // ----------------------------------------------------------
+// 頂点カラーを使うだけの単純なシェーダー
+// 頂点に VertexPC を使う
+// ----------------------------------------------------------
+
+// ----------------------------------------------------------
 // 頂点
 // ----------------------------------------------------------
 // カメラ定数バッファ
 cbuffer CBPerCamera : register(b8)
 {
-    float4x4 view;
-    float4x4 projection;
+    row_major float4x4 view;
+    row_major float4x4 projection;
 };
 
 // オブジェクト定数バッファ
 cbuffer CBPerObject : register(b9)
 {
-    float4x4 world;
+    row_major float4x4 world;
 };
 
 // 頂点シェーダーへ入力するデータ
@@ -34,9 +39,9 @@ PSInput VS(VSInput vin)
 {
     PSInput Out;
     float4 p = float4(vin.pos.xyz, 1);
-    p = mul(world, p);
-    p = mul(view, p);
-    p = mul(projection, p);
+    p = mul(p, world);
+    p = mul(p, view);
+    p = mul(p, projection);
     Out.pos = p;
     Out.color = vin.color;
     return Out;

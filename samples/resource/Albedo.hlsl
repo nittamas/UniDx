@@ -1,11 +1,16 @@
 // ----------------------------------------------------------
+// テクスチャを使って陰影をつけないシェーダー
+// 頂点に VertexPT を使う
+// ----------------------------------------------------------
+
+// ----------------------------------------------------------
 // 頂点
 // ----------------------------------------------------------
 // カメラ定数バッファ
 cbuffer CBPerCamera : register(b8)
 {
-    float4x4 view;
-    float4x4 projection;
+    row_major float4x4 view;
+    row_major float4x4 projection;
     float3 cameraPosW;
     float cameraNear;
     float3 cameraForwardW;
@@ -23,7 +28,7 @@ cbuffer CBPerObject : register(b9)
 struct VSInput
 {
     float3 pos : POSITION;
-    float2 uv : TEXUV;
+    float2 uv : TEXCOORD0;
 };
 
 
@@ -39,9 +44,9 @@ PSInput VS(VSInput vin)
 {
     PSInput Out;
     float4 p = float4(vin.pos.xyz, 1);
-    p = mul(world, p);
-    p = mul(view, p);
-    p = mul(projection, p);
+    p = mul(p, world);
+    p = mul(p, view);
+    p = mul(p, projection);
     Out.pos = p;
     Out.uv = vin.uv;
     return Out;
