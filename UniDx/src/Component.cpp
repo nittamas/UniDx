@@ -14,8 +14,9 @@ Component::Component() :
         [this](bool value) {
             if (!_enabled && value && !isCalledDestroy) {
                 _enabled = true;
-                if (!isCalledAwake) { Awake(); isCalledAwake = true; }
-                OnEnable();
+                // Awakeはアクティブシーンへの接続時に呼ぶ。
+                // すでにAwake済みなら、再有効化としてOnEnableを呼ぶ。
+                if (isCalledAwake) { OnEnable(); }
             }
             else if (_enabled && !value) {
                 _enabled = false;
@@ -55,7 +56,6 @@ Component::~Component()
 void Destroy(Component* component)
 {
     assert(component != nullptr);
-    component->enabled = false; // 無効化（ここはUniyと挙動が異なる）
     component->isCalledDestroy = true; // フレームの終わりに削除される
 }
 

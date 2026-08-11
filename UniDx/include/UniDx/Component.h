@@ -14,7 +14,7 @@ namespace UniDx {
 class Behaviour;
 class GameObject;
 
-/** 
+/**
   * @brief コンポーネントを破棄
   * 実際に削除されるタイミングはフレームの終了時
   */
@@ -30,16 +30,23 @@ public:
 
     GameObject* gameObject = nullptr;
 
-    // 有効フラグが立っているかどうか確認して Awake() 呼び出し
+    // 未破棄ならAwake()を一度だけ呼び、有効なままならOnEnable()を呼ぶ
     void checkAwake()
     {
-        if (_enabled && !isCalledAwake)
-        {
-            Awake();
-            isCalledAwake = true;
+        if (isCalledAwake || isCalledDestroy) return;
 
-            OnEnable();
+        Awake();
+        isCalledAwake = true;
+
+        // Awake()内で破棄予約された場合、OnEnable/OnDisableは呼ばない
+        if (isCalledDestroy)
+        {
+            _enabled = false;
+            return;
         }
+
+        // Awake()内で無効化された場合もOnEnableは呼ばない
+        if (_enabled) OnEnable();
     }
 
     // 有効フラグが立っているかどうか確認して Start() 呼び出し
@@ -69,6 +76,8 @@ protected:
     bool _enabled;
 
     Component();
+
+private:
     void doDestroy();
 
     friend void Destroy(Component*);

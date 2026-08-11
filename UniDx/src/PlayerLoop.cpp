@@ -49,10 +49,15 @@ void PlayerLoop::createScene()
 {
     SceneManager::getInstance()->createScene();
 
-    // Awake
-    for (auto& it : SceneManager::getInstance()->GetActiveScene()->GetRootGameObjects())
+    // シーン構築中(CreateDefaultScene()の中)は即時Awakeが抑止されているため、
+    // ここで一括してAwake()/OnEnable()を呼ぶ。
+    // これ以降はシーンが有効になっているので、追加されたものは即時Awakeされる。
+    // Awake()中にGameObjectが追加されるとvectorが再確保されるため、
+    // イテレータではなくインデックスで巡回する。
+    auto* scene = SceneManager::getInstance()->GetActiveScene();
+    for (size_t i = 0; i < scene->GetRootGameObjects().size(); ++i)
     {
-        awake(&*it);
+        scene->GetRootGameObjects()[i]->checkAwake();
     }
 }
 
@@ -93,6 +98,9 @@ int PlayerLoop::MainLoop()
 
         // 画面を塗りつぶす
         D3DManager::getInstance()->Clear(0.35f, 0.55f, 0.9f, 1.0f);
+
+        // Start()（Unity同様、FixedUpdate()より前のフレーム先頭で回収する）
+        checkStart();
 
         Time::SetDeltaTimeFixed(); // Unity同様、FixedUpdate()では deltaTime と fixedDeltaTime が同じ
 
@@ -141,12 +149,31 @@ int PlayerLoop::MainLoop()
 }
 
 
+// Start()の回収
+// Start()中にGameObjectが追加されるとvectorが再確保されるため、
+// イテレータではなくインデックスで巡回する。
+// Start()中に追加されたオブジェクトもこのパスでStart()の対象にする
+void PlayerLoop::checkStart()
+{
+    auto* scene = SceneManager::getInstance()->GetActiveScene();
+    for (size_t i = 0; i < scene->GetRootGameObjects().size(); ++i)
+    {
+        checkStart(&*scene->GetRootGameObjects()[i]);
+    }
+}
+
+
 // 固定時間更新更新
+// FixedUpdate()中にGameObjectが追加されるとvectorが再確保されるため、
+// イテレータではなくインデックスで巡回する。
+// このフレームで追加されたオブジェクトはFixedUpdate()しない(次回から)
 void PlayerLoop::fixedUpdate()
 {
-    for (auto& it : SceneManager::getInstance()->GetActiveScene()->GetRootGameObjects())
+    auto* scene = SceneManager::getInstance()->GetActiveScene();
+    const size_t count = scene->GetRootGameObjects().size();
+    for (size_t i = 0; i < count && i < scene->GetRootGameObjects().size(); ++i)
     {
-        fixedUpdate(&*it);
+        fixedUpdate(&*scene->GetRootGameObjects()[i]);
     }
 }
 
@@ -166,29 +193,34 @@ void PlayerLoop::input()
 
 
 //  更新処理
+// Update()中にGameObjectやComponentが追加されるとvectorが再確保されるため、
+// イテレータではなくインデックスで巡回する。
 void PlayerLoop::update()
 {
-    // 各オブジェクトの Start()
-    for (auto& it : SceneManager::getInstance()->GetActiveScene()->GetRootGameObjects())
-    {
-        checkStart(&*it);
-    }
+    auto* scene = SceneManager::getInstance()->GetActiveScene();
 
     // 各オブジェクトの Update()
-    for (auto& it : SceneManager::getInstance()->GetActiveScene()->GetRootGameObjects())
+    // このフレームで追加されたオブジェクトはUpdate()しない(次フレームから)
+    const size_t count = scene->GetRootGameObjects().size();
+    for (size_t i = 0; i < count && i < scene->GetRootGameObjects().size(); ++i)
     {
-        update(&*it);
+        update(&*scene->GetRootGameObjects()[i]);
     }
 }
 
 
 // 後更新処理
+// LateUpdate()中にGameObjectが追加されるとvectorが再確保されるため、
+// イテレータではなくインデックスで巡回する。
+// このフレームで追加されたオブジェクトはLateUpdate()しない(次フレームから)
 void PlayerLoop::lateUpdate()
 {
     // 各コンポーネントの LateUpdate()
-    for (auto& it : SceneManager::getInstance()->GetActiveScene()->GetRootGameObjects())
+    auto* scene = SceneManager::getInstance()->GetActiveScene();
+    const size_t count = scene->GetRootGameObjects().size();
+    for (size_t i = 0; i < count && i < scene->GetRootGameObjects().size(); ++i)
     {
-        lateUpdate(&*it);
+        lateUpdate(&*scene->GetRootGameObjects()[i]);
     }
 }
 
@@ -259,28 +291,16 @@ void PlayerLoop::finalize()
 }
 
 
-void PlayerLoop::awake(GameObject* object)
-{
-    // 自身のコンポーネントの中でAwakeを呼び出していないものを呼ぶ
-    for (auto& it : object->GetComponents())
-    {
-        it->checkAwake();
-    }
-
-    // 子供のオブジェクトについて再帰
-    for (auto& it : object->transform->getChildGameObjects())
-    {
-        awake(&*it);
-    }
-}
-
-
 void PlayerLoop::fixedUpdate(GameObject* object)
 {
     // アタッチされている各コンポーネントのFixedUpdateを呼ぶ
-    for (auto& it : object->GetComponents())
+    // FixedUpdate()中にコンポーネントが追加されてもよいようインデックスで巡回し、
+    // 追加された分はこの回では呼ばない
+    auto& components = object->GetComponents();
+    const size_t componentCount = components.size();
+    for (size_t i = 0; i < componentCount && i < components.size(); ++i)
     {
-        auto behaviour = dynamic_cast<Behaviour*>(it.get());
+        auto behaviour = dynamic_cast<Behaviour*>(components[i].get());
         if (behaviour != nullptr && behaviour->enabled)
         {
             behaviour->FixedUpdate();
@@ -288,9 +308,11 @@ void PlayerLoop::fixedUpdate(GameObject* object)
     }
 
     // 子供のオブジェクトについて再帰
-    for (auto& it : object->transform->getChildGameObjects())
+    auto& children = object->transform->getChildGameObjects();
+    const size_t childCount = children.size();
+    for (size_t i = 0; i < childCount && i < children.size(); ++i)
     {
-        fixedUpdate(&*it);
+        fixedUpdate(&*children[i]);
     }
 }
 
@@ -298,9 +320,10 @@ void PlayerLoop::fixedUpdate(GameObject* object)
 void PlayerLoop::checkStart(GameObject* object)
 {
     // 自身のコンポーネントの中でStartを呼び出していないものを呼ぶ
-    for (auto& it : object->GetComponents())
+    // Start()中の追加に備えてインデックスで巡回する
+    for (size_t i = 0; i < object->GetComponents().size(); ++i)
     {
-        auto behaviour = dynamic_cast<Behaviour*>(it.get());
+        auto behaviour = dynamic_cast<Behaviour*>(object->GetComponents()[i].get());
         if (behaviour != nullptr)
         {
             behaviour->checkStart();
@@ -308,9 +331,10 @@ void PlayerLoop::checkStart(GameObject* object)
     }
 
     // 子供のオブジェクトについて再帰
-    for (auto& it : object->transform->getChildGameObjects())
+    auto& children = object->transform->getChildGameObjects();
+    for (size_t i = 0; i < children.size(); ++i)
     {
-        checkStart(&*it);
+        checkStart(&*children[i]);
     }
 }
 
@@ -318,9 +342,13 @@ void PlayerLoop::checkStart(GameObject* object)
 void PlayerLoop::update(GameObject* object)
 {
     // アタッチされている各コンポーネントのUpdateを呼ぶ
-    for (auto& it : object->GetComponents())
+    // Update()中にコンポーネントが追加されてもよいようインデックスで巡回し、
+    // 追加された分はこのフレームでは呼ばない
+    auto& components = object->GetComponents();
+    const size_t componentCount = components.size();
+    for (size_t i = 0; i < componentCount && i < components.size(); ++i)
     {
-        auto behaviour = dynamic_cast<Behaviour*>(it.get());
+        auto behaviour = dynamic_cast<Behaviour*>(components[i].get());
         if (behaviour != nullptr && behaviour->enabled)
         {
             behaviour->Update();
@@ -328,9 +356,11 @@ void PlayerLoop::update(GameObject* object)
     }
 
     // 子供のオブジェクトについて再帰
-    for (auto& it : object->transform->getChildGameObjects())
+    auto& children = object->transform->getChildGameObjects();
+    const size_t childCount = children.size();
+    for (size_t i = 0; i < childCount && i < children.size(); ++i)
     {
-        update(&*it);
+        update(&*children[i]);
     }
 }
 
@@ -338,9 +368,13 @@ void PlayerLoop::update(GameObject* object)
 void PlayerLoop::lateUpdate(GameObject* object)
 {
     // アタッチされている各コンポーネントのLateUpdateを呼ぶ
-    for (auto& it : object->GetComponents())
+    // LateUpdate()中にコンポーネントが追加されてもよいようインデックスで巡回し、
+    // 追加された分はこのフレームでは呼ばない
+    auto& components = object->GetComponents();
+    const size_t componentCount = components.size();
+    for (size_t i = 0; i < componentCount && i < components.size(); ++i)
     {
-        auto behaviour = dynamic_cast<Behaviour*>(it.get());
+        auto behaviour = dynamic_cast<Behaviour*>(components[i].get());
         if (behaviour != nullptr && behaviour->enabled)
         {
             behaviour->LateUpdate();
@@ -348,9 +382,11 @@ void PlayerLoop::lateUpdate(GameObject* object)
     }
 
     // 子供のオブジェクトについて再帰
-    for (auto& it : object->transform->getChildGameObjects())
+    auto& children = object->transform->getChildGameObjects();
+    const size_t childCount = children.size();
+    for (size_t i = 0; i < childCount && i < children.size(); ++i)
     {
-        lateUpdate(&*it);
+        lateUpdate(&*children[i]);
     }
 }
 

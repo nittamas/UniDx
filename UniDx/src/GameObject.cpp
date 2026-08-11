@@ -16,6 +16,26 @@ GameObject::~GameObject()
 }
 
 
+// 自身と子孫について、未呼び出しのAwake()/OnEnable()を呼ぶ
+// checkAwake()は冪等なので何度呼んでも安全
+void GameObject::checkAwake()
+{
+	// 自身のコンポーネントの中でAwakeを呼び出していないものを呼ぶ
+	// Awake()中の追加に備えてインデックスで巡回する
+	for (size_t i = 0; i < components.size(); ++i)
+	{
+		components[i]->checkAwake();
+	}
+
+	// 子供のオブジェクトについて再帰
+	auto& children = transform->getChildGameObjects();
+	for (size_t i = 0; i < children.size(); ++i)
+	{
+		children[i]->checkAwake();
+	}
+}
+
+
 // Destroy()が呼ばれたコンポーネントを削除
 // 自身を削除する場合 true
 bool GameObject::checkDestroy()

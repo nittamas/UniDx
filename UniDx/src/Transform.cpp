@@ -2,6 +2,8 @@
 
 #include <SimpleMath.h>
 
+#include <UniDx/Scene.h>
+
 namespace UniDx
 {
 
@@ -198,6 +200,9 @@ GameObject* Transform::SetParent(Transform * newParent)
     {
         // 新しい親に自分を持つGameObjectを追加
         parent->children.push_back(std::move(gameObject_owner));
+
+        // アクティブシーンへ接続された場合はその場でAwake()/OnEnable()を呼ぶ
+        if (IsConnectedToActiveScene(gameObject_ptr)) gameObject_ptr->checkAwake();
     }
     m_dirty = true;
 
@@ -221,7 +226,12 @@ void Transform::SetParent(unique_ptr<GameObject> gameObjectPtr, Transform* newPa
     if (newParent)
     {
         // 新しい親に自分を持つGameObjectを追加
+        GameObject* added = gameObjectPtr.get();
         newParent->children.push_back(std::move(gameObjectPtr));
+
+        // アクティブシーンへ接続された場合はその場でAwake()/OnEnable()を呼ぶ
+        // Instantiate()相当。サブツリー全体が対象
+        if (IsConnectedToActiveScene(added)) added->checkAwake();
     }
 }
 

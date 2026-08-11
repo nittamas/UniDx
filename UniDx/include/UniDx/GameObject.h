@@ -11,6 +11,7 @@
 
 #include "Object.h"
 #include "Collision.h"
+#include "Scene.h"
 
 namespace UniDx {
 
@@ -35,8 +36,8 @@ public:
     GameObject(const char8_t* n) : GameObject(StringId::intern(n)) {}
     GameObject(StringId n) : Object([this](){return name_;}), name_(n), isCalledDestroy(false)
     {
-        // デフォルトでTransformを追加
-        transform = AddComponent<Transform>();
+        // デフォルトでTransformを追加。即時Awakeしないattach版を使う
+        transform = attachComponent<Transform>();
     }
 
     // 可変長引数でunique_ptr<Component>を受け取るコンストラクタ
@@ -76,19 +77,29 @@ public:
     void Add(First&& first, Rest&&... rest)
     {
         first->gameObject = this;
+        Component* added = first.get();
         components.push_back(std::move(first));
+
+        // アクティブシーンに接続済みなら、その場でAwake()/OnEnable()を呼ぶ
+        if (IsConnectedToActiveScene(this)) added->checkAwake();
+
         Add(std::forward<Rest>(rest)...);
     }
 
+    /// @brief コンポーネントを生成してアタッチする
+    /// GameObjectがアクティブシーンに接続済みなら、その場で Awake() / OnEnable() が呼ばれる
     template<typename T, typename... Args>
     T* AddComponent(Args&&... args) {
-        static_assert(std::is_base_of_v<Component, T>, "T must be a Component");
-        auto comp = std::make_unique<T>(std::forward<Args>(args)...);
-        comp->gameObject = this;
-        T* ptr = comp.get();
-        components.push_back(std::move(comp));
+        T* ptr = attachComponent<T>(std::forward<Args>(args)...);
+
+        // アクティブシーンに接続済みなら、その場でAwake()/OnEnable()を呼ぶ
+        if (IsConnectedToActiveScene(this)) ptr->checkAwake();
+
         return ptr;
     }
+
+    /// @brief GameObjectとその子孫について、未呼び出しのAwake()/OnEnable()を呼ぶ
+    void checkAwake();
 
     template<typename T>
     [[nodiscard]] T* GetComponent(bool includeInactive = false) {
@@ -115,6 +126,17 @@ public:
     virtual void onCollisionExit(const Collision& collision);
 
 protected:
+    /// @brief コンポーネントを生成してアタッチするだけで Awake() は呼ばない
+    template<typename T, typename... Args>
+    T* attachComponent(Args&&... args) {
+        static_assert(std::is_base_of_v<Component, T>, "T must be a Component");
+        auto comp = std::make_unique<T>(std::forward<Args>(args)...);
+        comp->gameObject = this;
+        T* ptr = comp.get();
+        components.push_back(std::move(comp));
+        return ptr;
+    }
+
     StringId name_;
     std::vector<std::unique_ptr<Component>> components;
     bool isCalledDestroy = false;
