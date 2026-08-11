@@ -5,6 +5,9 @@
  */
 #pragma once
 
+#include <concepts>
+#include <memory>
+
 #include "Object.h"
 #include "Property.h"
 
@@ -64,6 +67,17 @@ public:
     virtual ~Component();
 
 protected:
+    using CopyConstruct = std::unique_ptr<Component>(*)(const Component&);
+
+    /**
+      * @brief コピー構築済みのComponentをクローンとして成立させる後処理
+      * @param destination 複製先Component
+      *
+      * 階層全体のコピー構築後、Sceneへ接続する前に呼ばれる。
+      * 単純コピーで問題ないComponentは実装不要。
+      */
+    virtual void CloneTo(Component& destination) const {}
+
     virtual void Awake() {}
     virtual void Start() {}
     virtual void OnEnable() {}
@@ -76,8 +90,35 @@ protected:
     bool _enabled;
 
     Component();
+    Component(const Component& source);
+    void copyComponentStateFrom(const Component& source);
 
 private:
+    CopyConstruct copyConstruct_ = nullptr;
+
+    void setEnabled(bool value);
+
+    template<class T>
+    void registerCopyConstructor()
+    {
+        static_assert(std::derived_from<T, Component>);
+
+        if constexpr (std::is_copy_constructible_v<T>)
+        {
+            copyConstruct_ = [](const Component& source) -> std::unique_ptr<Component>
+            {
+                return std::make_unique<T>(static_cast<const T&>(source));
+            };
+        }
+        else
+        {
+            copyConstruct_ = nullptr;
+        }
+    }
+
+    [[nodiscard]] bool canCopyConstruct() const { return copyConstruct_ != nullptr; }
+    [[nodiscard]] std::unique_ptr<Component> copyConstruct() const;
+
     void doDestroy();
 
     friend void Destroy(Component*);

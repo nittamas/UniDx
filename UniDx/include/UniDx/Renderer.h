@@ -62,6 +62,7 @@ public:
 protected:
     ComPtr<ID3D11Buffer> constantBufferPerObject;
 
+    virtual void CloneTo(Component& destination) const override;
     virtual void OnEnable() override;
     virtual void createConstantBufferPerObject();
     virtual void bindPerObject();

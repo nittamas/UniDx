@@ -23,14 +23,14 @@ public:
     // 向き
     Property<Quaternion> rotation;
 
-    // 速度
-    Vector3 linearVelocity{ 0, 0, 0 };
-
     // 重力スケール（1.0fで標準重力、0で無重力、負値で逆重力）
     float gravityScale = 1.0f;
 
     // 質量（0以下は1.0fとして扱う）
     float mass = 1.0f;
+
+    // 速度
+    Vector3 linearVelocity{ 0, 0, 0 };
 
     bool isKinematic = false;
 
@@ -44,6 +44,17 @@ public:
             [this](Quaternion q) { rotation_ = q; hasMoveRot_ = true; }
         )
     {
+    }
+
+    Rigidbody(const Rigidbody& source) : Rigidbody()
+    {
+        // Propertyとライフサイクル状態は新しいthis用に初期化し、設定だけ引き継ぐ
+        copyComponentStateFrom(source);
+
+        // 速度・移動要求・内部姿勢は実行時状態なので初期化したままにする
+        gravityScale = source.gravityScale;
+        mass = source.mass;
+        isKinematic = source.isKinematic;
     }
 
     // 初期化
@@ -126,8 +137,8 @@ public:
     }
 
 private:
-    Vector3 position_;
-    Quaternion rotation_;
+    Vector3 position_ = Vector3::zero;
+    Quaternion rotation_ = Quaternion::identity;
     Vector3 move_{ 0, 0, 0 };
 
     bool hasMovePos_ = false;

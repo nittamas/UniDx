@@ -24,6 +24,12 @@ class Collider;
 /// @brief GameObjectを破棄
 void Destroy(GameObject* component);
 
+/**
+  * @brief GameObjectと子孫を複製し、指定した親へ接続
+  * @return 複製したGameObject。複製できないComponentがある場合はnullptr
+  */
+GameObject* Instantiate(const GameObject& original, Transform* parent);
+
  /// @brief キャラクターや背景カメラなどの基礎となるオブジェクト
 class GameObject : public Object
 {
@@ -76,6 +82,10 @@ public:
     template<typename First, typename... Rest>
     void Add(First&& first, Rest&&... rest)
     {
+        using ComponentType = typename std::remove_cvref_t<First>::element_type;
+        static_assert(std::is_base_of_v<Component, ComponentType>, "First must own a Component");
+
+        first->template registerCopyConstructor<ComponentType>();
         first->gameObject = this;
         Component* added = first.get();
         components.push_back(std::move(first));
@@ -131,6 +141,7 @@ protected:
     T* attachComponent(Args&&... args) {
         static_assert(std::is_base_of_v<Component, T>, "T must be a Component");
         auto comp = std::make_unique<T>(std::forward<Args>(args)...);
+        comp->template registerCopyConstructor<T>();
         comp->gameObject = this;
         T* ptr = comp.get();
         components.push_back(std::move(comp));
@@ -141,7 +152,16 @@ protected:
     std::vector<std::unique_ptr<Component>> components;
     bool isCalledDestroy = false;
 
+private:
+    // 階層とライフサイクルを壊す直接コピーを禁止。Instantiateを通す
+    GameObject(const GameObject& source);
+    GameObject& operator=(const GameObject&) = delete;
+
+    [[nodiscard]] bool canInstantiate() const;
+    void cloneTo(GameObject& destination) const;
+
     friend void Destroy(GameObject*);
+    friend GameObject* Instantiate(const GameObject& original, Transform* parent);
 };
 
 } // namespace UniDx

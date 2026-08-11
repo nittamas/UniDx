@@ -50,6 +50,12 @@ namespace UniDx
         virtual bool checkIntersect(SphereCollider* other, PhysicsActor* myActor, PhysicsActor* otherActor) = 0;
         virtual bool checkIntersect(AABBCollider* other, PhysicsActor* myActor, PhysicsActor* otherActor) = 0;
 
+    protected:
+        virtual void CloneTo(Component& destination) const override
+        {
+            static_cast<Collider&>(destination).attachedRigidbody = nullptr;
+        }
+
     private:
         Rigidbody* findNearestRigidbody(Transform* t) const;
     };

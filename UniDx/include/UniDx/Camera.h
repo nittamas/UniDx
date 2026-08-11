@@ -25,6 +25,7 @@ public:
     void UpdateConstantBuffer();
 
 protected:
+    virtual void CloneTo(Component& destination) const override;
     virtual void OnEnable() override;
     virtual void OnDisable() override;
 
