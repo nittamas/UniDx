@@ -75,6 +75,7 @@ protected:
       *
       * 階層全体のコピー構築後、Sceneへ接続する前に呼ばれる。
       * 単純コピーで問題ないComponentは実装不要。
+      * コンポーネント自体のコピーコンストラクタが必要。
       */
     virtual void CloneTo(Component& destination) const {}
 
@@ -98,6 +99,7 @@ private:
 
     void setEnabled(bool value);
 
+    // コピー可能な場合にそのコンストラクタを登録する
     template<class T>
     void registerCopyConstructor()
     {

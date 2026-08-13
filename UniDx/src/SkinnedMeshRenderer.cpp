@@ -28,6 +28,28 @@ SkinnedMeshRenderer::SkinnedMeshRenderer()
 }
 
 
+// Instantiate用コピー。skinはGltfModel::CloneTo()がコピー先へ張り直す。
+SkinnedMeshRenderer::SkinnedMeshRenderer(const SkinnedMeshRenderer& source) :
+    MeshRenderer(source),
+    skin(nullptr),
+    constantBuffer(nullptr)
+{
+}
+
+
+void SkinnedMeshRenderer::CloneTo(Component& destination) const
+{
+    // Rendererが持つGPUリソースをOnEnable()で作り直す。
+    MeshRenderer::CloneTo(destination);
+
+    auto& renderer = static_cast<SkinnedMeshRenderer&>(destination);
+    renderer.constantBuffer.reset();
+
+    // skinは親側のGltfModel::CloneTo()が先に設定済み。
+    // GltfModelに属さない単体Rendererはコピーコンストラクタのnullptrを維持する。
+}
+
+
 // 現在の姿勢をシェーダーの定数バッファに転送
 void SkinnedMeshRenderer::createConstantBufferPerObject()
 {
@@ -49,17 +71,21 @@ void SkinnedMeshRenderer::bindPerObject()
     constantBuffer->world = transform->localToWorldMatrix();
 
     // ボーン行列
-    if(skin && !skin->joints.empty())
+    if(skin && skin->inverseBind && !skin->joints.empty())
     {
         Matrix4x4 invWorld = constantBuffer->world.inverse();
 
-        const uint32_t n = (uint32_t)std::min<size_t>(skin->joints.size(), SkinMeshBoneMax);
+        const uint32_t n = (uint32_t)std::min({
+            skin->joints.size(),
+            skin->inverseBind->size(),
+            static_cast<size_t>(SkinMeshBoneMax)
+        });
 
         for(uint32_t i = 0; i < n; ++i)
         {
             // 頂点データ → ワールド座標 → モデル座標 となる変換
             Matrix4x4 jointWorld = skin->joints[i]->localToWorldMatrix();
-            Matrix4x4 m = skin->inverseBind[i] * jointWorld * invWorld;
+            Matrix4x4 m = (*skin->inverseBind)[i] * jointWorld * invWorld;
 
             // CB用 3x4 に圧縮
             constantBuffer->bones[i] = BoneMat3x4::FromMatrix4x4(m);

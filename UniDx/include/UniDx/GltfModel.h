@@ -15,6 +15,9 @@ namespace UniDx {
 class GltfModel : public Component
 {
 public:
+    GltfModel() = default;
+    GltfModel(const GltfModel& source);
+
     const std::unordered_map<int, std::shared_ptr<Material>>& GetMaterials() { return materials; }
 
     /**
@@ -116,12 +119,13 @@ public:
 protected:
     std::vector<MeshRenderer*> renderer;
     std::unordered_map<int, std::shared_ptr<Material>> materials;
-    std::unique_ptr< tinygltf::Model> model;
+    std::shared_ptr<tinygltf::Model> model; // 読み込み済みglTF。Instantiateで共有
     std::vector< std::shared_ptr<Mesh> > meshes; // model->meshesの順に従ったメッシュ
     std::unordered_map<int, std::shared_ptr<Texture>> textures;
     std::unordered_map<int, Transform*> nodes;
     std::unordered_map<int, SkinInstance> skinInstance;
 
+    virtual void CloneTo(Component& destination) const override;
     virtual bool load_(const char* filePath, bool makeTextureMaterial, std::shared_ptr<Shader> shader);
     virtual void readPrimitive(UniDx::Mesh* mesh, const tinygltf::Primitive& primitive);
     virtual void createNodeRecursive(const tinygltf::Model& model, int nodeIndex, GameObject* parentGO, bool attachIncludeMaterial);

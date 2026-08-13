@@ -13,10 +13,10 @@ constexpr int WeightMax = 4;
 struct SkinInstance
 {
     std::vector<SkinnedMeshRenderer*> reference;
-    //        std::vector<Matrix4x4> jointGlobal;      // M_joint
     std::vector<Transform*> joints;
-    std::vector<Matrix4x4> inverseBind;
-    //        uint64_t version;                        // 更新世代
+
+    // glTF由来の不変なアセットデータ。インスタンス間で共有する。
+    std::shared_ptr<const std::vector<Matrix4x4>> inverseBind;
 };
 
 
@@ -68,8 +68,10 @@ class SkinnedMeshRenderer : public MeshRenderer
 public:
     SkinInstance* skin = nullptr;
     SkinnedMeshRenderer();
+    SkinnedMeshRenderer(const SkinnedMeshRenderer& source);
 
 protected:
+    virtual void CloneTo(Component& destination) const override;
     virtual void createConstantBufferPerObject() override;
     virtual void bindPerObject() override;
 
