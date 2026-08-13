@@ -66,6 +66,12 @@ public:
 
     virtual ~Component();
 
+    template<typename T>
+    T* GetComponent() const { return gameObject->GetComponent<T>(); }
+
+    template<typename T>
+    T* GetComponentInParent() const { return gameObject->GetComponentInParent<T>(); }
+
 protected:
     using CopyConstruct = std::unique_ptr<Component>(*)(const Component&);
 

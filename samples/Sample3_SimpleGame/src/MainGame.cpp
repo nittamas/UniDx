@@ -1,8 +1,6 @@
 ﻿// CreateDefaultScene.cpp
 // デフォルトのシーンを生成します
 
-#include <numbers>
-
 #include <UniDx.h>
 #include <UniDx/Scene.h>
 #include <UniDx/PrimitiveRenderer.h>
@@ -18,7 +16,6 @@
 #include "MapData.h"
 #include "LightController.h"
 
-#include <thread>
 #include "MainGame.h"
 
 
@@ -95,7 +92,7 @@ void MainGame::createMap()
                     make_unique<Rigidbody>(),
                     make_unique<SphereCollider>(Vector3(0, -0.1f, 0), 0.4f)
                 );
-                auto model = coin->GetComponent<GltfModel>(true);
+                auto model = coin->GetComponent<GltfModel>();
                 model->Load<VertexPN>(
                     u8"resource/coin.glb",
                     coinMat);
@@ -152,7 +149,7 @@ unique_ptr<UniDx::Scene> MainGame::CreateScene()
         make_unique<SphereCollider>(Vector3(0, 0.25f, 0)),
         make_unique<Player>()
         );
-    auto model = playerObj->GetComponent<GltfModel>(true);
+    auto model = playerObj->GetComponent<GltfModel>();
     model->Load<VertexSkin>(
         u8"resource/mini_emma.glb",
         u8"resource/SkinBasic.hlsl");
@@ -161,7 +158,7 @@ unique_ptr<UniDx::Scene> MainGame::CreateScene()
 
     // -- カメラ --
     auto cameraBehaviour = make_unique<CameraController>();
-    cameraBehaviour->player = playerObj->GetComponent<Player>(true);
+    cameraBehaviour->player = playerObj->GetComponent<Player>();
 
     // -- ライト --
     LightManager::getInstance()->ambientColor = Color(0.3f, 0.3f, 0.3f, 1.0f);
@@ -169,7 +166,7 @@ unique_ptr<UniDx::Scene> MainGame::CreateScene()
     auto lights = make_unique<GameObject>(u8"ライト群");
     auto light = make_unique<GameObject>(u8"ディレクショナルライト", make_unique<Light>(), make_unique<LightController>());
     light->transform->localPosition = Vector3(4, 3, 0);
-    light->GetComponent<Light>(true)->intensity = 0.4f;
+    light->GetComponent<Light>()->intensity = 0.4f;
     Transform::SetParent(move(light), lights->transform);
 
     for (int i = 0; i < 2; ++i)

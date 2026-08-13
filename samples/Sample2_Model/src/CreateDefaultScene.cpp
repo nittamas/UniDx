@@ -25,7 +25,7 @@ unique_ptr<Scene> CreateDefaultScene()
     auto character = make_unique<GameObject>(u8"キャラクター", Vector3(0, -0.8f, 0),
         make_unique<GltfModel>()
     );
-    auto model = character->GetComponent<GltfModel>(true);
+    auto model = character->GetComponent<GltfModel>();
 
     // .glbファイルからモデルデータをロード
     // 先にGameObjectにアタッチしておく
@@ -44,7 +44,7 @@ unique_ptr<Scene> CreateDefaultScene()
         make_unique<LightController>()
     );
     light->transform->localPosition = Vector3(-1.0f, 3.0f, -4.0f);
-    light->GetComponent<Light>(true)->intensity = 0.6f;
+    light->GetComponent<Light>()->intensity = 0.6f;
 
     // 環境光
     LightManager::getInstance()->ambientColor = Color(0.5f, 0.5f, 0.5f);

@@ -112,15 +112,18 @@ public:
     void checkAwake();
 
     template<typename T>
-    [[nodiscard]] T* GetComponent(bool includeInactive = false) {
+    [[nodiscard]] T* GetComponent() const {
         for (auto& comp : components) {
             auto casted = dynamic_cast<T*>(comp.get());
-            if (casted != nullptr && (comp->enabled || includeInactive && !comp->isDestroyed())) {
+            if (casted != nullptr && !comp->isDestroyed()) {
                 return casted;
             }
         }
         return nullptr;
     }
+
+    template<typename T>
+    T* GetComponentInParent() const;
 
     template<typename Predicate>
     GameObject* Find(Predicate pred) const;

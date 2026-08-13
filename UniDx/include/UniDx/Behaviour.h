@@ -27,17 +27,6 @@ public:
     virtual void OnCollisionExit(const Collision& collision) {}
 
     virtual ~Behaviour() = default;
-
-    template<typename T>
-    T* GetComponent(bool includeInactive = false) const { return gameObject->GetComponent<T>(includeInactive); }
-
-    template<typename T>
-    T* GetComponentInParent(bool includeInactive = false) const
-    {
-        auto c = GetComponent<T>();
-        if (c != nullptr || transform->parent == nullptr) return c;
-        return transform->parent->gameObject->GetComponent<T>(includeInactive);
-    }
 };
 
 

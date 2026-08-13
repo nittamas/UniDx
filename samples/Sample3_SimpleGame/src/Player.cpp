@@ -1,11 +1,7 @@
-﻿#pragma once
-
-#include "Player.h"
+﻿#include "Player.h"
 
 #include <UniDx/Input.h>
 #include <UniDx/Collider.h>
-#include <UniDx/Time.h>
-#include <UniDx/PrimitiveRenderer.h>
 
 #include "MainGame.h"
 
@@ -50,11 +46,11 @@ namespace
 
 void Player::OnEnable()
 {
-    rb = GetComponent<Rigidbody>(true);
+    rb = GetComponent<Rigidbody>();
     assert(rb != nullptr);
 
     rb->gravityScale = 1.5f;
-    GetComponent<Collider>(true)->bounciness = 0.0f;
+    GetComponent<Collider>()->bounciness = 0.0f;
 
     // アニメーションさせるボーンを検索し、初期姿勢の回転を記録
     bones.resize(BoneMax);
