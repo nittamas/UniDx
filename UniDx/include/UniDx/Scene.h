@@ -10,6 +10,14 @@ namespace UniDx
 
 class GameObject;
 
+/**
+  * @brief GameObject がアクティブシーンのツリーに接続されているか
+  *
+  * GameObject から親をたどったルートが、アクティブシーンのルートに
+  * 含まれている場合に true。未接続オブジェクトやシーン構築中は false。
+  */
+bool IsConnectedToActiveScene(const GameObject* gameObject);
+
 // シーン
 class Scene
 {

@@ -61,6 +61,7 @@ public:
     }
 
     Transform();
+    Transform(const Transform& source);
 
     virtual ~Transform();
 

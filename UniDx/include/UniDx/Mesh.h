@@ -245,6 +245,12 @@ public:
     std::vector< std::shared_ptr<SubMesh> > submesh;
 
     Mesh() : Object([this]() {return name_;}) {}
+    Mesh(const Mesh& source) :
+        Object([this]() { return name_; }),
+        submesh(source.submesh),
+        name_(source.name_)
+    {
+    }
     virtual ~Mesh() {}
 
     void render() const

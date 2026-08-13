@@ -118,7 +118,7 @@ namespace UniDx
     Rigidbody* Collider::findNearestRigidbody(Transform* t) const
     {
         // 同じGameObjectにRigidbodyがあればそれを登録
-        Rigidbody* rb = gameObject->GetComponent<Rigidbody>();
+        Rigidbody* rb = t->gameObject->GetComponent<Rigidbody>(true);
         if (rb != nullptr)
         {
             return rb;

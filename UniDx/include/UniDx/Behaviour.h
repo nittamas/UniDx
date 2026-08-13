@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file Behaviour.h
  * @brief GameObjectの挙動を記述する基底コンポーネント
  */

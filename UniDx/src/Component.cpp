@@ -11,27 +11,56 @@ Component::Component() :
         [this]() { return _enabled && isCalledAwake; },
 
         // set
-        [this](bool value) {
-            if (!_enabled && value && !isCalledDestroy) {
-                _enabled = true;
-                if (!isCalledAwake) { Awake(); isCalledAwake = true; }
-                OnEnable();
-            }
-            else if (_enabled && !value) {
-                _enabled = false;
-                if (isCalledAwake) { OnDisable(); }
-            }
-        }
+        [this](bool value) { setEnabled(value); }
     ),
     transform(
         [this]() { return gameObject->transform; }
     ),
-    _enabled(true),
     isCalledAwake(false),
     isCalledStart(false),
-    isCalledDestroy(false)
+    isCalledDestroy(false),
+    _enabled(true),
+    copyConstruct_(nullptr)
 {
+}
 
+
+// コピーコンストラクタ
+// Propertyのラムダはコピーせず、複製先のthisへ張り直す
+Component::Component(const Component& source) : Component()
+{
+    copyComponentStateFrom(source);
+}
+
+
+void Component::copyComponentStateFrom(
+    const Component& source)
+{
+    _enabled = source._enabled;
+    copyConstruct_ = source.copyConstruct_;
+}
+
+
+void Component::setEnabled(bool value)
+{
+    if (!_enabled && value && !isCalledDestroy)
+    {
+        _enabled = true;
+        // Awakeはアクティブシーンへの接続時に呼ぶ。
+        // すでにAwake済みなら、再有効化としてOnEnableを呼ぶ。
+        if (isCalledAwake) { OnEnable(); }
+    }
+    else if (_enabled && !value)
+    {
+        _enabled = false;
+        if (isCalledAwake) { OnDisable(); }
+    }
+}
+
+std::unique_ptr<Component> Component::copyConstruct() const
+{
+    if (copyConstruct_ == nullptr) return nullptr;
+    return copyConstruct_(*this);
 }
 
 void Component::doDestroy()
@@ -55,7 +84,6 @@ Component::~Component()
 void Destroy(Component* component)
 {
     assert(component != nullptr);
-    component->enabled = false; // 無効化（ここはUniyと挙動が異なる）
     component->isCalledDestroy = true; // フレームの終わりに削除される
 }
 

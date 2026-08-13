@@ -67,6 +67,10 @@ public:
     template<typename U>
     bool operator!=(U* rhs) const { return getter_() != rhs; }
 
+	// コピー禁止
+    ReadOnlyProperty(const ReadOnlyProperty&) = delete;
+    ReadOnlyProperty& operator=(const ReadOnlyProperty&) = delete; 
+
 protected:
     Getter getter_;
 };
@@ -90,6 +94,24 @@ public:
     /** @brief C#風代入アクセス*/
     template<typename U>
     Property& operator=(const U& value) { set(T(value)); return *this; }
+
+    /** @brief 値をセットする代入演算 */
+    Property& operator=(const Property& value)
+    {
+        if(this != &value)
+        {
+            set(value.get());
+        }
+        return *this;
+    }
+
+    /** @brief 互換性のあるプロパティの値をセットする代入演算 */
+    template<typename U> requires std::constructible_from<T, const U&>
+    Property& operator=(const Property<U>& value)
+    {
+        set(T(value.get()));
+        return *this;
+    }
 
 private:
     Setter setter_;

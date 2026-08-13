@@ -2,12 +2,15 @@
 
 #include <SimpleMath.h>
 
+#include <UniDx/Scene.h>
+
 namespace UniDx
 {
 
 // コンストラクタ
-Transform::Transform()
-    : localPosition(
+Transform::Transform() :
+    Component(),
+    localPosition(
         [this]() { return _localPosition; },
         [this](Vector3 v) { _localPosition = v; m_dirty = true; }
     ),
@@ -27,7 +30,7 @@ Transform::Transform()
         },
         // setter: グローバル座標からlocalPositionを逆算
         [this](Vector3 worldPos) {
-            if (parent) {
+            if(parent) {
                 parent->updateMatrices();
                 Matrix4x4 invParent = parent->m_worldMatrix.inverse();
                 _localPosition = worldPos * invParent;
@@ -48,7 +51,7 @@ Transform::Transform()
             return q;
         },
         [this](Quaternion worldRot) {
-            if (parent) {
+            if(parent) {
                 parent->updateMatrices();
                 // 親のワールド回転の逆を掛けてローカル回転を算出
                 Quaternion parentWorldRot, parentWorldRotInv;
@@ -70,12 +73,12 @@ Transform::Transform()
         },
         // setter: worldForward に向くようワールド回転を設定
         [this](Vector3 worldForward) {
-            if (worldForward.magnitude() < 1e-6f) return;
+            if(worldForward.magnitude() < 1e-6f) return;
             Vector3 f = worldForward.normalized();
 
             // up が前方向とほぼ平行なら代替 up を使う
             Vector3 up = Vector3::up;
-            if (std::abs(Dot(f, up)) > 0.999f) up = Vector3::right;
+            if(std::abs(Dot(f, up)) > 0.999f) up = Vector3::right;
 
             // CreateWorld の引数は (position, forward, up)
             Matrix4x4 m = DirectX::SimpleMath::Matrix::CreateWorld(Vector3::zero, f, up);
@@ -92,7 +95,7 @@ Transform::Transform()
         },
         // setter: worldUp に向くようワールド回転を設定（可能な限り現在の forward を保持）
         [this](Vector3 worldUp) {
-            if (worldUp.magnitude() < 1e-6f) return;
+            if(worldUp.magnitude() < 1e-6f) return;
             Vector3 upVec = worldUp.normalized();
 
             // 現在の forward を取得（ワールド）
@@ -100,7 +103,7 @@ Transform::Transform()
 
             // 右方向を計算（forward x up）
             Vector3 right = Cross(currF, upVec);
-            if (right.magnitude() < 1e-6f) {
+            if(right.magnitude() < 1e-6f) {
                 // forward と up がほぼ平行 -> 別の基準を使う
                 currF = Vector3::forward;
                 right = Cross(currF, upVec);
@@ -123,7 +126,7 @@ Transform::Transform()
         },
         // setter: worldRight に向くようワールド回転を設定（可能な限り現在の up を保持）
         [this](Vector3 worldRight) {
-            if (worldRight.magnitude() < 1e-6f) return;
+            if(worldRight.magnitude() < 1e-6f) return;
             Vector3 rVec = worldRight.normalized();
 
             // 現在の up を取得（ワールド）
@@ -131,7 +134,7 @@ Transform::Transform()
 
             // forward を計算 (up x right)
             Vector3 f = Cross(currUp, rVec);
-            if (f.magnitude() < 1e-6f) {
+            if(f.magnitude() < 1e-6f) {
                 // up と right がほぼ平行 -> 別の基準を使う
                 currUp = Vector3::up;
                 f = Cross(currUp, rVec).normalized();
@@ -149,6 +152,18 @@ Transform::Transform()
     )
 {
 }
+
+
+// コピーコンストラクタ
+// Propertyのラムダを複製先へ張り直し、子階層はGameObject側でコピーする
+Transform::Transform(const Transform& source) : Transform()
+{
+    copyComponentStateFrom(source);
+    _localPosition = source._localPosition;
+    _localRotation = source._localRotation;
+    _localScale = source._localScale;
+}
+
 
 Transform::~Transform()
 {
@@ -198,6 +213,9 @@ GameObject* Transform::SetParent(Transform * newParent)
     {
         // 新しい親に自分を持つGameObjectを追加
         parent->children.push_back(std::move(gameObject_owner));
+
+        // アクティブシーンへ接続された場合はその場でAwake()/OnEnable()を呼ぶ
+        if (IsConnectedToActiveScene(gameObject_ptr)) gameObject_ptr->checkAwake();
     }
     m_dirty = true;
 
@@ -221,7 +239,12 @@ void Transform::SetParent(unique_ptr<GameObject> gameObjectPtr, Transform* newPa
     if (newParent)
     {
         // 新しい親に自分を持つGameObjectを追加
+        GameObject* added = gameObjectPtr.get();
         newParent->children.push_back(std::move(gameObjectPtr));
+
+        // アクティブシーンへ接続された場合はその場でAwake()/OnEnable()を呼ぶ
+        // Instantiate()相当。サブツリー全体が対象
+        if (IsConnectedToActiveScene(added)) added->checkAwake();
     }
 }
 

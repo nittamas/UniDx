@@ -18,6 +18,58 @@ static const Matrix4x4 xFlipMtx = Matrix4x4(
     0.f, 0.f, 1.f, 0.f,
     0.f, 0.f, 0.f, 1.f
 );
+
+using NodeIndexByTransform = unordered_map<const Transform*, int>;
+using RendererIndexByPointer = unordered_map<const MeshRenderer*, size_t>;
+
+// 元とコピー先はGameObject、子、Componentの順序が同じ。
+// GltfModelが所有する参照だけを、一度の並行巡回でコピー先へ対応付ける。
+void RemapModelHierarchy(
+    const GameObject& source,
+    GameObject& destination,
+    const NodeIndexByTransform& nodeIndices,
+    const RendererIndexByPointer& rendererIndices,
+    unordered_map<int, Transform*>& destinationNodes,
+    vector<MeshRenderer*>& destinationRenderers)
+{
+    if(auto node = nodeIndices.find(source.transform); node != nodeIndices.end())
+    {
+        destinationNodes.emplace(node->second, destination.transform);
+    }
+
+    const auto& sourceComponents = source.GetComponents();
+    const auto& destinationComponents = destination.GetComponents();
+    assert(sourceComponents.size() == destinationComponents.size());
+
+    for(size_t i = 0; i < sourceComponents.size(); ++i)
+    {
+        auto sourceRenderer = dynamic_cast<const MeshRenderer*>(sourceComponents[i].get());
+        if(sourceRenderer == nullptr) continue;
+
+        auto renderer = rendererIndices.find(sourceRenderer);
+        if(renderer == rendererIndices.end()) continue;
+
+        auto destinationRenderer = dynamic_cast<MeshRenderer*>(destinationComponents[i].get());
+        assert(destinationRenderer != nullptr);
+        destinationRenderers[renderer->second] = destinationRenderer;
+    }
+
+    const auto& sourceChildren = source.transform->getChildGameObjects();
+    const auto& destinationChildren = destination.transform->getChildGameObjects();
+    assert(sourceChildren.size() == destinationChildren.size());
+
+    for(size_t i = 0; i < sourceChildren.size(); ++i)
+    {
+        RemapModelHierarchy(
+            *sourceChildren[i],
+            *destinationChildren[i],
+            nodeIndices,
+            rendererIndices,
+            destinationNodes,
+            destinationRenderers);
+    }
+}
+
 const unsigned char* getAccessorData(const tinygltf::Model& model, const tinygltf::Accessor& accessor,
     size_t& stride, size_t& count)
 {
@@ -170,13 +222,96 @@ void ReadAccessorU8x4(
 
 
 // -----------------------------------------------------------------------------
+// Instantiate用コピー
+// -----------------------------------------------------------------------------
+GltfModel::GltfModel(const GltfModel& source) :
+    Component(source),
+    materials(source.materials),
+    model(source.model),
+    meshes(source.meshes),
+    textures(source.textures)
+{
+    // renderer/nodes/skinInstanceはコピー先階層を指す必要があるため、
+    // 階層全体のコピー完了後にCloneTo()で構築する。
+}
+
+
+void GltfModel::CloneTo(Component& destination) const
+{
+    auto& gltf = static_cast<GltfModel&>(destination);
+
+    // 探索時だけ使う逆引き表。階層全体を一度巡回してコピー先を得る。
+    NodeIndexByTransform nodeIndices;
+    nodeIndices.reserve(nodes.size());
+    for(const auto& [nodeIndex, transform] : nodes)
+    {
+        nodeIndices.emplace(transform, nodeIndex);
+    }
+
+    RendererIndexByPointer rendererIndices;
+    rendererIndices.reserve(renderer.size());
+    for(size_t i = 0; i < renderer.size(); ++i)
+    {
+        rendererIndices.emplace(renderer[i], i);
+    }
+
+    gltf.nodes.clear();
+    gltf.nodes.reserve(nodes.size());
+    gltf.renderer.assign(renderer.size(), nullptr);
+
+    RemapModelHierarchy(
+        *gameObject,
+        *gltf.gameObject,
+        nodeIndices,
+        rendererIndices,
+        gltf.nodes,
+        gltf.renderer);
+
+    assert(gltf.nodes.size() == nodes.size());
+    assert(ranges::none_of(gltf.renderer, [](auto renderer) { return renderer == nullptr; }));
+
+    // SkinInstanceは姿勢ごとの状態。inverseBindだけはアセットとして共有する。
+    gltf.skinInstance.clear();
+    gltf.skinInstance.reserve(skinInstance.size());
+
+    for(const auto& [skinIndex, sourceSkin] : skinInstance)
+    {
+        auto& clonedSkin = gltf.skinInstance[skinIndex];
+        clonedSkin.inverseBind = sourceSkin.inverseBind;
+        clonedSkin.joints.reserve(sourceSkin.joints.size());
+        clonedSkin.reference.reserve(sourceSkin.reference.size());
+
+        for(auto sourceJoint : sourceSkin.joints)
+        {
+            auto node = nodeIndices.find(sourceJoint);
+            assert(node != nodeIndices.end());
+            clonedSkin.joints.push_back(gltf.nodes.at(node->second));
+        }
+
+        for(auto sourceRenderer : sourceSkin.reference)
+        {
+            auto rendererIndex = rendererIndices.find(sourceRenderer);
+            assert(rendererIndex != rendererIndices.end());
+
+            auto clonedRenderer = dynamic_cast<SkinnedMeshRenderer*>(
+                gltf.renderer[rendererIndex->second]);
+            assert(clonedRenderer != nullptr);
+
+            clonedSkin.reference.push_back(clonedRenderer);
+            clonedRenderer->skin = &clonedSkin;
+        }
+    }
+}
+
+
+// -----------------------------------------------------------------------------
 // gltfファイルを読み込み
 // -----------------------------------------------------------------------------
 bool GltfModel::load_(const char* filePath, bool makeTextureMaterial, std::shared_ptr<Shader> shader)
 {
     Debug::Log(filePath);
 
-    model = make_unique<tinygltf::Model>();
+    model = make_shared<tinygltf::Model>();
     tinygltf::TinyGLTF loader;
     string err, warn;
 
@@ -263,7 +398,7 @@ bool GltfModel::load_(const char* filePath, bool makeTextureMaterial, std::share
             size_t stride = acc.ByteStride(bv);
             if(stride < sizeof(float) * 16) continue;
 
-            pair.second.inverseBind.resize(acc.count);
+            auto inverseBind = make_shared<vector<Matrix4x4>>(acc.count);
             for(int i = 0; i < acc.count; ++i)
             {
                 const uint8_t* p = base + i * stride;
@@ -272,8 +407,9 @@ bool GltfModel::load_(const char* filePath, bool makeTextureMaterial, std::share
                 // glTFは列ベクトルで最初の列から、UniDxは行ベクトルで最初の行からなので、結果的に順番コピーでOK
                 std::memcpy(&localRH, p, sizeof(float) * 16);
 
-                pair.second.inverseBind[i] = xFlipMtx * localRH * xFlipMtx;
+                (*inverseBind)[i] = xFlipMtx * localRH * xFlipMtx;
             }
+            pair.second.inverseBind = move(inverseBind);
         }
     }
     return true;

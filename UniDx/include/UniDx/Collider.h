@@ -11,9 +11,7 @@ namespace UniDx
     class SphereCollider;
     class AABBCollider;
 
-    // --------------------
-    // Collider基底クラス
-    // --------------------
+    /// @brief すべてのコライダーの基盤となるクラス
     class Collider : public Component
     {
     public:
@@ -52,14 +50,18 @@ namespace UniDx
         virtual bool checkIntersect(SphereCollider* other, PhysicsActor* myActor, PhysicsActor* otherActor) = 0;
         virtual bool checkIntersect(AABBCollider* other, PhysicsActor* myActor, PhysicsActor* otherActor) = 0;
 
+    protected:
+        virtual void CloneTo(Component& destination) const override
+        {
+            static_cast<Collider&>(destination).attachedRigidbody = nullptr;
+        }
+
     private:
         Rigidbody* findNearestRigidbody(Transform* t) const;
     };
 
 
-    // --------------------
-    // AABBCollider
-    // --------------------
+    /// @brief Axis-Aligned Bounding Box（軸並行境界ボックス）。UnityのBoxColliderと違い、回転の影響を受けない。
     class AABBCollider : public Collider
     {
     public:
@@ -88,9 +90,7 @@ namespace UniDx
     };
 
 
-    // --------------------
-    // SphereCollider
-    // --------------------
+    /// @brief 球体のコライダー
     class SphereCollider : public Collider
     {
     public:

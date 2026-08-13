@@ -41,6 +41,7 @@ public:
     void unregisterCanvas(Canvas* c);
 
 protected:
+    virtual void checkStart();
     virtual void fixedUpdate();
     virtual void physics();
     virtual void input();
@@ -50,7 +51,6 @@ protected:
     virtual void checkDestroy();
     virtual void finalize();
 
-    void awake(GameObject* object);
     void fixedUpdate(GameObject* object);
     void checkStart(GameObject* object);
     void update(GameObject* object);

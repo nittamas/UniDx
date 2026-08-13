@@ -100,7 +100,7 @@ void LightManager::unregisterLight(Light* light)
     {
         if (lights_[i] == light)
         {
-            lights_[i] = light;
+            lights_[i] = nullptr;
             return;
         }
     }

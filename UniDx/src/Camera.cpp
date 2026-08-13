@@ -10,6 +10,15 @@ namespace UniDx{
 // static なメインカメラ
 Camera* Camera::main;
 
+void Camera::CloneTo(Component& destination) const
+{
+    auto& camera = static_cast<Camera&>(destination);
+
+    // mainはstaticなのでコピー対象外。GPUリソースはOnEnable()で作り直す
+    camera.constantBufferPerCamera.Reset();
+}
+
+
 Matrix4x4 Camera::GetViewMatrix() const
 {
     // ワールド行列を分解
@@ -24,6 +33,7 @@ Matrix4x4 Camera::GetViewMatrix() const
     // 逆行列を返す（ビュー行列）
     return worldNoScale.inverse();
 }
+
 
 Matrix4x4 Camera::GetProjectionMatrix(float aspect) const
 {
