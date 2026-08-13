@@ -96,6 +96,7 @@ int PlayerLoop::MainLoop()
 
         Time::SetDeltaTimeFixed(); // Unity同様、FixedUpdate()では deltaTime と fixedDeltaTime が同じ
 
+		restFixedUpdateTime = std::min(restFixedUpdateTime, double(Time::maximumDeltaTime)); // 最大値を超えないようにする
         while (restFixedUpdateTime > Time::fixedDeltaTime)
         {
             // 固定時間更新更新
