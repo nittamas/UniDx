@@ -5,7 +5,6 @@
 #include <d3d11.h>
 
 #include <UniDx/D3DManager.h>
-#include <UniDx/ConstantBuffer.h>
 
 #pragma comment(lib, "d3dcompiler.lib")
 
@@ -133,9 +132,12 @@ void Shader::reflectPSLayout(ID3DBlob* psBlob)
 	if(!psBlob) return;
 
 	Microsoft::WRL::ComPtr<ID3D11ShaderReflection> refl;
-	if(FAILED(D3DReflect(psBlob->GetBufferPointer(), psBlob->GetBufferSize(),
-		IID_ID3D11ShaderReflection, (void**)refl.GetAddressOf())))
+	if(FAILED( D3DReflect(psBlob->GetBufferPointer(),
+		psBlob->GetBufferSize(),
+		IID_PPV_ARGS(refl.ReleaseAndGetAddressOf()))))
+	{
 		return;
+	}
 
 	// PerMaterial
 	ID3D11ShaderReflectionConstantBuffer* cb = refl->GetConstantBufferByName("CBPerMaterial");
