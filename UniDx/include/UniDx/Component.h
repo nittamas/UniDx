@@ -33,13 +33,16 @@ public:
 
     GameObject* gameObject = nullptr;
 
+	bool didAwake() const { return didAwake_; }
+	bool didStart() const { return didStart_; }
+
     // 未破棄ならAwake()を一度だけ呼び、有効なままならOnEnable()を呼ぶ
     void checkAwake()
     {
-        if (isCalledAwake || isCalledDestroy) return;
+        if (didAwake_ || isCalledDestroy) return;
 
         Awake();
-        isCalledAwake = true;
+        didAwake_ = true;
 
         // Awake()内で破棄予約された場合、OnEnable/OnDisableは呼ばない
         if (isCalledDestroy)
@@ -55,10 +58,10 @@ public:
     // 有効フラグが立っているかどうか確認して Start() 呼び出し
     void checkStart()
     {
-        if (_enabled && isCalledAwake && !isCalledStart)
+        if (_enabled && didAwake_ && !didStart_)
         {
             Start();
-            isCalledStart = true;
+            didStart_ = true;
         }
     }
 
@@ -91,8 +94,8 @@ protected:
     virtual void OnDisable() {}
     virtual void OnDestroy() {}
 
-    bool isCalledAwake;
-    bool isCalledStart;
+    bool didAwake_;
+    bool didStart_;
     bool isCalledDestroy;
     bool _enabled;
 

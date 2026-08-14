@@ -49,9 +49,9 @@ void PlayerLoop::createScene()
 {
     SceneManager::getInstance()->createScene();
 
-    // シーン構築中(CreateDefaultScene()の中)は即時Awakeが抑止されているため、
-    // ここで一括してAwake()/OnEnable()を呼ぶ。
-    // これ以降はシーンが有効になっているので、追加されたものは即時Awakeされる。
+    // シーン構築中(CreateDefaultScene()の中)に構築されたGameObjectは
+	// Awake()/OnEnable()が呼ばれていないので、ここで一括で呼ぶ。
+    // 以降、activeScene配下へのGameObjectやComponent追加は、追加時に呼ばれる。
     // Awake()中にGameObjectが追加されるとvectorが再確保されるため、
     // イテレータではなくインデックスで巡回する。
     auto* scene = SceneManager::getInstance()->GetActiveScene();
@@ -302,7 +302,7 @@ void PlayerLoop::fixedUpdate(GameObject* object)
     for (size_t i = 0; i < componentCount && i < components.size(); ++i)
     {
         auto behaviour = dynamic_cast<Behaviour*>(components[i].get());
-        if (behaviour != nullptr && behaviour->enabled)
+        if (behaviour != nullptr && behaviour->enabled && behaviour->didStart())
         {
             behaviour->FixedUpdate();
         }
@@ -350,7 +350,7 @@ void PlayerLoop::update(GameObject* object)
     for (size_t i = 0; i < componentCount && i < components.size(); ++i)
     {
         auto behaviour = dynamic_cast<Behaviour*>(components[i].get());
-        if (behaviour != nullptr && behaviour->enabled)
+        if (behaviour != nullptr && behaviour->enabled && behaviour->didStart())
         {
             behaviour->Update();
         }
@@ -376,7 +376,7 @@ void PlayerLoop::lateUpdate(GameObject* object)
     for (size_t i = 0; i < componentCount && i < components.size(); ++i)
     {
         auto behaviour = dynamic_cast<Behaviour*>(components[i].get());
-        if (behaviour != nullptr && behaviour->enabled)
+        if (behaviour != nullptr && behaviour->enabled && behaviour->didStart())
         {
             behaviour->LateUpdate();
         }

@@ -8,7 +8,7 @@ Component::Component() :
     Object([this]() { return gameObject != nullptr ? gameObject->name : StringId(); }),
     enabled(
         // get
-        [this]() { return _enabled && isCalledAwake; },
+        [this]() { return _enabled && didAwake_; },
 
         // set
         [this](bool value) { setEnabled(value); }
@@ -16,8 +16,8 @@ Component::Component() :
     transform(
         [this]() { return gameObject->transform; }
     ),
-    isCalledAwake(false),
-    isCalledStart(false),
+    didAwake_(false),
+    didStart_(false),
     isCalledDestroy(false),
     _enabled(true),
     copyConstruct_(nullptr)
@@ -48,12 +48,12 @@ void Component::setEnabled(bool value)
         _enabled = true;
         // Awakeはアクティブシーンへの接続時に呼ぶ。
         // すでにAwake済みなら、再有効化としてOnEnableを呼ぶ。
-        if (isCalledAwake) { OnEnable(); }
+        if (didAwake_) { OnEnable(); }
     }
     else if (_enabled && !value)
     {
         _enabled = false;
-        if (isCalledAwake) { OnDisable(); }
+        if (didAwake_) { OnDisable(); }
     }
 }
 
@@ -70,7 +70,7 @@ void Component::doDestroy()
     {
         enabled = false; // 無効化（この中でOnDisable()が呼ばれる）
     }
-    if (isCalledAwake)
+    if (didAwake_)
     {
         OnDestroy();
     }

@@ -42,9 +42,8 @@ bool IsConnectedToActiveScene(const GameObject* gameObject)
 void SceneManager::createScene()
 {
 	activeScene = std::move(CreateDefaultScene());
-//	defaultMaterial = make_unique<Material>();
-//	defaultMaterial->shader.compile<VertexPN>(L"Resource/DefaultShade.hlsl");
 }
+
 
 // デストラクタ。シーンを破棄
 SceneManager::~SceneManager()
