@@ -2,6 +2,7 @@ var class_uni_dx_1_1_transform =
 [
     [ "GameObjectContainer", "class_uni_dx_1_1_transform.html#a27f781f09acf04be3eda17386f5b7d5c", null ],
     [ "Transform", "class_uni_dx_1_1_transform.html#ad8f23cd339c6e72280475deeb86ee034", null ],
+    [ "Transform", "class_uni_dx_1_1_transform.html#a3d79ec1b7196aeef8f4bf00c5b8aafd7", null ],
     [ "~Transform", "class_uni_dx_1_1_transform.html#a28b39ec9d7e27f4c891895530ab4b75d", null ],
     [ "childCount", "class_uni_dx_1_1_transform.html#adfe7a92f5a823c28e2a078a13c7fd021", null ],
     [ "GetChild", "class_uni_dx_1_1_transform.html#a1f91481340262d109033204b06dc6ab4", null ],

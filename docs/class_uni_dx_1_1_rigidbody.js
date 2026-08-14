@@ -1,6 +1,7 @@
 var class_uni_dx_1_1_rigidbody =
 [
     [ "Rigidbody", "class_uni_dx_1_1_rigidbody.html#a8d372ab843bcfa349c0cc79b6b8bdf09", null ],
+    [ "Rigidbody", "class_uni_dx_1_1_rigidbody.html#ada44a29a3222e283f025b83b60ce5d40", null ],
     [ "applyMove", "class_uni_dx_1_1_rigidbody.html#acc8d5e926398e125e8ebec4399eee055", null ],
     [ "Awake", "class_uni_dx_1_1_rigidbody.html#a09a4b8a7c57cc4dd258b8c1cf4f5f6a3", null ],
     [ "getMoveVector", "class_uni_dx_1_1_rigidbody.html#a2f17b8ad3b3eaa93d5d26a4192516d23", null ],

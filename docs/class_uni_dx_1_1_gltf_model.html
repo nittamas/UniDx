@@ -110,6 +110,8 @@ UniDx::GltfModel の継承関係図</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
+<tr class="memitem:a7ebed6bc768d7f44bf98c5988110ccb2" id="r_a7ebed6bc768d7f44bf98c5988110ccb2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ebed6bc768d7f44bf98c5988110ccb2">GltfModel</a> ()=default</td></tr>
+<tr class="memitem:a5f8c50d1fe44e39bc32a3c3080df7b39" id="r_a5f8c50d1fe44e39bc32a3c3080df7b39"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f8c50d1fe44e39bc32a3c3080df7b39">GltfModel</a> (const GltfModel &amp;source)</td></tr>
 <tr class="memitem:a11b8ffef28b2777bc47af182a9dbb272" id="r_a11b8ffef28b2777bc47af182a9dbb272"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; int, std::shared_ptr&lt; <a class="el" href="class_uni_dx_1_1_material.html">Material</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11b8ffef28b2777bc47af182a9dbb272">GetMaterials</a> ()</td></tr>
 <tr class="memitem:a2e4d77350d57b0f00e6f262a03bc92b8" id="r_a2e4d77350d57b0f00e6f262a03bc92b8"><td class="memTemplParams" colspan="2">template&lt;typename TVertex&gt; </td></tr>
 <tr class="memitem:a2e4d77350d57b0f00e6f262a03bc92b8 template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e4d77350d57b0f00e6f262a03bc92b8">Load</a> (const u8string &amp;modelPath, const u8string &amp;shaderPath)</td></tr>
@@ -128,19 +130,27 @@ UniDx::GltfModel の継承関係図</div>
 <tr class="memitem:aa839dcaed00df807a780c83fc8b108d4" id="r_aa839dcaed00df807a780c83fc8b108d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa839dcaed00df807a780c83fc8b108d4">AddMaterial</a> (int index, std::shared_ptr&lt; <a class="el" href="class_uni_dx_1_1_material.html">Material</a> &gt; material)</td></tr>
 <tr class="memitem:a99ec6ce06e5b3b76e1fbf97b84103c5f" id="r_a99ec6ce06e5b3b76e1fbf97b84103c5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99ec6ce06e5b3b76e1fbf97b84103c5f">SetAddressModeUV</a> (<a class="el" href="class_uni_dx_1_1_texture.html">Texture</a> *texture, int texIndex) const</td></tr>
 <tr class="inherit_header pub_methods_class_uni_dx_1_1_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_uni_dx_1_1_component')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_uni_dx_1_1_component.html">UniDx::Component</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:ae689bdb1c184510cb251afea54e465da inherit pub_methods_class_uni_dx_1_1_component" id="r_ae689bdb1c184510cb251afea54e465da"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#ae689bdb1c184510cb251afea54e465da">didAwake</a> () const</td></tr>
+<tr class="memitem:af3e654961504e61745525cf23daef06c inherit pub_methods_class_uni_dx_1_1_component" id="r_af3e654961504e61745525cf23daef06c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#af3e654961504e61745525cf23daef06c">didStart</a> () const</td></tr>
 <tr class="memitem:ae3cb179a3188fce84a0c18df712904f8 inherit pub_methods_class_uni_dx_1_1_component" id="r_ae3cb179a3188fce84a0c18df712904f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#ae3cb179a3188fce84a0c18df712904f8">checkAwake</a> ()</td></tr>
 <tr class="memitem:a3bd90e124c7a14c73b2899adaf2b92cb inherit pub_methods_class_uni_dx_1_1_component" id="r_a3bd90e124c7a14c73b2899adaf2b92cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#a3bd90e124c7a14c73b2899adaf2b92cb">checkStart</a> ()</td></tr>
 <tr class="memitem:a89abffb606dd2253c181af949458e563 inherit pub_methods_class_uni_dx_1_1_component" id="r_a89abffb606dd2253c181af949458e563"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#a89abffb606dd2253c181af949458e563">isDestroyed</a> () const</td></tr>
 <tr class="memitem:adfaad805015736afd6d469fab365eceb inherit pub_methods_class_uni_dx_1_1_component" id="r_adfaad805015736afd6d469fab365eceb"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#adfaad805015736afd6d469fab365eceb">~Component</a> ()</td></tr>
+<tr class="memitem:a43b0aef31c9c63eb7f8b6800b0826b3b inherit pub_methods_class_uni_dx_1_1_component" id="r_a43b0aef31c9c63eb7f8b6800b0826b3b"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a43b0aef31c9c63eb7f8b6800b0826b3b inherit pub_methods_class_uni_dx_1_1_component template"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#a43b0aef31c9c63eb7f8b6800b0826b3b">GetComponent</a> () const</td></tr>
+<tr class="memitem:a19e7976848d1c319143e459134197562 inherit pub_methods_class_uni_dx_1_1_component" id="r_a19e7976848d1c319143e459134197562"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a19e7976848d1c319143e459134197562 inherit pub_methods_class_uni_dx_1_1_component template"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#a19e7976848d1c319143e459134197562">GetComponentInParent</a> () const</td></tr>
 <tr class="inherit_header pub_methods_class_uni_dx_1_1_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_uni_dx_1_1_object')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_uni_dx_1_1_object.html">UniDx::Object</a> に属する継承公開メンバ関数</td></tr>
 <tr class="memitem:af1f20702fde9b535a83a02a5f8663fec inherit pub_methods_class_uni_dx_1_1_object" id="r_af1f20702fde9b535a83a02a5f8663fec"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_object.html#af1f20702fde9b535a83a02a5f8663fec">~Object</a> ()</td></tr>
 <tr class="memitem:a1d2a3979c7a097b2ce35a69347ea9b9f inherit pub_methods_class_uni_dx_1_1_object" id="r_a1d2a3979c7a097b2ce35a69347ea9b9f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_object.html#a1d2a3979c7a097b2ce35a69347ea9b9f">Object</a> (<a class="el" href="class_uni_dx_1_1_read_only_property.html">ReadOnlyProperty</a>&lt; <a class="el" href="class_uni_dx_1_1_string_id.html">StringId</a> &gt;<a class="el" href="class_uni_dx_1_1_read_only_property.html">::Getter</a> nameGet)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a5f82312906bc3a36b774ec5f83ff6b85" id="r_a5f82312906bc3a36b774ec5f83ff6b85"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f82312906bc3a36b774ec5f83ff6b85">CloneTo</a> (<a class="el" href="class_uni_dx_1_1_component.html#a6d0d42ab64e09768b102e1621ce72f0e">Component</a> &amp;destination) const override</td></tr>
+<tr class="memdesc:a5f82312906bc3a36b774ec5f83ff6b85"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピー構築済みのComponentをクローンとして成立させる後処理  <br /></td></tr>
 <tr class="memitem:ae4156bed14f18fd54be2d3d80c5f5654" id="r_ae4156bed14f18fd54be2d3d80c5f5654"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4156bed14f18fd54be2d3d80c5f5654">load_</a> (const char *filePath, bool makeTextureMaterial, std::shared_ptr&lt; <a class="el" href="class_uni_dx_1_1_shader.html">Shader</a> &gt; shader)</td></tr>
 <tr class="memitem:adcf8f0428a731e71c8e0a150ad2c994a" id="r_adcf8f0428a731e71c8e0a150ad2c994a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adcf8f0428a731e71c8e0a150ad2c994a">readPrimitive</a> (<a class="el" href="class_uni_dx_1_1_mesh.html">UniDx::Mesh</a> *mesh, const tinygltf::Primitive &amp;primitive)</td></tr>
-<tr class="memitem:adbc04f5320ec17b82dd3f249d5f7ab29" id="r_adbc04f5320ec17b82dd3f249d5f7ab29"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbc04f5320ec17b82dd3f249d5f7ab29">createNodeRecursive</a> (const tinygltf::Model &amp;<a class="el" href="#adba50a91ffe8aadb3399b73694416767">model</a>, int nodeIndex, <a class="el" href="class_uni_dx_1_1_component.html#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *parentGO, bool attachIncludeMaterial)</td></tr>
+<tr class="memitem:adbc04f5320ec17b82dd3f249d5f7ab29" id="r_adbc04f5320ec17b82dd3f249d5f7ab29"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbc04f5320ec17b82dd3f249d5f7ab29">createNodeRecursive</a> (const tinygltf::Model &amp;<a class="el" href="#acf2c9ebeaf3a3a9bb6177260621696f3">model</a>, int nodeIndex, <a class="el" href="class_uni_dx_1_1_component.html#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *parentGO, bool attachIncludeMaterial)</td></tr>
 <tr class="memitem:a20c5d6b194c830847b9ced24417c6fa7" id="r_a20c5d6b194c830847b9ced24417c6fa7"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="class_uni_dx_1_1_texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20c5d6b194c830847b9ced24417c6fa7">getOrCreateTextureFromGltf_</a> (int textureIndex, bool isSRGB)</td></tr>
 <tr class="inherit_header pro_methods_class_uni_dx_1_1_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_uni_dx_1_1_component')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_uni_dx_1_1_component.html">UniDx::Component</a> に属する継承限定公開メンバ関数</td></tr>
 <tr class="memitem:ade9bdf0c41f0485c3b46df47f074b48e inherit pro_methods_class_uni_dx_1_1_component" id="r_ade9bdf0c41f0485c3b46df47f074b48e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#ade9bdf0c41f0485c3b46df47f074b48e">Awake</a> ()</td></tr>
@@ -149,22 +159,23 @@ UniDx::GltfModel の継承関係図</div>
 <tr class="memitem:a264bd15403e3a0d6c1f5bbb6b54d73f8 inherit pro_methods_class_uni_dx_1_1_component" id="r_a264bd15403e3a0d6c1f5bbb6b54d73f8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#a264bd15403e3a0d6c1f5bbb6b54d73f8">OnDisable</a> ()</td></tr>
 <tr class="memitem:a6f93d15a2634fb75aa500d192f1550b9 inherit pro_methods_class_uni_dx_1_1_component" id="r_a6f93d15a2634fb75aa500d192f1550b9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#a6f93d15a2634fb75aa500d192f1550b9">OnDestroy</a> ()</td></tr>
 <tr class="memitem:a6d0d42ab64e09768b102e1621ce72f0e inherit pro_methods_class_uni_dx_1_1_component" id="r_a6d0d42ab64e09768b102e1621ce72f0e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#a6d0d42ab64e09768b102e1621ce72f0e">Component</a> ()</td></tr>
-<tr class="memitem:a220a84758fdd7be4cbd0b4449de4bb64 inherit pro_methods_class_uni_dx_1_1_component" id="r_a220a84758fdd7be4cbd0b4449de4bb64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#a220a84758fdd7be4cbd0b4449de4bb64">doDestroy</a> ()</td></tr>
+<tr class="memitem:ad89f61ef3a9b961c32600d46a192eee1 inherit pro_methods_class_uni_dx_1_1_component" id="r_ad89f61ef3a9b961c32600d46a192eee1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#ad89f61ef3a9b961c32600d46a192eee1">Component</a> (const Component &amp;source)</td></tr>
+<tr class="memitem:a35e9df03a93d7670422871abff6f2194 inherit pro_methods_class_uni_dx_1_1_component" id="r_a35e9df03a93d7670422871abff6f2194"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#a35e9df03a93d7670422871abff6f2194">copyComponentStateFrom</a> (const <a class="el" href="class_uni_dx_1_1_component.html#a6d0d42ab64e09768b102e1621ce72f0e">Component</a> &amp;source)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 限定公開変数類</h2></td></tr>
 <tr class="memitem:a2fdd284c54c57cf556f5279a365af141" id="r_a2fdd284c54c57cf556f5279a365af141"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_uni_dx_1_1_mesh_renderer.html">MeshRenderer</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fdd284c54c57cf556f5279a365af141">renderer</a></td></tr>
 <tr class="memitem:a708c453a2e476e1000c2c30335e7b54e" id="r_a708c453a2e476e1000c2c30335e7b54e"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; int, std::shared_ptr&lt; <a class="el" href="class_uni_dx_1_1_material.html">Material</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a708c453a2e476e1000c2c30335e7b54e">materials</a></td></tr>
-<tr class="memitem:adba50a91ffe8aadb3399b73694416767" id="r_adba50a91ffe8aadb3399b73694416767"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; tinygltf::Model &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adba50a91ffe8aadb3399b73694416767">model</a></td></tr>
+<tr class="memitem:acf2c9ebeaf3a3a9bb6177260621696f3" id="r_acf2c9ebeaf3a3a9bb6177260621696f3"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; tinygltf::Model &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf2c9ebeaf3a3a9bb6177260621696f3">model</a></td></tr>
 <tr class="memitem:aa14ff88e6039bc3d79558fbef1b34327" id="r_aa14ff88e6039bc3d79558fbef1b34327"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_uni_dx_1_1_mesh.html">Mesh</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa14ff88e6039bc3d79558fbef1b34327">meshes</a></td></tr>
 <tr class="memitem:aff0d53675d51f71ccad465ced87961fa" id="r_aff0d53675d51f71ccad465ced87961fa"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; int, std::shared_ptr&lt; <a class="el" href="class_uni_dx_1_1_texture.html">Texture</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff0d53675d51f71ccad465ced87961fa">textures</a></td></tr>
 <tr class="memitem:ad9c84e317b5b788bf469d23c8a123562" id="r_ad9c84e317b5b788bf469d23c8a123562"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; int, <a class="el" href="class_uni_dx_1_1_transform.html">Transform</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9c84e317b5b788bf469d23c8a123562">nodes</a></td></tr>
 <tr class="memitem:a155e41d4c6af11fb00614362fbc8cc8e" id="r_a155e41d4c6af11fb00614362fbc8cc8e"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; int, <a class="el" href="struct_uni_dx_1_1_skin_instance.html">SkinInstance</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a155e41d4c6af11fb00614362fbc8cc8e">skinInstance</a></td></tr>
 <tr class="inherit_header pro_attribs_class_uni_dx_1_1_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_uni_dx_1_1_component')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_uni_dx_1_1_component.html">UniDx::Component</a> に属する継承限定公開変数類</td></tr>
-<tr class="memitem:a1be773279b79168c81a7b25d76c1476d inherit pro_attribs_class_uni_dx_1_1_component" id="r_a1be773279b79168c81a7b25d76c1476d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#a1be773279b79168c81a7b25d76c1476d">isCalledAwake</a></td></tr>
-<tr class="memitem:a25f03307ef83efdf1853475790f0c800 inherit pro_attribs_class_uni_dx_1_1_component" id="r_a25f03307ef83efdf1853475790f0c800"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#a25f03307ef83efdf1853475790f0c800">isCalledStart</a></td></tr>
+<tr class="memitem:a8944c8b58b4b8f72e351eccf1762c9be inherit pro_attribs_class_uni_dx_1_1_component" id="r_a8944c8b58b4b8f72e351eccf1762c9be"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#a8944c8b58b4b8f72e351eccf1762c9be">didAwake_</a></td></tr>
+<tr class="memitem:a5619518761878e24d87b975d46507d17 inherit pro_attribs_class_uni_dx_1_1_component" id="r_a5619518761878e24d87b975d46507d17"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#a5619518761878e24d87b975d46507d17">didStart_</a></td></tr>
 <tr class="memitem:ac705220673238df5954a310896ec2839 inherit pro_attribs_class_uni_dx_1_1_component" id="r_ac705220673238df5954a310896ec2839"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#ac705220673238df5954a310896ec2839">isCalledDestroy</a></td></tr>
-<tr class="memitem:a8cfe2aff82c20453058c9b3c607907d0 inherit pro_attribs_class_uni_dx_1_1_component" id="r_a8cfe2aff82c20453058c9b3c607907d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#a8cfe2aff82c20453058c9b3c607907d0">_enabled</a></td></tr>
+<tr class="memitem:aefb322b1274253c10bb4dd09710c7130 inherit pro_attribs_class_uni_dx_1_1_component" id="r_aefb322b1274253c10bb4dd09710c7130"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#aefb322b1274253c10bb4dd09710c7130">enabled_</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 その他の継承メンバ</h2></td></tr>
@@ -174,10 +185,55 @@ UniDx::GltfModel の継承関係図</div>
 <tr class="memitem:a8b7c735570cdb78e7a9a400649d1b32f inherit pub_attribs_class_uni_dx_1_1_component" id="r_a8b7c735570cdb78e7a9a400649d1b32f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_uni_dx_1_1_component.html#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#a8b7c735570cdb78e7a9a400649d1b32f">gameObject</a> = nullptr</td></tr>
 <tr class="inherit_header pub_attribs_class_uni_dx_1_1_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_uni_dx_1_1_object')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_uni_dx_1_1_object.html">UniDx::Object</a> に属する継承公開変数類</td></tr>
 <tr class="memitem:ace975b5121f8f79f54fdf62d46c06049 inherit pub_attribs_class_uni_dx_1_1_object" id="r_ace975b5121f8f79f54fdf62d46c06049"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_uni_dx_1_1_read_only_property.html">ReadOnlyProperty</a>&lt; <a class="el" href="class_uni_dx_1_1_string_id.html">StringId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_object.html#ace975b5121f8f79f54fdf62d46c06049">name</a></td></tr>
+<tr class="inherit_header pro_types_class_uni_dx_1_1_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_types_class_uni_dx_1_1_component')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_uni_dx_1_1_component.html">UniDx::Component</a> に属する継承限定公開型</td></tr>
+<tr class="memitem:a8e347a139a3f8b6c5663f0ee11554604 inherit pro_types_class_uni_dx_1_1_component" id="r_a8e347a139a3f8b6c5663f0ee11554604"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_component.html#a8e347a139a3f8b6c5663f0ee11554604">CopyConstruct</a> = std::unique_ptr&lt;<a class="el" href="class_uni_dx_1_1_component.html#a6d0d42ab64e09768b102e1621ce72f0e">Component</a>&gt;(*)(const <a class="el" href="class_uni_dx_1_1_component.html#a6d0d42ab64e09768b102e1621ce72f0e">Component</a>&amp;)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
 <div class="textblock"><p>glTF形式（.glb）のモデルデータを読み込んでレンダラーを生成するコンポーネント </p>
-</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
+<a id="a7ebed6bc768d7f44bf98c5988110ccb2" name="a7ebed6bc768d7f44bf98c5988110ccb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ebed6bc768d7f44bf98c5988110ccb2">&#9670;&#160;</a></span>GltfModel() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UniDx::GltfModel::GltfModel </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f8c50d1fe44e39bc32a3c3080df7b39" name="a5f8c50d1fe44e39bc32a3c3080df7b39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f8c50d1fe44e39bc32a3c3080df7b39">&#9670;&#160;</a></span>GltfModel() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UniDx::GltfModel::GltfModel </td>
+          <td>(</td>
+          <td class="paramtype">const GltfModel &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
 <a id="aa839dcaed00df807a780c83fc8b108d4" name="aa839dcaed00df807a780c83fc8b108d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa839dcaed00df807a780c83fc8b108d4">&#9670;&#160;</a></span>AddMaterial()</h2>
 
@@ -204,6 +260,42 @@ UniDx::GltfModel の継承関係図</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f82312906bc3a36b774ec5f83ff6b85" name="a5f82312906bc3a36b774ec5f83ff6b85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f82312906bc3a36b774ec5f83ff6b85">&#9670;&#160;</a></span>CloneTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UniDx::GltfModel::CloneTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_uni_dx_1_1_component.html#a6d0d42ab64e09768b102e1621ce72f0e">Component</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>destination</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コピー構築済みのComponentをクローンとして成立させる後処理 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">destination</td><td>複製先Component</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>階層全体のコピー構築後、Sceneへ接続する前に呼ばれる。 単純コピーで問題ないComponentは実装不要。 コンポーネント自体のコピーコンストラクタが必要。 </p>
+
+<p><a class="el" href="class_uni_dx_1_1_component.html#a4bb092a7cf359d9223f451b8ce48cd64">UniDx::Component</a>を再実装しています。</p>
 
 </div>
 </div>
@@ -607,8 +699,8 @@ template&lt;typename TVertex&gt; </div>
 
 </div>
 </div>
-<a id="adba50a91ffe8aadb3399b73694416767" name="adba50a91ffe8aadb3399b73694416767"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adba50a91ffe8aadb3399b73694416767">&#9670;&#160;</a></span>model</h2>
+<a id="acf2c9ebeaf3a3a9bb6177260621696f3" name="acf2c9ebeaf3a3a9bb6177260621696f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf2c9ebeaf3a3a9bb6177260621696f3">&#9670;&#160;</a></span>model</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -617,7 +709,7 @@ template&lt;typename TVertex&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt; tinygltf::Model&gt; UniDx::GltfModel::model</td>
+          <td class="memname">std::shared_ptr&lt;tinygltf::Model&gt; UniDx::GltfModel::model</td>
         </tr>
       </table>
   </td>

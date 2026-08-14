@@ -3,6 +3,7 @@ var class_uni_dx_1_1_collider =
     [ "checkIntersect", "class_uni_dx_1_1_collider.html#a7e6235e803c1dd0833ffc1827920a3ad", null ],
     [ "checkIntersect", "class_uni_dx_1_1_collider.html#a9cb615b49b252d22f0ceb13908349e52", null ],
     [ "checkIntersect", "class_uni_dx_1_1_collider.html#ad44fe9d3685b5c6e963b562a1082f68a", null ],
+    [ "CloneTo", "class_uni_dx_1_1_collider.html#a4661c63322ec9b8fede31ae2ab60055d", null ],
     [ "getBounds", "class_uni_dx_1_1_collider.html#ae2391f950aca1116a38ba8223d6b34c7", null ],
     [ "intersects", "class_uni_dx_1_1_collider.html#a9bbe00a4596ef0bc6761826eb18eb526", null ],
     [ "intersects", "class_uni_dx_1_1_collider.html#a49df1dcbd42e0dfe3de53c846c4abe1f", null ],

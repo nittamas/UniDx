@@ -382,38 +382,47 @@ $(function(){initNavTree('_mesh_8h_source.html','',''); });
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_mesh.html#ae17b6b9585021385bcfa3f00b3da185b">  245</a></span>    std::vector&lt; std::shared_ptr&lt;SubMesh&gt; &gt; <a class="code hl_variable" href="class_uni_dx_1_1_mesh.html#ae17b6b9585021385bcfa3f00b3da185b">submesh</a>;</div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_mesh.html#a18208aac2f2944edcdbc9c48e8b3d4fb">  247</a></span>    <a class="code hl_function" href="class_uni_dx_1_1_mesh.html#a18208aac2f2944edcdbc9c48e8b3d4fb">Mesh</a>() : <a class="code hl_function" href="class_uni_dx_1_1_object.html#a1d2a3979c7a097b2ce35a69347ea9b9f">Object</a>([this]() {<span class="keywordflow">return</span> <a class="code hl_variable" href="class_uni_dx_1_1_mesh.html#accfe527ef2b009f8f4a15122b2884f31">name_</a>;}) {}</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_mesh.html#ab2642165f4daa4adcb153f09fe710700">  248</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_uni_dx_1_1_mesh.html#ab2642165f4daa4adcb153f09fe710700">~Mesh</a>() {}</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
-<div class="foldopen" id="foldopen00250" data-start="{" data-end="}">
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_mesh.html#ad6627ab774ac81cf64ebe967fa9309a7">  250</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_mesh.html#ad6627ab774ac81cf64ebe967fa9309a7">render</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; sub : <a class="code hl_variable" href="class_uni_dx_1_1_mesh.html#ae17b6b9585021385bcfa3f00b3da185b">submesh</a>)</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        {</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>            sub-&gt;render();</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        }</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    }</div>
+<div class="foldopen" id="foldopen00248" data-start="{" data-end="}">
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_mesh.html#a77904f3643f9a5f170318f48e2785742">  248</a></span>    <a class="code hl_function" href="class_uni_dx_1_1_mesh.html#a77904f3643f9a5f170318f48e2785742">Mesh</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_uni_dx_1_1_mesh.html#a18208aac2f2944edcdbc9c48e8b3d4fb">Mesh</a>&amp; source) :</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        <a class="code hl_function" href="class_uni_dx_1_1_object.html#a1d2a3979c7a097b2ce35a69347ea9b9f">Object</a>([this]() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_uni_dx_1_1_mesh.html#accfe527ef2b009f8f4a15122b2884f31">name_</a>; }),</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        <a class="code hl_variable" href="class_uni_dx_1_1_mesh.html#ae17b6b9585021385bcfa3f00b3da185b">submesh</a>(source.submesh),</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        <a class="code hl_variable" href="class_uni_dx_1_1_mesh.html#accfe527ef2b009f8f4a15122b2884f31">name_</a>(source.name_)</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    {</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    }</div>
 </div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_mesh.html#ad6627ab774ac81cf64ebe967fa9309a7">render</a>(std::span&lt;<span class="keyword">const</span> std::shared_ptr&lt;Material&gt; &gt; materials) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    </div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_mesh.html#accfe527ef2b009f8f4a15122b2884f31">  261</a></span>    <a class="code hl_class" href="class_uni_dx_1_1_string_id.html">StringId</a> <a class="code hl_variable" href="class_uni_dx_1_1_mesh.html#accfe527ef2b009f8f4a15122b2884f31">name_</a>;</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>};</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_mesh.html#ab2642165f4daa4adcb153f09fe710700">  254</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_uni_dx_1_1_mesh.html#ab2642165f4daa4adcb153f09fe710700">~Mesh</a>() {}</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
+<div class="foldopen" id="foldopen00256" data-start="{" data-end="}">
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_mesh.html#ad6627ab774ac81cf64ebe967fa9309a7">  256</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_mesh.html#ad6627ab774ac81cf64ebe967fa9309a7">render</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; sub : <a class="code hl_variable" href="class_uni_dx_1_1_mesh.html#ae17b6b9585021385bcfa3f00b3da185b">submesh</a>)</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        {</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>            sub-&gt;render();</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        }</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    }</div>
 </div>
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>} <span class="comment">// namespace UniDx</span></div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_uni_dx_1_1_mesh.html#ad6627ab774ac81cf64ebe967fa9309a7">render</a>(std::span&lt;<span class="keyword">const</span> std::shared_ptr&lt;Material&gt; &gt; materials) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    </div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno"><a class="line" href="class_uni_dx_1_1_mesh.html#accfe527ef2b009f8f4a15122b2884f31">  267</a></span>    <a class="code hl_class" href="class_uni_dx_1_1_string_id.html">StringId</a> <a class="code hl_variable" href="class_uni_dx_1_1_mesh.html#accfe527ef2b009f8f4a15122b2884f31">name_</a>;</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>};</div>
+</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>} <span class="comment">// namespace UniDx</span></div>
 <div class="ttc" id="a_object_8h_html"><div class="ttname"><a href="_object_8h.html">Object.h</a></div></div>
 <div class="ttc" id="a_property_8h_html"><div class="ttname"><a href="_property_8h.html">Property.h</a></div><div class="ttdoc">C::のプロパティライクな記述を実現するクラス ReadOnlyProperty&lt;&gt; 読み取り専用プロパティ Property&lt;&gt; 読み書きプロパティ メンバアクセス(....</div></div>
 <div class="ttc" id="a_shader_8h_html"><div class="ttname"><a href="_shader_8h.html">Shader.h</a></div></div>
 <div class="ttc" id="aclass_uni_dx_1_1_camera_html"><div class="ttname"><a href="class_uni_dx_1_1_camera.html">UniDx::Camera</a></div><div class="ttdef"><b>Definition</b> Camera.h:12</div></div>
 <div class="ttc" id="aclass_uni_dx_1_1_material_html"><div class="ttname"><a href="class_uni_dx_1_1_material.html">UniDx::Material</a></div><div class="ttdef"><b>Definition</b> Material.h:32</div></div>
 <div class="ttc" id="aclass_uni_dx_1_1_mesh_html_a18208aac2f2944edcdbc9c48e8b3d4fb"><div class="ttname"><a href="class_uni_dx_1_1_mesh.html#a18208aac2f2944edcdbc9c48e8b3d4fb">UniDx::Mesh::Mesh</a></div><div class="ttdeci">Mesh()</div><div class="ttdef"><b>Definition</b> Mesh.h:247</div></div>
-<div class="ttc" id="aclass_uni_dx_1_1_mesh_html_ab2642165f4daa4adcb153f09fe710700"><div class="ttname"><a href="class_uni_dx_1_1_mesh.html#ab2642165f4daa4adcb153f09fe710700">UniDx::Mesh::~Mesh</a></div><div class="ttdeci">virtual ~Mesh()</div><div class="ttdef"><b>Definition</b> Mesh.h:248</div></div>
-<div class="ttc" id="aclass_uni_dx_1_1_mesh_html_accfe527ef2b009f8f4a15122b2884f31"><div class="ttname"><a href="class_uni_dx_1_1_mesh.html#accfe527ef2b009f8f4a15122b2884f31">UniDx::Mesh::name_</a></div><div class="ttdeci">StringId name_</div><div class="ttdef"><b>Definition</b> Mesh.h:261</div></div>
-<div class="ttc" id="aclass_uni_dx_1_1_mesh_html_ad6627ab774ac81cf64ebe967fa9309a7"><div class="ttname"><a href="class_uni_dx_1_1_mesh.html#ad6627ab774ac81cf64ebe967fa9309a7">UniDx::Mesh::render</a></div><div class="ttdeci">void render() const</div><div class="ttdef"><b>Definition</b> Mesh.h:250</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_mesh_html_a77904f3643f9a5f170318f48e2785742"><div class="ttname"><a href="class_uni_dx_1_1_mesh.html#a77904f3643f9a5f170318f48e2785742">UniDx::Mesh::Mesh</a></div><div class="ttdeci">Mesh(const Mesh &amp;source)</div><div class="ttdef"><b>Definition</b> Mesh.h:248</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_mesh_html_ab2642165f4daa4adcb153f09fe710700"><div class="ttname"><a href="class_uni_dx_1_1_mesh.html#ab2642165f4daa4adcb153f09fe710700">UniDx::Mesh::~Mesh</a></div><div class="ttdeci">virtual ~Mesh()</div><div class="ttdef"><b>Definition</b> Mesh.h:254</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_mesh_html_accfe527ef2b009f8f4a15122b2884f31"><div class="ttname"><a href="class_uni_dx_1_1_mesh.html#accfe527ef2b009f8f4a15122b2884f31">UniDx::Mesh::name_</a></div><div class="ttdeci">StringId name_</div><div class="ttdef"><b>Definition</b> Mesh.h:267</div></div>
+<div class="ttc" id="aclass_uni_dx_1_1_mesh_html_ad6627ab774ac81cf64ebe967fa9309a7"><div class="ttname"><a href="class_uni_dx_1_1_mesh.html#ad6627ab774ac81cf64ebe967fa9309a7">UniDx::Mesh::render</a></div><div class="ttdeci">void render() const</div><div class="ttdef"><b>Definition</b> Mesh.h:256</div></div>
 <div class="ttc" id="aclass_uni_dx_1_1_mesh_html_ae17b6b9585021385bcfa3f00b3da185b"><div class="ttname"><a href="class_uni_dx_1_1_mesh.html#ae17b6b9585021385bcfa3f00b3da185b">UniDx::Mesh::submesh</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; SubMesh &gt; &gt; submesh</div><div class="ttdef"><b>Definition</b> Mesh.h:245</div></div>
 <div class="ttc" id="aclass_uni_dx_1_1_object_html_a1d2a3979c7a097b2ce35a69347ea9b9f"><div class="ttname"><a href="class_uni_dx_1_1_object.html#a1d2a3979c7a097b2ce35a69347ea9b9f">UniDx::Object::Object</a></div><div class="ttdeci">Object(ReadOnlyProperty&lt; StringId &gt;::Getter nameGet)</div><div class="ttdef"><b>Definition</b> Object.h:20</div></div>
 <div class="ttc" id="aclass_uni_dx_1_1_string_id_html"><div class="ttname"><a href="class_uni_dx_1_1_string_id.html">UniDx::StringId</a></div><div class="ttdoc">インターンプールに貯めて使う文字列 高速に比較できる</div><div class="ttdef"><b>Definition</b> StringId.h:21</div></div>

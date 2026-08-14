@@ -12,8 +12,7 @@ UniDxは、UnityライクなDirectX用ゲームフレームワークです。
 
 
 ## 特徴
-[GameObject](@ref UniDx::GameObject), [Component](@ref UniDx::Component), [Transform](@ref UniDx::Transform), [Behaviour](@ref UniDx::Behaviour) など、Unityでおなじみの階層構造
-
+- [GameObject](@ref UniDx::GameObject), [Component](@ref UniDx::Component), [Transform](@ref UniDx::Transform), [Behaviour](@ref UniDx::Behaviour) など、Unityでおなじみの階層構造
 - 簡易的な物理計算をサポート
 - glTF形式の3Dモデルが使用可能
 - 比較的コンパクトで理解しやすいコード
@@ -21,9 +20,10 @@ UniDxは、UnityライクなDirectX用ゲームフレームワークです。
 
 ## 動作環境
 - Windows 10/11
-- Visual Studio 2022
+- Visual Studio 2022/2026
 - DirectX 11
 - C++20
+- x64
 
 
 ## 依存ライブラリ
@@ -49,7 +49,7 @@ git clone --recursive https://github.com/nittamas/UniDx.git
 
 ### 実行
 
-/samples/UniDxSamples.sln を Visual Studio 2022 で開いてください。
+/samples/UniDxSamples.sln を Visual Studio で開いてください。
 
 ソリューションエクスプローラーで、Sample1_Sphereを右クリックして、
 [スタートアップ プロジェクトに設定]を選択してください。

@@ -25,7 +25,7 @@ class PlayerLoop : public Singleton<PlayerLoop>
 public:
     /**
      * @brief プレイヤーループの初期化。
-     * @param CreateWindowW()で生成するウィンドウハンドル
+     * @param hWnd CreateWindowW()で生成するウィンドウハンドル
      */
     virtual void Initialize(HWND hWnd);
 

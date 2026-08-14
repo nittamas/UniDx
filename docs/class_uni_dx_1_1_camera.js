@@ -1,5 +1,6 @@
 var class_uni_dx_1_1_camera =
 [
+    [ "CloneTo", "class_uni_dx_1_1_camera.html#abf9f0ce1b018149568623f4954e68476", null ],
     [ "GetProjectionMatrix", "class_uni_dx_1_1_camera.html#ad351d73894108ffeaaa7f8bf73e13f1a", null ],
     [ "GetViewMatrix", "class_uni_dx_1_1_camera.html#ac345bcbbffe3f538b6f328dc815ca338", null ],
     [ "OnDisable", "class_uni_dx_1_1_camera.html#aa6867b6622b5d8ba6f81c92bb7e2bc36", null ],

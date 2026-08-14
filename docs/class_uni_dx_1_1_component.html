@@ -105,7 +105,7 @@ UniDx::Component の継承関係図</div>
   <map id="UniDx_3A_3AComponent_map" name="UniDx_3A_3AComponent_map">
 <area href="class_uni_dx_1_1_object.html" alt="UniDx::Object" shape="rect" coords="1140,0,1320,24"/>
 <area href="class_uni_dx_1_1_behaviour.html" title="GameObjectの挙動を記述する基底コンポーネント。UnityのMonoBehaviour相当" alt="UniDx::Behaviour" shape="rect" coords="285,112,465,136"/>
-<area href="class_uni_dx_1_1_collider.html" alt="UniDx::Collider" shape="rect" coords="855,112,1035,136"/>
+<area href="class_uni_dx_1_1_collider.html" title="すべてのコライダーの基盤となるクラス" alt="UniDx::Collider" shape="rect" coords="855,112,1035,136"/>
 <area href="class_uni_dx_1_1_gltf_model.html" title="glTF形式（.glb）のモデルデータを読み込んでレンダラーを生成するコンポーネント" alt="UniDx::GltfModel" shape="rect" coords="1045,112,1225,136"/>
 <area href="class_uni_dx_1_1_renderer.html" title="3D描画を行う基本コンポーネント" alt="UniDx::Renderer" shape="rect" coords="1235,112,1415,136"/>
 <area href="class_uni_dx_1_1_rigidbody.html" alt="UniDx::Rigidbody" shape="rect" coords="1425,112,1605,136"/>
@@ -114,8 +114,8 @@ UniDx::Component の継承関係図</div>
 <area href="class_uni_dx_1_1_canvas.html" alt="UniDx::Canvas" shape="rect" coords="190,168,370,192"/>
 <area href="class_uni_dx_1_1_light.html" alt="UniDx::Light" shape="rect" coords="380,168,560,192"/>
 <area href="class_uni_dx_1_1_u_i_behaviour.html" alt="UniDx::UIBehaviour" shape="rect" coords="570,168,750,192"/>
-<area href="class_uni_dx_1_1_a_a_b_b_collider.html" alt="UniDx::AABBCollider" shape="rect" coords="760,168,940,192"/>
-<area href="class_uni_dx_1_1_sphere_collider.html" alt="UniDx::SphereCollider" shape="rect" coords="950,168,1130,192"/>
+<area href="class_uni_dx_1_1_a_a_b_b_collider.html" title="Axis-Aligned Bounding Box（軸並行境界ボックス）。UnityのBoxColliderと違い、回転の影響を受けない。" alt="UniDx::AABBCollider" shape="rect" coords="760,168,940,192"/>
+<area href="class_uni_dx_1_1_sphere_collider.html" title="球体のコライダー" alt="UniDx::SphereCollider" shape="rect" coords="950,168,1130,192"/>
 <area href="class_uni_dx_1_1_mesh_renderer.html" title="メッシュ用のレンダラーコンポーネント" alt="UniDx::MeshRenderer" shape="rect" coords="1235,168,1415,192"/>
 <area href="class_uni_dx_1_1_image.html" alt="UniDx::Image" shape="rect" coords="475,224,655,248"/>
 <area href="class_uni_dx_1_1_text_mesh.html" alt="UniDx::TextMesh" shape="rect" coords="665,224,845,248"/>
@@ -127,10 +127,16 @@ UniDx::Component の継承関係図</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
+<tr class="memitem:ae689bdb1c184510cb251afea54e465da" id="r_ae689bdb1c184510cb251afea54e465da"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae689bdb1c184510cb251afea54e465da">didAwake</a> () const</td></tr>
+<tr class="memitem:af3e654961504e61745525cf23daef06c" id="r_af3e654961504e61745525cf23daef06c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3e654961504e61745525cf23daef06c">didStart</a> () const</td></tr>
 <tr class="memitem:ae3cb179a3188fce84a0c18df712904f8" id="r_ae3cb179a3188fce84a0c18df712904f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3cb179a3188fce84a0c18df712904f8">checkAwake</a> ()</td></tr>
 <tr class="memitem:a3bd90e124c7a14c73b2899adaf2b92cb" id="r_a3bd90e124c7a14c73b2899adaf2b92cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bd90e124c7a14c73b2899adaf2b92cb">checkStart</a> ()</td></tr>
 <tr class="memitem:a89abffb606dd2253c181af949458e563" id="r_a89abffb606dd2253c181af949458e563"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89abffb606dd2253c181af949458e563">isDestroyed</a> () const</td></tr>
 <tr class="memitem:adfaad805015736afd6d469fab365eceb" id="r_adfaad805015736afd6d469fab365eceb"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adfaad805015736afd6d469fab365eceb">~Component</a> ()</td></tr>
+<tr class="memitem:a43b0aef31c9c63eb7f8b6800b0826b3b" id="r_a43b0aef31c9c63eb7f8b6800b0826b3b"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a43b0aef31c9c63eb7f8b6800b0826b3b template"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43b0aef31c9c63eb7f8b6800b0826b3b">GetComponent</a> () const</td></tr>
+<tr class="memitem:a19e7976848d1c319143e459134197562" id="r_a19e7976848d1c319143e459134197562"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a19e7976848d1c319143e459134197562 template"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19e7976848d1c319143e459134197562">GetComponentInParent</a> () const</td></tr>
 <tr class="inherit_header pub_methods_class_uni_dx_1_1_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_uni_dx_1_1_object')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_uni_dx_1_1_object.html">UniDx::Object</a> に属する継承公開メンバ関数</td></tr>
 <tr class="memitem:af1f20702fde9b535a83a02a5f8663fec inherit pub_methods_class_uni_dx_1_1_object" id="r_af1f20702fde9b535a83a02a5f8663fec"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_object.html#af1f20702fde9b535a83a02a5f8663fec">~Object</a> ()</td></tr>
 <tr class="memitem:a1d2a3979c7a097b2ce35a69347ea9b9f inherit pub_methods_class_uni_dx_1_1_object" id="r_a1d2a3979c7a097b2ce35a69347ea9b9f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_object.html#a1d2a3979c7a097b2ce35a69347ea9b9f">Object</a> (<a class="el" href="class_uni_dx_1_1_read_only_property.html">ReadOnlyProperty</a>&lt; <a class="el" href="class_uni_dx_1_1_string_id.html">StringId</a> &gt;<a class="el" href="class_uni_dx_1_1_read_only_property.html">::Getter</a> nameGet)</td></tr>
@@ -143,22 +149,29 @@ UniDx::Component の継承関係図</div>
 <tr class="inherit_header pub_attribs_class_uni_dx_1_1_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_uni_dx_1_1_object')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_uni_dx_1_1_object.html">UniDx::Object</a> に属する継承公開変数類</td></tr>
 <tr class="memitem:ace975b5121f8f79f54fdf62d46c06049 inherit pub_attribs_class_uni_dx_1_1_object" id="r_ace975b5121f8f79f54fdf62d46c06049"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_uni_dx_1_1_read_only_property.html">ReadOnlyProperty</a>&lt; <a class="el" href="class_uni_dx_1_1_string_id.html">StringId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_object.html#ace975b5121f8f79f54fdf62d46c06049">name</a></td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-types" class="groupheader"><a id="pro-types" name="pro-types"></a>
+限定公開型</h2></td></tr>
+<tr class="memitem:a8e347a139a3f8b6c5663f0ee11554604" id="r_a8e347a139a3f8b6c5663f0ee11554604"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e347a139a3f8b6c5663f0ee11554604">CopyConstruct</a> = std::unique_ptr&lt;<a class="el" href="#a6d0d42ab64e09768b102e1621ce72f0e">Component</a>&gt;(*)(const <a class="el" href="#a6d0d42ab64e09768b102e1621ce72f0e">Component</a>&amp;)</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a4bb092a7cf359d9223f451b8ce48cd64" id="r_a4bb092a7cf359d9223f451b8ce48cd64"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bb092a7cf359d9223f451b8ce48cd64">CloneTo</a> (<a class="el" href="#a6d0d42ab64e09768b102e1621ce72f0e">Component</a> &amp;destination) const</td></tr>
+<tr class="memdesc:a4bb092a7cf359d9223f451b8ce48cd64"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピー構築済みのComponentをクローンとして成立させる後処理  <br /></td></tr>
 <tr class="memitem:ade9bdf0c41f0485c3b46df47f074b48e" id="r_ade9bdf0c41f0485c3b46df47f074b48e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade9bdf0c41f0485c3b46df47f074b48e">Awake</a> ()</td></tr>
 <tr class="memitem:afbb63a49fcd4c32476bf7b8875f8b9fd" id="r_afbb63a49fcd4c32476bf7b8875f8b9fd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbb63a49fcd4c32476bf7b8875f8b9fd">Start</a> ()</td></tr>
 <tr class="memitem:a7d3ef4ec15fbe5fe132aa5584f4a8bc3" id="r_a7d3ef4ec15fbe5fe132aa5584f4a8bc3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d3ef4ec15fbe5fe132aa5584f4a8bc3">OnEnable</a> ()</td></tr>
 <tr class="memitem:a264bd15403e3a0d6c1f5bbb6b54d73f8" id="r_a264bd15403e3a0d6c1f5bbb6b54d73f8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a264bd15403e3a0d6c1f5bbb6b54d73f8">OnDisable</a> ()</td></tr>
 <tr class="memitem:a6f93d15a2634fb75aa500d192f1550b9" id="r_a6f93d15a2634fb75aa500d192f1550b9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f93d15a2634fb75aa500d192f1550b9">OnDestroy</a> ()</td></tr>
 <tr class="memitem:a6d0d42ab64e09768b102e1621ce72f0e" id="r_a6d0d42ab64e09768b102e1621ce72f0e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d0d42ab64e09768b102e1621ce72f0e">Component</a> ()</td></tr>
-<tr class="memitem:a220a84758fdd7be4cbd0b4449de4bb64" id="r_a220a84758fdd7be4cbd0b4449de4bb64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a220a84758fdd7be4cbd0b4449de4bb64">doDestroy</a> ()</td></tr>
+<tr class="memitem:ad89f61ef3a9b961c32600d46a192eee1" id="r_ad89f61ef3a9b961c32600d46a192eee1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad89f61ef3a9b961c32600d46a192eee1">Component</a> (const Component &amp;source)</td></tr>
+<tr class="memitem:a35e9df03a93d7670422871abff6f2194" id="r_a35e9df03a93d7670422871abff6f2194"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35e9df03a93d7670422871abff6f2194">copyComponentStateFrom</a> (const <a class="el" href="#a6d0d42ab64e09768b102e1621ce72f0e">Component</a> &amp;source)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 限定公開変数類</h2></td></tr>
-<tr class="memitem:a1be773279b79168c81a7b25d76c1476d" id="r_a1be773279b79168c81a7b25d76c1476d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1be773279b79168c81a7b25d76c1476d">isCalledAwake</a></td></tr>
-<tr class="memitem:a25f03307ef83efdf1853475790f0c800" id="r_a25f03307ef83efdf1853475790f0c800"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25f03307ef83efdf1853475790f0c800">isCalledStart</a></td></tr>
+<tr class="memitem:a8944c8b58b4b8f72e351eccf1762c9be" id="r_a8944c8b58b4b8f72e351eccf1762c9be"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8944c8b58b4b8f72e351eccf1762c9be">didAwake_</a></td></tr>
+<tr class="memitem:a5619518761878e24d87b975d46507d17" id="r_a5619518761878e24d87b975d46507d17"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5619518761878e24d87b975d46507d17">didStart_</a></td></tr>
 <tr class="memitem:ac705220673238df5954a310896ec2839" id="r_ac705220673238df5954a310896ec2839"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac705220673238df5954a310896ec2839">isCalledDestroy</a></td></tr>
-<tr class="memitem:a8cfe2aff82c20453058c9b3c607907d0" id="r_a8cfe2aff82c20453058c9b3c607907d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8cfe2aff82c20453058c9b3c607907d0">_enabled</a></td></tr>
+<tr class="memitem:aefb322b1274253c10bb4dd09710c7130" id="r_aefb322b1274253c10bb4dd09710c7130"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aefb322b1274253c10bb4dd09710c7130">enabled_</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
 フレンド</h2></td></tr>
@@ -168,7 +181,30 @@ UniDx::Component の継承関係図</div>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
 <div class="textblock"><p>GameObjectにアタッチして機能を追加する基本クラス </p>
-</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
+</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">型定義メンバ詳解</h2>
+<a id="a8e347a139a3f8b6c5663f0ee11554604" name="a8e347a139a3f8b6c5663f0ee11554604"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e347a139a3f8b6c5663f0ee11554604">&#9670;&#160;</a></span>CopyConstruct</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a8e347a139a3f8b6c5663f0ee11554604">UniDx::Component::CopyConstruct</a> = std::unique_ptr&lt;<a class="el" href="#a6d0d42ab64e09768b102e1621ce72f0e">Component</a>&gt;(*)(const <a class="el" href="#a6d0d42ab64e09768b102e1621ce72f0e">Component</a>&amp;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
 <a id="adfaad805015736afd6d469fab365eceb" name="adfaad805015736afd6d469fab365eceb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adfaad805015736afd6d469fab365eceb">&#9670;&#160;</a></span>~Component()</h2>
 
@@ -195,7 +231,7 @@ UniDx::Component の継承関係図</div>
 </div>
 </div>
 <a id="a6d0d42ab64e09768b102e1621ce72f0e" name="a6d0d42ab64e09768b102e1621ce72f0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d0d42ab64e09768b102e1621ce72f0e">&#9670;&#160;</a></span>Component()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d0d42ab64e09768b102e1621ce72f0e">&#9670;&#160;</a></span>Component() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -207,6 +243,31 @@ UniDx::Component の継承関係図</div>
           <td class="memname">UniDx::Component::Component </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad89f61ef3a9b961c32600d46a192eee1" name="ad89f61ef3a9b961c32600d46a192eee1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad89f61ef3a9b961c32600d46a192eee1">&#9670;&#160;</a></span>Component() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UniDx::Component::Component </td>
+          <td>(</td>
+          <td class="paramtype">const Component &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -297,8 +358,8 @@ UniDx::Component の継承関係図</div>
 
 </div>
 </div>
-<a id="a220a84758fdd7be4cbd0b4449de4bb64" name="a220a84758fdd7be4cbd0b4449de4bb64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a220a84758fdd7be4cbd0b4449de4bb64">&#9670;&#160;</a></span>doDestroy()</h2>
+<a id="a4bb092a7cf359d9223f451b8ce48cd64" name="a4bb092a7cf359d9223f451b8ce48cd64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bb092a7cf359d9223f451b8ce48cd64">&#9670;&#160;</a></span>CloneTo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -307,15 +368,155 @@ UniDx::Component の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void UniDx::Component::doDestroy </td>
+          <td class="memname">virtual void UniDx::Component::CloneTo </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#a6d0d42ab64e09768b102e1621ce72f0e">Component</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>destination</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コピー構築済みのComponentをクローンとして成立させる後処理 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">destination</td><td>複製先Component</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>階層全体のコピー構築後、Sceneへ接続する前に呼ばれる。 単純コピーで問題ないComponentは実装不要。 コンポーネント自体のコピーコンストラクタが必要。 </p>
+
+<p><a class="el" href="class_uni_dx_1_1_camera.html#abf9f0ce1b018149568623f4954e68476">UniDx::Camera</a>, <a class="el" href="class_uni_dx_1_1_collider.html#a4661c63322ec9b8fede31ae2ab60055d">UniDx::Collider</a>, <a class="el" href="class_uni_dx_1_1_gltf_model.html#a5f82312906bc3a36b774ec5f83ff6b85">UniDx::GltfModel</a>, <a class="el" href="class_uni_dx_1_1_renderer.html#a27d9b43791bc207dd73af9172fc955a6">UniDx::Renderer</a>, <a class="el" href="class_uni_dx_1_1_skinned_mesh_renderer.html#a356d164ee401d9afb7d8ad1f1d603433">UniDx::SkinnedMeshRenderer</a>で再実装されています。</p>
+
+</div>
+</div>
+<a id="a35e9df03a93d7670422871abff6f2194" name="a35e9df03a93d7670422871abff6f2194"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35e9df03a93d7670422871abff6f2194">&#9670;&#160;</a></span>copyComponentStateFrom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UniDx::Component::copyComponentStateFrom </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a6d0d42ab64e09768b102e1621ce72f0e">Component</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae689bdb1c184510cb251afea54e465da" name="ae689bdb1c184510cb251afea54e465da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae689bdb1c184510cb251afea54e465da">&#9670;&#160;</a></span>didAwake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UniDx::Component::didAwake </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af3e654961504e61745525cf23daef06c" name="af3e654961504e61745525cf23daef06c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3e654961504e61745525cf23daef06c">&#9670;&#160;</a></span>didStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UniDx::Component::didStart </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a43b0aef31c9c63eb7f8b6800b0826b3b" name="a43b0aef31c9c63eb7f8b6800b0826b3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43b0aef31c9c63eb7f8b6800b0826b3b">&#9670;&#160;</a></span>GetComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T * UniDx::Component::GetComponent </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a19e7976848d1c319143e459134197562" name="a19e7976848d1c319143e459134197562"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19e7976848d1c319143e459134197562">&#9670;&#160;</a></span>GetComponentInParent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T * UniDx::Component::GetComponentInParent </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -502,8 +703,8 @@ UniDx::Component の継承関係図</div>
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">メンバ詳解</h2>
-<a id="a8cfe2aff82c20453058c9b3c607907d0" name="a8cfe2aff82c20453058c9b3c607907d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8cfe2aff82c20453058c9b3c607907d0">&#9670;&#160;</a></span>_enabled</h2>
+<a id="a8944c8b58b4b8f72e351eccf1762c9be" name="a8944c8b58b4b8f72e351eccf1762c9be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8944c8b58b4b8f72e351eccf1762c9be">&#9670;&#160;</a></span>didAwake_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -512,7 +713,29 @@ UniDx::Component の継承関係図</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool UniDx::Component::_enabled</td>
+          <td class="memname">bool UniDx::Component::didAwake_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5619518761878e24d87b975d46507d17" name="a5619518761878e24d87b975d46507d17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5619518761878e24d87b975d46507d17">&#9670;&#160;</a></span>didStart_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UniDx::Component::didStart_</td>
         </tr>
       </table>
   </td>
@@ -538,6 +761,28 @@ UniDx::Component の継承関係図</div>
 
 </div>
 </div>
+<a id="aefb322b1274253c10bb4dd09710c7130" name="aefb322b1274253c10bb4dd09710c7130"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefb322b1274253c10bb4dd09710c7130">&#9670;&#160;</a></span>enabled_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UniDx::Component::enabled_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a8b7c735570cdb78e7a9a400649d1b32f" name="a8b7c735570cdb78e7a9a400649d1b32f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8b7c735570cdb78e7a9a400649d1b32f">&#9670;&#160;</a></span>gameObject</h2>
 
@@ -548,28 +793,6 @@ UniDx::Component の継承関係図</div>
           <td class="memname"><a class="el" href="#a00df87c957d8f7ee0fc51f07a0542f4a">GameObject</a>* UniDx::Component::gameObject = nullptr</td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1be773279b79168c81a7b25d76c1476d" name="a1be773279b79168c81a7b25d76c1476d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1be773279b79168c81a7b25d76c1476d">&#9670;&#160;</a></span>isCalledAwake</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool UniDx::Component::isCalledAwake</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -585,28 +808,6 @@ UniDx::Component の継承関係図</div>
       <table class="memname">
         <tr>
           <td class="memname">bool UniDx::Component::isCalledDestroy</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a25f03307ef83efdf1853475790f0c800" name="a25f03307ef83efdf1853475790f0c800"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25f03307ef83efdf1853475790f0c800">&#9670;&#160;</a></span>isCalledStart</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool UniDx::Component::isCalledStart</td>
         </tr>
       </table>
   </td>

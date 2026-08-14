@@ -22,7 +22,7 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "PlayerLoop.cpp", "_player_loop_8cpp.html", null ],
     [ "PrimitiveRenderer.cpp", "_primitive_renderer_8cpp.html", null ],
     [ "Renderer.cpp", "_renderer_8cpp.html", null ],
-    [ "SceneManager.cpp", "_scene_manager_8cpp.html", null ],
+    [ "SceneManager.cpp", "_scene_manager_8cpp.html", "_scene_manager_8cpp" ],
     [ "Shader.cpp", "_shader_8cpp.html", null ],
     [ "SkinnedMeshRenderer.cpp", "_skinned_mesh_renderer_8cpp.html", null ],
     [ "TextMesh.cpp", "_text_mesh_8cpp.html", null ],

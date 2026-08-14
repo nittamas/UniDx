@@ -109,8 +109,11 @@ $(function(){initNavTree('namespace_uni_dx.html','',''); });
 <tr class="memitem:Camera" id="r_Camera"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_camera.html">Camera</a></td></tr>
 <tr class="memitem:Canvas" id="r_Canvas"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_canvas.html">Canvas</a></td></tr>
 <tr class="memitem:Collider" id="r_Collider"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_collider.html">Collider</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">すべてのコライダーの基盤となるクラス  <a href="class_uni_dx_1_1_collider.html#details">[詳解]</a><br /></td></tr>
 <tr class="memitem:AABBCollider" id="r_AABBCollider"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_a_a_b_b_collider.html">AABBCollider</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Axis-Aligned Bounding Box（軸並行境界ボックス）。UnityのBoxColliderと違い、回転の影響を受けない。  <a href="class_uni_dx_1_1_a_a_b_b_collider.html#details">[詳解]</a><br /></td></tr>
 <tr class="memitem:SphereCollider" id="r_SphereCollider"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_sphere_collider.html">SphereCollider</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">球体のコライダー  <a href="class_uni_dx_1_1_sphere_collider.html#details">[詳解]</a><br /></td></tr>
 <tr class="memitem:ContactPoint" id="r_ContactPoint"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_uni_dx_1_1_contact_point.html">ContactPoint</a></td></tr>
 <tr class="memitem:Collision" id="r_Collision"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_uni_dx_1_1_collision.html">Collision</a></td></tr>
 <tr class="memitem:RaycastHit" id="r_RaycastHit"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_uni_dx_1_1_raycast_hit.html">RaycastHit</a></td></tr>
@@ -243,12 +246,16 @@ $(function(){initNavTree('namespace_uni_dx.html','',''); });
 関数</h2></td></tr>
 <tr class="memitem:ad8bf91dec8556a2468aaca923070b290" id="r_ad8bf91dec8556a2468aaca923070b290"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8bf91dec8556a2468aaca923070b290">Destroy</a> (<a class="el" href="class_uni_dx_1_1_component.html">Component</a> *component)</td></tr>
 <tr class="memdesc:ad8bf91dec8556a2468aaca923070b290"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンポーネントを破棄 実際に削除されるタイミングはフレームの終了時  <br /></td></tr>
+<tr class="memitem:ab09b5dbc576629cd4985fd3f0dbe1408" id="r_ab09b5dbc576629cd4985fd3f0dbe1408"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_uni_dx_1_1_game_object.html">GameObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab09b5dbc576629cd4985fd3f0dbe1408">Instantiate</a> (const <a class="el" href="class_uni_dx_1_1_game_object.html">GameObject</a> &amp;original, <a class="el" href="class_uni_dx_1_1_transform.html">Transform</a> *parent)</td></tr>
+<tr class="memdesc:ab09b5dbc576629cd4985fd3f0dbe1408"><td class="mdescLeft">&#160;</td><td class="mdescRight">GameObjectと子孫を複製し、指定した親へ接続  <br /></td></tr>
 <tr class="memitem:a97a3f71e5d7cb98c70461248c9e37975" id="r_a97a3f71e5d7cb98c70461248c9e37975"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97a3f71e5d7cb98c70461248c9e37975">Destroy</a> (<a class="el" href="class_uni_dx_1_1_game_object.html">GameObject</a> *gameObject)</td></tr>
 <tr class="memdesc:a97a3f71e5d7cb98c70461248c9e37975"><td class="mdescLeft">&#160;</td><td class="mdescRight">GameObjectを破棄  <br /></td></tr>
 <tr class="memitem:ab00dafbb6c683a5fc1501c7ff3e619ba" id="r_ab00dafbb6c683a5fc1501c7ff3e619ba"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab00dafbb6c683a5fc1501c7ff3e619ba">getLightIntensity</a> (<a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> position, const <a class="el" href="struct_uni_dx_1_1_point_light_buffer.html">PointLightBuffer</a> &amp;light)</td></tr>
 <tr class="memitem:ac92f54f23ca5dc776e64fdfdcfcb725b" id="r_ac92f54f23ca5dc776e64fdfdcfcb725b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac92f54f23ca5dc776e64fdfdcfcb725b">getLightIntensity</a> (<a class="el" href="struct_uni_dx_1_1_vector3.html">Vector3</a> position, const <a class="el" href="struct_uni_dx_1_1_spot_light_buffer.html">SpotLightBuffer</a> &amp;light)</td></tr>
 <tr class="memitem:a620a5a465d2c1c0e446372b29808d170" id="r_a620a5a465d2c1c0e446372b29808d170"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:a620a5a465d2c1c0e446372b29808d170 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a620a5a465d2c1c0e446372b29808d170">addSort</a> (vector&lt; T &gt; &amp;valueVec, vector&lt; float &gt; &amp;compVec, float comp)</td></tr>
+<tr class="memitem:ae57252912d0e736b66b0a59bf34273fd" id="r_ae57252912d0e736b66b0a59bf34273fd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae57252912d0e736b66b0a59bf34273fd">IsConnectedToActiveScene</a> (const <a class="el" href="class_uni_dx_1_1_game_object.html">GameObject</a> *gameObject)</td></tr>
+<tr class="memdesc:ae57252912d0e736b66b0a59bf34273fd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_uni_dx_1_1_game_object.html" title="キャラクターや背景カメラなどの基礎となるオブジェクト">GameObject</a> がアクティブシーンのツリーに接続されているか  <br /></td></tr>
 <tr class="memitem:ab7d202e29aea25c2d15230aa4ff09b69" id="r_ab7d202e29aea25c2d15230aa4ff09b69"><td class="memItemLeft" align="right" valign="top">u8string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7d202e29aea25c2d15230aa4ff09b69">ToUtf8</a> (std::wstring_view wstr)</td></tr>
 <tr class="memdesc:ab7d202e29aea25c2d15230aa4ff09b69"><td class="mdescLeft">&#160;</td><td class="mdescRight">utf8文字列へ変換  <br /></td></tr>
 <tr class="memitem:a723400dd76025757a3988cee1ceb5656" id="r_a723400dd76025757a3988cee1ceb5656"><td class="memItemLeft" align="right" valign="top">std::wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a723400dd76025757a3988cee1ceb5656">ToUtf16</a> (u8string_view <a class="el" href="#abd23b6444e9beda72f6d209766f3270e">str</a>)</td></tr>
@@ -658,6 +665,30 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a id="ab09b5dbc576629cd4985fd3f0dbe1408" name="ab09b5dbc576629cd4985fd3f0dbe1408"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab09b5dbc576629cd4985fd3f0dbe1408">&#9670;&#160;</a></span>Instantiate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_uni_dx_1_1_game_object.html">GameObject</a> * UniDx::Instantiate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_uni_dx_1_1_game_object.html">GameObject</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>original</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_uni_dx_1_1_transform.html">Transform</a> *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GameObjectと子孫を複製し、指定した親へ接続 </p>
+<dl class="section return"><dt>戻り値</dt><dd>複製したGameObject。複製できないComponentがある場合はnullptr </dd></dl>
+
+</div>
+</div>
 <a id="a899c6877e138876816241d34be59bac8" name="a899c6877e138876816241d34be59bac8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a899c6877e138876816241d34be59bac8">&#9670;&#160;</a></span>Inverse()</h2>
 
@@ -682,6 +713,26 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>クォータニオンの逆 </p>
+
+</div>
+</div>
+<a id="ae57252912d0e736b66b0a59bf34273fd" name="ae57252912d0e736b66b0a59bf34273fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae57252912d0e736b66b0a59bf34273fd">&#9670;&#160;</a></span>IsConnectedToActiveScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UniDx::IsConnectedToActiveScene </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_uni_dx_1_1_game_object.html">GameObject</a> *</td>          <td class="paramname"><span class="paramname"><em>gameObject</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_uni_dx_1_1_game_object.html" title="キャラクターや背景カメラなどの基礎となるオブジェクト">GameObject</a> がアクティブシーンのツリーに接続されているか </p>
+<p><a class="el" href="class_uni_dx_1_1_game_object.html" title="キャラクターや背景カメラなどの基礎となるオブジェクト">GameObject</a> から親をたどったルートが、アクティブシーンのルートに 含まれている場合に true。未接続オブジェクトやシーン構築中は false。 </p>
 
 </div>
 </div>

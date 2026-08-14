@@ -105,12 +105,21 @@ $(function(){initNavTree('class_uni_dx_1_1_time.html','','class_uni_dx_1_1_time-
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 静的公開変数類</h2></td></tr>
 <tr class="memitem:a592bd01bdf21457a783968ba1db942f5" id="r_a592bd01bdf21457a783968ba1db942f5"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a592bd01bdf21457a783968ba1db942f5">frameCount</a> = 0</td></tr>
+<tr class="memdesc:a592bd01bdf21457a783968ba1db942f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">開始からの経過フレーム数  <br /></td></tr>
 <tr class="memitem:a8c155105ee459fcf8ad147d00f4ab9c4" id="r_a8c155105ee459fcf8ad147d00f4ab9c4"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c155105ee459fcf8ad147d00f4ab9c4">fixedDeltaTime</a> = 0.01667f</td></tr>
+<tr class="memdesc:a8c155105ee459fcf8ad147d00f4ab9c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">固定時間ステップ  <br /></td></tr>
+<tr class="memitem:a0d02a1e9bbd2c4ec8fc107d9729cb605" id="r_a0d02a1e9bbd2c4ec8fc107d9729cb605"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d02a1e9bbd2c4ec8fc107d9729cb605">maximumDeltaTime</a> = 0.2f</td></tr>
+<tr class="memdesc:a0d02a1e9bbd2c4ec8fc107d9729cb605"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大許容時間ステップ  <br /></td></tr>
 <tr class="memitem:aa694b7911d0afac280bb555a977717c6" id="r_aa694b7911d0afac280bb555a977717c6"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa694b7911d0afac280bb555a977717c6">time</a> = 0.0f</td></tr>
+<tr class="memdesc:aa694b7911d0afac280bb555a977717c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在の時間（timeScaleを考慮した値）  <br /></td></tr>
 <tr class="memitem:aee87c8126ac554571e2ed954915c3d5e" id="r_aee87c8126ac554571e2ed954915c3d5e"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee87c8126ac554571e2ed954915c3d5e">timeScale</a> = 1.0f</td></tr>
+<tr class="memdesc:aee87c8126ac554571e2ed954915c3d5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">時間のスケール（1.0fが通常速度、0.5fが半分の速度、2.0fが倍速）  <br /></td></tr>
 <tr class="memitem:a0767ca0c92c7252ef334463b109a3207" id="r_a0767ca0c92c7252ef334463b109a3207"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0767ca0c92c7252ef334463b109a3207">unscaledTime</a> = 0.0f</td></tr>
+<tr class="memdesc:a0767ca0c92c7252ef334463b109a3207"><td class="mdescLeft">&#160;</td><td class="mdescRight">timeScaleを考慮しない現在の時間  <br /></td></tr>
 <tr class="memitem:ad2f9f574ff69dc4204f9532fe709aa56" id="r_ad2f9f574ff69dc4204f9532fe709aa56"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2f9f574ff69dc4204f9532fe709aa56">unscaledDeltaTime</a> = 0.0f</td></tr>
+<tr class="memdesc:ad2f9f574ff69dc4204f9532fe709aa56"><td class="mdescLeft">&#160;</td><td class="mdescRight">timeScaleを考慮しない前フレームからの経過時間  <br /></td></tr>
 <tr class="memitem:a16c685e708e9048baea7cd4b2e644f7b" id="r_a16c685e708e9048baea7cd4b2e644f7b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_uni_dx_1_1_read_only_property.html">ReadOnlyProperty</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16c685e708e9048baea7cd4b2e644f7b">deltaTime</a> = <a class="el" href="class_uni_dx_1_1_read_only_property.html">ReadOnlyProperty</a>&lt;float&gt;([]() { return <a class="el" href="#ad2f9f574ff69dc4204f9532fe709aa56">unscaledDeltaTime</a> * <a class="el" href="#aee87c8126ac554571e2ed954915c3d5e">timeScale</a>; })</td></tr>
+<tr class="memdesc:a16c685e708e9048baea7cd4b2e644f7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">前フレームからの経過時間（timeScaleを考慮した値）  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
 <a id="a463d560fe778f083cb60cb533cccd056" name="a463d560fe778f083cb60cb533cccd056"></a>
@@ -234,6 +243,8 @@ $(function(){initNavTree('class_uni_dx_1_1_time.html','','class_uni_dx_1_1_time-
 </table>
 </div><div class="memdoc">
 
+<p>前フレームからの経過時間（timeScaleを考慮した値） </p>
+
 </div>
 </div>
 <a id="a8c155105ee459fcf8ad147d00f4ab9c4" name="a8c155105ee459fcf8ad147d00f4ab9c4"></a>
@@ -255,6 +266,8 @@ $(function(){initNavTree('class_uni_dx_1_1_time.html','','class_uni_dx_1_1_time-
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>固定時間ステップ </p>
 
 </div>
 </div>
@@ -278,6 +291,32 @@ $(function(){initNavTree('class_uni_dx_1_1_time.html','','class_uni_dx_1_1_time-
 </table>
 </div><div class="memdoc">
 
+<p>開始からの経過フレーム数 </p>
+
+</div>
+</div>
+<a id="a0d02a1e9bbd2c4ec8fc107d9729cb605" name="a0d02a1e9bbd2c4ec8fc107d9729cb605"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d02a1e9bbd2c4ec8fc107d9729cb605">&#9670;&#160;</a></span>maximumDeltaTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UniDx::Time::maximumDeltaTime = 0.2f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>最大許容時間ステップ </p>
+
 </div>
 </div>
 <a id="aa694b7911d0afac280bb555a977717c6" name="aa694b7911d0afac280bb555a977717c6"></a>
@@ -299,6 +338,8 @@ $(function(){initNavTree('class_uni_dx_1_1_time.html','','class_uni_dx_1_1_time-
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>現在の時間（timeScaleを考慮した値） </p>
 
 </div>
 </div>
@@ -322,6 +363,8 @@ $(function(){initNavTree('class_uni_dx_1_1_time.html','','class_uni_dx_1_1_time-
 </table>
 </div><div class="memdoc">
 
+<p>時間のスケール（1.0fが通常速度、0.5fが半分の速度、2.0fが倍速） </p>
+
 </div>
 </div>
 <a id="ad2f9f574ff69dc4204f9532fe709aa56" name="ad2f9f574ff69dc4204f9532fe709aa56"></a>
@@ -344,6 +387,8 @@ $(function(){initNavTree('class_uni_dx_1_1_time.html','','class_uni_dx_1_1_time-
 </table>
 </div><div class="memdoc">
 
+<p>timeScaleを考慮しない前フレームからの経過時間 </p>
+
 </div>
 </div>
 <a id="a0767ca0c92c7252ef334463b109a3207" name="a0767ca0c92c7252ef334463b109a3207"></a>
@@ -365,6 +410,8 @@ $(function(){initNavTree('class_uni_dx_1_1_time.html','','class_uni_dx_1_1_time-
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>timeScaleを考慮しない現在の時間 </p>
 
 </div>
 </div>

@@ -1,4 +1,23 @@
-﻿## [0.2.0] - 2026-01-18
+﻿## [0.3.0] - 2026-08-15
+
+### Added
+- GameObject の Instantiate 機能を追加しました。
+- Timeに最大許容時間ステップを追加しました。
+
+### Changed
+- Property の代入は値のセットとし、コピーは削除しました。
+- GetComponentInParent() が祖先をたどるようにしました。
+
+### Fixed
+- Releaseビルドのリンクエラーを修正しました。
+- 実行中の Component 追加時のエラーを修正しました。
+
+### Breaking Changes
+- GetComponent の引数を削除しました。
+
+---
+
+## [0.2.0] - 2026-01-18
 
 ### Added
 - スキンメッシュモデルの描画機能を実装しました。

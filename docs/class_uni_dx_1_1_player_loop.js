@@ -1,7 +1,7 @@
 var class_uni_dx_1_1_player_loop =
 [
-    [ "awake", "class_uni_dx_1_1_player_loop.html#af48c722d7fcac3d766f6d01752594ec0", null ],
     [ "checkDestroy", "class_uni_dx_1_1_player_loop.html#ac6efe49ef3f88eda791c5f8ec5a48706", null ],
+    [ "checkStart", "class_uni_dx_1_1_player_loop.html#a3927aa170123244eafe4bbed6be02e46", null ],
     [ "checkStart", "class_uni_dx_1_1_player_loop.html#a1fabac2e63d277635820ed803b97c9ce", null ],
     [ "finalize", "class_uni_dx_1_1_player_loop.html#ac6a6d4ea37a392c5f40d04284b820c73", null ],
     [ "fixedUpdate", "class_uni_dx_1_1_player_loop.html#a14a2beeb2cc048dbdd385e7e08c5eb71", null ],

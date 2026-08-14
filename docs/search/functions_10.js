@@ -35,7 +35,7 @@ var searchData=
   ['simulatepositioncorrection_32',['simulatePositionCorrection',['../class_uni_dx_1_1_physics.html#aaffdb001e2410b97e7a1ddc87019ef24',1,'UniDx::Physics']]],
   ['singleton_33',['Singleton',['../class_uni_dx_1_1_singleton.html#aa1d5dc993efef5faa60dc69cb141ae1f',1,'UniDx::Singleton']]],
   ['size_34',['size',['../struct_uni_dx_1_1_bounds.html#ac4c6df2b6c1a8a766491a9170997c485',1,'UniDx::Bounds']]],
-  ['skinnedmeshrenderer_35',['SkinnedMeshRenderer',['../class_uni_dx_1_1_skinned_mesh_renderer.html#a9f009a768f33e29b9e85fb248664dda0',1,'UniDx::SkinnedMeshRenderer']]],
+  ['skinnedmeshrenderer_35',['SkinnedMeshRenderer',['../class_uni_dx_1_1_skinned_mesh_renderer.html#a9f009a768f33e29b9e85fb248664dda0',1,'UniDx::SkinnedMeshRenderer::SkinnedMeshRenderer()'],['../class_uni_dx_1_1_skinned_mesh_renderer.html#a33ad68b7a935a8df01f5bc1d8bf102f1',1,'UniDx::SkinnedMeshRenderer::SkinnedMeshRenderer(const SkinnedMeshRenderer &amp;source)']]],
   ['solvecorrection_36',['solveCorrection',['../class_uni_dx_1_1_rigidbody.html#a5b5e4bdd8d6b575f374bd85b9c650200',1,'UniDx::Rigidbody']]],
   ['sphere_37',['Sphere',['../struct_uni_dx_1_1_sphere.html#af5fd4b82d16b92f07376261d65558dd7',1,'UniDx::Sphere::Sphere()=default'],['../struct_uni_dx_1_1_sphere.html#af573fdd663008196011cb0f6cf463923',1,'UniDx::Sphere::Sphere(Vector3 center, float radius)']]],
   ['spherecollider_38',['SphereCollider',['../class_uni_dx_1_1_sphere_collider.html#a215abf3e678d037a52167ba519f01a2f',1,'UniDx::SphereCollider']]],

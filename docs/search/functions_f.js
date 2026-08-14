@@ -4,7 +4,7 @@ var searchData=
   ['range_1',['Range',['../class_uni_dx_1_1_random.html#a11bc204ab2b742b9ebae94ff97b08624',1,'UniDx::Random::Range(float min, float max)'],['../class_uni_dx_1_1_random.html#a665008f8ae9d70b2fee08f5e85489d7a',1,'UniDx::Random::Range(int min, int max)']]],
   ['rangeexclusive_2',['RangeExclusive',['../class_uni_dx_1_1_random.html#aeb586ea57833863f89e1294477640fc6',1,'UniDx::Random::RangeExclusive(float min, float maxExclusive)'],['../class_uni_dx_1_1_random.html#a8ae36ebd297cc454ddffa94c603d67da',1,'UniDx::Random::RangeExclusive(int min, int maxExclusive)']]],
   ['raycast_3',['Raycast',['../class_uni_dx_1_1_collider.html#a8c4f199b33c0d7bb7b4eb8738c9c9698',1,'UniDx::Collider::Raycast()'],['../class_uni_dx_1_1_a_a_b_b_collider.html#a30e598ab8bb9623064aee04a47c2de07',1,'UniDx::AABBCollider::Raycast()'],['../class_uni_dx_1_1_sphere_collider.html#a0c4809b900d6154b2499cfefc72d0b30',1,'UniDx::SphereCollider::Raycast()'],['../class_uni_dx_1_1_physics.html#af9d1e1dfa6dc778b2fcc2065ea58f09d',1,'UniDx::Physics::Raycast()']]],
-  ['readonlyproperty_4',['ReadOnlyProperty',['../class_uni_dx_1_1_read_only_property.html#ac31e52abc7c8c2ad3f92893612794dd8',1,'UniDx::ReadOnlyProperty::ReadOnlyProperty()'],['../class_uni_dx_1_1_read_only_property_3_01_t_01_5_01_4.html#a620caf6a22a318d63e4aaf87b07e1b3f',1,'UniDx::ReadOnlyProperty&lt; T * &gt;::ReadOnlyProperty()']]],
+  ['readonlyproperty_4',['ReadOnlyProperty',['../class_uni_dx_1_1_read_only_property.html#ac31e52abc7c8c2ad3f92893612794dd8',1,'UniDx::ReadOnlyProperty::ReadOnlyProperty()'],['../class_uni_dx_1_1_read_only_property_3_01_t_01_5_01_4.html#a620caf6a22a318d63e4aaf87b07e1b3f',1,'UniDx::ReadOnlyProperty&lt; T * &gt;::ReadOnlyProperty(Getter getter)'],['../class_uni_dx_1_1_read_only_property_3_01_t_01_5_01_4.html#a1f103d59a9d77acb8ceeff73d0abb28a',1,'UniDx::ReadOnlyProperty&lt; T * &gt;::ReadOnlyProperty(const ReadOnlyProperty &amp;)=delete']]],
   ['readprimitive_5',['readPrimitive',['../class_uni_dx_1_1_gltf_model.html#adcf8f0428a731e71c8e0a150ad2c994a',1,'UniDx::GltfModel']]],
   ['reflectpslayout_6',['reflectPSLayout',['../class_uni_dx_1_1_shader.html#a3d57c502bc4d60e33fe2354df6445953',1,'UniDx::Shader']]],
   ['register3d_7',['register3d',['../class_uni_dx_1_1_physics.html#a6bd0b7663e8cee2828051df644ed8285',1,'UniDx::Physics']]],
@@ -22,7 +22,7 @@ var searchData=
   ['resizeuv2_19',['resizeUV2',['../struct_uni_dx_1_1_owned_sub_mesh.html#a8e4fef50187260237bcb0065bc6416e2',1,'UniDx::OwnedSubMesh']]],
   ['resizeuv3_20',['resizeUV3',['../struct_uni_dx_1_1_owned_sub_mesh.html#a6b1d54f5253f897c610b1f3f79987c57',1,'UniDx::OwnedSubMesh']]],
   ['resizeuv4_21',['resizeUV4',['../struct_uni_dx_1_1_owned_sub_mesh.html#a9d8fd170c3afc5fa2867dbb1e2bc56fa',1,'UniDx::OwnedSubMesh']]],
-  ['rigidbody_22',['Rigidbody',['../class_uni_dx_1_1_rigidbody.html#a8d372ab843bcfa349c0cc79b6b8bdf09',1,'UniDx::Rigidbody']]],
+  ['rigidbody_22',['Rigidbody',['../class_uni_dx_1_1_rigidbody.html#a8d372ab843bcfa349c0cc79b6b8bdf09',1,'UniDx::Rigidbody::Rigidbody()'],['../class_uni_dx_1_1_rigidbody.html#ada44a29a3222e283f025b83b60ce5d40',1,'UniDx::Rigidbody::Rigidbody(const Rigidbody &amp;source)']]],
   ['rotate_23',['Rotate',['../struct_uni_dx_1_1_matrix4x4.html#aa7e799ddf1de97787fbbaf0e0ae999c6',1,'UniDx::Matrix4x4']]],
   ['rotationuniform_24',['rotationUniform',['../class_uni_dx_1_1_random.html#adedb5b20a11846e412e6ec58c2825a96',1,'UniDx::Random']]]
 ];

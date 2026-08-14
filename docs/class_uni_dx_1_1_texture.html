@@ -255,7 +255,10 @@ UniDx::Texture の継承関係図</div>
 <p>メモリ上のRGBA8画像(UNORM)からテクスチャを生成する </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pixels</td><td>width * height * 4 bytes </td></tr>
+    <tr><td class="paramname">pixels</td><td>ピクセルデータ。width * height * 4 bytes </td></tr>
+    <tr><td class="paramname">width</td><td>幅 </td></tr>
+    <tr><td class="paramname">height</td><td>高さ </td></tr>
+    <tr><td class="paramname">isSRGB</td><td>色空間がSRGBの場合 true、リニアの場合 false </td></tr>
   </table>
   </dd>
 </dl>

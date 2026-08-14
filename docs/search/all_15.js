@@ -1,18 +1,12 @@
 var searchData=
 [
-  ['value_0',['Value',['../class_uni_dx_1_1_material.html#ae9e9b723d34bdca7c1e82921df5b30da',1,'UniDx::Material']]],
-  ['value_1',['value',['../struct_uni_dx_1_1_keyframe.html#acbaab74cfe33a4f977d081419397604a',1,'UniDx::Keyframe::value'],['../class_uni_dx_1_1_random.html#a04605a39c959971dc02c5756823dbb26',1,'UniDx::Random::value()']]],
-  ['vector2_2',['Vector2',['../struct_uni_dx_1_1_vector2.html',1,'UniDx::Vector2'],['../struct_uni_dx_1_1_vector2.html#af27569636198dd8be0e26c5409ae0392',1,'UniDx::Vector2::Vector2() noexcept'],['../struct_uni_dx_1_1_vector2.html#aa93d77f8f29335dfb382dfce0bfec597',1,'UniDx::Vector2::Vector2(float ix, float iy) noexcept'],['../struct_uni_dx_1_1_vector2.html#aa00fb887d02e98528c90eedb20f024ec',1,'UniDx::Vector2::Vector2(float ix) noexcept'],['../struct_uni_dx_1_1_vector2.html#a963236c4cc15fd0a5679212bad67c891',1,'UniDx::Vector2::Vector2(const DirectX::XMFLOAT2 &amp;V) noexcept'],['../struct_uni_dx_1_1_vector2.html#ae8b6bf6e7364d9873966d238517b45cc',1,'UniDx::Vector2::Vector2(const DirectX::XMVECTOR &amp;v)']]],
-  ['vector3_3',['Vector3',['../struct_uni_dx_1_1_vector3.html',1,'UniDx::Vector3'],['../struct_uni_dx_1_1_vector3.html#af1236c0b75210fed6781ff2fd3e4723e',1,'UniDx::Vector3::Vector3() noexcept'],['../struct_uni_dx_1_1_vector3.html#a62136ece80b0f4a4f516e3c4c42c3580',1,'UniDx::Vector3::Vector3(float ix, float iy, float iz) noexcept'],['../struct_uni_dx_1_1_vector3.html#a364386bd6d4d80be3713884fd8401c6e',1,'UniDx::Vector3::Vector3(Vector2 v, float iz) noexcept'],['../struct_uni_dx_1_1_vector3.html#abaf9b008e37c7ddd1eaa3844dbf4556b',1,'UniDx::Vector3::Vector3(float ix) noexcept'],['../struct_uni_dx_1_1_vector3.html#afd4206f7fd012bcb9d88ab84439ace6b',1,'UniDx::Vector3::Vector3(const DirectX::XMFLOAT3 &amp;V) noexcept'],['../struct_uni_dx_1_1_vector3.html#af8979b1253d6a45a4a12f691b0835f5a',1,'UniDx::Vector3::Vector3(const DirectX::XMVECTOR &amp;v)']]],
-  ['vector4_4',['Vector4',['../struct_uni_dx_1_1_vector4.html',1,'UniDx::Vector4'],['../struct_uni_dx_1_1_vector4.html#aa51bed237580dfb8d27393583f5e6d56',1,'UniDx::Vector4::Vector4() noexcept'],['../struct_uni_dx_1_1_vector4.html#a0c2d40937483f0cf78f9042ef840df12',1,'UniDx::Vector4::Vector4(float ix, float iy, float iz, float iw) noexcept'],['../struct_uni_dx_1_1_vector4.html#a09679c62d6e1ec04ef65e22489c6c6a4',1,'UniDx::Vector4::Vector4(Vector2 v, float iz, float iw) noexcept'],['../struct_uni_dx_1_1_vector4.html#a11b626638e5094961549355c4390d4d1',1,'UniDx::Vector4::Vector4(Vector3 v, float iw) noexcept'],['../struct_uni_dx_1_1_vector4.html#a1662dd2ee0524ed22b0ddca68483b183',1,'UniDx::Vector4::Vector4(float ix) noexcept'],['../struct_uni_dx_1_1_vector4.html#a95b8b5a05674eaa95b00b96d835e08e7',1,'UniDx::Vector4::Vector4(const DirectX::XMFLOAT4 &amp;V) noexcept'],['../struct_uni_dx_1_1_vector4.html#a810a672fddceac901c93c048219a7e30',1,'UniDx::Vector4::Vector4(const DirectX::XMVECTOR &amp;v)']]],
-  ['vertexbuffer_5',['vertexBuffer',['../struct_uni_dx_1_1_sub_mesh.html#ae25b48e69d137bd05266247c605afa44',1,'UniDx::SubMesh']]],
-  ['vertexp_6',['VertexP',['../struct_uni_dx_1_1_vertex_p.html',1,'UniDx']]],
-  ['vertexpc_7',['VertexPC',['../struct_uni_dx_1_1_vertex_p_c.html',1,'UniDx']]],
-  ['vertexpn_8',['VertexPN',['../struct_uni_dx_1_1_vertex_p_n.html',1,'UniDx']]],
-  ['vertexpnc_9',['VertexPNC',['../struct_uni_dx_1_1_vertex_p_n_c.html',1,'UniDx']]],
-  ['vertexpnt_10',['VertexPNT',['../struct_uni_dx_1_1_vertex_p_n_t.html',1,'UniDx']]],
-  ['vertexpt_11',['VertexPT',['../struct_uni_dx_1_1_vertex_p_t.html',1,'UniDx']]],
-  ['vertexptc_12',['VertexPTC',['../struct_uni_dx_1_1_vertex_p_t_c.html',1,'UniDx']]],
-  ['vertexskin_13',['VertexSkin',['../struct_uni_dx_1_1_vertex_skin.html',1,'UniDx']]],
-  ['view_14',['view',['../struct_uni_dx_1_1_constant_buffer_per_camera.html#a6feedb14b146f0b046a15e83175ee338',1,'UniDx::ConstantBufferPerCamera::view'],['../class_uni_dx_1_1_string_id.html#afb4ba32733df3c7d8a9fc90065348104',1,'UniDx::StringId::view()']]]
+  ['w_0',['w',['../struct_uni_dx_1_1_quaternion.html#a095368e2341fc06c671b1100f8f0f38e',1,'UniDx::Quaternion']]],
+  ['weightmax_1',['WeightMax',['../namespace_uni_dx.html#a6ff72ecbb06b64aec0601d28eeefe359',1,'UniDx']]],
+  ['weights_2',['Weights',['../struct_uni_dx_1_1_vertex_skin.html#af0cc221418096ebd87e667442266491f',1,'UniDx::VertexSkin']]],
+  ['weights_3',['weights',['../struct_uni_dx_1_1_vertex_skin.html#a23c0d06f92df4679f8cbdf185ee5de98',1,'UniDx::VertexSkin']]],
+  ['weightsdata_4',['weightsData',['../struct_uni_dx_1_1_skinned_sub_mesh.html#acc744a2735bcd094b60c3f77c1f789c4',1,'UniDx::SkinnedSubMesh']]],
+  ['white_5',['white',['../struct_uni_dx_1_1_color.html#ab9ed988c29a902ea05d08b680ed3bc4c',1,'UniDx::Color']]],
+  ['world_6',['world',['../struct_uni_dx_1_1_constant_buffer_per_object.html#a29c3fed50afa11f6c563e25923497e14',1,'UniDx::ConstantBufferPerObject::world'],['../struct_uni_dx_1_1_constant_buffer_skin_per_object.html#ae40b126bac2bea971b5cbc4a21631013',1,'UniDx::ConstantBufferSkinPerObject::world']]],
+  ['wrapmodeu_7',['wrapModeU',['../class_uni_dx_1_1_texture.html#a20abb6a7eddcdf64c8613659d1febee9',1,'UniDx::Texture']]],
+  ['wrapmodev_8',['wrapModeV',['../class_uni_dx_1_1_texture.html#a0122764e0490133494057af5b912ce74',1,'UniDx::Texture']]]
 ];

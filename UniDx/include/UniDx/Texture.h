@@ -32,7 +32,10 @@ public:
 
     /**
      * @brief メモリ上のRGBA8画像(UNORM)からテクスチャを生成する
-     * @param pixels: width * height * 4 bytes
+     * @param pixels ピクセルデータ。width * height * 4 bytes
+     * @param width 幅
+     * @param height 高さ
+     * @param isSRGB 色空間がSRGBの場合 true、リニアの場合 false
      */
     bool LoadFromMemoryRGBA8(const void* pixels, int width, int height, bool isSRGB);
 

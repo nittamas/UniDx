@@ -11,8 +11,8 @@ var searchData=
   ['getchildgameobjects_8',['getChildGameObjects',['../class_uni_dx_1_1_transform.html#a312bd36dab2c0ea29f39f725d3fa2cd3',1,'UniDx::Transform']]],
   ['getcollider_9',['getCollider',['../class_uni_dx_1_1_physics_shape.html#af8f1718f433a4f4089d0c3d6abc11799',1,'UniDx::PhysicsShape']]],
   ['getcolor_10',['GetColor',['../class_uni_dx_1_1_material.html#a3c100149ee29d9690af8f827f47b12f8',1,'UniDx::Material']]],
-  ['getcomponent_11',['GetComponent',['../class_uni_dx_1_1_behaviour.html#a633b22a599fff5082e4e107f02910765',1,'UniDx::Behaviour::GetComponent()'],['../class_uni_dx_1_1_game_object.html#abbd002e21634e2867ff6a2c70610deba',1,'UniDx::GameObject::GetComponent()']]],
-  ['getcomponentinparent_12',['GetComponentInParent',['../class_uni_dx_1_1_behaviour.html#a6d8c1bd91dcc06e85c2a498654517d5c',1,'UniDx::Behaviour']]],
+  ['getcomponent_11',['GetComponent',['../class_uni_dx_1_1_component.html#a43b0aef31c9c63eb7f8b6800b0826b3b',1,'UniDx::Component::GetComponent()'],['../class_uni_dx_1_1_game_object.html#abc30ffbc05d2633220a43989e0f666ee',1,'UniDx::GameObject::GetComponent()']]],
+  ['getcomponentinparent_12',['GetComponentInParent',['../class_uni_dx_1_1_component.html#a19e7976848d1c319143e459134197562',1,'UniDx::Component::GetComponentInParent()'],['../class_uni_dx_1_1_game_object.html#a92362d81fbdd8195d24ee0f400eb53ab',1,'UniDx::GameObject::GetComponentInParent() const']]],
   ['getcomponents_13',['GetComponents',['../class_uni_dx_1_1_game_object.html#a600845741b8bc94b4194f4cc67e3e8a9',1,'UniDx::GameObject']]],
   ['getcontext_14',['GetContext',['../class_uni_dx_1_1_d3_d_manager.html#ac5ed036554e449b89ee9ea47efb65d18',1,'UniDx::D3DManager']]],
   ['getcorrectpositionbounds_15',['getCorrectPositionBounds',['../class_uni_dx_1_1_physics_actor.html#a4b8895fede9d2e05ae424201e395eead',1,'UniDx::PhysicsActor']]],
@@ -44,5 +44,6 @@ var searchData=
   ['getu16text_41',['getU16Text',['../class_uni_dx_1_1_text_mesh.html#a2c78d8e3f45ea2123cae7d042281fe4d',1,'UniDx::TextMesh']]],
   ['getvector_42',['GetVector',['../class_uni_dx_1_1_material.html#a8ff6735bd954091f80c7140d130539a7',1,'UniDx::Material']]],
   ['getviewmatrix_43',['GetViewMatrix',['../class_uni_dx_1_1_camera.html#ac345bcbbffe3f538b6f328dc815ca338',1,'UniDx::Camera']]],
-  ['global_44',['global',['../class_uni_dx_1_1_random.html#a98d8568db0cd9d8f92fe1115a8004591',1,'UniDx::Random']]]
+  ['global_44',['global',['../class_uni_dx_1_1_random.html#a98d8568db0cd9d8f92fe1115a8004591',1,'UniDx::Random']]],
+  ['gltfmodel_45',['GltfModel',['../class_uni_dx_1_1_gltf_model.html#a7ebed6bc768d7f44bf98c5988110ccb2',1,'UniDx::GltfModel::GltfModel()=default'],['../class_uni_dx_1_1_gltf_model.html#a5f8c50d1fe44e39bc32a3c3080df7b39',1,'UniDx::GltfModel::GltfModel(const GltfModel &amp;source)']]]
 ];

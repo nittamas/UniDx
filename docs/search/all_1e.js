@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['特徴_0',['特徴',['../index.html#autotoc_md2',1,'']]]
+  ['用途_0',['用途',['../index.html#autotoc_md1',1,'']]]
 ];

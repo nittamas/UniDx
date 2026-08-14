@@ -131,8 +131,13 @@ requires (!std::same_as&lt;std::remove_cvref_t&lt;First&gt;, <a class="el" href=
 <tr class="memitem:a608af257312f237fb0cf4e5279e18d78 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a608af257312f237fb0cf4e5279e18d78">Add</a> (First &amp;&amp;first, Rest &amp;&amp;... rest)</td></tr>
 <tr class="memitem:aeb5cba145a1f89430629023ddfb5eb95" id="r_aeb5cba145a1f89430629023ddfb5eb95"><td class="memTemplParams" colspan="2">template&lt;typename T, typename... Args&gt; </td></tr>
 <tr class="memitem:aeb5cba145a1f89430629023ddfb5eb95 template"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb5cba145a1f89430629023ddfb5eb95">AddComponent</a> (Args &amp;&amp;... args)</td></tr>
-<tr class="memitem:abbd002e21634e2867ff6a2c70610deba" id="r_abbd002e21634e2867ff6a2c70610deba"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
-<tr class="memitem:abbd002e21634e2867ff6a2c70610deba template"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbd002e21634e2867ff6a2c70610deba">GetComponent</a> (bool includeInactive=false)</td></tr>
+<tr class="memdesc:aeb5cba145a1f89430629023ddfb5eb95"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンポーネントを生成してアタッチする GameObjectがアクティブシーンに接続済みなら、その場で Awake() / OnEnable() が呼ばれる  <br /></td></tr>
+<tr class="memitem:aa21abfecc5f13a5b625b1eddb2f5bf8e" id="r_aa21abfecc5f13a5b625b1eddb2f5bf8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa21abfecc5f13a5b625b1eddb2f5bf8e">checkAwake</a> ()</td></tr>
+<tr class="memdesc:aa21abfecc5f13a5b625b1eddb2f5bf8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">GameObjectとその子孫について、未呼び出しのAwake()/OnEnable()を呼ぶ  <br /></td></tr>
+<tr class="memitem:abc30ffbc05d2633220a43989e0f666ee" id="r_abc30ffbc05d2633220a43989e0f666ee"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:abc30ffbc05d2633220a43989e0f666ee template"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc30ffbc05d2633220a43989e0f666ee">GetComponent</a> () const</td></tr>
+<tr class="memitem:a92362d81fbdd8195d24ee0f400eb53ab" id="r_a92362d81fbdd8195d24ee0f400eb53ab"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a92362d81fbdd8195d24ee0f400eb53ab template"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92362d81fbdd8195d24ee0f400eb53ab">GetComponentInParent</a> () const</td></tr>
 <tr class="memitem:a50fa12256682aecd8485d2ce628a2ece" id="r_a50fa12256682aecd8485d2ce628a2ece"><td class="memTemplParams" colspan="2">template&lt;typename Predicate&gt; </td></tr>
 <tr class="memitem:a50fa12256682aecd8485d2ce628a2ece template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#abd1ae0824779009dd2398f6d3df4ac7d">GameObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50fa12256682aecd8485d2ce628a2ece">Find</a> (Predicate pred) const</td></tr>
 <tr class="memitem:a4e5d5083352620b8111052a177979505" id="r_a4e5d5083352620b8111052a177979505"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e5d5083352620b8111052a177979505">SetName</a> (<a class="el" href="class_uni_dx_1_1_string_id.html">StringId</a> n)</td></tr>
@@ -153,6 +158,12 @@ requires (!std::same_as&lt;std::remove_cvref_t&lt;First&gt;, <a class="el" href=
 <tr class="inherit_header pub_attribs_class_uni_dx_1_1_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_uni_dx_1_1_object')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_uni_dx_1_1_object.html">UniDx::Object</a> に属する継承公開変数類</td></tr>
 <tr class="memitem:ace975b5121f8f79f54fdf62d46c06049 inherit pub_attribs_class_uni_dx_1_1_object" id="r_ace975b5121f8f79f54fdf62d46c06049"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_uni_dx_1_1_read_only_property.html">ReadOnlyProperty</a>&lt; <a class="el" href="class_uni_dx_1_1_string_id.html">StringId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_uni_dx_1_1_object.html#ace975b5121f8f79f54fdf62d46c06049">name</a></td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a3485f4a4f62ed46102ebf88817d19894" id="r_a3485f4a4f62ed46102ebf88817d19894"><td class="memTemplParams" colspan="2">template&lt;typename T, typename... Args&gt; </td></tr>
+<tr class="memitem:a3485f4a4f62ed46102ebf88817d19894 template"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3485f4a4f62ed46102ebf88817d19894">attachComponent</a> (Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:a3485f4a4f62ed46102ebf88817d19894"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンポーネントを生成してアタッチするだけで Awake() は呼ばない  <br /></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 限定公開変数類</h2></td></tr>
 <tr class="memitem:ad69129ddfc9e7b87b69fe24bae932750" id="r_ad69129ddfc9e7b87b69fe24bae932750"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_uni_dx_1_1_string_id.html">StringId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad69129ddfc9e7b87b69fe24bae932750">name_</a></td></tr>
@@ -163,6 +174,8 @@ requires (!std::same_as&lt;std::remove_cvref_t&lt;First&gt;, <a class="el" href=
 フレンド</h2></td></tr>
 <tr class="memitem:a94284444ce9df711ae71494a51c5c608" id="r_a94284444ce9df711ae71494a51c5c608"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94284444ce9df711ae71494a51c5c608">Destroy</a> (<a class="el" href="#abd1ae0824779009dd2398f6d3df4ac7d">GameObject</a> *gameObject)</td></tr>
 <tr class="memdesc:a94284444ce9df711ae71494a51c5c608"><td class="mdescLeft">&#160;</td><td class="mdescRight">GameObjectを破棄  <br /></td></tr>
+<tr class="memitem:aa4a59fbb41548a025fe15b206de0e704" id="r_aa4a59fbb41548a025fe15b206de0e704"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#abd1ae0824779009dd2398f6d3df4ac7d">GameObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4a59fbb41548a025fe15b206de0e704">Instantiate</a> (const <a class="el" href="#abd1ae0824779009dd2398f6d3df4ac7d">GameObject</a> &amp;original, <a class="el" href="class_uni_dx_1_1_transform.html">Transform</a> *parent)</td></tr>
+<tr class="memdesc:aa4a59fbb41548a025fe15b206de0e704"><td class="mdescLeft">&#160;</td><td class="mdescRight">GameObjectと子孫を複製し、指定した親へ接続  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
 <div class="textblock"><p>キャラクターや背景カメラなどの基礎となるオブジェクト </p>
@@ -502,6 +515,56 @@ template&lt;typename T, typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>コンポーネントを生成してアタッチする GameObjectがアクティブシーンに接続済みなら、その場で Awake() / OnEnable() が呼ばれる </p>
+
+</div>
+</div>
+<a id="a3485f4a4f62ed46102ebf88817d19894" name="a3485f4a4f62ed46102ebf88817d19894"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3485f4a4f62ed46102ebf88817d19894">&#9670;&#160;</a></span>attachComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T * UniDx::GameObject::attachComponent </td>
+          <td>(</td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コンポーネントを生成してアタッチするだけで Awake() は呼ばない </p>
+
+</div>
+</div>
+<a id="aa21abfecc5f13a5b625b1eddb2f5bf8e" name="aa21abfecc5f13a5b625b1eddb2f5bf8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa21abfecc5f13a5b625b1eddb2f5bf8e">&#9670;&#160;</a></span>checkAwake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UniDx::GameObject::checkAwake </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GameObjectとその子孫について、未呼び出しのAwake()/OnEnable()を呼ぶ </p>
+
 </div>
 </div>
 <a id="a3db41bfdac1da3521dae2f0a250497fe" name="a3db41bfdac1da3521dae2f0a250497fe"></a>
@@ -540,8 +603,8 @@ template&lt;typename Predicate&gt; </div>
 
 </div>
 </div>
-<a id="abbd002e21634e2867ff6a2c70610deba" name="abbd002e21634e2867ff6a2c70610deba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abbd002e21634e2867ff6a2c70610deba">&#9670;&#160;</a></span>GetComponent()</h2>
+<a id="abc30ffbc05d2633220a43989e0f666ee" name="abc30ffbc05d2633220a43989e0f666ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc30ffbc05d2633220a43989e0f666ee">&#9670;&#160;</a></span>GetComponent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -554,8 +617,8 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname">T * UniDx::GameObject::GetComponent </td>
           <td>(</td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>includeInactive</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span></td><td>)</td>
-          <td></td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -563,6 +626,25 @@ template&lt;typename T&gt; </div>
 <span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
   </tr>
 </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a92362d81fbdd8195d24ee0f400eb53ab" name="a92362d81fbdd8195d24ee0f400eb53ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92362d81fbdd8195d24ee0f400eb53ab">&#9670;&#160;</a></span>GetComponentInParent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T * UniDx::GameObject::GetComponentInParent </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
 </div><div class="memdoc">
 
 </div>
@@ -792,6 +874,38 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>GameObjectを破棄 </p>
+
+</div>
+</div>
+<a id="aa4a59fbb41548a025fe15b206de0e704" name="aa4a59fbb41548a025fe15b206de0e704"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4a59fbb41548a025fe15b206de0e704">&#9670;&#160;</a></span>Instantiate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#abd1ae0824779009dd2398f6d3df4ac7d">GameObject</a> * Instantiate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#abd1ae0824779009dd2398f6d3df4ac7d">GameObject</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>original</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_uni_dx_1_1_transform.html">Transform</a> *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>GameObjectと子孫を複製し、指定した親へ接続 </p>
+<dl class="section return"><dt>戻り値</dt><dd>複製したGameObject。複製できないComponentがある場合はnullptr </dd></dl>
 
 </div>
 </div>

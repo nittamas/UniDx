@@ -1,6 +1,9 @@
 var class_uni_dx_1_1_gltf_model =
 [
+    [ "GltfModel", "class_uni_dx_1_1_gltf_model.html#a7ebed6bc768d7f44bf98c5988110ccb2", null ],
+    [ "GltfModel", "class_uni_dx_1_1_gltf_model.html#a5f8c50d1fe44e39bc32a3c3080df7b39", null ],
     [ "AddMaterial", "class_uni_dx_1_1_gltf_model.html#aa839dcaed00df807a780c83fc8b108d4", null ],
+    [ "CloneTo", "class_uni_dx_1_1_gltf_model.html#a5f82312906bc3a36b774ec5f83ff6b85", null ],
     [ "createNodeRecursive", "class_uni_dx_1_1_gltf_model.html#adbc04f5320ec17b82dd3f249d5f7ab29", null ],
     [ "GetMaterials", "class_uni_dx_1_1_gltf_model.html#a11b8ffef28b2777bc47af182a9dbb272", null ],
     [ "getOrCreateTextureFromGltf_", "class_uni_dx_1_1_gltf_model.html#a20c5d6b194c830847b9ced24417c6fa7", null ],
@@ -14,7 +17,7 @@ var class_uni_dx_1_1_gltf_model =
     [ "SetAddressModeUV", "class_uni_dx_1_1_gltf_model.html#a99ec6ce06e5b3b76e1fbf97b84103c5f", null ],
     [ "materials", "class_uni_dx_1_1_gltf_model.html#a708c453a2e476e1000c2c30335e7b54e", null ],
     [ "meshes", "class_uni_dx_1_1_gltf_model.html#aa14ff88e6039bc3d79558fbef1b34327", null ],
-    [ "model", "class_uni_dx_1_1_gltf_model.html#adba50a91ffe8aadb3399b73694416767", null ],
+    [ "model", "class_uni_dx_1_1_gltf_model.html#acf2c9ebeaf3a3a9bb6177260621696f3", null ],
     [ "nodes", "class_uni_dx_1_1_gltf_model.html#ad9c84e317b5b788bf469d23c8a123562", null ],
     [ "renderer", "class_uni_dx_1_1_gltf_model.html#a2fdd284c54c57cf556f5279a365af141", null ],
     [ "skinInstance", "class_uni_dx_1_1_gltf_model.html#a155e41d4c6af11fb00614362fbc8cc8e", null ],
