@@ -8,7 +8,7 @@ Component::Component() :
     Object([this]() { return gameObject != nullptr ? gameObject->name : StringId(); }),
     enabled(
         // get
-        [this]() { return _enabled && didAwake_; },
+        [this]() { return enabled_ && didAwake_; },
 
         // set
         [this](bool value) { setEnabled(value); }
@@ -19,7 +19,7 @@ Component::Component() :
     didAwake_(false),
     didStart_(false),
     isCalledDestroy(false),
-    _enabled(true),
+    enabled_(true),
     copyConstruct_(nullptr)
 {
 }
@@ -36,23 +36,23 @@ Component::Component(const Component& source) : Component()
 void Component::copyComponentStateFrom(
     const Component& source)
 {
-    _enabled = source._enabled;
+    enabled_ = source.enabled_;
     copyConstruct_ = source.copyConstruct_;
 }
 
 
 void Component::setEnabled(bool value)
 {
-    if (!_enabled && value && !isCalledDestroy)
+    if (!enabled_ && value && !isCalledDestroy)
     {
-        _enabled = true;
+        enabled_ = true;
         // Awakeはアクティブシーンへの接続時に呼ぶ。
         // すでにAwake済みなら、再有効化としてOnEnableを呼ぶ。
         if (didAwake_) { OnEnable(); }
     }
-    else if (_enabled && !value)
+    else if (enabled_ && !value)
     {
-        _enabled = false;
+        enabled_ = false;
         if (didAwake_) { OnDisable(); }
     }
 }
@@ -66,7 +66,7 @@ std::unique_ptr<Component> Component::copyConstruct() const
 void Component::doDestroy()
 {
     isCalledDestroy = true; // 以降で enabled=true は無効
-    if (_enabled)
+    if (enabled_)
     {
         enabled = false; // 無効化（この中でOnDisable()が呼ばれる）
     }

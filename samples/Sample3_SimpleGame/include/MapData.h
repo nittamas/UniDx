@@ -7,8 +7,8 @@
 class MapData
 {
 public:
-	static void create() { _instance = std::make_unique<MapData>(); }
-	static MapData* getInstance() { return _instance.get(); }
+	static void create() { instance_ = std::make_unique<MapData>(); }
+	static MapData* getInstance() { return instance_.get(); }
 
 	char getData(int x, int y) const;
 	size_t getHeight() const;
@@ -16,7 +16,7 @@ public:
 	bool load(std::u8string_view filename);
 
 protected:
-	static inline std::unique_ptr<MapData> _instance;
+	static inline std::unique_ptr<MapData> instance_;
 
 	std::vector< std::string > data;
 };

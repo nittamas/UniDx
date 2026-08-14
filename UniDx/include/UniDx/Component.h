@@ -47,18 +47,18 @@ public:
         // Awake()内で破棄予約された場合、OnEnable/OnDisableは呼ばない
         if (isCalledDestroy)
         {
-            _enabled = false;
+            enabled_ = false;
             return;
         }
 
         // Awake()内で無効化された場合もOnEnableは呼ばない
-        if (_enabled) OnEnable();
+        if (enabled_) OnEnable();
     }
 
     // 有効フラグが立っているかどうか確認して Start() 呼び出し
     void checkStart()
     {
-        if (_enabled && didAwake_ && !didStart_)
+        if (enabled_ && didAwake_ && !didStart_)
         {
             Start();
             didStart_ = true;
@@ -97,7 +97,7 @@ protected:
     bool didAwake_;
     bool didStart_;
     bool isCalledDestroy;
-    bool _enabled;
+    bool enabled_;
 
     Component();
     Component(const Component& source);

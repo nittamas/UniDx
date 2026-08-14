@@ -11,16 +11,16 @@ namespace UniDx
 Transform::Transform() :
     Component(),
     localPosition(
-        [this]() { return _localPosition; },
-        [this](Vector3 v) { _localPosition = v; m_dirty = true; }
+        [this]() { return localPosition_; },
+        [this](Vector3 v) { localPosition_ = v; m_dirty = true; }
     ),
     localRotation(
-        [this]() { return _localRotation; },
-        [this](Quaternion q) { _localRotation = q; m_dirty = true; }
+        [this]() { return localRotation_; },
+        [this](Quaternion q) { localRotation_ = q; m_dirty = true; }
     ),
     localScale(
-        [this]() { return _localScale; },
-        [this](Vector3 v) { _localScale = v; m_dirty = true; }
+        [this]() { return localScale_; },
+        [this](Vector3 v) { localScale_ = v; m_dirty = true; }
     ),
     position(
         // getter: グローバル座標
@@ -33,10 +33,10 @@ Transform::Transform() :
             if(parent) {
                 parent->updateMatrices();
                 Matrix4x4 invParent = parent->m_worldMatrix.inverse();
-                _localPosition = worldPos * invParent;
+                localPosition_ = worldPos * invParent;
             }
             else {
-                _localPosition = worldPos;
+                localPosition_ = worldPos;
             }
             m_dirty = true;
         }
@@ -58,10 +58,10 @@ Transform::Transform() :
                 Vector3 s, t;
                 parent->m_worldMatrix.Decompose(s, parentWorldRot, t);
                 parentWorldRotInv = Inverse(parentWorldRot);
-                _localRotation = worldRot * parentWorldRotInv;
+                localRotation_ = worldRot * parentWorldRotInv;
             }
             else {
-                _localRotation = worldRot;
+                localRotation_ = worldRot;
             }
             m_dirty = true;
         }
@@ -159,9 +159,9 @@ Transform::Transform() :
 Transform::Transform(const Transform& source) : Transform()
 {
     copyComponentStateFrom(source);
-    _localPosition = source._localPosition;
-    _localRotation = source._localRotation;
-    _localScale = source._localScale;
+    localPosition_ = source.localPosition_;
+    localRotation_ = source.localRotation_;
+    localScale_ = source.localScale_;
 }
 
 
@@ -261,9 +261,9 @@ Transform* Transform::GetChild(size_t index) const
 const Matrix4x4& Transform::localMatrix() const
 {
     if (m_dirty) {
-        m_localMatrix = DirectX::SimpleMath::Matrix::CreateScale(_localScale.x, _localScale.y, _localScale.z)
-            * DirectX::SimpleMath::Matrix::CreateFromQuaternion(DirectX::XMFLOAT4(_localRotation))
-            * DirectX::SimpleMath::Matrix::CreateTranslation(_localPosition.x, _localPosition.y, _localPosition.z);
+        m_localMatrix = DirectX::SimpleMath::Matrix::CreateScale(localScale_.x, localScale_.y, localScale_.z)
+            * DirectX::SimpleMath::Matrix::CreateFromQuaternion(DirectX::XMFLOAT4(localRotation_))
+            * DirectX::SimpleMath::Matrix::CreateTranslation(localPosition_.x, localPosition_.y, localPosition_.z);
     }
     return m_localMatrix;
 }
@@ -278,9 +278,9 @@ void Transform::updateMatrices() const
 
     if (m_dirty)
     {
-        m_localMatrix = DirectX::SimpleMath::Matrix::CreateScale(_localScale)
-            * DirectX::SimpleMath::Matrix::CreateFromQuaternion(DirectX::XMFLOAT4(_localRotation))
-            * DirectX::SimpleMath::Matrix::CreateTranslation(_localPosition);
+        m_localMatrix = DirectX::SimpleMath::Matrix::CreateScale(localScale_)
+            * DirectX::SimpleMath::Matrix::CreateFromQuaternion(DirectX::XMFLOAT4(localRotation_))
+            * DirectX::SimpleMath::Matrix::CreateTranslation(localPosition_);
         if (parent) {
             m_worldMatrix = m_localMatrix * parent->m_worldMatrix;
         }

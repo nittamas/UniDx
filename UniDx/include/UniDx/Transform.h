@@ -87,9 +87,9 @@ private:
 
     bool dirtyInHierarchy() const { return m_dirty || parent && parent->dirtyInHierarchy(); }
 
-    Vector3 _localPosition{ 0,0,0 };
-    Quaternion _localRotation = Quaternion::identity;
-    Vector3 _localScale{ 1,1,1 };
+    Vector3 localPosition_{ 0,0,0 };
+    Quaternion localRotation_ = Quaternion::identity;
+    Vector3 localScale_{ 1,1,1 };
 
     // 子GameObject
     // トップ以外のGameObjectはTransformによって保持される
